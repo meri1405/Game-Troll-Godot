@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://dt1tth682nenl"]
+[gd_scene load_steps=31 format=3 uid="uid://dt1tth682nenl"]
 
 [ext_resource type="Script" uid="uid://fqyrhlrtisxu" path="res://Scenes/character_body_2d.gd" id="1_88kja"]
 [ext_resource type="Texture2D" uid="uid://cnofw3hrt217a" path="res://Pixel Adventure 1/Free/Main Characters/Ninja Frog/Jump (32x32).png" id="1_ymxaj"]
@@ -187,8 +187,11 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pbq55"]
+size = Vector2(13.6667, 16.6667)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gbyq6"]
-size = Vector2(14.6667, 16.3333)
+size = Vector2(13.6667, 16.5)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 scale = Vector2(3, 3)
@@ -202,6 +205,18 @@ sprite_frames = SubResource("SpriteFrames_a02g7")
 animation = &"Idle"
 autoplay = "Idle"
 
+[node name="HurtBox" type="Area2D" parent="." groups=["player"]]
+position = Vector2(324.667, 194.333)
+disable_mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+visible = false
+position = Vector2(-0.166931, 0.000350952)
+shape = SubResource("RectangleShape2D_pbq55")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(324.333, 194.167)
+visible = false
+position = Vector2(324.5, 194.333)
 shape = SubResource("RectangleShape2D_gbyq6")
+
+[connection signal="area_entered" from="HurtBox" to="." method="_on_hurt_box_area_entered"]
