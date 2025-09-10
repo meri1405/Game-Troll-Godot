@@ -10,7 +10,8 @@ config_version=5
 
 [application]
 
-run/main_scene="uid://dxmmwaa2m58ff"
+config/name="Project-1"
+run/main_scene="uid://bm5l0hvg6erwk"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
 
