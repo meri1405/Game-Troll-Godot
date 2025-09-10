@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://dd8yp6nvh8ln4"]
+
+[ext_resource type="Script" uid="uid://beef7jg5hna4g" path="res://UI/setting_button.gd" id="1_ok036"]
+[ext_resource type="Script" uid="uid://ukruwug2hfho" path="res://UI/settings_panel.gd" id="1_uovhs"]
+
+[node name="SettingButton" type="CanvasLayer"]
+script = ExtResource("1_ok036")
+
+[node name="Button" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "⚙"
+
+[node name="SettingsPanel" type="Panel" parent="."]
+offset_left = 1.0
+offset_top = 34.0
+offset_right = 33.0
+offset_bottom = 64.0
+script = ExtResource("1_uovhs")
+
+[node name="SoundButton" type="Button" parent="SettingsPanel"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 31.0
+offset_right = 112.0
+offset_bottom = 62.0
+text = "Sound"
+
+[node name="HomeButton" type="Button" parent="SettingsPanel"]
+layout_mode = 0
+offset_top = 31.0
+offset_right = 55.0
+offset_bottom = 62.0
+text = "Home"
+
+[connection signal="pressed" from="SettingsPanel/SoundButton" to="SettingsPanel" method="_on_sound_button_pressed"]
+[connection signal="pressed" from="SettingsPanel/HomeButton" to="SettingsPanel" method="_on_home_button_pressed"]

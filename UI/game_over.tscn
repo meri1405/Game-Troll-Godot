@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bfm0i344y5nsl"]
 
 [ext_resource type="Texture2D" uid="uid://cmx6ev0y0fkb7" path="res://Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="1_y26ei"]
-[ext_resource type="Script" uid="uid://dt8svpna7kg8m" path="res://game_over.gd" id="1_yxx3c"]
+[ext_resource type="Script" uid="uid://dt8svpna7kg8m" path="res://UI/game_over.gd" id="1_yxx3c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yxx3c"]
 texture = ExtResource("1_y26ei")
