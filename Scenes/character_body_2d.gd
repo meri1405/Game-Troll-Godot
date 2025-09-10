@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
-
+const startingX = -895.0
+const startingY = -225.0
 const SPEED = 280.0
 const JUMP_VELOCITY = -430.0
 @onready var sprite_2d: AnimatedSprite2D = $Sprite2D
@@ -36,11 +37,12 @@ func _physics_process(delta: float) -> void:
 	sprite_2d.flip_h = isLeft
 
 func _do_reset():
-	position = Vector2(-895.0, -225.0)
+	position = Vector2(startingX, startingY)
 
 func _on_hurt_box_area_entered(area: Area2D) -> void:
 	if area.is_in_group("mob"):
 		_do_reset()
+		
 		print(position)
 		print("hit enemy")
 		
