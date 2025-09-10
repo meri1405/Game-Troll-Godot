@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://c3lddyn0fnn1e"]
+[gd_scene load_steps=3 format=3 uid="uid://c3lddyn0fnn1e"]
 
+[ext_resource type="Script" uid="uid://c85pk27sc71ds" path="res://level_1.gd" id="1_kidjj"]
 [ext_resource type="Texture2D" uid="uid://dhkt1prc5cciq" path="res://Pixel Adventure 1/Free/Background/Blue.png" id="1_n0r7v"]
 
 [node name="Level1" type="Node2D"]
+script = ExtResource("1_kidjj")
 
 [node name="Background" type="TextureRect" parent="."]
 anchors_preset = 15
