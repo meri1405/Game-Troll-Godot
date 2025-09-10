@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=3 uid="uid://841bx4n0hke1"]
+
+[ext_resource type="Script" uid="uid://cku0afh4wjxrw" path="res://audio_controller.gd" id="1_blxgy"]
+[ext_resource type="AudioStream" uid="uid://87mjbs6mevhc" path="res://audio/mouse-click-117076.wav" id="2_xujww"]
+[ext_resource type="AudioStream" uid="uid://c758eprb0owr5" path="res://audio/mr-23142.wav" id="3_vys8g"]
+[ext_resource type="AudioStream" uid="uid://bhvb0rxc6lj63" path="res://audio/game-over-39-199830.wav" id="4_h7rxg"]
+[ext_resource type="AudioStream" uid="uid://1akeedf865lm" path="res://audio/8-bit-jump-001-171817.wav" id="5_y6d7d"]
+
+[node name="AudioController" type="Node2D"]
+script = ExtResource("1_blxgy")
+
+[node name="Click" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_xujww")
+
+[node name="Endgame" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_h7rxg")
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_vys8g")
+
+[node name="Jump" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_y6d7d")
