@@ -1,3 +1,4 @@
+
 [gd_scene load_steps=10 format=3 uid="uid://c2jasx7qwyf71"]
 
 [ext_resource type="PackedScene" uid="uid://m4c8hp47kokd" path="res://UI/pause_menu.tscn" id="1_bxfwq"]
@@ -338,3 +339,4 @@ scale = Vector2(3, 3)
 icon = ExtResource("2_waryd")
 
 [connection signal="pressed" from="CanvasLayer/MenuButton" to="." method="_on_menu_button_pressed"]
+

@@ -1,15 +1,9 @@
+[gd_scene load_steps=9 format=3 uid="uid://5r1u824o4ne"]
 
-[gd_scene load_steps=11 format=3 uid="uid://bl5ecus2o2nnf"]
-
-[ext_resource type="Texture2D" uid="uid://c2q1auamo4dbd" path="res://Pixel Adventure 1/Free/Background/Brown.png" id="1_1y8me"]
-[ext_resource type="Script" uid="uid://bq6ed1y6q0fw5" path="res://level_2.gd" id="1_7j8ne"]
-[ext_resource type="Texture2D" uid="uid://cmx6ev0y0fkb7" path="res://Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="2_rlddw"]
-[ext_resource type="PackedScene" path="res://Scenes/pig_mob.tscn" id="4_kgqac"]
-[ext_resource type="PackedScene" uid="uid://cn3fdwy7umk4h" path="res://Checkpoint/Level_2/checkpoint_2.tscn" id="5_n7ypv"]
-[ext_resource type="PackedScene" uid="uid://m4c8hp47kokd" path="res://UI/pause_menu.tscn" id="6_kgqac"]
-[ext_resource type="Texture2D" uid="uid://cbhtkwag7pn5d" path="res://Pixel Adventure 1/Free/Menu/Buttons/Settings.png" id="7_kgqac"]
-
+[ext_resource type="Texture2D" uid="uid://c2q1auamo4dbd" path="res://Pixel Adventure 1/Free/Background/Brown.png" id="1_jyudl"]
+[ext_resource type="Texture2D" uid="uid://cmx6ev0y0fkb7" path="res://Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="2_3djxs"]
 [ext_resource type="PackedScene" uid="uid://dt1tth682nenl" path="res://Scenes/character_body_2d.tscn" id="3_rlddw"]
+[ext_resource type="PackedScene" uid="uid://cn3fdwy7umk4h" path="res://Checkpoint/Level_2/checkpoint_2.tscn" id="4_3djxs"]
 [ext_resource type="PackedScene" uid="uid://v4xh8kgqeipn" path="res://Scenes/pig_mob.tscn" id="5_rlddw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1n7cm"]
@@ -258,19 +252,5 @@ position = Vector2(287, 580)
 position = Vector2(637.5, 609)
 shape = SubResource("RectangleShape2D_rlddw")
 
-[node name="PauseMenu" parent="." instance=ExtResource("6_kgqac")]
-visible = false
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="MenuButton" type="Button" parent="CanvasLayer"]
-offset_left = 22.0
-offset_top = 17.0
-offset_right = 51.0
-offset_bottom = 47.0
-scale = Vector2(3, 3)
-icon = ExtResource("7_kgqac")
-
 [connection signal="body_entered" from="checkpoint2" to="checkpoint2" method="_on_body_entered"]
-[connection signal="pressed" from="CanvasLayer/MenuButton" to="." method="_on_menu_button_pressed"]
 [connection signal="body_exited" from="Area2D" to="PigMob" method="_on_area_2d_body_exited"]

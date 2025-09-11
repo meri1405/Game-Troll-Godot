@@ -257,7 +257,7 @@ texture_filter = 1
 position = Vector2(324.563, 191.521)
 scale = Vector2(0.652342, 0.678385)
 sprite_frames = SubResource("SpriteFrames_a02g7")
-animation = &"Hit"
+animation = &"Idle"
 autoplay = "Idle"
 
 [node name="HurtBox" type="Area2D" parent="." groups=["player"]]
@@ -274,10 +274,5 @@ position = Vector2(324.5, 194.333)
 shape = SubResource("RectangleShape2D_gbyq6")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(324.333, 194.333)
-position_smoothing_enabled = true
-position_smoothing_speed = 3.0
 
 [connection signal="area_entered" from="HurtBox" to="." method="_on_hurt_box_area_entered"]
