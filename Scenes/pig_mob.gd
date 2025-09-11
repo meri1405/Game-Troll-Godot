@@ -1,6 +1,13 @@
 extends CharacterBody2D
 
-class_name PigMob 
+const SPEED = 280.0
+@onready var sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
-const speed = 10
-var is_pig_chase: bool
+func _physics_process(delta: float) -> void:
+	if not is_on_floor():
+			velocity += get_gravity() * delta
+	
+	
+			
+	move_and_slide()
+	pass

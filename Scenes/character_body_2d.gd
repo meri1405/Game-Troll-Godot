@@ -1,6 +1,5 @@
 extends CharacterBody2D
 
-
 const startingX = -895.0
 const startingY = -225.0
 const SPEED = 280.0

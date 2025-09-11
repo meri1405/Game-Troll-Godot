@@ -192,11 +192,11 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_w654r"]
-size = Vector2(25, 25)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vlj81"]
 size = Vector2(32, 27.3333)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w654r"]
+size = Vector2(25, 25)
 
 [node name="PigMob" type="CharacterBody2D"]
 texture_filter = 1
@@ -209,16 +209,15 @@ animation = &"idle"
 autoplay = "idle"
 frame_progress = 0.699518
 
+[node name="HurtBox" type="Area2D" parent="." groups=["mob"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+position = Vector2(0.333333, 1.33333)
+shape = SubResource("RectangleShape2D_vlj81")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(0.5, 2.5)
 shape = SubResource("RectangleShape2D_w654r")
 
 [node name="DirectionTimer" type="Timer" parent="."]
 autostart = true
-
-[node name="Area2D" type="Area2D" parent="." groups=["mob"]]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0.333333, 1.33333)
-shape = SubResource("RectangleShape2D_vlj81")
