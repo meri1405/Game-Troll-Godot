@@ -275,4 +275,9 @@ shape = SubResource("RectangleShape2D_gbyq6")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(324.333, 194.333)
+position_smoothing_enabled = true
+position_smoothing_speed = 3.0
+
 [connection signal="area_entered" from="HurtBox" to="." method="_on_hurt_box_area_entered"]
