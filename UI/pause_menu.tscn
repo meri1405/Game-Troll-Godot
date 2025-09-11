@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://m4c8hp47kokd"]
+
+[ext_resource type="Script" uid="uid://cie4765y7nai" path="res://UI/pause_menu.gd" id="1_ltd3m"]
+[ext_resource type="Texture2D" uid="uid://l8gwdmxtel2c" path="res://Pixel Adventure 1/Free/Menu/Buttons/Restart.png" id="2_0b5ob"]
+[ext_resource type="Texture2D" uid="uid://bvmv30isvhk2y" path="res://Pixel Adventure 1/Free/Menu/Buttons/Back.png" id="3_nben2"]
+[ext_resource type="Texture2D" uid="uid://bloq3xuxutf25" path="res://Pixel Adventure 1/Free/Menu/Buttons/Volume.png" id="3_pqlge"]
+[ext_resource type="Texture2D" uid="uid://braaoi1b501hw" path="res://Pixel Adventure 1/Free/Menu/Buttons/Play.png" id="4_nben2"]
+
+[node name="PauseMenu" type="CanvasLayer"]
+script = ExtResource("1_ltd3m")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="ReplayButton" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Chơi lại"
+icon = ExtResource("2_0b5ob")
+
+[node name="HomeButton" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = " Trở lại"
+icon = ExtResource("3_nben2")
+
+[node name="SoundButton" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Tắt âm thanh"
+icon = ExtResource("3_pqlge")
+
+[node name="Continue" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Tiếp Tục"
+icon = ExtResource("4_nben2")
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/ReplayButton" to="." method="_on_replay_button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/HomeButton" to="." method="_on_home_button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/SoundButton" to="." method="_on_sound_button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Continue" to="." method="_on_continue_pressed"]

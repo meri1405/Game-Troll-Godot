@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Project-1"
-run/main_scene="uid://bl5ecus2o2nnf"
+run/main_scene="uid://c3lddyn0fnn1e"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
 
@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[dotnet]
+
+project/assembly_name="Project-1"
 
 [input]
 

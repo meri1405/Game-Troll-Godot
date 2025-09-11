@@ -208,7 +208,8 @@ texture = ExtResource("2_rlddw")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_1bvp3")
 
-[node name="Node" type="Node2D"]
+[node name="Level2" type="Node2D"]
+script = ExtResource("1_kgqac")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
@@ -230,5 +231,20 @@ position = Vector2(-848, -103)
 [node name="PigMob" parent="." instance=ExtResource("4_kgqac")]
 position = Vector2(540, 579)
 
-[node name="checkpoint2" parent="." instance=ExtResource("5_n7ypv")]
-position = Vector2(-69, -79)
+[node name="checkpoint2" parent="." instance=ExtResource("4_3djxs")]
+position = Vector2(0, -1)
+
+[node name="PauseMenu" parent="." instance=ExtResource("6_kgqac")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MenuButton" type="Button" parent="CanvasLayer"]
+offset_left = 36.0
+offset_top = 25.0
+offset_right = 65.0
+offset_bottom = 55.0
+scale = Vector2(3, 3)
+icon = ExtResource("7_kgqac")
+
+[connection signal="body_entered" from="checkpoint2" to="checkpoint2" method="_on_body_entered"]
+[connection signal="pressed" from="CanvasLayer/MenuButton" to="." method="_on_menu_button_pressed"]
