@@ -2,26 +2,10 @@
 
 [ext_resource type="Script" uid="uid://cie4765y7nai" path="res://UI/pause_menu.gd" id="1_ltd3m"]
 
-[node name="PauseMenu" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="PauseMenu" type="CanvasLayer"]
 script = ExtResource("1_ltd3m")
 
-[node name="Background" type="ColorRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.244776, 0.244776, 0.244776, 1)
-
 [node name="CenterContainer" type="CenterContainer" parent="."]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -43,6 +27,11 @@ text = "Về Home"
 layout_mode = 2
 text = "Tắt âm thanh"
 
+[node name="Continue" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Tiếp Tục"
+
 [connection signal="pressed" from="CenterContainer/VBoxContainer/ReplayButton" to="." method="_on_replay_button_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/HomeButton" to="." method="_on_home_button_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/SoundButton" to="." method="_on_sound_button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Continue" to="." method="_on_continue_pressed"]

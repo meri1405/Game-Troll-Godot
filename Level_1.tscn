@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://bm5l0hvg6erwk"]
+[gd_scene load_steps=9 format=3 uid="uid://c3lddyn0fnn1e"]
 
-[ext_resource type="Texture2D" uid="uid://c2urtr66gce31" path="res://Pixel Adventure 1/Free/Background/Green.png" id="1_kidjj"]
+[ext_resource type="Script" uid="uid://c85pk27sc71ds" path="res://level_1.gd" id="1_kidjj"]
 [ext_resource type="Texture2D" uid="uid://cmx6ev0y0fkb7" path="res://Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="2_65pcf"]
+[ext_resource type="Texture2D" uid="uid://c2urtr66gce31" path="res://Pixel Adventure 1/Free/Background/Green.png" id="2_u16a4"]
 [ext_resource type="PackedScene" uid="uid://dt1tth682nenl" path="res://Scenes/character_body_2d.tscn" id="3_65pcf"]
 [ext_resource type="PackedScene" uid="uid://btdfqc4qp1j67" path="res://Checkpoint/Level_1/checkpoint.tscn" id="4_a0j4s"]
+[ext_resource type="PackedScene" uid="uid://m4c8hp47kokd" path="res://UI/pause_menu.tscn" id="5_jikk4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jikk4"]
 texture = ExtResource("2_65pcf")
@@ -177,9 +179,11 @@ script = ExtResource("1_kidjj")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
-offset_right = 1152.0
-offset_bottom = 648.0
-texture = ExtResource("1_kidjj")
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 1153.0
+offset_bottom = 649.0
+texture = ExtResource("2_u16a4")
 stretch_mode = 1
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -199,3 +203,17 @@ rotation_smoothing_enabled = true
 rotation_smoothing_speed = 3.0
 
 [node name="Checkpoint" parent="." instance=ExtResource("4_a0j4s")]
+
+[node name="PauseMenu" parent="." instance=ExtResource("5_jikk4")]
+visible = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MenuButton" type="Button" parent="CanvasLayer"]
+offset_left = 22.0
+offset_top = 17.0
+offset_right = 75.0
+offset_bottom = 48.0
+text = "Menu"
+
+[connection signal="pressed" from="CanvasLayer/MenuButton" to="." method="_on_menu_button_pressed"]
