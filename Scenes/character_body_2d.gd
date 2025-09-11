@@ -34,3 +34,21 @@ func _physics_process(delta: float) -> void:
 
 	var isLeft = velocity.x < 0
 	sprite_2d.flip_h = isLeft
+
+func _do_reset():
+	position = Vector2(0,0)
+
+func _on_hurt_box_area_entered(area: Area2D) -> void:
+	if area.is_in_group("mob"):
+		_do_reset()
+		print(position)
+		print("hit enemy")
+		
+func _on_saw_area_entered(area: Area2D) -> void:
+		if area.is_in_group("saw"):
+			_do_reset()
+			print(position)
+			print("hit enemy")
+			
+		
+		
