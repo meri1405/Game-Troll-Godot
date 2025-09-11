@@ -1,12 +1,19 @@
 extends CharacterBody2D
 
-const startingX = -895.0
-const startingY = -225.0
 const SPEED = 280.0
 const JUMP_VELOCITY = -430.0
 @onready var sprite_2d: AnimatedSprite2D = $Sprite2D
-
 var is_alive = true
+
+var spawn_point_x=0
+var spawn_point_y=0
+
+func _ready() -> void:
+	spawn_point_x=global_position.x
+	spawn_point_y=global_position.y
+	print(spawn_point_x)
+	print(spawn_point_y)
+	
 
 func _physics_process(delta: float) -> void:
 	if is_alive:
@@ -40,7 +47,7 @@ func _physics_process(delta: float) -> void:
 
 
 func _do_reset():
-	position = Vector2(startingX, startingY)
+	position = Vector2(spawn_point_x,spawn_point_y)
 
 func die():
 	is_alive = false
@@ -56,6 +63,7 @@ func _on_hurt_box_area_entered(area: Area2D) -> void:
 		die()
 		print(position)
 		print("hit enemy")
-		
+
+
 		
 		

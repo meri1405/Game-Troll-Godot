@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://5r1u824o4ne"]
+[gd_scene load_steps=8 format=3 uid="uid://5r1u824o4ne"]
 
 [ext_resource type="Texture2D" uid="uid://c2q1auamo4dbd" path="res://Pixel Adventure 1/Free/Background/Brown.png" id="1_jyudl"]
 [ext_resource type="Texture2D" uid="uid://cmx6ev0y0fkb7" path="res://Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="2_3djxs"]
 [ext_resource type="PackedScene" uid="uid://dt1tth682nenl" path="res://Scenes/character_body_2d.tscn" id="3_rlddw"]
 [ext_resource type="PackedScene" uid="uid://cn3fdwy7umk4h" path="res://Checkpoint/Level_2/checkpoint_2.tscn" id="4_3djxs"]
+[ext_resource type="PackedScene" uid="uid://v4xh8kgqeipn" path="res://Scenes/pig_mob.tscn" id="5_rlddw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1n7cm"]
 texture = ExtResource("2_3djxs")
@@ -238,5 +239,8 @@ rotation_smoothing_speed = 3.0
 
 [node name="checkpoint2" parent="." instance=ExtResource("4_3djxs")]
 position = Vector2(0, -1)
+
+[node name="PigMob" parent="." instance=ExtResource("5_rlddw")]
+position = Vector2(344, 578)
 
 [connection signal="body_entered" from="checkpoint2" to="checkpoint2" method="_on_body_entered"]
