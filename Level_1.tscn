@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cmx6ev0y0fkb7" path="res://Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="2_65pcf"]
 [ext_resource type="PackedScene" uid="uid://dt1tth682nenl" path="res://Scenes/character_body_2d.tscn" id="3_65pcf"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a0j4s"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_65pcf"]
 texture = ExtResource("2_65pcf")
 0:0/0 = 0
 1:0/0 = 0
@@ -169,7 +169,7 @@ texture = ExtResource("2_65pcf")
 
 [sub_resource type="TileSet" id="TileSet_jikk4"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_a0j4s")
+sources/0 = SubResource("TileSetAtlasSource_65pcf")
 
 [node name="Level1" type="Node2D"]
 
