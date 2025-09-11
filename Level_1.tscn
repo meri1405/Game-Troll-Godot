@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c3lddyn0fnn1e"]
+[gd_scene load_steps=10 format=3 uid="uid://c3lddyn0fnn1e"]
 
 [ext_resource type="Script" uid="uid://c85pk27sc71ds" path="res://level_1.gd" id="1_kidjj"]
 [ext_resource type="Texture2D" uid="uid://cmx6ev0y0fkb7" path="res://Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="2_65pcf"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dt1tth682nenl" path="res://Scenes/character_body_2d.tscn" id="3_65pcf"]
 [ext_resource type="PackedScene" uid="uid://btdfqc4qp1j67" path="res://Checkpoint/Level_1/checkpoint.tscn" id="4_a0j4s"]
 [ext_resource type="PackedScene" uid="uid://m4c8hp47kokd" path="res://UI/pause_menu.tscn" id="5_jikk4"]
+[ext_resource type="Texture2D" uid="uid://cbhtkwag7pn5d" path="res://Pixel Adventure 1/Free/Menu/Buttons/Settings.png" id="7_smwyr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jikk4"]
 texture = ExtResource("2_65pcf")
@@ -212,8 +213,9 @@ visible = false
 [node name="MenuButton" type="Button" parent="CanvasLayer"]
 offset_left = 22.0
 offset_top = 17.0
-offset_right = 75.0
-offset_bottom = 48.0
-text = "Menu"
+offset_right = 51.0
+offset_bottom = 47.0
+scale = Vector2(3, 3)
+icon = ExtResource("7_smwyr")
 
 [connection signal="pressed" from="CanvasLayer/MenuButton" to="." method="_on_menu_button_pressed"]
