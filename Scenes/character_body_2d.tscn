@@ -257,7 +257,7 @@ texture_filter = 1
 position = Vector2(324.563, 191.521)
 scale = Vector2(0.652342, 0.678385)
 sprite_frames = SubResource("SpriteFrames_a02g7")
-animation = &"Hit"
+animation = &"Idle"
 autoplay = "Idle"
 
 [node name="HurtBox" type="Area2D" parent="." groups=["player"]]

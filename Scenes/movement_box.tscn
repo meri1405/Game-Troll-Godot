@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://kewevn25uoa6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jikk4"]
+size = Vector2(207.5, 52)
+
+[node name="MovementBox" type="Area2D" groups=["movementBox"]]
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(64.25, 0)
+shape = SubResource("RectangleShape2D_jikk4")

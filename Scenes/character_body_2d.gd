@@ -59,7 +59,7 @@ func die():
 	is_alive = true
 
 func _on_hurt_box_area_entered(area: Area2D) -> void:
-	if area.is_in_group("mob"):
+	if area.is_in_group("hurt"):
 		die()
 		print(position)
 		print("hit enemy")

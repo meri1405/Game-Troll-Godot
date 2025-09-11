@@ -138,6 +138,11 @@ animations = [{
 "name": &"idle",
 "speed": 8.0
 }, {
+"frames": [],
+"loop": true,
+"name": &"running",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_t3ur1")
@@ -207,9 +212,8 @@ script = ExtResource("1_vlj81")
 sprite_frames = SubResource("SpriteFrames_d3d08")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.699518
 
-[node name="HurtBox" type="Area2D" parent="." groups=["mob"]]
+[node name="HurtBox" type="Area2D" parent="." groups=["hurt"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
 position = Vector2(0.333333, 1.33333)
@@ -221,3 +225,5 @@ shape = SubResource("RectangleShape2D_w654r")
 
 [node name="DirectionTimer" type="Timer" parent="."]
 autostart = true
+
+[connection signal="area_entered" from="HurtBox" to="." method="_on_hurt_box_area_entered"]
