@@ -68,7 +68,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ie7uf"]
-size = Vector2(45, 44)
+size = Vector2(44, 40)
 
 [node name="Win" type="Area2D"]
 script = ExtResource("1_3mm25")
@@ -79,8 +79,7 @@ sprite_frames = SubResource("SpriteFrames_d1osm")
 frame_progress = 0.334396
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(53.5, 138)
+position = Vector2(24, 182)
 shape = SubResource("RectangleShape2D_ie7uf")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
