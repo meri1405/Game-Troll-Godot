@@ -170,6 +170,7 @@ texture = ExtResource("2_65pcf")
 18:10/0 = 0
 19:10/0 = 0
 20:10/0 = 0
+13:3/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_jikk4"]
 physics_layer_0/collision_layer = 1
@@ -196,7 +197,7 @@ layer_0/tile_data = PackedInt32Array(917503, 393216, 0, 851968, 458752, 0, 85196
 
 [node name="CharacterBody2D" parent="." groups=["Player"] instance=ExtResource("3_65pcf")]
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+[node name="Camera2D2" type="Camera2D" parent="CharacterBody2D"]
 position = Vector2(325.333, 194.667)
 position_smoothing_enabled = true
 position_smoothing_speed = 3.0
