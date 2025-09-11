@@ -1,7 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dn0x62dystbdd"]
+[gd_scene load_steps=10 format=3 uid="uid://c2jasx7qwyf71"]
 
+[ext_resource type="PackedScene" uid="uid://m4c8hp47kokd" path="res://UI/pause_menu.tscn" id="1_bxfwq"]
+[ext_resource type="Script" uid="uid://c1wx3b6ckmkdy" path="res://level_3.gd" id="1_qulvd"]
 [ext_resource type="Texture2D" uid="uid://b2cvefql3txu0" path="res://Pixel Adventure 1/Free/Background/Gray.png" id="1_waryd"]
 [ext_resource type="Texture2D" uid="uid://cmx6ev0y0fkb7" path="res://Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="2_qulvd"]
+[ext_resource type="Texture2D" uid="uid://cbhtkwag7pn5d" path="res://Pixel Adventure 1/Free/Menu/Buttons/Settings.png" id="2_waryd"]
 [ext_resource type="PackedScene" uid="uid://dt1tth682nenl" path="res://Scenes/character_body_2d.tscn" id="3_qulvd"]
 [ext_resource type="PackedScene" uid="uid://wwquua73d4tb" path="res://Scenes/win.tscn" id="4_4qbfe"]
 
@@ -296,6 +299,7 @@ sources/0 = SubResource("TileSetAtlasSource_4qbfe")
 
 [node name="Level3" type="Node2D"]
 position = Vector2(1, 0)
+script = ExtResource("1_qulvd")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
@@ -319,3 +323,18 @@ position = Vector2(-922, -135)
 
 [node name="Win" parent="." instance=ExtResource("4_4qbfe")]
 position = Vector2(1105, -57)
+
+[node name="PauseMenu" parent="." instance=ExtResource("1_bxfwq")]
+visible = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MenuButton" type="Button" parent="CanvasLayer"]
+offset_left = 22.0
+offset_top = 17.0
+offset_right = 51.0
+offset_bottom = 47.0
+scale = Vector2(3, 3)
+icon = ExtResource("2_waryd")
+
+[connection signal="pressed" from="CanvasLayer/MenuButton" to="." method="_on_menu_button_pressed"]
