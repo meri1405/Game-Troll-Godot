@@ -34,3 +34,7 @@ func _physics_process(delta: float) -> void:
 
 	var isLeft = velocity.x < 0
 	sprite_2d.flip_h = isLeft
+
+
+func _on_button_pressed() -> void:
+	pass # Replace with function body.
