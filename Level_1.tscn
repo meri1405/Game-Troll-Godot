@@ -212,11 +212,13 @@ visible = false
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="MenuButton" type="Button" parent="CanvasLayer"]
+texture_filter = 1
 offset_left = 22.0
 offset_top = 17.0
 offset_right = 51.0
 offset_bottom = 47.0
 scale = Vector2(3, 3)
 icon = ExtResource("7_smwyr")
+flat = true
 
 [connection signal="pressed" from="CanvasLayer/MenuButton" to="." method="_on_menu_button_pressed"]
