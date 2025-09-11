@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://cnto0xkwtwguy"]
+
+[ext_resource type="Script" path="res://moving_platform.gd" id="1_fkhx8"]
+[ext_resource type="Texture2D" path="res://UI/new_atlas_texture.tres" id="2_lcuul"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7w0et"]
+size = Vector2(94.3021, 92.8403)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a3dyd"]
+size = Vector2(91.0004, 233)
+
+[node name="Move" type="AnimatableBody2D"]
+position = Vector2(283, 136)
+script = ExtResource("1_fkhx8")
+
+[node name="NewAtlasTexture" type="Sprite2D" parent="."]
+position = Vector2(114.4, 88.4005)
+rotation = -6.28963
+scale = Vector2(3, 3)
+texture = ExtResource("2_lcuul")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(114, 88)
+rotation = -1.58352
+shape = SubResource("RectangleShape2D_7w0et")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(8, 22)
+rotation = -0.34932
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(145.6, 123.278)
+rotation = 1.9197
+shape = SubResource("RectangleShape2D_a3dyd")
