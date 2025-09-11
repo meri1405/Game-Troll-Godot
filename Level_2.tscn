@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bl5ecus2o2nnf"]
+[gd_scene load_steps=9 format=3 uid="uid://bl5ecus2o2nnf"]
 
 [ext_resource type="Texture2D" uid="uid://c2q1auamo4dbd" path="res://Pixel Adventure 1/Free/Background/Brown.png" id="1_1y8me"]
 [ext_resource type="Texture2D" uid="uid://cmx6ev0y0fkb7" path="res://Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="2_rlddw"]
@@ -208,7 +208,6 @@ texture = ExtResource("2_rlddw")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_1bvp3")
 
-[node name="Level2" type="Node2D"]
 script = ExtResource("1_kgqac")
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -240,11 +239,5 @@ position = Vector2(0, -1)
 
 [node name="MenuButton" type="Button" parent="CanvasLayer"]
 offset_left = 36.0
-offset_top = 25.0
-offset_right = 65.0
-offset_bottom = 55.0
-scale = Vector2(3, 3)
-icon = ExtResource("7_kgqac")
-
-[connection signal="body_entered" from="checkpoint2" to="checkpoint2" method="_on_body_entered"]
-[connection signal="pressed" from="CanvasLayer/MenuButton" to="." method="_on_menu_button_pressed"]
+[node name="checkpoint2" parent="." instance=ExtResource("5_n7ypv")]
+position = Vector2(-69, -79)
