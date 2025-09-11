@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://bfm0i344y5nsl"]
+
+[ext_resource type="Script" uid="uid://dt8svpna7kg8m" path="res://UI/game_over.gd" id="1_yxx3c"]
+[ext_resource type="Texture2D" uid="uid://l8gwdmxtel2c" path="res://Pixel Adventure 1/Free/Menu/Buttons/Restart.png" id="2_wruqd"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3y5qq"]
+load_path = "res://.godot/imported/home_icon_21x22.png-917a8eed2f4973aa2d28d10367b181e5.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wruqd"]
+load_path = "res://.godot/imported/GameOver.png-af4108a7a55d071e943b7682d9bbd5bf.ctex"
+
+[node name="Node" type="CanvasLayer"]
+script = ExtResource("1_yxx3c")
+
+[node name="Again" type="Button" parent="."]
+z_index = 1
+offset_left = 638.0
+offset_top = 365.0
+offset_right = 667.0
+offset_bottom = 395.0
+scale = Vector2(2.5, 2.5)
+icon = ExtResource("2_wruqd")
+
+[node name="Home" type="Button" parent="."]
+z_index = 1
+offset_left = 434.0
+offset_top = 362.0
+offset_right = 463.0
+offset_bottom = 392.0
+scale = Vector2(3, 3)
+icon = SubResource("CompressedTexture2D_3y5qq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(0.75, 0.632813)
+texture = SubResource("CompressedTexture2D_wruqd")
+
+[connection signal="pressed" from="Again" to="." method="_on_again_pressed"]
+[connection signal="pressed" from="Home" to="." method="_on_home_pressed"]
