@@ -1,3 +1,22 @@
-[gd_scene format=3 uid="uid://c2jasx7qwyf71"]
+[gd_scene load_steps=4 format=3 uid="uid://c2jasx7qwyf71"]
+
+[ext_resource type="PackedScene" uid="uid://m4c8hp47kokd" path="res://UI/pause_menu.tscn" id="1_bxfwq"]
+[ext_resource type="Script" uid="uid://c1wx3b6ckmkdy" path="res://level_3.gd" id="1_qulvd"]
+[ext_resource type="Texture2D" uid="uid://cbhtkwag7pn5d" path="res://Pixel Adventure 1/Free/Menu/Buttons/Settings.png" id="2_waryd"]
 
 [node name="Level3" type="Node2D"]
+script = ExtResource("1_qulvd")
+
+[node name="PauseMenu" parent="." instance=ExtResource("1_bxfwq")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MenuButton" type="Button" parent="CanvasLayer"]
+offset_left = 24.0
+offset_top = 23.0
+offset_right = 53.0
+offset_bottom = 53.0
+scale = Vector2(3, 3)
+icon = ExtResource("2_waryd")
+
+[connection signal="pressed" from="CanvasLayer/MenuButton" to="." method="_on_menu_button_pressed"]
