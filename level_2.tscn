@@ -189,3 +189,5 @@ position = Vector2(-895, -225)
 [node name="PigMob" parent="." instance=ExtResource("4_kgqac")]
 position = Vector2(556, 582)
 scale = Vector2(1.5, 1.5)
+
+[node name="CharacterBody2D2" type="CharacterBody2D" parent="."]

@@ -150,7 +150,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_jvhjq")
 }],
-"loop": true,
+"loop": false,
 "name": &"Hit",
 "speed": 6.0
 }, {
@@ -259,14 +259,12 @@ scale = Vector2(0.652342, 0.678385)
 sprite_frames = SubResource("SpriteFrames_a02g7")
 animation = &"Hit"
 autoplay = "Idle"
-frame_progress = 0.605816
 
 [node name="HurtBox" type="Area2D" parent="." groups=["player"]]
 position = Vector2(324.667, 194.333)
 disable_mode = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
-visible = false
 position = Vector2(-0.166931, 0.000350952)
 shape = SubResource("RectangleShape2D_pbq55")
 
@@ -274,5 +272,7 @@ shape = SubResource("RectangleShape2D_pbq55")
 visible = false
 position = Vector2(324.5, 194.333)
 shape = SubResource("RectangleShape2D_gbyq6")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
 [connection signal="area_entered" from="HurtBox" to="." method="_on_hurt_box_area_entered"]
