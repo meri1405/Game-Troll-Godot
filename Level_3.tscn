@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [gd_scene load_steps=24 format=3 uid="uid://c2jasx7qwyf71"]
+=======
+[gd_scene load_steps=11 format=3 uid="uid://c2jasx7qwyf71"]
+>>>>>>> 4eb1f36f650971da5c854f8e1be7f07a6c3aaf92
 
 [ext_resource type="PackedScene" uid="uid://m4c8hp47kokd" path="res://UI/pause_menu.tscn" id="1_bxfwq"]
 [ext_resource type="Script" uid="uid://c1wx3b6ckmkdy" path="res://level_3.gd" id="1_qulvd"]
@@ -7,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://cbhtkwag7pn5d" path="res://Pixel Adventure 1/Free/Menu/Buttons/Settings.png" id="2_waryd"]
 [ext_resource type="PackedScene" uid="uid://dt1tth682nenl" path="res://Scenes/character_body_2d.tscn" id="3_qulvd"]
 [ext_resource type="PackedScene" uid="uid://wwquua73d4tb" path="res://Scenes/win.tscn" id="4_4qbfe"]
+<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://dflyeou82jyro" path="res://Scenes/saw.tscn" id="8_v4u5w"]
 [ext_resource type="Script" uid="uid://ce6x1o0f7k2f6" path="res://Scenes/sawMoving.gd" id="9_ymluh"]
 [ext_resource type="PackedScene" uid="uid://dm5b22pnb78kc" path="res://Scenes/sawRotate.tscn" id="10_3bt5s"]
@@ -14,6 +19,9 @@
 [ext_resource type="PackedScene" uid="uid://dcw1f5su5l2w5" path="res://Scenes/Spike4set.tscn" id="12_sguqi"]
 [ext_resource type="PackedScene" uid="uid://v4xh8kgqeipn" path="res://Scenes/pig_mob.tscn" id="13_ti2hy"]
 [ext_resource type="Script" uid="uid://de05mel54uj2a" path="res://Scenes/pig_mob_trigger.gd" id="14_r4fpt"]
+=======
+[ext_resource type="PackedScene" uid="uid://b0b8d8fe0ga2a" path="res://Touch_Controls/scene/touch_controls.tscn" id="8_v4u5w"]
+>>>>>>> 4eb1f36f650971da5c854f8e1be7f07a6c3aaf92
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4qbfe"]
 texture = ExtResource("2_qulvd")
@@ -366,6 +374,7 @@ offset_bottom = 47.0
 scale = Vector2(3, 3)
 icon = ExtResource("2_waryd")
 
+<<<<<<< HEAD
 [node name="RotateController" parent="." instance=ExtResource("10_3bt5s")]
 position = Vector2(216, 168)
 rotation = 4.71239
@@ -652,6 +661,15 @@ metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Saw3/Saw3"]
 shape = SubResource("CircleShape2D_jc4en")
+=======
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TouchControls" parent="Control" instance=ExtResource("8_v4u5w")]
+>>>>>>> 4eb1f36f650971da5c854f8e1be7f07a6c3aaf92
 
 [connection signal="pressed" from="CanvasLayer/MenuButton" to="." method="_on_menu_button_pressed"]
 [connection signal="body_exited" from="Saw" to="Saw/Saw" method="_on_saw_movebox_body_exited"]

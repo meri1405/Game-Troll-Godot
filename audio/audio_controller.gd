@@ -16,6 +16,26 @@ func play_jump() -> void:
 	if not mute:	
 		$Jump.play()
 
+# Phát âm thanh bước chân (loop khi chạy)
+func play_walk() -> void:
+	if not mute and not $Walk.playing:
+		$Walk.play()
+
+# Dừng âm thanh bước chân
+func stop_walk() -> void:
+	if $Walk.playing:
+		$Walk.stop()
+
+# Phát âm thanh khi lên level
+func play_level_up() -> void:
+	if not mute:
+		$LevelUp.play()
+
+
+func play_respawn() -> void:
+	if not mute:	
+		$Respawn.play()
+
 # Phát âm thanh click
 func play_click() -> void:
 	if not mute:

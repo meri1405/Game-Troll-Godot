@@ -8,12 +8,22 @@
 [ext_resource type="PackedScene" uid="uid://cn3fdwy7umk4h" path="res://Checkpoint/Level_2/checkpoint_2.tscn" id="5_n7ypv"]
 [ext_resource type="PackedScene" uid="uid://m4c8hp47kokd" path="res://UI/pause_menu.tscn" id="6_kgqac"]
 [ext_resource type="Texture2D" uid="uid://cbhtkwag7pn5d" path="res://Pixel Adventure 1/Free/Menu/Buttons/Settings.png" id="7_kgqac"]
+<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://dflyeou82jyro" path="res://Scenes/saw.tscn" id="9_ehv2h"]
 [ext_resource type="Script" uid="uid://ce6x1o0f7k2f6" path="res://Scenes/sawMoving.gd" id="10_15wb7"]
 [ext_resource type="Script" uid="uid://0oxbiqe02uyg" path="res://Scenes/spikeTrapTop.gd" id="12_xbcdb"]
 [ext_resource type="PackedScene" uid="uid://dcw1f5su5l2w5" path="res://Scenes/Spike4set.tscn" id="13_s77qv"]
 [ext_resource type="PackedScene" uid="uid://ck1mdn7rmkyp7" path="res://Scenes/Fan.tscn" id="13_xbcdb"]
 [ext_resource type="Script" uid="uid://db128ecs6dg70" path="res://Scenes/fanDown.gd" id="14_s77qv"]
+=======
+[ext_resource type="PackedScene" path="res://Scenes/saw.tscn" id="9_ehv2h"]
+[ext_resource type="Script" path="res://Scenes/sawMoving.gd" id="10_15wb7"]
+[ext_resource type="PackedScene" path="res://Scenes/Spike.tscn" id="11_yl73a"]
+[ext_resource type="Script" path="res://Scenes/spikeTrapTop.gd" id="12_xbcdb"]
+[ext_resource type="PackedScene" path="res://Scenes/Fan.tscn" id="13_xbcdb"]
+[ext_resource type="Script" path="res://Scenes/fanDown.gd" id="14_s77qv"]
+[ext_resource type="PackedScene" uid="uid://b0b8d8fe0ga2a" path="res://Touch_Controls/scene/touch_controls.tscn" id="15_5hnhx"]
+>>>>>>> 4eb1f36f650971da5c854f8e1be7f07a6c3aaf92
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1bvp3"]
 texture = ExtResource("2_rlddw")
@@ -313,6 +323,7 @@ position = Vector2(42, 184)
 position = Vector2(7, -8)
 shape = SubResource("RectangleShape2D_5hnhx")
 
+<<<<<<< HEAD
 [node name="Spike4setFake" parent="." instance=ExtResource("13_s77qv")]
 position = Vector2(550, 24)
 rotation = 3.14159
@@ -323,6 +334,15 @@ position = Vector2(407, 23)
 rotation = 3.14159
 scale = Vector2(3, 3)
 script = ExtResource("12_xbcdb")
+=======
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TouchControls" parent="Control" instance=ExtResource("15_5hnhx")]
+>>>>>>> 4eb1f36f650971da5c854f8e1be7f07a6c3aaf92
 
 [connection signal="body_entered" from="checkpoint2" to="checkpoint2" method="_on_body_entered"]
 [connection signal="pressed" from="CanvasLayer/MenuButton" to="." method="_on_menu_button_pressed"]
