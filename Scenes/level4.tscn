@@ -1,12 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://b4yiv85ljk2lk"]
+[gd_scene load_steps=11 format=3 uid="uid://b4yiv85ljk2lk"]
 
-[ext_resource type="Texture2D" uid="uid://dps2vak3wrpfb" path="res://Pixel Adventure 1/Free/Background/Purple.png" id="1_g1tnb"]
-[ext_resource type="Texture2D" uid="uid://c2q1auamo4dbd" path="res://Pixel Adventure 1/Free/Background/Brown.png" id="2_pklw6"]
-[ext_resource type="Texture2D" uid="uid://cmx6ev0y0fkb7" path="res://Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="3_bp1i4"]
-[ext_resource type="PackedScene" uid="uid://dt1tth682nenl" path="res://Scenes/character_body_2d.tscn" id="4_bvvno"]
+[ext_resource type="Texture2D" uid="uid://dps2vak3wrpfb" path="res://Pixel Adventure 1/Free/Background/Purple.png" id="1_x5oe7"]
+[ext_resource type="Texture2D" uid="uid://c2q1auamo4dbd" path="res://Pixel Adventure 1/Free/Background/Brown.png" id="2_46vi4"]
+[ext_resource type="PackedScene" uid="uid://clkg8l6v7wwo0" path="res://Scenes/sawMoving.tscn" id="3_ohik4"]
+[ext_resource type="Texture2D" uid="uid://cmx6ev0y0fkb7" path="res://Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="4_adi6q"]
+[ext_resource type="PackedScene" uid="uid://dt1tth682nenl" path="res://Scenes/character_body_2d.tscn" id="5_7u67b"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b4lsh"]
-texture = ExtResource("3_bp1i4")
+texture = ExtResource("4_adi6q")
 1:0/0 = 0
 1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:0/0 = 0
@@ -298,7 +299,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_b4lsh")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g1tnb"]
-texture = ExtResource("3_bp1i4")
+texture = ExtResource("4_adi6q")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -447,6 +448,10 @@ texture = ExtResource("3_bp1i4")
 [sub_resource type="TileSet" id="TileSet_pklw6"]
 sources/0 = SubResource("TileSetAtlasSource_g1tnb")
 
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_bp1i4"]
+a = Vector2(0, 63)
+b = Vector2(0, -36)
+
 [node name="Level4" type="Node"]
 
 [node name="PinkGround" type="TextureRect" parent="."]
@@ -456,7 +461,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_g1tnb")
+texture = ExtResource("1_x5oe7")
 stretch_mode = 1
 
 [node name="SandGround" type="TextureRect" parent="."]
@@ -465,8 +470,11 @@ offset_left = 1153.0
 offset_top = -1.0
 offset_right = 2360.0
 offset_bottom = 667.0
-texture = ExtResource("2_pklw6")
+texture = ExtResource("2_46vi4")
 stretch_mode = 1
+
+[node name="Saw" parent="." instance=ExtResource("3_ohik4")]
+position = Vector2(1029, 100)
 
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2(3, 3)
@@ -480,5 +488,13 @@ tile_set = SubResource("TileSet_pklw6")
 format = 2
 layer_0/tile_data = PackedInt32Array(786435, 786432, 4, 786436, 851968, 4, 786437, 917504, 4, 393216, 1179648, 2, 393217, 1245184, 2, 458752, 1245184, 2, 0, 851968, 9, 65536, 851968, 10, 1, 917504, 9, 65537, 917504, 10, 2, 786432, 9, 131072, 786432, 9, 786438, 786432, 5, 720902, 786432, 5, 262166, 1114112, 2, 262167, 1179648, 2, 327703, 1114112, 2)
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("4_bvvno")]
-position = Vector2(-927, -40)
+[node name="CharacterBody2D" parent="." instance=ExtResource("5_7u67b")]
+position = Vector2(-854, -463)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(352, 34)
+shape = SubResource("SegmentShape2D_bp1i4")
+
+[connection signal="body_entered" from="Area2D" to="Saw" method="_on_movement_box_saw_body_entered"]

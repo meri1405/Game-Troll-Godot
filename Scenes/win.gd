@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var next_level: String = "res://WinScene.tscn"
+@export var next_level: String = "res://Scenes/WinScene.tscn"
 @onready var sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 func _on_body_entered(body):

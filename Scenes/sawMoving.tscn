@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://clkg8l6v7wwo0"]
+[gd_scene load_steps=13 format=3 uid="uid://clkg8l6v7wwo0"]
 
 [ext_resource type="Script" uid="uid://clc1c3sspa4nv" path="res://Scenes/saw.gd" id="1_pr1g0"]
 [ext_resource type="Texture2D" uid="uid://26g1nyycfuji" path="res://Pixel Adventure 1/Free/Traps/Saw/On (38x38).png" id="2_lc88m"]
@@ -67,9 +67,6 @@ animations = [{
 "speed": 7.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_jp1mk"]
-radius = 20.6155
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_4qbox"]
 radius = 22.0
 
@@ -80,9 +77,6 @@ script = ExtResource("1_pr1g0")
 sprite_frames = SubResource("SpriteFrames_wqgoi")
 animation = &"Running"
 autoplay = "Running"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["mob"]]
-shape = SubResource("CircleShape2D_jp1mk")
 
 [node name="HurtBox" type="Area2D" parent="." groups=["hurt"]]
 

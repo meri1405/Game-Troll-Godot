@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://c2jasx7qwyf71"]
 
 [ext_resource type="PackedScene" uid="uid://m4c8hp47kokd" path="res://UI/pause_menu.tscn" id="1_bxfwq"]
-[ext_resource type="Script" uid="uid://c1wx3b6ckmkdy" path="res://level_3.gd" id="1_qulvd"]
+[ext_resource type="Script" uid="uid://c1wx3b6ckmkdy" path="res://Scenes/level_3.gd" id="1_qulvd"]
 [ext_resource type="Texture2D" uid="uid://b2cvefql3txu0" path="res://Pixel Adventure 1/Free/Background/Gray.png" id="1_waryd"]
 [ext_resource type="Texture2D" uid="uid://cmx6ev0y0fkb7" path="res://Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="2_qulvd"]
 [ext_resource type="Texture2D" uid="uid://cbhtkwag7pn5d" path="res://Pixel Adventure 1/Free/Menu/Buttons/Settings.png" id="2_waryd"]

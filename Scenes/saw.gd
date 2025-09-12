@@ -3,7 +3,7 @@ extends CharacterBody2D
 
 const speed = 300
 @onready var sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
-var direction = 1
+var direction = -1
 var triggered = false 
 
 func _physics_process(delta: float) -> void:

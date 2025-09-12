@@ -24,7 +24,7 @@ func _on_replay_button_pressed():
 
 func _on_home_button_pressed():
 	get_tree().paused = false
-	get_tree().change_scene_to_file("res://main.tscn")
+	get_tree().change_scene_to_file("res://Scenes/main.tscn")
 
 func _on_sound_button_pressed():
 	is_sound_on = !is_sound_on
