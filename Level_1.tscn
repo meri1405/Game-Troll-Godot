@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://c3lddyn0fnn1e"]
+[gd_scene load_steps=16 format=3 uid="uid://c3lddyn0fnn1e"]
 
 [ext_resource type="Script" uid="uid://c85pk27sc71ds" path="res://level_1.gd" id="1_kidjj"]
 [ext_resource type="Texture2D" uid="uid://cmx6ev0y0fkb7" path="res://Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="2_65pcf"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dflyeou82jyro" path="res://Scenes/saw.tscn" id="8_tedvs"]
 [ext_resource type="PackedScene" uid="uid://cibklyepbriw8" path="res://Scenes/Spike.tscn" id="9_gyeet"]
 [ext_resource type="PackedScene" uid="uid://ck1mdn7rmkyp7" path="res://Scenes/Fan.tscn" id="10_2wi7h"]
+[ext_resource type="PackedScene" uid="uid://b0b8d8fe0ga2a" path="res://Touch_Controls/scene/touch_controls.tscn" id="11_4s4xf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jikk4"]
 texture = ExtResource("2_65pcf")
@@ -282,6 +283,14 @@ position = Vector2(1, 1)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FanTrigger"]
 position = Vector2(669, 164)
 shape = SubResource("RectangleShape2D_2wi7h")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TouchControls" parent="Control" instance=ExtResource("11_4s4xf")]
 
 [connection signal="pressed" from="CanvasLayer/MenuButton" to="." method="_on_menu_button_pressed"]
 [connection signal="body_entered" from="SawTrigger" to="Saw" method="_on_movement_box_saw_body_entered"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c2jasx7qwyf71"]
+[gd_scene load_steps=11 format=3 uid="uid://c2jasx7qwyf71"]
 
 [ext_resource type="PackedScene" uid="uid://m4c8hp47kokd" path="res://UI/pause_menu.tscn" id="1_bxfwq"]
 [ext_resource type="Script" uid="uid://c1wx3b6ckmkdy" path="res://level_3.gd" id="1_qulvd"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cbhtkwag7pn5d" path="res://Pixel Adventure 1/Free/Menu/Buttons/Settings.png" id="2_waryd"]
 [ext_resource type="PackedScene" uid="uid://dt1tth682nenl" path="res://Scenes/character_body_2d.tscn" id="3_qulvd"]
 [ext_resource type="PackedScene" uid="uid://wwquua73d4tb" path="res://Scenes/win.tscn" id="4_4qbfe"]
+[ext_resource type="PackedScene" uid="uid://b0b8d8fe0ga2a" path="res://Touch_Controls/scene/touch_controls.tscn" id="8_v4u5w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4qbfe"]
 texture = ExtResource("2_qulvd")
@@ -336,5 +337,13 @@ offset_right = 51.0
 offset_bottom = 47.0
 scale = Vector2(3, 3)
 icon = ExtResource("2_waryd")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TouchControls" parent="Control" instance=ExtResource("8_v4u5w")]
 
 [connection signal="pressed" from="CanvasLayer/MenuButton" to="." method="_on_menu_button_pressed"]
