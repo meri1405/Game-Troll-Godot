@@ -7,6 +7,7 @@
 [node name="WinScene" type="Node2D"]
 
 [node name="ChatGptImage12140211Thg9,2025" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(576, 324)
 scale = Vector2(0.751302, 0.632813)
 texture = ExtResource("1_t3pix")
