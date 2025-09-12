@@ -21,6 +21,12 @@ func _physics_process(delta: float) -> void:
 			sprite_2d.animation = "Running"
 		else :
 			sprite_2d.animation = "Idle"
+			
+		# Thêm kiểm tra bước chân
+		if sprite_2d.animation == "Running" and is_on_floor():
+			$"/root/AudioController".play_walk()
+		else:
+			$"/root/AudioController".stop_walk()
 		
 		# Add the gravity.
 		if not is_on_floor():
@@ -48,6 +54,7 @@ func _physics_process(delta: float) -> void:
 
 
 func _do_reset():
+	$"/root/AudioController".play_respawn()
 	position = Vector2(spawn_point_x,spawn_point_y)
 
 func die():
@@ -64,6 +71,7 @@ func _on_hurt_box_area_entered(area: Area2D) -> void:
 		die()
 		print(position)
 		print("hit enemy")
+
 
 
 		
