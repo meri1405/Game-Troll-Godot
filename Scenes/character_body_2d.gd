@@ -48,6 +48,7 @@ func _physics_process(delta: float) -> void:
 
 
 func _do_reset():
+	$"/root/AudioController".play_respawn()
 	position = Vector2(spawn_point_x,spawn_point_y)
 
 func die():

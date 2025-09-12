@@ -16,6 +16,10 @@ func play_jump() -> void:
 	if not mute:	
 		$Jump.play()
 
+func play_respawn() -> void:
+	if not mute:	
+		$Respawn.play()
+
 # Phát âm thanh click
 func play_click() -> void:
 	if not mute:
