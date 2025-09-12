@@ -29,7 +29,6 @@ func _on_saw_2_body_exited(body: Node2D) -> void:
 
 
 func _on_saw_3_body_exited(body: Node2D) -> void:
-	
 	if body.name=="Saw3":
 		print("Saw3 exit")
 		direction = direction * -1
