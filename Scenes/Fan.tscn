@@ -1,0 +1,79 @@
+[gd_scene load_steps=11 format=3 uid="uid://ck1mdn7rmkyp7"]
+
+[ext_resource type="Texture2D" uid="uid://cac3ilevpnjvc" path="res://Pixel Adventure 1/Free/Traps/Fan/On (24x8).png" id="1_ls5y8"]
+[ext_resource type="Script" uid="uid://xvkhfht7j4ei" path="res://Scenes/fan.gd" id="1_vjxsb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vjxsb"]
+atlas = ExtResource("1_ls5y8")
+region = Rect2(0, 0, 24, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5u1d5"]
+atlas = ExtResource("1_ls5y8")
+region = Rect2(24, 0, 24, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ffqab"]
+atlas = ExtResource("1_ls5y8")
+region = Rect2(48, 0, 24, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u4e0l"]
+atlas = ExtResource("1_ls5y8")
+region = Rect2(72, 0, 24, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oe0g7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vjxsb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5u1d5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ffqab")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u4e0l")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="GDScript" id="GDScript_5u1d5"]
+script/source = "extends Area2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2y71f"]
+size = Vector2(20, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_umgvq"]
+size = Vector2(7, 8)
+
+[node name="Fan" type="CharacterBody2D"]
+script = ExtResource("1_vjxsb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_oe0g7")
+autoplay = "default"
+frame_progress = 0.366979
+
+[node name="Area2D" type="Area2D" parent="." groups=["hurt"]]
+script = SubResource("GDScript_5u1d5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_2y71f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_umgvq")
