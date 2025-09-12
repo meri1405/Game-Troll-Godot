@@ -1,22 +1,37 @@
-[gd_scene load_steps=6 format=3 uid="uid://cycjjylhb8mlt"]
+[gd_scene load_steps=9 format=3 uid="uid://cycjjylhb8mlt"]
 
 [ext_resource type="Script" uid="uid://eiveqxno2d2j" path="res://audio/audio_controller.gd" id="1_blxgy"]
 [ext_resource type="AudioStream" uid="uid://c8ejid5voycrr" path="res://audio/mr-23142.wav" id="2_xujww"]
 [ext_resource type="AudioStream" uid="uid://bs1b5vk3dfp1r" path="res://audio/8-bit-jump-001-171817.wav" id="3_vys8g"]
 [ext_resource type="AudioStream" uid="uid://blc0m7minox4c" path="res://audio/mouse-click-117076.wav" id="4_h7rxg"]
 [ext_resource type="AudioStream" uid="uid://pubyq7jy10t5" path="res://audio/game-over-39-199830.wav" id="5_y6d7d"]
+[ext_resource type="AudioStream" uid="uid://b1rt73hhu16iw" path="res://audio/Respawn.wav" id="6_xujww"]
+[ext_resource type="AudioStream" uid="uid://c6l006xu58evx" path="res://audio/Walk.wav" id="7_vys8g"]
+[ext_resource type="AudioStream" uid="uid://cktwilg50yqw" path="res://audio/levelup.wav" id="8_h7rxg"]
 
 [node name="AudioController" type="Node2D"]
 script = ExtResource("1_blxgy")
 
 [node name="Jump" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_vys8g")
+volume_db = -20.612
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_xujww")
+volume_db = -14.991
+autoplay = true
 
 [node name="Endgame" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_y6d7d")
 
 [node name="Click" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_h7rxg")
+
+[node name="Respawn" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_xujww")
+
+[node name="Walk" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_vys8g")
+
+[node name="LevelUp" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_h7rxg")

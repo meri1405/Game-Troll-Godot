@@ -16,17 +16,21 @@ func hide_menu():
 
 # Thêm hàm này cho nút "Tiếp tục"
 func _on_continue_button_pressed():
+	$"/root/AudioController".play_click()
 	hide_menu()
 
 func _on_replay_button_pressed():
+	$"/root/AudioController".play_click()
 	get_tree().paused = false
 	get_tree().reload_current_scene()
 
 func _on_home_button_pressed():
+	$"/root/AudioController".play_click()
 	get_tree().paused = false
 	get_tree().change_scene_to_file("res://Scenes/main.tscn")
 
 func _on_sound_button_pressed():
+	$"/root/AudioController".play_click()
 	is_sound_on = !is_sound_on
 	AudioServer.set_bus_mute(0, !is_sound_on)
 	if is_sound_on:
@@ -36,4 +40,5 @@ func _on_sound_button_pressed():
 
 
 func _on_continue_pressed() -> void:
+	$"/root/AudioController".play_click()
 	hide_menu()

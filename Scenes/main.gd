@@ -2,6 +2,7 @@ extends Node2D
 
 
 func _on_quit_bt_pressed() -> void:
+	$"/root/AudioController".play_click()
 	get_tree().quit()
 	pass # Replace with function body.
 
