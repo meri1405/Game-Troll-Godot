@@ -210,7 +210,7 @@ script = ExtResource("1_vlj81")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_d3d08")
-animation = &"idle"
+animation = &"walking"
 autoplay = "idle"
 
 [node name="HurtBox" type="Area2D" parent="." groups=["hurt"]]

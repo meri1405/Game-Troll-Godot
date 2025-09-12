@@ -1,0 +1,233 @@
+[gd_scene load_steps=18 format=3 uid="uid://mhj5l6hhprdx"]
+
+[ext_resource type="Texture2D" uid="uid://06d6gprqjsdt" path="res://Pixel Adventure 1/Free/Traps/Saw/Chain.png" id="1_b1ygr"]
+[ext_resource type="Texture2D" uid="uid://26g1nyycfuji" path="res://Pixel Adventure 1/Free/Traps/Saw/On (38x38).png" id="2_5jjua"]
+
+[sub_resource type="GDScript" id="GDScript_5jjua"]
+script/source = "extends Node2D
+
+@export var rotation_speed = 1.5
+var rotation_direction = 0
+# Called when the node enters the scene tree for the first time.
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5jjua"]
+radius = 7.5
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_80hea"]
+radius = 7.5
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_il4im"]
+radius = 7.5
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_b1ygr"]
+radius = 2.66667
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_80hea"]
+atlas = ExtResource("2_5jjua")
+region = Rect2(0, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_il4im"]
+atlas = ExtResource("2_5jjua")
+region = Rect2(38, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u3dug"]
+atlas = ExtResource("2_5jjua")
+region = Rect2(76, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g21st"]
+atlas = ExtResource("2_5jjua")
+region = Rect2(114, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n1gty"]
+atlas = ExtResource("2_5jjua")
+region = Rect2(152, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_63glp"]
+atlas = ExtResource("2_5jjua")
+region = Rect2(190, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xy2bo"]
+atlas = ExtResource("2_5jjua")
+region = Rect2(228, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hrwv6"]
+atlas = ExtResource("2_5jjua")
+region = Rect2(266, 0, 38, 38)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b4iqi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_80hea")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_il4im")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u3dug")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g21st")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n1gty")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_63glp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xy2bo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hrwv6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k7e1x"]
+radius = 22.4722
+
+[node name="TestChain" type="Node2D"]
+position = Vector2(28, 7)
+rotation = 1.22173
+script = SubResource("GDScript_5jjua")
+
+[node name="Joint5" type="PinJoint2D" parent="."]
+position = Vector2(75.9493, 10.6164)
+node_a = NodePath("../RigidBody2D5")
+node_b = NodePath("../RigidBody2D6")
+
+[node name="RigidBody2D4" type="RigidBody2D" parent="."]
+position = Vector2(54.7613, 10.3539)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D4"]
+position = Vector2(-0.5, 0)
+shape = SubResource("CircleShape2D_5jjua")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D4"]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("1_b1ygr")
+
+[node name="RigidBody2D5" type="RigidBody2D" parent="."]
+position = Vector2(68.6874, 10.1017)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D5"]
+position = Vector2(-0.5, 0)
+shape = SubResource("CircleShape2D_80hea")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D5"]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("1_b1ygr")
+
+[node name="RigidBody2D6" type="RigidBody2D" parent="."]
+position = Vector2(82.6135, 9.84947)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D6"]
+position = Vector2(-0.5, 0)
+shape = SubResource("CircleShape2D_il4im")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D6"]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("1_b1ygr")
+
+[node name="Joint1" type="PinJoint2D" parent="."]
+position = Vector2(20, 11)
+node_a = NodePath("../RigidBody2D")
+node_b = NodePath("../RigidBody2D2")
+
+[node name="Joint2" type="PinJoint2D" parent="."]
+position = Vector2(33, 11)
+node_a = NodePath("../RigidBody2D2")
+node_b = NodePath("../RigidBody2D3")
+
+[node name="MainJoint" type="PinJoint2D" parent="."]
+position = Vector2(5, 11)
+node_a = NodePath("../RigidBody2D")
+node_b = NodePath("../StaticBody2D")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-2, 11)
+scale = Vector2(3, 3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("CircleShape2D_b1ygr")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+texture_filter = 1
+texture = ExtResource("1_b1ygr")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2(12.983, 11.1105)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(-0.5, 0)
+shape = SubResource("CircleShape2D_5jjua")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("1_b1ygr")
+
+[node name="RigidBody2D2" type="RigidBody2D" parent="."]
+position = Vector2(27, 11)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D2"]
+position = Vector2(-0.5, 0)
+shape = SubResource("CircleShape2D_80hea")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D2"]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("1_b1ygr")
+
+[node name="RigidBody2D3" type="RigidBody2D" parent="."]
+position = Vector2(41, 11)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D3"]
+position = Vector2(-0.5, 0)
+shape = SubResource("CircleShape2D_il4im")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D3"]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("1_b1ygr")
+
+[node name="Joint3" type="PinJoint2D" parent="."]
+position = Vector2(48.0971, 11.1208)
+node_a = NodePath("../RigidBody2D3")
+node_b = NodePath("../RigidBody2D4")
+
+[node name="Joint4" type="PinJoint2D" parent="."]
+position = Vector2(61.0971, 11.1208)
+node_a = NodePath("../RigidBody2D4")
+node_b = NodePath("../RigidBody2D5")
+
+[node name="Saw" type="RigidBody2D" parent="."]
+position = Vector2(109.526, 9.0031)
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Saw"]
+position = Vector2(2.92063e-06, -6.55651e-07)
+sprite_frames = SubResource("SpriteFrames_b4iqi")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Saw"]
+position = Vector2(0, 3.8147e-06)
+shape = SubResource("CircleShape2D_k7e1x")
+
+[node name="Joint6" type="PinJoint2D" parent="."]
+position = Vector2(87.996, 9.68023)
+node_a = NodePath("../RigidBody2D6")
+node_b = NodePath("../Saw")

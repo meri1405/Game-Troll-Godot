@@ -1,0 +1,176 @@
+[gd_scene load_steps=18 format=3 uid="uid://bo4sjys7ihhwn"]
+
+[ext_resource type="Script" uid="uid://bnthc2x0f5pl6" path="res://Scenes/rotating_thing.gd" id="1_245yi"]
+[ext_resource type="Texture2D" uid="uid://crxy2arorn447" path="res://Pixel Adventure 1/Free/Traps/Blocks/Idle.png" id="2_q8pb0"]
+[ext_resource type="Texture2D" uid="uid://06d6gprqjsdt" path="res://Pixel Adventure 1/Free/Traps/Saw/Chain.png" id="3_kuse7"]
+[ext_resource type="Texture2D" uid="uid://26g1nyycfuji" path="res://Pixel Adventure 1/Free/Traps/Saw/On (38x38).png" id="4_bvxhw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_upavx"]
+radius = 6.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_80hea"]
+atlas = ExtResource("4_bvxhw")
+region = Rect2(0, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_il4im"]
+atlas = ExtResource("4_bvxhw")
+region = Rect2(38, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u3dug"]
+atlas = ExtResource("4_bvxhw")
+region = Rect2(76, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g21st"]
+atlas = ExtResource("4_bvxhw")
+region = Rect2(114, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n1gty"]
+atlas = ExtResource("4_bvxhw")
+region = Rect2(152, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_63glp"]
+atlas = ExtResource("4_bvxhw")
+region = Rect2(190, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xy2bo"]
+atlas = ExtResource("4_bvxhw")
+region = Rect2(228, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hrwv6"]
+atlas = ExtResource("4_bvxhw")
+region = Rect2(266, 0, 38, 38)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_skgwp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_80hea")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_il4im")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u3dug")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g21st")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n1gty")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_63glp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xy2bo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hrwv6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vlgvc"]
+radius = 22.4722
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ir43t"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kuse7"]
+radius = 19.0
+
+[node name="RotatingThing" type="CharacterBody2D"]
+position = Vector2(138, 126)
+script = ExtResource("1_245yi")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-2.75427, 1.24572)
+rotation = 0.698132
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_q8pb0")
+
+[node name="Joint5" type="PinJoint2D" parent="."]
+position = Vector2(36, -1)
+node_a = NodePath("../RigidBody2D5")
+node_b = NodePath("../RigidBody2D6")
+
+[node name="RigidBody2D4" type="RigidBody2D" parent="."]
+position = Vector2(19, -1)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D4"]
+shape = SubResource("CircleShape2D_upavx")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D4"]
+texture_filter = 1
+position = Vector2(-6.55651e-06, -3.09944e-06)
+scale = Vector2(2.53212, 2.31853)
+texture = ExtResource("3_kuse7")
+
+[node name="Joint3" type="PinJoint2D" parent="."]
+position = Vector2(12.8497, -0.636574)
+node_a = NodePath("..")
+node_b = NodePath("../RigidBody2D4")
+
+[node name="Joint4" type="PinJoint2D" parent="."]
+position = Vector2(25.8497, -0.636574)
+node_a = NodePath("../RigidBody2D4")
+node_b = NodePath("../RigidBody2D5")
+
+[node name="Saw" type="RigidBody2D" parent="."]
+position = Vector2(66, 3.8147e-06)
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Saw"]
+position = Vector2(2.92063e-06, -6.55651e-07)
+sprite_frames = SubResource("SpriteFrames_skgwp")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Saw"]
+position = Vector2(0, 3.8147e-06)
+scale = Vector2(0.7, 0.7)
+shape = SubResource("CircleShape2D_vlgvc")
+
+[node name="Joint6" type="PinJoint2D" parent="."]
+position = Vector2(47, -0.999996)
+node_a = NodePath("../RigidBody2D6")
+node_b = NodePath("../Saw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.245728, 0.245728)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_ir43t")
+
+[node name="RigidBody2D5" type="RigidBody2D" parent="."]
+position = Vector2(30, -1)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D5"]
+shape = SubResource("CircleShape2D_upavx")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D5"]
+texture_filter = 1
+position = Vector2(-6.55651e-06, -3.09944e-06)
+scale = Vector2(2.53212, 2.31853)
+texture = ExtResource("3_kuse7")
+
+[node name="RigidBody2D6" type="RigidBody2D" parent="."]
+position = Vector2(41, -1)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D6"]
+shape = SubResource("CircleShape2D_upavx")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D6"]
+texture_filter = 1
+position = Vector2(-6.55651e-06, -3.09944e-06)
+scale = Vector2(2.53212, 2.31853)
+texture = ExtResource("3_kuse7")
+
+[node name="Area2D" type="Area2D" parent="." groups=["hurt"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(66, 0)
+shape = SubResource("CircleShape2D_kuse7")

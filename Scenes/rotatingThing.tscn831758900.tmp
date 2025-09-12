@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bo4sjys7ihhwn"]
+
+[ext_resource type="PackedScene" uid="uid://mhj5l6hhprdx" path="res://Scenes/testChain.tscn" id="1_5n4s7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q8pb0"]
+
+[node name="RotatingThing" type="CharacterBody2D"]
+position = Vector2(13, 10)
+
+[node name="TestChain" parent="." instance=ExtResource("1_5n4s7")]
+position = Vector2(11, 0)
+script = null
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_q8pb0")

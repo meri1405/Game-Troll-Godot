@@ -1,15 +1,10 @@
 extends CharacterBody2D
 
 
-const SPEED = 1000
-@onready var sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+const SPEED = 800
 var triggered = false 
-var direction = 1
-
-func _ready() -> void:
-	sprite_2d.speed_scale = 10
-
-
+var direction = -1
+	
 func _physics_process(delta: float) -> void:
 	if triggered:
 		velocity.y = direction * SPEED

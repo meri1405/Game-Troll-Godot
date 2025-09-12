@@ -50,13 +50,16 @@ func _do_reset():
 	position = Vector2(spawn_point_x,spawn_point_y)
 
 func die():
+	get_node("CollisionShape2D").disabled = true
 	is_alive = false
 	sprite_2d.stop()
 	sprite_2d.play("Hit")
 	sprite_2d.play_backwards("Hit")
 	await get_tree().create_timer(1.0).timeout
 	_do_reset()
+	get_node("CollisionShape2D").disabled = false
 	is_alive = true
+	await get_tree().create_timer(1).timeout
 
 func _on_hurt_box_area_entered(area: Area2D) -> void:
 	if area.is_in_group("hurt"):
