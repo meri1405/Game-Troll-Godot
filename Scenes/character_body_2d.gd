@@ -63,6 +63,13 @@ func die():
 	sprite_2d.stop()
 	sprite_2d.play("Hit")
 	sprite_2d.play_backwards("Hit")
+	# Reset tất cả các bẫy saw về vị trí ban đầu
+	for saw in get_tree().get_nodes_in_group("saws"):
+		if saw.has_method("reset_trap"):
+			saw.reset_trap()
+
+	
+	
 	await get_tree().create_timer(1.0).timeout
 	_do_reset()
 	
