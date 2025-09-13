@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cp4bpmyb0m7me"]
+
+[ext_resource type="Script" uid="uid://18xvqwcuksf5" path="res://fall.gd" id="1_a1d3u"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_bp1i4"]
+a = Vector2(413, 4.5)
+b = Vector2(-425, 8.5)
+
+[node name="fall" type="Area2D"]
+script = ExtResource("1_a1d3u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-414, 6.5)
+shape = SubResource("SegmentShape2D_bp1i4")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
