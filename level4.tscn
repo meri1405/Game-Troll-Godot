@@ -1,82 +1,11 @@
-[gd_scene load_steps=24 format=3 uid="uid://b4yiv85ljk2lk"]
+[gd_scene load_steps=11 format=3 uid="uid://b4yiv85ljk2lk"]
 
 [ext_resource type="Texture2D" uid="uid://dps2vak3wrpfb" path="res://Pixel Adventure 1/Free/Background/Purple.png" id="1_g1tnb"]
 [ext_resource type="Texture2D" uid="uid://c2q1auamo4dbd" path="res://Pixel Adventure 1/Free/Background/Brown.png" id="2_pklw6"]
 [ext_resource type="Texture2D" uid="uid://cmx6ev0y0fkb7" path="res://Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="3_bp1i4"]
+[ext_resource type="PackedScene" uid="uid://be08yvn3m3mkx" path="res://Scenes/saw_trap_left_move.tscn" id="3_bvvno"]
 [ext_resource type="PackedScene" uid="uid://dt1tth682nenl" path="res://Scenes/character_body_2d.tscn" id="4_bvvno"]
-[ext_resource type="Script" uid="uid://18xvqwcuksf5" path="res://fall.gd" id="5_pklw6"]
-[ext_resource type="Texture2D" uid="uid://26g1nyycfuji" path="res://Pixel Adventure 1/Free/Traps/Saw/On (38x38).png" id="6_bp1i4"]
-[ext_resource type="Script" uid="uid://d1ty6ap7bfv6j" path="res://saw_trap_left.gd" id="6_bvvno"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_b4lsh"]
-atlas = ExtResource("6_bp1i4")
-region = Rect2(0, 0, 38, 38)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yxclo"]
-atlas = ExtResource("6_bp1i4")
-region = Rect2(38, 0, 38, 38)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fx4lf"]
-atlas = ExtResource("6_bp1i4")
-region = Rect2(76, 0, 38, 38)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_sx4db"]
-atlas = ExtResource("6_bp1i4")
-region = Rect2(114, 0, 38, 38)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7lf1v"]
-atlas = ExtResource("6_bp1i4")
-region = Rect2(152, 0, 38, 38)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_dguho"]
-atlas = ExtResource("6_bp1i4")
-region = Rect2(190, 0, 38, 38)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_p2trt"]
-atlas = ExtResource("6_bp1i4")
-region = Rect2(228, 0, 38, 38)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_n01hv"]
-atlas = ExtResource("6_bp1i4")
-region = Rect2(266, 0, 38, 38)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_7odde"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_b4lsh")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yxclo")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fx4lf")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_sx4db")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7lf1v")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_dguho")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_p2trt")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_n01hv")
-}],
-"loop": true,
-"name": &"Running",
-"speed": 19.0
-}]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_0bk12"]
-radius = 21.095
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bvvno"]
-size = Vector2(2, 96.5)
+[ext_resource type="PackedScene" uid="uid://cp4bpmyb0m7me" path="res://Scenes/fall.tscn" id="6_b4lsh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b4lsh"]
 texture = ExtResource("3_bp1i4")
@@ -520,10 +449,6 @@ texture = ExtResource("3_bp1i4")
 [sub_resource type="TileSet" id="TileSet_pklw6"]
 sources/0 = SubResource("TileSetAtlasSource_g1tnb")
 
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_bp1i4"]
-a = Vector2(413, 4.5)
-b = Vector2(-425, 8.5)
-
 [node name="Level4" type="Node"]
 
 [node name="PinkGround" type="TextureRect" parent="."]
@@ -545,29 +470,7 @@ offset_bottom = 667.0
 texture = ExtResource("2_pklw6")
 stretch_mode = 1
 
-[node name="SawTrap_LeftMove" type="Node" parent="." groups=["saws"]]
-
-[node name="SawTrapLeft" type="Area2D" parent="SawTrap_LeftMove" groups=["hurt", "saws"]]
-position = Vector2(1022, 101)
-script = ExtResource("6_bvvno")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="SawTrap_LeftMove/SawTrapLeft"]
-sprite_frames = SubResource("SpriteFrames_7odde")
-animation = &"Running"
-autoplay = "Running"
-frame_progress = 0.488265
-
-[node name="DieZone" type="Area2D" parent="SawTrap_LeftMove/SawTrapLeft" groups=["hurt"]]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SawTrap_LeftMove/SawTrapLeft/DieZone"]
-shape = SubResource("CircleShape2D_0bk12")
-
-[node name="SawTrigger" type="Area2D" parent="SawTrap_LeftMove"]
-position = Vector2(354, 57)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SawTrap_LeftMove/SawTrigger"]
-position = Vector2(-1, -9.25)
-shape = SubResource("RectangleShape2D_bvvno")
+[node name="SawTrap_LeftMove" parent="." instance=ExtResource("3_bvvno")]
 
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2(3, 3)
@@ -583,15 +486,7 @@ layer_0/tile_data = PackedInt32Array(786435, 786432, 4, 786436, 851968, 4, 78643
 
 [node name="Player" parent="." groups=["player"] instance=ExtResource("4_bvvno")]
 unique_name_in_owner = true
-position = Vector2(-854, -459)
+position = Vector2(-926, -48)
 
-[node name="fall" type="Area2D" parent="."]
+[node name="fall" parent="." instance=ExtResource("6_b4lsh")]
 position = Vector2(1165, 678)
-script = ExtResource("5_pklw6")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="fall"]
-position = Vector2(-414, 6.5)
-shape = SubResource("SegmentShape2D_bp1i4")
-
-[connection signal="body_entered" from="SawTrap_LeftMove/SawTrigger" to="SawTrap_LeftMove/SawTrapLeft" method="_on_saw_trigger_body_entered"]
-[connection signal="body_entered" from="fall" to="fall" method="_on_body_entered"]
