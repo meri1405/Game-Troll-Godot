@@ -31,6 +31,7 @@ project/assembly_name="Project-1"
 [global_group]
 
 hurt=""
+saws=""
 
 [input]
 
