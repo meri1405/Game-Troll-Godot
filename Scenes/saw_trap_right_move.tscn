@@ -76,7 +76,7 @@ size = Vector2(0.5, 101.5)
 [node name="SawTrap_RightMove" type="Node" groups=["saws"]]
 
 [node name="SawTrapRight" type="Area2D" parent="." groups=["hurt", "saws"]]
-position = Vector2(20, 102)
+position = Vector2(20, 70)
 script = ExtResource("1_cat6o")
 speed = 380.0
 
