@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://b4yiv85ljk2lk"]
+[gd_scene load_steps=34 format=3 uid="uid://b4yiv85ljk2lk"]
 
 [ext_resource type="Texture2D" uid="uid://dps2vak3wrpfb" path="res://Pixel Adventure 1/Free/Background/Purple.png" id="1_g1tnb"]
 [ext_resource type="Texture2D" uid="uid://c2q1auamo4dbd" path="res://Pixel Adventure 1/Free/Background/Brown.png" id="2_pklw6"]
@@ -14,6 +14,7 @@
 [ext_resource type="Script" uid="uid://bvhj68g1ggo7h" path="res://spike_trap_left_move.gd" id="12_7lf1v"]
 [ext_resource type="Script" uid="uid://s8pdr1olwmhl" path="res://spike_trap_up_move.gd" id="13_dguho"]
 [ext_resource type="Script" uid="uid://cfchxus616laa" path="res://spike_trap_down_move.gd" id="14_p2trt"]
+[ext_resource type="PackedScene" uid="uid://b0b8d8fe0ga2a" path="res://Touch_Controls/scene/touch_controls.tscn" id="15_n01hv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sx4db"]
 size = Vector2(15.6666, 7.33334)
@@ -882,6 +883,8 @@ autoplay = "idle"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Box_LeftMove"]
 position = Vector2(0.5, 0)
 shape = SubResource("RectangleShape2D_yxclo")
+
+[node name="TouchControls" parent="." instance=ExtResource("15_n01hv")]
 
 [connection signal="body_entered" from="SpikeTrap_RightMove/SpikeTrigger" to="SpikeTrap_RightMove/SpikeTrap_RightMove" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="SpikeTrap_RightMove2/SpikeTrigger" to="SpikeTrap_RightMove2/SpikeTrap_RightMove" method="_on_saw_trigger_body_entered"]
