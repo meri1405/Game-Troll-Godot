@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://mhwnib7cebs5"]
+[gd_scene load_steps=37 format=3 uid="uid://mhwnib7cebs5"]
 
 [ext_resource type="Script" uid="uid://c85pk27sc71ds" path="res://level_1.gd" id="1_c3dvo"]
 [ext_resource type="Texture2D" uid="uid://dhkt1prc5cciq" path="res://Pixel Adventure 1/Free/Background/Blue.png" id="1_vm84t"]
@@ -21,6 +21,7 @@
 [ext_resource type="Script" uid="uid://d0i3764jsu8oy" path="res://CHiTAN/TrapXoay.gd" id="12_kt7kh"]
 [ext_resource type="Script" uid="uid://b0cmuxvyqi5kp" path="res://CHiTAN/Move_L.gd" id="16_jchsq"]
 [ext_resource type="Texture2D" uid="uid://bg14ereu48jp2" path="res://Pixel Adventure 1/Free/Traps/Spiked Ball/Spiked Ball.png" id="17_enh1l"]
+[ext_resource type="Script" uid="uid://0b6cax5k1r7e" path="res://CHiTAN/Trap_U_R.gd" id="23_kt7kh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dj87x"]
 size = Vector2(106.82, 15.3959)
@@ -370,33 +371,6 @@ rotation = -1.58177
 scale = Vector2(0.37512, 0.566092)
 shape = SubResource("RectangleShape2D_rbddr")
 
-[node name="Area2D8" type="Area2D" parent="."]
-position = Vector2(1453, -40)
-script = ExtResource("5_t3540")
-
-[node name="NewAtlasTexture" type="Sprite2D" parent="Area2D8"]
-position = Vector2(108, 216)
-rotation = -0.0108285
-scale = Vector2(3.14582, 2.42886)
-texture = ExtResource("3_hlycl")
-
-[node name="TriggerArea" type="Area2D" parent="Area2D8"]
-position = Vector2(-20, 395)
-rotation = -0.34932
-scale = Vector2(0.878281, 0.8882)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D8/TriggerArea"]
-position = Vector2(312.16, -176.339)
-rotation = 1.9197
-scale = Vector2(0.999975, 1.03161)
-shape = SubResource("RectangleShape2D_dj87x")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D8"]
-position = Vector2(108.027, 228.498)
-rotation = -1.58177
-scale = Vector2(0.37512, 0.566092)
-shape = SubResource("RectangleShape2D_rbddr")
-
 [node name="Trap" type="Node" parent="."]
 
 [node name="DeadlyObject2" parent="Trap" instance=ExtResource("4_c3dvo")]
@@ -587,5 +561,33 @@ shape = SubResource("RectangleShape2D_enh1l")
 
 [node name="MoveR" parent="." instance=ExtResource("5_jchsq")]
 position = Vector2(667, 323)
+
+[node name="Area2D8" type="Area2D" parent="."]
+position = Vector2(1502, -44)
+script = ExtResource("23_kt7kh")
+move_speed = 0.2
+
+[node name="NewAtlasTexture" type="Sprite2D" parent="Area2D8"]
+position = Vector2(108, 216)
+rotation = -0.0108285
+scale = Vector2(3.14582, 2.42886)
+texture = ExtResource("3_hlycl")
+
+[node name="TriggerArea" type="Area2D" parent="Area2D8"]
+position = Vector2(43, 410)
+rotation = -0.34932
+scale = Vector2(0.878281, 0.8882)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D8/TriggerArea"]
+position = Vector2(312.16, -176.339)
+rotation = 1.9197
+scale = Vector2(0.999975, 1.03161)
+shape = SubResource("RectangleShape2D_dj87x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D8"]
+position = Vector2(108, 230)
+rotation = -1.58177
+scale = Vector2(0.37512, 0.566092)
+shape = SubResource("RectangleShape2D_rbddr")
 
 [connection signal="pressed" from="CanvasLayer/MenuButton" to="." method="_on_menu_button_pressed"]
