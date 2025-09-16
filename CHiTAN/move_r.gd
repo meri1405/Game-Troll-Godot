@@ -1,7 +1,7 @@
 extends AnimatableBody2D
 
 @export var move_distance: float = 48.0
-@export var move_speed: float = 0.3
+@export var move_speed: float = 0.1
 @export var move_direction: Vector2 = Vector2(1, 0)  # Hướng di chuyển (phải)
 
 var start_position: Vector2
