@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://cvvso2wo21aec"]
+
+[ext_resource type="Script" uid="uid://dcsvq68rpfd4e" path="res://CHiTAN/move_r.gd" id="1_nqf3g"]
+[ext_resource type="Texture2D" uid="uid://crnswvpxwaj4b" path="res://UI/ImgBlock/Block.tres" id="1_yat8c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yat8c"]
+size = Vector2(44, 47)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_yat8c"]
+a = Vector2(0, -53)
+b = Vector2(0, 31)
+
+[node name="MoveR" type="AnimatableBody2D"]
+script = ExtResource("1_nqf3g")
+
+[node name="Block" type="Sprite2D" parent="."]
+position = Vector2(364, 133)
+scale = Vector2(2.84861, 3.1894)
+texture = ExtResource("1_yat8c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(363, 133.5)
+shape = SubResource("RectangleShape2D_yat8c")
+
+[node name="TriggerArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerArea"]
+position = Vector2(324, 50)
+shape = SubResource("SegmentShape2D_yat8c")

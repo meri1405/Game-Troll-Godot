@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://b6ag1ctw4nvis"]
+
+[ext_resource type="Script" uid="uid://7434bwhkya88" path="res://CHiTAN/TrapCoDinh.gd" id="1_nkq5o"]
+[ext_resource type="Texture2D" uid="uid://crhk04in7jmsy" path="res://Pixel Adventure 1/Free/Traps/Spikes/Idle.png" id="1_xofrt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nkq5o"]
+size = Vector2(15.4067, 14.885)
+
+[node name="DeadlyObject" type="Area2D"]
+script = ExtResource("1_nkq5o")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(215, 111)
+scale = Vector2(3.00134, 2.74906)
+texture = ExtResource("1_xofrt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(213.5, 126.764)
+scale = Vector2(2.27174, 0.90882)
+shape = SubResource("RectangleShape2D_nkq5o")

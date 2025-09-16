@@ -1,0 +1,63 @@
+[gd_scene load_steps=2 format=3 uid="uid://ccu07nsth75pk"]
+
+[sub_resource type="GDScript" id="GDScript_1m3d0"]
+script/source = "extends Control
+class_name LevelButton
+
+signal level_selected(level_number: int)
+
+@onready var button = $Button
+@onready var level_number_label = $LevelNumber
+@onready var lock_icon = $LockIcon
+
+var level_number: int
+var is_unlocked: bool = false
+
+func _ready():
+	button.pressed.connect(_on_button_pressed)
+
+func setup_level(level_num: int, unlocked: bool):
+	level_number = level_num
+	is_unlocked = unlocked
+	
+	level_number_label.text = str(level_number)
+	
+	if is_unlocked:
+		# Level mở khóa
+		button.disabled = false
+		button.modulate = Color.WHITE
+		lock_icon.visible = false
+		level_number_label.visible = true
+	else:
+		# Level bị khóa
+		button.disabled = true
+		button.modulate = Color.GRAY
+		lock_icon.visible = true
+		level_number_label.visible = false
+
+func _on_button_pressed():
+	if is_unlocked:
+		level_selected.emit(level_number)
+"
+
+[node name="LevelButton" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = SubResource("GDScript_1m3d0")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="LevelNumber" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

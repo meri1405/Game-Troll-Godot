@@ -1,0 +1,354 @@
+[gd_scene load_steps=14 format=3 uid="uid://cu45f24ymnn55"]
+
+[ext_resource type="Texture2D" uid="uid://dhkt1prc5cciq" path="res://Pixel Adventure 1/Free/Background/Blue.png" id="1_fqse5"]
+[ext_resource type="Texture2D" uid="uid://cmx6ev0y0fkb7" path="res://Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="2_dguiw"]
+[ext_resource type="Script" uid="uid://f7wkvuj85q1u" path="res://CHiTAN/Trap-up-Low.gd" id="2_ip2n2"]
+[ext_resource type="PackedScene" uid="uid://dt1tth682nenl" path="res://Scenes/character_body_2d.tscn" id="3_34kj1"]
+[ext_resource type="Texture2D" uid="uid://crhk04in7jmsy" path="res://Pixel Adventure 1/Free/Traps/Spikes/Idle.png" id="3_n4d6i"]
+[ext_resource type="Script" uid="uid://dhbe4nrvokkhm" path="res://CHiTAN/ChiTanNV.gd" id="4_dguiw"]
+[ext_resource type="PackedScene" uid="uid://b6ag1ctw4nvis" path="res://CHiTAN/TrapCoDinh.tscn" id="4_ip2n2"]
+[ext_resource type="Script" uid="uid://vg8pr4ejlbca" path="res://CHiTAN/trap_d.gd" id="4_n4d6i"]
+[ext_resource type="Script" uid="uid://wyg414gqlrvb" path="res://CHiTAN/Trap_D_R.gd" id="5_vydm2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vydm2"]
+size = Vector2(64.8456, 15.3959)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u68p4"]
+size = Vector2(45.4257, 75.8772)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ptkxv"]
+texture = ExtResource("2_dguiw")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+6:0/0 = 0
+6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:0/0 = 0
+7:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:0/0 = 0
+8:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:0/0 = 0
+10:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+13:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+14:0/0 = 0
+15:0/0 = 0
+17:0/0 = 0
+18:0/0 = 0
+19:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+15:1/0 = 0
+15:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+17:1/0 = 0
+18:1/0 = 0
+19:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+15:2/0 = 0
+17:2/0 = 0
+18:2/0 = 0
+18:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+19:2/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+12:4/0 = 0
+12:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+13:4/0 = 0
+13:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+14:4/0 = 0
+14:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+15:4/0 = 0
+15:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+17:4/0 = 0
+18:4/0 = 0
+19:4/0 = 0
+20:4/0 = 0
+21:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+12:5/0 = 0
+12:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+13:5/0 = 0
+14:5/0 = 0
+15:5/0 = 0
+15:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+17:5/0 = 0
+18:5/0 = 0
+19:5/0 = 0
+20:5/0 = 0
+21:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+15:6/0 = 0
+15:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+17:6/0 = 0
+18:6/0 = 0
+19:6/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+14:8/0 = 0
+15:8/0 = 0
+17:8/0 = 0
+18:8/0 = 0
+19:8/0 = 0
+20:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+10:9/0 = 0
+12:9/0 = 0
+13:9/0 = 0
+14:9/0 = 0
+15:9/0 = 0
+17:9/0 = 0
+18:9/0 = 0
+19:9/0 = 0
+20:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+13:10/0 = 0
+14:10/0 = 0
+15:10/0 = 0
+18:10/0 = 0
+19:10/0 = 0
+20:10/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_yy20u"]
+physics_layer_0/collision_layer = 1
+physics_layer_1/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_ptkxv")
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(13, -34)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_top = -32.0
+offset_right = 2038.0
+offset_bottom = 668.0
+grow_vertical = 2
+size_flags_horizontal = 0
+texture = ExtResource("1_fqse5")
+stretch_mode = 1
+
+[node name="Area2D6" type="Area2D" parent="TextureRect"]
+position = Vector2(617, 507)
+script = ExtResource("2_ip2n2")
+
+[node name="NewAtlasTexture" type="Sprite2D" parent="TextureRect/Area2D6"]
+position = Vector2(108, 216)
+rotation = -0.0108285
+scale = Vector2(3.2132, 2.63862)
+texture = ExtResource("3_n4d6i")
+
+[node name="TriggerArea" type="Area2D" parent="TextureRect/Area2D6"]
+position = Vector2(-133, 417)
+rotation = -0.34932
+scale = Vector2(0.878281, 0.8882)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Area2D6/TriggerArea"]
+position = Vector2(275.444, -220.698)
+rotation = 1.9197
+scale = Vector2(0.999975, 1.03161)
+shape = SubResource("RectangleShape2D_vydm2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Area2D6"]
+position = Vector2(108.027, 228.498)
+rotation = -1.58177
+scale = Vector2(0.37512, 0.566092)
+shape = SubResource("RectangleShape2D_u68p4")
+
+[node name="Area2D7" type="Area2D" parent="TextureRect"]
+position = Vector2(617, 388)
+script = ExtResource("2_ip2n2")
+
+[node name="NewAtlasTexture" type="Sprite2D" parent="TextureRect/Area2D7"]
+position = Vector2(107, 240)
+rotation = -3.13746
+scale = Vector2(3.2132, 2.63862)
+texture = ExtResource("3_n4d6i")
+
+[node name="TriggerArea" type="Area2D" parent="TextureRect/Area2D7"]
+position = Vector2(-134, 538)
+rotation = -0.34932
+scale = Vector2(0.878281, 0.8882)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Area2D7/TriggerArea"]
+position = Vector2(275.444, -220.698)
+rotation = 1.9197
+scale = Vector2(0.999975, 1.03161)
+shape = SubResource("RectangleShape2D_vydm2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Area2D7"]
+position = Vector2(108.027, 228.498)
+rotation = -1.58177
+scale = Vector2(0.37512, 0.566092)
+shape = SubResource("RectangleShape2D_u68p4")
+
+[node name="Trap-d" type="Area2D" parent="TextureRect"]
+position = Vector2(330, 345)
+script = ExtResource("4_n4d6i")
+
+[node name="NewAtlasTexture" type="Sprite2D" parent="TextureRect/Trap-d"]
+position = Vector2(107, 240)
+rotation = -3.13746
+scale = Vector2(3.2132, 2.63862)
+texture = ExtResource("3_n4d6i")
+
+[node name="TriggerArea" type="Area2D" parent="TextureRect/Trap-d"]
+position = Vector2(-113, 577)
+rotation = -0.34932
+scale = Vector2(0.878281, 0.8882)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Trap-d/TriggerArea"]
+position = Vector2(275.444, -220.698)
+rotation = 1.9197
+scale = Vector2(0.999975, 1.03161)
+shape = SubResource("RectangleShape2D_vydm2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Trap-d"]
+position = Vector2(108.027, 228.498)
+rotation = -1.58177
+scale = Vector2(0.37512, 0.566092)
+shape = SubResource("RectangleShape2D_u68p4")
+
+[node name="Trap-d2" type="Area2D" parent="TextureRect"]
+position = Vector2(332, 462)
+script = ExtResource("4_n4d6i")
+
+[node name="NewAtlasTexture" type="Sprite2D" parent="TextureRect/Trap-d2"]
+position = Vector2(110, 216)
+rotation = -0.002491
+scale = Vector2(3.2132, 2.63862)
+texture = ExtResource("3_n4d6i")
+
+[node name="TriggerArea" type="Area2D" parent="TextureRect/Trap-d2"]
+position = Vector2(-115, 456)
+rotation = -0.34932
+scale = Vector2(0.878281, 0.8882)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Trap-d2/TriggerArea"]
+position = Vector2(275.444, -220.698)
+rotation = 1.9197
+scale = Vector2(0.999975, 1.03161)
+shape = SubResource("RectangleShape2D_vydm2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Trap-d2"]
+position = Vector2(108.027, 228.498)
+rotation = -1.58177
+scale = Vector2(0.37512, 0.566092)
+shape = SubResource("RectangleShape2D_u68p4")
+
+[node name="Trap-d3" type="Area2D" parent="TextureRect"]
+position = Vector2(849, 323)
+script = ExtResource("5_vydm2")
+
+[node name="NewAtlasTexture" type="Sprite2D" parent="TextureRect/Trap-d3"]
+position = Vector2(110, 216)
+rotation = -0.002491
+scale = Vector2(3.2132, 2.63862)
+texture = ExtResource("3_n4d6i")
+
+[node name="TriggerArea" type="Area2D" parent="TextureRect/Trap-d3"]
+position = Vector2(-121, 574)
+rotation = -0.34932
+scale = Vector2(0.878281, 0.8882)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Trap-d3/TriggerArea"]
+position = Vector2(275.444, -220.698)
+rotation = 1.9197
+scale = Vector2(0.999975, 1.03161)
+shape = SubResource("RectangleShape2D_vydm2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Trap-d3"]
+position = Vector2(108.027, 228.498)
+rotation = -1.58177
+scale = Vector2(0.37512, 0.566092)
+shape = SubResource("RectangleShape2D_u68p4")
+
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2(3, 3)
+tile_set = SubResource("TileSet_yy20u")
+format = 2
+layer_0/tile_data = PackedInt32Array(65535, 983040, 1, 131071, 983040, 1, 196607, 983040, 1, 262143, 983040, 1, 393215, 983040, 1, 458751, 983040, 1, 524287, 983040, 1, 589823, 983040, 1, 655359, 983040, 1, 720895, 983040, 1, 786431, 983040, 1, 851967, 983040, 1, 917503, 983040, 2, 917504, 851968, 0, 917505, 851968, 0, 917506, 851968, 0, 917507, 851968, 0, 917508, 851968, 0, 917509, 851968, 0, 917510, 851968, 0, 917511, 851968, 0, 917512, 851968, 0, 917513, 851968, 0, 917514, 851968, 0, 917515, 851968, 0, 917516, 851968, 0, 917517, 851968, 0, 917518, 851968, 0, 917519, 851968, 0, 917520, 851968, 0, 917521, 851968, 0, 917522, 851968, 0, 917523, 851968, 0, 917524, 851968, 0, 917525, 851968, 0, 917526, 851968, 0, 917527, 851968, 0, 983039, 786432, 1, -65510, 851968, 0, 917528, 851968, 0, 917529, 851968, 0, 917530, 851968, 0, -1, 786432, 1, -65536, 851968, 0, -65535, 851968, 0, -65534, 851968, 0, -65521, 851968, 0, -65520, 851968, 0, -65519, 851968, 0, -65518, 851968, 0, -65517, 851968, 0, -65516, 851968, 0, -65513, 851968, 0, -65512, 851968, 0, -65511, 851968, 0, -65522, 851968, 0, -65523, 851968, 0, -65524, 851968, 0, -65525, 851968, 0, -65526, 851968, 0, -65527, 851968, 0, -65528, 851968, 0, -65529, 851968, 0, -65530, 851968, 0, -65531, 851968, 0, -65532, 851968, 0, -65533, 851968, 0, -65515, 851968, 0, -65514, 851968, 0, 851995, 983040, 1, 786459, 983040, 1, 720923, 983040, 1, 655387, 983040, 1, 589851, 983040, 1, 524315, 983040, 1, 458779, 983040, 1, 393243, 983040, 1, 327707, 983040, 1, 262171, 983040, 1, 196635, 983040, 1, 131099, 983040, 1, 65563, 983040, 1, 27, 983040, 1, -65509, 786432, 1, 917531, 786432, 1, 327679, 983040, 1, 720896, 458752, 0, 720897, 458752, 0, 720898, 458752, 0, 720899, 458752, 0, 720900, 458752, 0, 720901, 458752, 0, 720902, 458752, 0, 720903, 458752, 0, 720904, 458752, 0, 720905, 458752, 0, 720906, 458752, 0, 720907, 458752, 0, 720908, 458752, 0, 720909, 458752, 0, 720910, 458752, 0, 720911, 458752, 0, 720912, 458752, 0, 720913, 458752, 0, 720914, 458752, 0, 720915, 458752, 0, 720916, 458752, 0, 720917, 458752, 0, 720918, 458752, 0, 524310, 458752, 0, 524309, 458752, 0, 524308, 458752, 0, 524307, 458752, 0, 524306, 458752, 0, 524305, 458752, 0, 524304, 458752, 0, 524303, 458752, 0, 524302, 458752, 0, 524301, 458752, 0, 524300, 458752, 0, 524299, 458752, 0, 524298, 458752, 0, 524297, 458752, 0, 524296, 458752, 0, 524295, 458752, 0, 524294, 458752, 0, 524293, 458752, 0, 524292, 458752, 0, 655360, 458752, 0, 524291, 458752, 0, 327680, 458752, 0, 327681, 458752, 0, 327682, 458752, 0, 327683, 458752, 0, 327684, 458752, 0, 327685, 458752, 0, 327686, 458752, 0, 327687, 458752, 0, 327688, 458752, 0, 327689, 458752, 0, 327690, 458752, 0, 327691, 458752, 0, 327692, 458752, 0, 327693, 458752, 0, 327694, 458752, 0, 327695, 458752, 0, 327696, 458752, 0, 327697, 458752, 0, 327698, 458752, 0, 524311, 458752, 0, 524312, 458752, 0, 524313, 458752, 0, 524314, 458752, 0, 327699, 458752, 0, 327700, 458752, 0, 327701, 458752, 0, 327702, 458752, 0, 458778, 458752, 0, 131075, 458752, 0, 131076, 458752, 0, 131077, 458752, 0, 131078, 458752, 0, 131079, 458752, 0, 131080, 458752, 0, 131081, 458752, 0, 131082, 458752, 0, 131083, 458752, 0, 131084, 458752, 0, 131085, 458752, 0, 131086, 458752, 0, 131087, 458752, 0, 131088, 458752, 0, 131089, 458752, 0, 131090, 458752, 0, 131091, 458752, 0, 131092, 458752, 0, 131093, 458752, 0, 131094, 458752, 0, 131095, 458752, 0, 131096, 458752, 0, 131097, 458752, 0, 131098, 458752, 0, 262144, 458752, 0, 327703, 458752, 0, 851994, 458752, 0, 720919, 458752, 0)
+
+[node name="CharacterBody2D2" parent="." groups=["Player"] instance=ExtResource("3_34kj1")]
+position = Vector2(-155, 29)
+script = ExtResource("4_dguiw")
+
+[node name="Camera2D2" type="Camera2D" parent="CharacterBody2D2"]
+position = Vector2(325.333, 194.667)
+position_smoothing_enabled = true
+position_smoothing_speed = 3.0
+rotation_smoothing_enabled = true
+rotation_smoothing_speed = 3.0
+
+[node name="trap" type="Node" parent="."]
+
+[node name="DeadlyObject" parent="trap" instance=ExtResource("4_ip2n2")]
+position = Vector2(9, 502)
