@@ -274,6 +274,7 @@ visible = false
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="MenuButton" type="Button" parent="CanvasLayer"]
+texture_filter = 1
 offset_left = 22.0
 offset_top = 17.0
 offset_right = 51.0

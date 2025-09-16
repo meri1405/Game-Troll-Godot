@@ -83,6 +83,7 @@ func _on_hurt_box_area_entered(area: Area2D) -> void:
 		print("hit enemy")
 
 
-
-		
-		
+func _on_force_jump_body_entered(body: Node2D) -> void:
+	if body.name == "Player":
+		velocity.y = JUMP_VELOCITY * 3 
+	
