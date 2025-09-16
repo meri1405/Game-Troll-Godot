@@ -523,6 +523,15 @@ size = Vector2(79, 78)
 
 [node name="Level4" type="Node"]
 
+[node name="SandGround" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = 1153.0
+offset_top = -1.0
+offset_right = 2360.0
+offset_bottom = 667.0
+texture = ExtResource("2_pklw6")
+stretch_mode = 1
+
 [node name="PinkGround" type="TextureRect" parent="."]
 texture_filter = 1
 anchors_preset = 15
@@ -531,15 +540,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_g1tnb")
-stretch_mode = 1
-
-[node name="SandGround" type="TextureRect" parent="."]
-texture_filter = 1
-offset_left = 1153.0
-offset_top = -1.0
-offset_right = 2360.0
-offset_bottom = 667.0
-texture = ExtResource("2_pklw6")
 stretch_mode = 1
 
 [node name="SawTrap_LeftMove" parent="." instance=ExtResource("3_bvvno")]
@@ -674,7 +674,7 @@ shape = SubResource("RectangleShape2D_fx4lf")
 [node name="SpikeTrap_RightMove6" type="Node" parent="."]
 
 [node name="SpikeTrap_RightMove" type="Area2D" parent="SpikeTrap_RightMove6" groups=["hurt", "saws"]]
-position = Vector2(-4, 409)
+position = Vector2(-3, 399)
 rotation = 1.5708
 scale = Vector2(3, 3)
 script = ExtResource("10_sx4db")
@@ -795,7 +795,6 @@ scale = Vector2(1.52242, 1.71489)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SpikeTrap_UpMove/SpikeTrigger"]
 position = Vector2(-15.1075, -120.707)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_n01hv")
 
 [node name="SpikeTrap_DownMove" type="Node" parent="."]
@@ -864,7 +863,7 @@ layer_0/tile_data = PackedInt32Array(786435, 786432, 4, 786436, 851968, 4, 78643
 
 [node name="Player" parent="." groups=["player"] instance=ExtResource("4_bvvno")]
 unique_name_in_owner = true
-position = Vector2(-88, -327)
+position = Vector2(-925, -62)
 
 [node name="fall" parent="." instance=ExtResource("6_b4lsh")]
 position = Vector2(1165, 678)
