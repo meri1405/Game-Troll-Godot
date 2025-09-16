@@ -878,35 +878,6 @@ scale = Vector2(1.52242, 1.71489)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SpikeTrap_UpMove/SpikeTrigger"]
 position = Vector2(-15.1075, -120.707)
-<<<<<<< HEAD
-=======
-shape = SubResource("RectangleShape2D_n01hv")
-
-[node name="SpikeTrap_UpMove2" type="Node" parent="."]
-
-[node name="SpikeTrap_UpMove" type="Area2D" parent="SpikeTrap_UpMove2" groups=["hurt", "saws"]]
-position = Vector2(365, 620)
-rotation = -3.14159
-scale = Vector2(4.10359, -3.74664)
-script = ExtResource("13_dguho")
-
-[node name="Sprite2D" type="Sprite2D" parent="SpikeTrap_UpMove2/SpikeTrap_UpMove"]
-texture_filter = 1
-texture = ExtResource("10_fx4lf")
-
-[node name="Area2D" type="Area2D" parent="SpikeTrap_UpMove2/SpikeTrap_UpMove" groups=["hurt"]]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SpikeTrap_UpMove2/SpikeTrap_UpMove/Area2D"]
-position = Vector2(-1, 4.83334)
-shape = SubResource("RectangleShape2D_p2trt")
-
-[node name="SpikeTrigger" type="Area2D" parent="SpikeTrap_UpMove2"]
-position = Vector2(376, 605)
-scale = Vector2(1.52242, 1.71489)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SpikeTrap_UpMove2/SpikeTrigger"]
-position = Vector2(-15.1075, -120.707)
->>>>>>> a0339a6a84bea4ec9a5cc31f0e9069285c69c35f
 shape = SubResource("RectangleShape2D_n01hv")
 
 [node name="SpikeTrap_DownMove" type="Node" parent="."]
