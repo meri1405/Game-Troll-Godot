@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddgtlxu55dixr"]
+
+[ext_resource type="Script" uid="uid://bt6w5jtgmrbbg" path="res://spike_fall.gd" id="1_qejcc"]
+[ext_resource type="Texture2D" uid="uid://crhk04in7jmsy" path="res://Pixel Adventure 1/Free/Traps/Spikes/Idle.png" id="2_fk7u6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8at3q"]
+size = Vector2(45, 21.5)
+
+[node name="SpikeFall" type="Area2D" groups=["hurt", "saws"]]
+script = ExtResource("1_qejcc")
+
+[node name="Sprite2D" type="Sprite2D" parent="." groups=["hurt"]]
+texture_filter = 1
+rotation = 3.14159
+scale = Vector2(2, 2)
+texture = ExtResource("2_fk7u6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["hurt"]]
+visibility_layer = 2
+position = Vector2(1.5, -13.75)
+shape = SubResource("RectangleShape2D_8at3q")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(1, -13)
+scale = Vector2(2.3, 1.1)
