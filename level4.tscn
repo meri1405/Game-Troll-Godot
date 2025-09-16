@@ -946,7 +946,7 @@ layer_0/tile_data = PackedInt32Array(786435, 786432, 4, 786436, 851968, 4, 78643
 
 [node name="Player" parent="." groups=["player"] instance=ExtResource("4_bvvno")]
 unique_name_in_owner = true
-position = Vector2(437, -186)
+position = Vector2(-918, -56)
 
 [node name="fall" parent="." instance=ExtResource("6_b4lsh")]
 position = Vector2(1165, 678)
@@ -992,7 +992,6 @@ shape = SubResource("RectangleShape2D_tbmqs")
 [connection signal="body_entered" from="SpikeTrap_LeftMove2/SpikeTrigger" to="SpikeTrap_LeftMove2/SpikeTrap_LeftMove" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="SpikeTrap_LeftMove3/SpikeTrigger" to="SpikeTrap_LeftMove3/SpikeTrap_LeftMove" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="SpikeTrap_UpMove/SpikeTrigger" to="SpikeTrap_UpMove/SpikeTrap_UpMove" method="_on_saw_trigger_body_entered"]
-[connection signal="body_entered" from="SpikeTrap_UpMove2/SpikeTrigger" to="SpikeTrap_UpMove2/SpikeTrap_UpMove" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="SpikeTrap_DownMove/SpikeTrigger" to="SpikeTrap_DownMove/SpikeTrap_DownMove" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="SpikeTrap_DownMove2/SpikeTrigger" to="SpikeTrap_DownMove2/SpikeTrap_DownMove" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="CheckPoint" to="CheckPoint" method="_on_body_entered"]
