@@ -606,6 +606,15 @@ size = Vector2(27, 40)
 
 [node name="Level4" type="Node"]
 
+[node name="SandGround" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = 1153.0
+offset_top = -1.0
+offset_right = 2360.0
+offset_bottom = 667.0
+texture = ExtResource("2_pklw6")
+stretch_mode = 1
+
 [node name="PinkGround" type="TextureRect" parent="."]
 texture_filter = 1
 anchors_preset = 15
@@ -614,15 +623,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_g1tnb")
-stretch_mode = 1
-
-[node name="SandGround" type="TextureRect" parent="."]
-texture_filter = 1
-offset_left = 1153.0
-offset_top = -1.0
-offset_right = 2360.0
-offset_bottom = 667.0
-texture = ExtResource("2_pklw6")
 stretch_mode = 1
 
 [node name="SawTrap_LeftMove" parent="." instance=ExtResource("3_bvvno")]
