@@ -606,6 +606,15 @@ size = Vector2(27, 40)
 
 [node name="Level4" type="Node"]
 
+[node name="SandGround" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = 1153.0
+offset_top = -1.0
+offset_right = 2360.0
+offset_bottom = 667.0
+texture = ExtResource("2_pklw6")
+stretch_mode = 1
+
 [node name="PinkGround" type="TextureRect" parent="."]
 texture_filter = 1
 anchors_preset = 15
@@ -614,15 +623,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_g1tnb")
-stretch_mode = 1
-
-[node name="SandGround" type="TextureRect" parent="."]
-texture_filter = 1
-offset_left = 1153.0
-offset_top = -1.0
-offset_right = 2360.0
-offset_bottom = 667.0
-texture = ExtResource("2_pklw6")
 stretch_mode = 1
 
 [node name="SawTrap_LeftMove" parent="." instance=ExtResource("3_bvvno")]
@@ -880,32 +880,6 @@ scale = Vector2(1.52242, 1.71489)
 position = Vector2(-15.1075, -120.707)
 shape = SubResource("RectangleShape2D_n01hv")
 
-[node name="SpikeTrap_UpMove2" type="Node" parent="."]
-
-[node name="SpikeTrap_UpMove" type="Area2D" parent="SpikeTrap_UpMove2" groups=["hurt", "saws"]]
-position = Vector2(362, 616)
-rotation = -3.14159
-scale = Vector2(4.10359, -3.74664)
-script = ExtResource("13_dguho")
-
-[node name="Sprite2D" type="Sprite2D" parent="SpikeTrap_UpMove2/SpikeTrap_UpMove"]
-texture_filter = 1
-texture = ExtResource("10_fx4lf")
-
-[node name="Area2D" type="Area2D" parent="SpikeTrap_UpMove2/SpikeTrap_UpMove" groups=["hurt"]]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SpikeTrap_UpMove2/SpikeTrap_UpMove/Area2D"]
-position = Vector2(-1, 4.83334)
-shape = SubResource("RectangleShape2D_p2trt")
-
-[node name="SpikeTrigger" type="Area2D" parent="SpikeTrap_UpMove2"]
-position = Vector2(377, 598)
-scale = Vector2(1.52242, 1.71489)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SpikeTrap_UpMove2/SpikeTrigger"]
-position = Vector2(-15.1075, -120.707)
-shape = SubResource("RectangleShape2D_n01hv")
-
 [node name="SpikeTrap_DownMove" type="Node" parent="."]
 
 [node name="SpikeTrap_DownMove" type="Area2D" parent="SpikeTrap_DownMove" groups=["hurt", "saws"]]
@@ -1018,7 +992,6 @@ shape = SubResource("RectangleShape2D_tbmqs")
 [connection signal="body_entered" from="SpikeTrap_LeftMove2/SpikeTrigger" to="SpikeTrap_LeftMove2/SpikeTrap_LeftMove" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="SpikeTrap_LeftMove3/SpikeTrigger" to="SpikeTrap_LeftMove3/SpikeTrap_LeftMove" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="SpikeTrap_UpMove/SpikeTrigger" to="SpikeTrap_UpMove/SpikeTrap_UpMove" method="_on_saw_trigger_body_entered"]
-[connection signal="body_entered" from="SpikeTrap_UpMove2/SpikeTrigger" to="SpikeTrap_UpMove2/SpikeTrap_UpMove" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="SpikeTrap_DownMove/SpikeTrigger" to="SpikeTrap_DownMove/SpikeTrap_DownMove" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="SpikeTrap_DownMove2/SpikeTrigger" to="SpikeTrap_DownMove2/SpikeTrap_DownMove" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="CheckPoint" to="CheckPoint" method="_on_body_entered"]
