@@ -878,35 +878,6 @@ scale = Vector2(1.52242, 1.71489)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SpikeTrap_UpMove/SpikeTrigger"]
 position = Vector2(-15.1075, -120.707)
-<<<<<<< HEAD
-=======
-shape = SubResource("RectangleShape2D_n01hv")
-
-[node name="SpikeTrap_UpMove2" type="Node" parent="."]
-
-[node name="SpikeTrap_UpMove" type="Area2D" parent="SpikeTrap_UpMove2" groups=["hurt", "saws"]]
-position = Vector2(365, 620)
-rotation = -3.14159
-scale = Vector2(4.10359, -3.74664)
-script = ExtResource("13_dguho")
-
-[node name="Sprite2D" type="Sprite2D" parent="SpikeTrap_UpMove2/SpikeTrap_UpMove"]
-texture_filter = 1
-texture = ExtResource("10_fx4lf")
-
-[node name="Area2D" type="Area2D" parent="SpikeTrap_UpMove2/SpikeTrap_UpMove" groups=["hurt"]]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SpikeTrap_UpMove2/SpikeTrap_UpMove/Area2D"]
-position = Vector2(-1, 4.83334)
-shape = SubResource("RectangleShape2D_p2trt")
-
-[node name="SpikeTrigger" type="Area2D" parent="SpikeTrap_UpMove2"]
-position = Vector2(376, 605)
-scale = Vector2(1.52242, 1.71489)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SpikeTrap_UpMove2/SpikeTrigger"]
-position = Vector2(-15.1075, -120.707)
->>>>>>> a0339a6a84bea4ec9a5cc31f0e9069285c69c35f
 shape = SubResource("RectangleShape2D_n01hv")
 
 [node name="SpikeTrap_DownMove" type="Node" parent="."]
@@ -975,11 +946,7 @@ layer_0/tile_data = PackedInt32Array(786435, 786432, 4, 786436, 851968, 4, 78643
 
 [node name="Player" parent="." groups=["player"] instance=ExtResource("4_bvvno")]
 unique_name_in_owner = true
-<<<<<<< HEAD
-position = Vector2(-940, -40)
-=======
-position = Vector2(437, -186)
->>>>>>> a0339a6a84bea4ec9a5cc31f0e9069285c69c35f
+position = Vector2(-918, -56)
 
 [node name="fall" parent="." instance=ExtResource("6_b4lsh")]
 position = Vector2(1165, 678)
@@ -1025,7 +992,6 @@ shape = SubResource("RectangleShape2D_tbmqs")
 [connection signal="body_entered" from="SpikeTrap_LeftMove2/SpikeTrigger" to="SpikeTrap_LeftMove2/SpikeTrap_LeftMove" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="SpikeTrap_LeftMove3/SpikeTrigger" to="SpikeTrap_LeftMove3/SpikeTrap_LeftMove" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="SpikeTrap_UpMove/SpikeTrigger" to="SpikeTrap_UpMove/SpikeTrap_UpMove" method="_on_saw_trigger_body_entered"]
-[connection signal="body_entered" from="SpikeTrap_UpMove2/SpikeTrigger" to="SpikeTrap_UpMove2/SpikeTrap_UpMove" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="SpikeTrap_DownMove/SpikeTrigger" to="SpikeTrap_DownMove/SpikeTrap_DownMove" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="SpikeTrap_DownMove2/SpikeTrigger" to="SpikeTrap_DownMove2/SpikeTrap_DownMove" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="CheckPoint" to="CheckPoint" method="_on_body_entered"]
