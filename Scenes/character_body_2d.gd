@@ -95,9 +95,16 @@ func set_color(new_color: int):
 		4: sprite_2d.modulate = Color.GREEN
 		_: sprite_2d.modulate = Color.WHITE
 
+<<<<<<< HEAD
 func reset_color():
 	# Reset lại màu
 	current_color = 0
 	sprite_2d.modulate = Color.WHITE
 		
 		
+=======
+func _on_force_jump_body_entered(body: Node2D) -> void:
+	if body.name == "Player":
+		velocity.y = JUMP_VELOCITY * 3 
+	
+>>>>>>> a0339a6a84bea4ec9a5cc31f0e9069285c69c35f
