@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://qllh8td5b7kn"]
+
+[ext_resource type="Script" uid="uid://cks07ntut1om4" path="res://CHiTAN/trap_up.gd" id="1_m0xwq"]
+[ext_resource type="Texture2D" uid="uid://crhk04in7jmsy" path="res://Pixel Adventure 1/Free/Traps/Spikes/Idle.png" id="1_uncrj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m0xwq"]
+size = Vector2(28.2552, 3.20134)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uyu2j"]
+size = Vector2(45.4257, 75.8772)
+
+[node name="TrapUp" type="Area2D"]
+position = Vector2(165, 109)
+script = ExtResource("1_m0xwq")
+
+[node name="NewAtlasTexture" type="Sprite2D" parent="."]
+position = Vector2(109, 78)
+rotation = -0.0108285
+scale = Vector2(3.2132, 2.63862)
+texture = ExtResource("1_uncrj")
+
+[node name="TriggerArea" type="Area2D" parent="."]
+position = Vector2(8, 22)
+rotation = -0.34932
+scale = Vector2(0.878281, 0.8882)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerArea"]
+position = Vector2(264.32, -169.645)
+rotation = 1.9197
+scale = Vector2(0.999975, 1.03161)
+shape = SubResource("RectangleShape2D_m0xwq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(109.027, 90.4983)
+rotation = -1.58177
+scale = Vector2(0.37512, 0.566092)
+shape = SubResource("RectangleShape2D_uyu2j")

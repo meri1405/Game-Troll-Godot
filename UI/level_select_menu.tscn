@@ -1,0 +1,64 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0p1gp1m0ehxd"]
+
+[ext_resource type="Script" uid="uid://bor0vn4cccx01" path="res://UI/level_select_menu.gd" id="1_3jria"]
+[ext_resource type="Texture2D" uid="uid://bbgwpoiadoloa" path="res://Pixel Adventure 1/Free/Background/background.png" id="2_3jria"]
+
+[node name="LevelSelectMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 25.0
+offset_top = 91.0
+offset_right = 65.0
+offset_bottom = 131.0
+script = ExtResource("1_3jria")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = -348.0
+offset_top = -85.0
+offset_right = 1188.0
+offset_bottom = 939.0
+scale = Vector2(1.19026, 1.28884)
+texture = ExtResource("2_3jria")
+stretch_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 272.0
+offset_top = 69.0
+offset_right = 584.0
+offset_bottom = 183.0
+
+[node name="Title" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.0430392, 0.0430392, 0.0430392, 1)
+theme_override_colors/font_outline_color = Color(1, 0.935287, 0.974431, 1)
+theme_override_font_sizes/font_size = 48
+text = "SELECT LEVEL"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(700, 300)
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer/ScrollContainer"]
+custom_minimum_size = Vector2(690, 300)
+layout_mode = 2
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 20
+columns = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="BackButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Back"
+
+[node name="ResetButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Reset Level"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
