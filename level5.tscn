@@ -1,10 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://besfbgrgvx1sp"]
+[gd_scene load_steps=14 format=3 uid="uid://besfbgrgvx1sp"]
 
 [ext_resource type="Texture2D" uid="uid://dhkt1prc5cciq" path="res://Pixel Adventure 1/Free/Background/Blue.png" id="1_t4tfv"]
 [ext_resource type="Texture2D" uid="uid://cmx6ev0y0fkb7" path="res://Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="2_bf6rn"]
 [ext_resource type="Texture2D" uid="uid://b2cvefql3txu0" path="res://Pixel Adventure 1/Free/Background/Gray.png" id="2_qmr0j"]
 [ext_resource type="PackedScene" uid="uid://dt1tth682nenl" path="res://Scenes/character_body_2d.tscn" id="3_qmr0j"]
 [ext_resource type="Texture2D" uid="uid://dps2vak3wrpfb" path="res://Pixel Adventure 1/Free/Background/Purple.png" id="3_x2odi"]
+[ext_resource type="Script" uid="uid://ckuyjpr6m1qgq" path="res://spike_trap_right_move.gd" id="6_8at3q"]
+[ext_resource type="Texture2D" uid="uid://crhk04in7jmsy" path="res://Pixel Adventure 1/Free/Traps/Spikes/Idle.png" id="7_87x5k"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x2odi"]
 texture = ExtResource("2_bf6rn")
@@ -451,6 +453,12 @@ texture = ExtResource("2_bf6rn")
 [sub_resource type="TileSet" id="TileSet_yfwe1"]
 sources/0 = SubResource("TileSetAtlasSource_87x5k")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yfwe1"]
+size = Vector2(15.6666, 7.33334)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p3j2p"]
+size = Vector2(5, 101)
+
 [node name="Level5" type="Node"]
 
 [node name="blue_bg" type="TextureRect" parent="."]
@@ -495,5 +503,84 @@ tile_set = SubResource("TileSet_yfwe1")
 format = 2
 layer_0/tile_data = PackedInt32Array(18, 851968, 1, 65554, 851968, 2, 19, 917504, 1, 65555, 917504, 2, 17, 786432, 1, 131091, 786432, 1, 720896, 851968, 1, 786432, 851968, 2, 720897, 917504, 1, 786433, 917504, 2, 655360, 786432, 1, 786434, 786432, 1, -917504, 851968, 5, -851968, 851968, 6, -917503, 917504, 5, -851967, 917504, 6, -917502, 786432, 5, -786432, 786432, 5, -131055, 786432, 5, -196590, 851968, 5, -131054, 851968, 6, -196589, 917504, 5, -131053, 917504, 6, -262125, 786432, 5, -1703936, 524288, 10, -1769471, 524288, 10, -1835006, 524288, 10, -1900544, 589824, 8, -1835008, 589824, 9, -1900543, 655360, 8, -1835007, 655360, 9, -1900542, 524288, 9, -1769472, 458752, 9)
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("3_qmr0j")]
+[node name="CharacterBody2D" parent="." groups=["player"] instance=ExtResource("3_qmr0j")]
 position = Vector2(-894, -11)
+
+[node name="SpikeTrap_RightMove" type="Node" parent="."]
+
+[node name="SpikeTrap_RightMove" type="Area2D" parent="SpikeTrap_RightMove" groups=["hurt", "saws"]]
+position = Vector2(-45, 439)
+rotation = 1.5708
+scale = Vector2(3, 3)
+script = ExtResource("6_8at3q")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpikeTrap_RightMove/SpikeTrap_RightMove"]
+texture_filter = 1
+texture = ExtResource("7_87x5k")
+
+[node name="Area2D" type="Area2D" parent="SpikeTrap_RightMove/SpikeTrap_RightMove" groups=["hurt"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpikeTrap_RightMove/SpikeTrap_RightMove/Area2D"]
+position = Vector2(-0.500046, 4.33334)
+shape = SubResource("RectangleShape2D_yfwe1")
+
+[node name="SpikeTrigger" type="Area2D" parent="SpikeTrap_RightMove"]
+position = Vector2(818, 481)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpikeTrap_RightMove/SpikeTrigger"]
+position = Vector2(5.5, 28.5)
+shape = SubResource("RectangleShape2D_p3j2p")
+
+[node name="SpikeTrap_RightMove2" type="Node" parent="."]
+
+[node name="SpikeTrap_RightMove" type="Area2D" parent="SpikeTrap_RightMove2" groups=["hurt", "saws"]]
+position = Vector2(-43, 389)
+rotation = 1.5708
+scale = Vector2(3, 3)
+script = ExtResource("6_8at3q")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpikeTrap_RightMove2/SpikeTrap_RightMove"]
+texture_filter = 1
+texture = ExtResource("7_87x5k")
+
+[node name="Area2D" type="Area2D" parent="SpikeTrap_RightMove2/SpikeTrap_RightMove" groups=["hurt"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpikeTrap_RightMove2/SpikeTrap_RightMove/Area2D"]
+position = Vector2(-0.500046, 4.33334)
+shape = SubResource("RectangleShape2D_yfwe1")
+
+[node name="SpikeTrigger" type="Area2D" parent="SpikeTrap_RightMove2"]
+position = Vector2(843, 380)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpikeTrap_RightMove2/SpikeTrigger"]
+position = Vector2(5.5, 28.5)
+shape = SubResource("RectangleShape2D_p3j2p")
+
+[node name="SpikeTrap_RightMove3" type="Node" parent="."]
+
+[node name="SpikeTrap_RightMove" type="Area2D" parent="SpikeTrap_RightMove3" groups=["hurt", "saws"]]
+position = Vector2(-72, 388)
+rotation = 1.5708
+scale = Vector2(3, 3)
+script = ExtResource("6_8at3q")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpikeTrap_RightMove3/SpikeTrap_RightMove"]
+texture_filter = 1
+texture = ExtResource("7_87x5k")
+
+[node name="Area2D" type="Area2D" parent="SpikeTrap_RightMove3/SpikeTrap_RightMove" groups=["hurt"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpikeTrap_RightMove3/SpikeTrap_RightMove/Area2D"]
+position = Vector2(-0.500046, 4.33334)
+shape = SubResource("RectangleShape2D_yfwe1")
+
+[node name="SpikeTrigger" type="Area2D" parent="SpikeTrap_RightMove3"]
+position = Vector2(854, 411)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpikeTrap_RightMove3/SpikeTrigger"]
+position = Vector2(5.5, 28.5)
+shape = SubResource("RectangleShape2D_p3j2p")
+
+[connection signal="body_entered" from="SpikeTrap_RightMove/SpikeTrigger" to="SpikeTrap_RightMove/SpikeTrap_RightMove" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="SpikeTrap_RightMove2/SpikeTrigger" to="SpikeTrap_RightMove2/SpikeTrap_RightMove" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="SpikeTrap_RightMove3/SpikeTrigger" to="SpikeTrap_RightMove3/SpikeTrap_RightMove" method="_on_saw_trigger_body_entered"]
