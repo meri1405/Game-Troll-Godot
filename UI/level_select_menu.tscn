@@ -14,6 +14,7 @@ script = ExtResource("1_3jria")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
+layout_mode = 0
 offset_left = -348.0
 offset_top = -85.0
 offset_right = 1188.0
