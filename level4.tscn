@@ -1002,7 +1002,7 @@ script = ExtResource("16_0bk12")
 sprite_frames = SubResource("SpriteFrames_0fpet")
 animation = &"checkpoint"
 autoplay = "checkpoint"
-frame_progress = 0.208016
+frame_progress = 0.86484
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CheckPoint"]
 position = Vector2(3.5, 12)
