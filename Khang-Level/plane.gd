@@ -15,10 +15,25 @@ extends Area2D
 
 func _on_body_entered(body):
 	if body.is_in_group("Player"):
-		# Thêm tile lại ở (5, 10) trên TileMap
+		# Thêm 2 block đầu và cuối
 		tilemap.set_cell(0, Vector2i(12, 11), 0, Vector2i(6, 8))
 		tilemap.set_cell(0, Vector2i(21, 11), 0, Vector2i(8, 8))
+
+		# Hiện toàn bộ block cửa
 		for coords in tile_coords:
-			# hiện tile tại mỗi tọa độ
 			tilemap.set_cell(0, coords, 0, Vector2i(7, 8))
-		queue_free()
+
+		# Bắt đầu coroutine xoá block dần
+		await _delete_tiles_step_by_step()
+
+		hide() # Xóa luôn Area2D (cửa không kích hoạt nữa)
+
+
+func _delete_tiles_step_by_step() -> void:
+	await get_tree().create_timer(0.15).timeout
+	tilemap.set_cell(0, Vector2i(12, 11), -1)
+	for coords in tile_coords:
+		await get_tree().create_timer(0.15).timeout
+		tilemap.set_cell(0, coords, -1)  # -1 = xoá tile
+	await get_tree().create_timer(0.15).timeout
+	tilemap.set_cell(0, Vector2i(21, 11), -1)

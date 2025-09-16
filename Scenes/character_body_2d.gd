@@ -7,6 +7,8 @@ var is_alive = true
 
 var spawn_point_x=0
 var spawn_point_y=0
+# 🎨 Màu hiện tại (0 = None, 1 = Red, 2 = Yellow, ...)
+var current_color: int = 0
 
 func _ready() -> void:
 	spawn_point_x=global_position.x
@@ -68,7 +70,9 @@ func die():
 		if saw.has_method("reset_trap"):
 			saw.reset_trap()
 
-	
+	# Reset lại màu
+	current_color = 0
+	sprite_2d.modulate = Color.WHITE
 	
 	await get_tree().create_timer(1.0).timeout
 	_do_reset()
@@ -82,7 +86,21 @@ func _on_hurt_box_area_entered(area: Area2D) -> void:
 		print(position)
 		print("hit enemy")
 
+func set_color(new_color: int):
+	current_color = new_color
+	match current_color:
+		1: sprite_2d.modulate = Color.RED
+		2: sprite_2d.modulate = Color.YELLOW
+		3: sprite_2d.modulate = Color.BLUE
+		4: sprite_2d.modulate = Color.GREEN
+		_: sprite_2d.modulate = Color.WHITE
 
+func reset_color():
+	# Reset lại màu
+	current_color = 0
+	sprite_2d.modulate = Color.WHITE
+		
+		
 func _on_force_jump_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		velocity.y = JUMP_VELOCITY * 3 
