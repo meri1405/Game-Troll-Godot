@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://b0b8d8fe0ga2a" path="res://Touch_Controls/scene/touch_controls.tscn" id="11_4s4xf"]
 [ext_resource type="Script" uid="uid://c2rmfiaeqok35" path="res://Scenes/spike3set_UP.gd" id="11_p7bnq"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jikk4"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p7bnq"]
 texture = ExtResource("2_65pcf")
 0:0/0 = 0
 1:0/0 = 0
@@ -179,7 +179,7 @@ texture = ExtResource("2_65pcf")
 
 [sub_resource type="TileSet" id="TileSet_jikk4"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_jikk4")
+sources/0 = SubResource("TileSetAtlasSource_p7bnq")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tedvs"]
 size = Vector2(39, 37)

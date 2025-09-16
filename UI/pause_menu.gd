@@ -42,3 +42,7 @@ func _on_sound_button_pressed():
 func _on_continue_pressed() -> void:
 	$"/root/AudioController".play_click()
 	hide_menu()
+
+
+func _on_menu_button_pressed() -> void:
+	pass # Replace with function body.
