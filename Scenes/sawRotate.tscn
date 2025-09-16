@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dm5b22pnb78kc"]
+
+[ext_resource type="Script" uid="uid://bnthc2x0f5pl6" path="res://Scenes/rotating_thing.gd" id="1_k0qgg"]
+
+[node name="RotateController" type="CharacterBody2D"]
+position = Vector2(127, 105)
+script = ExtResource("1_k0qgg")

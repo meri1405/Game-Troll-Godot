@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcw1f5su5l2w5"]
+
+[ext_resource type="Texture2D" uid="uid://crhk04in7jmsy" path="res://Pixel Adventure 1/Free/Traps/Spikes/Idle.png" id="1_v3gpq"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_agh12"]
+radius = 6.0
+height = 60.0
+
+[node name="Spike3set" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_v3gpq")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+texture_filter = 1
+position = Vector2(16, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("1_v3gpq")
+
+[node name="SpikeHitbox" type="Area2D" parent="." groups=["hurt"]]
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpikeHitbox"]
+position = Vector2(14, 10)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_agh12")

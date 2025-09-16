@@ -58,13 +58,23 @@ func _do_reset():
 	position = Vector2(spawn_point_x,spawn_point_y)
 
 func die():
+	
 	is_alive = false
 	sprite_2d.stop()
 	sprite_2d.play("Hit")
 	sprite_2d.play_backwards("Hit")
+	# Reset tất cả các bẫy saw về vị trí ban đầu
+	for saw in get_tree().get_nodes_in_group("saws"):
+		if saw.has_method("reset_trap"):
+			saw.reset_trap()
+
+	
+	
 	await get_tree().create_timer(1.0).timeout
 	_do_reset()
+	
 	is_alive = true
+	await get_tree().create_timer(1).timeout
 
 func _on_hurt_box_area_entered(area: Area2D) -> void:
 	if area.is_in_group("hurt"):
@@ -73,6 +83,7 @@ func _on_hurt_box_area_entered(area: Area2D) -> void:
 		print("hit enemy")
 
 
-
-		
-		
+func _on_force_jump_body_entered(body: Node2D) -> void:
+	if body.name == "Player":
+		velocity.y = JUMP_VELOCITY * 3 
+	

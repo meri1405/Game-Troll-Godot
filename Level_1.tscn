@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://c3lddyn0fnn1e"]
+[gd_scene load_steps=18 format=3 uid="uid://dh324qpanhx65"]
 
 [ext_resource type="Script" uid="uid://c85pk27sc71ds" path="res://level_1.gd" id="1_kidjj"]
 [ext_resource type="Texture2D" uid="uid://cmx6ev0y0fkb7" path="res://Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="2_65pcf"]
@@ -8,11 +8,12 @@
 [ext_resource type="PackedScene" uid="uid://m4c8hp47kokd" path="res://UI/pause_menu.tscn" id="5_jikk4"]
 [ext_resource type="Texture2D" uid="uid://cbhtkwag7pn5d" path="res://Pixel Adventure 1/Free/Menu/Buttons/Settings.png" id="7_smwyr"]
 [ext_resource type="PackedScene" uid="uid://dflyeou82jyro" path="res://Scenes/saw.tscn" id="8_tedvs"]
-[ext_resource type="PackedScene" uid="uid://cibklyepbriw8" path="res://Scenes/Spike.tscn" id="9_gyeet"]
 [ext_resource type="PackedScene" uid="uid://ck1mdn7rmkyp7" path="res://Scenes/Fan.tscn" id="10_2wi7h"]
+[ext_resource type="PackedScene" uid="uid://cibklyepbriw8" path="res://Scenes/Spike3set.tscn" id="10_4s4xf"]
 [ext_resource type="PackedScene" uid="uid://b0b8d8fe0ga2a" path="res://Touch_Controls/scene/touch_controls.tscn" id="11_4s4xf"]
+[ext_resource type="Script" uid="uid://c2rmfiaeqok35" path="res://Scenes/spike3set_UP.gd" id="11_p7bnq"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jikk4"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p7bnq"]
 texture = ExtResource("2_65pcf")
 0:0/0 = 0
 1:0/0 = 0
@@ -178,13 +179,16 @@ texture = ExtResource("2_65pcf")
 
 [sub_resource type="TileSet" id="TileSet_jikk4"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_jikk4")
+sources/0 = SubResource("TileSetAtlasSource_p7bnq")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tedvs"]
 size = Vector2(39, 37)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2wi7h"]
-size = Vector2(73, 65)
+size = Vector2(43, 65)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p7bnq"]
+size = Vector2(32, 33)
 
 [node name="Level1" type="Node2D"]
 script = ExtResource("1_kidjj")
@@ -231,7 +235,7 @@ scale = Vector2(3, 3)
 icon = ExtResource("7_smwyr")
 flat = true
 
-[node name="Saw" parent="." groups=["hurt"] instance=ExtResource("8_tedvs")]
+[node name="Saw" parent="." instance=ExtResource("8_tedvs")]
 texture_filter = 1
 position = Vector2(727, 475)
 
@@ -242,36 +246,6 @@ position = Vector2(895, 466)
 position = Vector2(60, -12)
 shape = SubResource("RectangleShape2D_tedvs")
 
-[node name="Spike" parent="." groups=["hurt"] instance=ExtResource("9_gyeet")]
-texture_filter = 1
-position = Vector2(208, 609)
-scale = Vector2(2, 2)
-
-[node name="Spike2" parent="." groups=["hurt"] instance=ExtResource("9_gyeet")]
-texture_filter = 1
-position = Vector2(224, 609)
-scale = Vector2(2, 2)
-
-[node name="Spike3" parent="." groups=["hurt"] instance=ExtResource("9_gyeet")]
-texture_filter = 1
-position = Vector2(16, 272)
-scale = Vector2(2, 2)
-
-[node name="Spike4" parent="." groups=["hurt"] instance=ExtResource("9_gyeet")]
-texture_filter = 1
-position = Vector2(32, 272)
-scale = Vector2(2, 2)
-
-[node name="Spike5" parent="." groups=["hurt"] instance=ExtResource("9_gyeet")]
-texture_filter = 1
-position = Vector2(64, 272)
-scale = Vector2(2, 2)
-
-[node name="Spike6" parent="." groups=["hurt"] instance=ExtResource("9_gyeet")]
-texture_filter = 1
-position = Vector2(80, 272)
-scale = Vector2(2, 2)
-
 [node name="Fan" parent="." instance=ExtResource("10_2wi7h")]
 texture_filter = 1
 position = Vector2(671, 294)
@@ -281,8 +255,24 @@ scale = Vector2(3.5, 3.5)
 position = Vector2(1, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FanTrigger"]
-position = Vector2(669, 164)
+position = Vector2(681, 162)
 shape = SubResource("RectangleShape2D_2wi7h")
+
+[node name="Spike3set" parent="." instance=ExtResource("10_4s4xf")]
+position = Vector2(206, 608)
+scale = Vector2(2, 2)
+script = ExtResource("11_p7bnq")
+
+[node name="Spike4set" parent="." instance=ExtResource("11_4s4xf")]
+scale = Vector2(2, 2)
+transform = Transform2D(2, 0, 0, 2, 0, 0)
+
+[node name="SpikeTrigger" type="Area2D" parent="."]
+position = Vector2(200, 322)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpikeTrigger"]
+position = Vector2(6, -6.5)
+shape = SubResource("RectangleShape2D_p7bnq")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -295,3 +285,4 @@ offset_bottom = 40.0
 [connection signal="pressed" from="CanvasLayer/MenuButton" to="." method="_on_menu_button_pressed"]
 [connection signal="body_entered" from="SawTrigger" to="Saw" method="_on_movement_box_saw_body_entered"]
 [connection signal="body_entered" from="FanTrigger" to="Fan" method="_on_fan_trigger_body_entered"]
+[connection signal="body_entered" from="SpikeTrigger" to="Spike3set" method="_on_fan_trigger_body_entered"]
