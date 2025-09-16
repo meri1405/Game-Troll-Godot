@@ -795,7 +795,6 @@ scale = Vector2(1.52242, 1.71489)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SpikeTrap_UpMove/SpikeTrigger"]
 position = Vector2(-15.1075, -120.707)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_n01hv")
 
 [node name="SpikeTrap_DownMove" type="Node" parent="."]
@@ -864,7 +863,7 @@ layer_0/tile_data = PackedInt32Array(786435, 786432, 4, 786436, 851968, 4, 78643
 
 [node name="Player" parent="." groups=["player"] instance=ExtResource("4_bvvno")]
 unique_name_in_owner = true
-position = Vector2(-88, -327)
+position = Vector2(-940, -40)
 
 [node name="fall" parent="." instance=ExtResource("6_b4lsh")]
 position = Vector2(1165, 678)

@@ -18,3 +18,7 @@ func _physics_process(delta: float) -> void:
 func _on_spike_set_1_body_entered(body: Node2D) -> void:
 	
 	triggered = true
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.

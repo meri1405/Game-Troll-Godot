@@ -13,7 +13,9 @@ var grass_tiles = [
 	Vector2i(18, 11),
 	Vector2i(19, 11),
 	Vector2i(20, 11),
-	Vector2i(21, 11)
+	Vector2i(21, 11),
+	Vector2i(22, 9),
+	Vector2i(22, 10)
 ]
 
 func _ready():
