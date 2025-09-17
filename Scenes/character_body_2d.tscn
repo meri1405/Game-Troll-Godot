@@ -277,6 +277,7 @@ shape = SubResource("RectangleShape2D_gbyq6")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(325.333, 194.667)
+limit_smoothed = true
 position_smoothing_enabled = true
 position_smoothing_speed = 3.0
 

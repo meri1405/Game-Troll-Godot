@@ -1,23 +1,14 @@
 extends Area2D
 
-@export var door_color: int = 1 # màu cửa
+@export var door_color: int = 3 # màu cửa
 @onready var player: CharacterBody2D = get_tree().get_first_node_in_group("Player")
 @onready var tilemap = $"../TileMap"
 
 var is_open: bool = false
 
-@export var tiles_to_remove1: Array[Vector2i] = [
-	Vector2i(11, 0),
-	Vector2i(11, 1),
-	Vector2i(11, 2),
-	Vector2i(11, 3)
-]
-
-@export var tiles_to_remove2: Array[Vector2i] = [
-	Vector2i(12, 0),
-	Vector2i(12, 1),
-	Vector2i(12, 2),
-	Vector2i(12, 3)
+@export var tiles_to_remove: Array[Vector2i] = [
+	Vector2i(14, 4),
+	Vector2i(15, 4)
 ]
 
 func _on_body_entered(body):
@@ -33,9 +24,7 @@ func _on_body_entered(body):
 func open_door():
 	is_open = true
 	# Xóa tile cửa
-	for coords in tiles_to_remove1:
-		tilemap.set_cell(0, coords, -1)
-	for coords in tiles_to_remove2:
+	for coords in tiles_to_remove:
 		tilemap.set_cell(0, coords, -1)
 
 	# Sau 1 giây cửa đóng lại
@@ -44,7 +33,6 @@ func open_door():
 
 func close_door():
 	is_open = false
-	for coords in tiles_to_remove1:
-		tilemap.set_cell(0, coords, 0, Vector2i(17, 5))
-	for coords in tiles_to_remove2:
-		tilemap.set_cell(0, coords, 0, Vector2i(19, 5))
+	# Đặt lại tile cửa bằng ID đã hardcode sẵn
+	tilemap.set_cell(0, Vector2i(14, 4), 0, Vector2i(12, 8))
+	tilemap.set_cell(0, Vector2i(15, 4), 0, Vector2i(14, 8))
