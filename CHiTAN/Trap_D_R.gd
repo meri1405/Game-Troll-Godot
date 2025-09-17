@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var move_distance_down: float = 70.0  # Khoảng cách di chuyển xuống
+@export var move_distance_down: float = 90.0  # Khoảng cách di chuyển xuống
 @export var move_distance_right: float = 300.0  # Khoảng cách di chuyển sang phải
 @export var move_speed: float = 0.5  # Tốc độ di chuyển
 

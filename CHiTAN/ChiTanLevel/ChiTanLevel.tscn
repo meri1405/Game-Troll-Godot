@@ -19,7 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://c82u71xim8u8g" path="res://Hello.png" id="10_wulba"]
 [ext_resource type="Script" uid="uid://dhbe4nrvokkhm" path="res://CHiTAN/ChiTanNV.gd" id="11_d3vyv"]
 [ext_resource type="Script" uid="uid://d0i3764jsu8oy" path="res://CHiTAN/TrapXoay.gd" id="12_kt7kh"]
-[ext_resource type="Script" uid="uid://b0cmuxvyqi5kp" path="res://CHiTAN/Move_L.gd" id="16_jchsq"]
+[ext_resource type="Script" uid="uid://b0cmuxvyqi5kp" path="res://CHiTAN/Trap_Move_L.gd" id="16_jchsq"]
 [ext_resource type="Texture2D" uid="uid://bg14ereu48jp2" path="res://Pixel Adventure 1/Free/Traps/Spiked Ball/Spiked Ball.png" id="17_enh1l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dj87x"]

@@ -1,7 +1,7 @@
 extends AnimatableBody2D
 
 @export var rotation_angle: float = 90.0  # Góc xoay (độ)
-@export var rotation_speed: float = 0.3   # Tốc độ xoay
+@export var rotation_speed: float = 0.1   # Tốc độ xoay
 
 var start_rotation: float
 var target_rotation: float

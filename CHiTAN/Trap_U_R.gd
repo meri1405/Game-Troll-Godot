@@ -1,7 +1,7 @@
 extends Area2D
 
 @export var move_distance_up: float = 40.0     # Khoảng cách di chuyển lên
-@export var move_distance_right: float = 150.0  # Khoảng cách di chuyển sang phải
+@export var move_distance_right: float = 160.0  # Khoảng cách di chuyển sang phải
 @export var move_speed: float = 0.5           # Tốc độ di chuyển
 
 var start_position: Vector2
@@ -62,3 +62,7 @@ func reset_object():
 	print("Resetting trap to start position")
 	global_position = start_position
 	has_triggered = false
+
+
+func _on_trap_trigger_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.
