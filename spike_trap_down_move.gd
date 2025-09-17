@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var speed: float = 1500.0
+@export var speed: float = 900.0
 @export var direction: int = 1
 
 var triggered: bool = false
