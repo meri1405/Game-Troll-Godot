@@ -1,7 +1,7 @@
 extends Area2D
 
-@export var speed: float = 300.0
-@export var direction: int = 1
+@export var speed: float = 150.0
+@export var direction: int = -1
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 var triggered: bool = false
@@ -13,8 +13,9 @@ func _ready():
 func _physics_process(delta: float) -> void:
 	if triggered:
 		global_position.x += direction * speed * delta
+		animated_sprite_2d.play("Running")
 		if not animated_sprite_2d.is_playing():
-			animated_sprite_2d.play() # chạy animation mặc định
+			animated_sprite_2d.play("idle")
 
 func _on_saw_trigger_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
@@ -24,4 +25,4 @@ func _on_saw_trigger_body_entered(body: Node2D) -> void:
 func reset_trap():
 	global_position = start_position
 	triggered = false
-	animated_sprite_2d.stop()
+	animated_sprite_2d.play("idle")
