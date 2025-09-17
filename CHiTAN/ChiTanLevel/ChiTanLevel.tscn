@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://crhk04in7jmsy" path="res://Pixel Adventure 1/Free/Traps/Spikes/Idle.png" id="3_hlycl"]
 [ext_resource type="PackedScene" uid="uid://b6ag1ctw4nvis" path="res://CHiTAN/TrapCoDinh.tscn" id="4_c3dvo"]
 [ext_resource type="PackedScene" uid="uid://cvvso2wo21aec" path="res://CHiTAN/MoveR.tscn" id="5_jchsq"]
-[ext_resource type="Script" uid="uid://d7j87xllr3qh" path="res://CHiTAN/ChiTanLevel/TrapMoveRight.gd" id="5_t3540"]
+[ext_resource type="Script" uid="uid://d7j87xllr3qh" path="res://CHiTAN/TrapMoveRight.gd" id="5_t3540"]
 [ext_resource type="PackedScene" uid="uid://qllh8td5b7kn" path="res://CHiTAN/TrapUp.tscn" id="6_enh1l"]
 [ext_resource type="Texture2D" uid="uid://cv75emh7is5wj" path="res://UI/ImgBlock/TrapImg.tres" id="7_0imk0"]
 [ext_resource type="Texture2D" uid="uid://crnswvpxwaj4b" path="res://UI/ImgBlock/Block.tres" id="8_0imk0"]
@@ -429,6 +429,7 @@ shape = SubResource("RectangleShape2D_kvda6")
 position = Vector2(40, 29)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Trap/Move_D/TriggerArea"]
+texture_filter = 1
 position = Vector2(324, 50)
 shape = SubResource("SegmentShape2D_wulba")
 
