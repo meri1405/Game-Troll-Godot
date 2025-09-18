@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://bl5ecus2o2nnf"]
+[gd_scene load_steps=20 format=3 uid="uid://bl5ecus2o2nnf"]
 
 [ext_resource type="Texture2D" uid="uid://c2q1auamo4dbd" path="res://Pixel Adventure 1/Free/Background/Brown.png" id="1_1y8me"]
 [ext_resource type="Script" uid="uid://bq6ed1y6q0fw5" path="res://level_2.gd" id="1_7j8ne"]
@@ -8,12 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://cn3fdwy7umk4h" path="res://Checkpoint/Level_2/checkpoint_2.tscn" id="5_n7ypv"]
 [ext_resource type="PackedScene" uid="uid://m4c8hp47kokd" path="res://UI/pause_menu.tscn" id="6_kgqac"]
 [ext_resource type="Texture2D" uid="uid://cbhtkwag7pn5d" path="res://Pixel Adventure 1/Free/Menu/Buttons/Settings.png" id="7_kgqac"]
-[ext_resource type="PackedScene" path="res://Scenes/saw.tscn" id="9_ehv2h"]
-[ext_resource type="Script" path="res://Scenes/sawMoving.gd" id="10_15wb7"]
-[ext_resource type="PackedScene" path="res://Scenes/Spike.tscn" id="11_yl73a"]
-[ext_resource type="Script" path="res://Scenes/spikeTrapTop.gd" id="12_xbcdb"]
-[ext_resource type="PackedScene" path="res://Scenes/Fan.tscn" id="13_xbcdb"]
-[ext_resource type="Script" path="res://Scenes/fanDown.gd" id="14_s77qv"]
+[ext_resource type="PackedScene" uid="uid://dflyeou82jyro" path="res://Scenes/saw.tscn" id="9_ehv2h"]
+[ext_resource type="Script" uid="uid://ce6x1o0f7k2f6" path="res://Scenes/sawMoving.gd" id="10_15wb7"]
+[ext_resource type="PackedScene" uid="uid://ck1mdn7rmkyp7" path="res://Scenes/Fan.tscn" id="13_xbcdb"]
+[ext_resource type="Script" uid="uid://db128ecs6dg70" path="res://Scenes/fanDown.gd" id="14_s77qv"]
 [ext_resource type="PackedScene" uid="uid://b0b8d8fe0ga2a" path="res://Touch_Controls/scene/touch_controls.tscn" id="15_5hnhx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1bvp3"]
@@ -286,35 +284,11 @@ script = ExtResource("10_15wb7")
 position = Vector2(887.75, 614)
 shape = SubResource("RectangleShape2D_15wb7")
 
-[node name="Spike3" parent="." instance=ExtResource("11_yl73a")]
-position = Vector2(356, 23)
-rotation = 3.14159
-scale = Vector2(3, 3)
-script = ExtResource("12_xbcdb")
-
-[node name="Spike4" parent="." instance=ExtResource("11_yl73a")]
-position = Vector2(503, 23)
-rotation = 3.14159
-scale = Vector2(3, 3)
-script = ExtResource("12_xbcdb")
-
 [node name="spike set 1" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spike set 1"]
 position = Vector2(394, 234)
 shape = SubResource("RectangleShape2D_s77qv")
-
-[node name="Spike" parent="." instance=ExtResource("11_yl73a")]
-position = Vector2(404, 23)
-rotation = -3.14159
-scale = Vector2(3, 3)
-script = ExtResource("12_xbcdb")
-
-[node name="Spike2" parent="." instance=ExtResource("11_yl73a")]
-position = Vector2(550, 23)
-rotation = -3.14159
-scale = Vector2(3, 3)
-script = ExtResource("12_xbcdb")
 
 [node name="Fan" parent="." instance=ExtResource("13_xbcdb")]
 position = Vector2(49, -29)
@@ -344,5 +318,4 @@ offset_bottom = 40.0
 [connection signal="pressed" from="CanvasLayer/MenuButton" to="." method="_on_menu_button_pressed"]
 [connection signal="body_exited" from="pigMovebox" to="PigMob" method="_on_area_2d_body_exited"]
 [connection signal="body_exited" from="SawMovebox" to="Saw" method="_on_saw_movebox_body_exited"]
-[connection signal="body_entered" from="spike set 1" to="Spike" method="_on_spike_set_1_body_entered"]
 [connection signal="body_entered" from="FanTrigger" to="Fan" method="_on_fan_trigger_body_entered"]

@@ -15,7 +15,7 @@ func _physics_process(delta: float) -> void:
 
 func _on_saw_trigger_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
-		print("Saw activated!")
+		print("Spike activated!")
 		triggered = true
 
 func reset_trap():
