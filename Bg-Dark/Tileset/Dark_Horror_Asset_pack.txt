@@ -1,0 +1,36 @@
+Dark_Horror_Asset_pack
+Author: NonokaATM
+File Type: PNG
+Tile Size: 16x16 px
+Total Tiles: 236 tiles
+
+Usage Notes:
+Designed for platformer games
+- Includes:
+  Terrain Tiles: grass, cracked stone, dark dirt, worn floors, bricks;
+  Transition Blocks: dirt-stone, rock-dirt connection blocks;
+  Liquids: swamp, acid;
+  Vegetation: blades of grass, trees, bushes, twisted vines, dead bushes;
+  Rock Formations: jagged rocks, spikes;
+  Decorations & Objects: graves, crosses, bats, spiders, cobwebs, blood, skull, bones, chain, ladder, metal grating, glowing mushrooms, torches, Jack-o-lantern;
+  Doors: heavy metal door;
+  Backgrounds: bright and dark sky, clouds, moon, mountains;
+
+Compatible with:
+- Godot
+- Unity (with Tilemap system)
+- Any engine that supports 16x16 PNG tiles
+
+License:
+This tileset is for commercial and personal use.
+You may use it in games, videos, or other creative projects.
+Credit is appreciated but not required.
+You may not resell or redistribute the tileset, modified or unmodified, as your own.
+Do not share this file or as part of other asset packs.
+
+Contact:  
+Email: alnonoka19@gmail.com
+Boosty: https://boosty.to/nonoka
+Reddit: https://www.reddit.com/user/HeronParking9950/
+
+Thank you so much for your support!

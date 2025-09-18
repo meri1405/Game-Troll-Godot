@@ -1,7 +1,7 @@
 extends Area2D
 
 @export var speed: float = 600.0
-@export var direction: int = -1
+@export var direction: int = 1
 @export var max_distance: float = 60.0  # khoảng cách tối đa
 
 var triggered: bool = false
