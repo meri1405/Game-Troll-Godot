@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://m0qlxx0uwevm"]
+
+[ext_resource type="Texture2D" uid="uid://3o72ly24grlg" path="res://Pixel Adventure 1/Free/Items/Checkpoints/Checkpoint/Checkpoint (Flag Idle)(64x64).png" id="1_03ori"]
+
+[resource]
+atlas = ExtResource("1_03ori")
+region = Rect2(18.7848, 17.997, 31.7739, 46.355)

@@ -23,6 +23,7 @@ position = Vector2(363, 133.5)
 shape = SubResource("RectangleShape2D_yat8c")
 
 [node name="TriggerArea" type="Area2D" parent="."]
+position = Vector2(15, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerArea"]
 position = Vector2(324, 50)
