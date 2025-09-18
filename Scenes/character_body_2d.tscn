@@ -245,23 +245,24 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pbq55"]
 size = Vector2(13.6667, 16.6667)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gbyq6"]
-size = Vector2(13.6667, 16.5)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t38ji"]
+size = Vector2(13, 16)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+position = Vector2(184, 159)
 scale = Vector2(3, 3)
 script = ExtResource("1_88kja")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(324.563, 191.521)
+position = Vector2(-0.895862, -2.14584)
 scale = Vector2(0.652342, 0.678385)
 sprite_frames = SubResource("SpriteFrames_a02g7")
 animation = &"Idle"
 autoplay = "Idle"
 
 [node name="HurtBox" type="Area2D" parent="." groups=["player"]]
-position = Vector2(324.667, 194.333)
+position = Vector2(-0.791858, 0.666157)
 disable_mode = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
@@ -270,13 +271,13 @@ shape = SubResource("RectangleShape2D_pbq55")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
-position = Vector2(324.5, 194.333)
-shape = SubResource("RectangleShape2D_gbyq6")
+position = Vector2(-0.5, 0.666668)
+shape = SubResource("RectangleShape2D_t38ji")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(325.333, 194.667)
+position = Vector2(-0.666667, 1)
 limit_smoothed = true
 position_smoothing_enabled = true
 position_smoothing_speed = 3.0
