@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @export var SPEED: float = 280.0
-@export var attack_range: float = 100.0
+@export var attack_range: float = 180.0
 @export var chase_range: float = 1000.0
 
 @onready var target: Node2D = %Player
