@@ -1394,7 +1394,7 @@ layer_0/tile_data = PackedInt32Array(786435, 786432, 4, 786436, 851968, 4, 78643
 
 [node name="Player" parent="." groups=["player"] instance=ExtResource("4_bvvno")]
 unique_name_in_owner = true
-position = Vector2(68, 513)
+position = Vector2(111, 119)
 
 [node name="Box_LeftMove" type="AnimatableBody2D" parent="." groups=["player"]]
 position = Vector2(1481, 580)

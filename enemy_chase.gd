@@ -25,7 +25,7 @@ func start_spawn():
 	state = "waiting"
 	anim.play("idle")
 
-	await get_tree().create_timer(2.0).timeout
+	await get_tree().create_timer(3.0).timeout
 	if state == "waiting":
 		state = "running"
 		anim.play("running")
