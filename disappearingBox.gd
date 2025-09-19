@@ -24,9 +24,11 @@ func _on_player_body_exited_box1(body: Node2D) -> void:
 
 func _on_appearing_2_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
-		visible = true
-
-
-func _on_appearing_2_body_exited(body: Node2D) -> void:
-	if body.name == "Player":
+		print("goodbye plat")
+		var getHitbox = get_child(1)
+		print(getHitbox)
+		remove_child(getHitbox)
 		visible = false
+		await get_tree().create_timer(4).timeout
+		add_child(getHitbox)
+		visible = true

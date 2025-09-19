@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbkmxmq434vnp"
-path="res://.godot/imported/Brown Off.png-e58d53d63604541edb77db7cc2501ef7.ctex"
+uid="uid://b7mxqmj1qqwpq"
+path="res://.godot/imported/HitSide (22x22).png-578e0aa8001603d24044ad271789b636.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Pixel Adventure 1/Free/Traps/Platforms/Brown Off.png"
-dest_files=["res://.godot/imported/Brown Off.png-e58d53d63604541edb77db7cc2501ef7.ctex"]
+source_file="res://Pixel Adventure 1/Free/Traps/HitSide (22x22).png"
+dest_files=["res://.godot/imported/HitSide (22x22).png-578e0aa8001603d24044ad271789b636.ctex"]
 
 [params]
 
