@@ -1,6 +1,8 @@
 extends Node2D
 
 @export var mute: bool = false
+@export var is_chasing: bool = false
+
 
 func _ready():
 	if not mute:
@@ -33,3 +35,4 @@ func stop_all() -> void:
 	$Jump.stop()
 	$Click.stop()
 	$EndLevel.stop()
+	
