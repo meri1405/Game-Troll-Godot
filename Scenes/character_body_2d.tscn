@@ -239,7 +239,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Running",
-"speed": 10.0
+"speed": 11.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pbq55"]
@@ -258,7 +258,7 @@ texture_filter = 1
 position = Vector2(-0.895862, -2.14584)
 scale = Vector2(0.652342, 0.678385)
 sprite_frames = SubResource("SpriteFrames_a02g7")
-animation = &"Idle"
+animation = &"Running"
 autoplay = "Idle"
 
 [node name="HurtBox" type="Area2D" parent="." groups=["player"]]

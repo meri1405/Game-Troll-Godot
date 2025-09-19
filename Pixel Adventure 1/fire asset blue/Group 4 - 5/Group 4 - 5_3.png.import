@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7mxqmj1qqwpq"
-path="res://.godot/imported/HitSide (22x22).png-679add7f9d4745dad79da9adce5a2cfb.ctex"
+uid="uid://dwo7jbsky1uek"
+path="res://.godot/imported/Group 4 - 5_3.png-a0ea55bc985594631b952b73a7301cd5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Pixel Adventure 1/Free/Traps/Blocks/HitSide (22x22).png"
-dest_files=["res://.godot/imported/HitSide (22x22).png-679add7f9d4745dad79da9adce5a2cfb.ctex"]
+source_file="res://Pixel Adventure 1/fire asset blue/Group 4 - 5/Group 4 - 5_3.png"
+dest_files=["res://.godot/imported/Group 4 - 5_3.png-a0ea55bc985594631b952b73a7301cd5.ctex"]
 
 [params]
 

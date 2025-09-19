@@ -13,3 +13,7 @@ func _process(delta: float) -> void:
 		rotation_direction = -1
 	rotate(rotation_direction*speed*delta)
 	
+
+
+
+		
