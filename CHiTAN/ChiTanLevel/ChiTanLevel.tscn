@@ -43,7 +43,7 @@ size = Vector2(21, 73)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lws3i"]
 size = Vector2(47.8915, 15.9551)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_db8ev"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t3540"]
 texture = ExtResource("8_kvda6")
 0:0/0 = 0
 1:0/0 = 0
@@ -202,7 +202,7 @@ texture = ExtResource("8_kvda6")
 
 [sub_resource type="TileSet" id="TileSet_mdw60"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_db8ev")
+sources/0 = SubResource("TileSetAtlasSource_t3540")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7pqv5"]
 size = Vector2(138, 51)
