@@ -92,7 +92,10 @@ func set_color(new_color: int):
 		1: sprite_2d.modulate = Color.RED
 		2: sprite_2d.modulate = Color.YELLOW
 		3: sprite_2d.modulate = Color.ORANGE
-		4: sprite_2d.modulate = Color.GRAY
+		4: sprite_2d.modulate = Color.GREEN
+		5: sprite_2d.modulate = Color.HOT_PINK
+		6: sprite_2d.modulate = Color.MAGENTA
+		7: sprite_2d.modulate = Color.CORAL
 		_: sprite_2d.modulate = Color.WHITE
 
 func reset_color():
