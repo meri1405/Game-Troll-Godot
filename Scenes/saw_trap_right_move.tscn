@@ -115,7 +115,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cat6o"]
-size = Vector2(39, 35)
+size = Vector2(44, 35)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bvvno"]
 size = Vector2(0.5, 101.5)
@@ -138,7 +138,7 @@ frame_progress = 0.671863
 [node name="DieZone" type="Area2D" parent="SawTrapRight" groups=["hurt"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SawTrapRight/DieZone"]
-position = Vector2(-4.5, 13.5)
+position = Vector2(-2, 13.5)
 shape = SubResource("RectangleShape2D_cat6o")
 
 [node name="SawTrigger" type="Area2D" parent="."]

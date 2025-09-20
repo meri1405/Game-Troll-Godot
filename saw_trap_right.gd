@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var speed: float = 88888.8
+@export var speed: float = 99999.9
 @export var direction: int = 1
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
@@ -15,6 +15,8 @@ func _physics_process(delta: float) -> void:
 	if triggered:
 		global_position.x += direction * speed * delta
 		animated_sprite_2d.play("Running")
+	if global_position.x > 2380:
+		queue_free()
 		if not animated_sprite_2d.is_playing():
 			animated_sprite_2d.play("idle")
 

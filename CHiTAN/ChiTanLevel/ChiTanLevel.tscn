@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://crhk04in7jmsy" path="res://Pixel Adventure 1/Free/Traps/Spikes/Idle.png" id="3_hlycl"]
 [ext_resource type="PackedScene" uid="uid://b6ag1ctw4nvis" path="res://CHiTAN/TrapCoDinh.tscn" id="4_c3dvo"]
 [ext_resource type="PackedScene" uid="uid://cvvso2wo21aec" path="res://CHiTAN/MoveR.tscn" id="5_jchsq"]
-[ext_resource type="Script" uid="uid://d7j87xllr3qh" path="res://CHiTAN/TrapMoveRight.gd" id="5_t3540"]
+[ext_resource type="Script" path="res://CHiTAN/TrapMoveRight.gd" id="5_t3540"]
 [ext_resource type="PackedScene" uid="uid://qllh8td5b7kn" path="res://CHiTAN/TrapUp.tscn" id="6_enh1l"]
 [ext_resource type="Texture2D" uid="uid://cv75emh7is5wj" path="res://UI/ImgBlock/TrapImg.tres" id="7_0imk0"]
 [ext_resource type="Texture2D" uid="uid://crnswvpxwaj4b" path="res://UI/ImgBlock/Block.tres" id="8_0imk0"]
@@ -19,7 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://c82u71xim8u8g" path="res://Hello.png" id="10_wulba"]
 [ext_resource type="Script" uid="uid://dhbe4nrvokkhm" path="res://CHiTAN/ChiTanNV.gd" id="11_d3vyv"]
 [ext_resource type="Script" uid="uid://d0i3764jsu8oy" path="res://CHiTAN/TrapXoay.gd" id="12_kt7kh"]
-[ext_resource type="Script" uid="uid://b0cmuxvyqi5kp" path="res://CHiTAN/Trap_Move_L.gd" id="16_jchsq"]
+[ext_resource type="Script" path="res://CHiTAN/Move_L.gd" id="16_jchsq"]
 [ext_resource type="Texture2D" uid="uid://bg14ereu48jp2" path="res://Pixel Adventure 1/Free/Traps/Spiked Ball/Spiked Ball.png" id="17_enh1l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dj87x"]

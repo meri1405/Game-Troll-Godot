@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bdd1852wn8bnm"]
+
+[ext_resource type="Texture2D" uid="uid://bg14ereu48jp2" path="res://Pixel Adventure 1/Free/Traps/Spiked Ball/Spiked Ball.png" id="1_2carb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hajmc"]
+radius = 12.0416
+
+[node name="SpikeBall" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_2carb")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_hajmc")

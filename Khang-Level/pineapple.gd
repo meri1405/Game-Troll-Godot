@@ -2,7 +2,8 @@ extends Area2D
 
 @onready var sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var collision: CollisionShape2D = $CollisionShape2D
-@export var fruit_color: int = 3  
+@onready var pickup_player: AudioStreamPlayer2D = $Pickup
+@export var fruit_color: int = 3
 
 var triggered: bool = false
 var start_position: Vector2
@@ -16,6 +17,8 @@ func _ready():
 
 func _on_body_entered(body):
 	if body.is_in_group("Player"):
+		if pickup_player:
+			pickup_player.play()
 		body.set_color(fruit_color)
 		hide()
 		collision.disabled = true

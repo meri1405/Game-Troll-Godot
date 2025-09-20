@@ -38,9 +38,7 @@ func open_door():
 	for coords in tiles_to_remove2:
 		tilemap.set_cell(0, coords, -1)
 
-	# Sau 1 giây cửa đóng lại
-	await get_tree().create_timer(1.0).timeout
-	close_door()
+	
 
 func close_door():
 	is_open = false
