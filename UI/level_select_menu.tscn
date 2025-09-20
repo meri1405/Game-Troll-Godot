@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bbgwpoiadoloa" path="res://Pixel Adventure 1/Free/Background/background.png" id="2_3jria"]
 
 [node name="LevelSelectMenu" type="Control"]
+texture_filter = 1
 layout_mode = 3
 anchors_preset = 0
 offset_left = 25.0
