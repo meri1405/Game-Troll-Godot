@@ -2,16 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c71l087x02s85"
-path="res://.godot/imported/ChatGPT Image 21_35_10 20 thg 9, 2025.png-1e0f1979e6ed0527bde8fee17ac230fb.ctex"
-metadata={
-"vram_texture": false
-}
+uid="uid://dxfr7s56v1n1k"
+valid=false
 
 [deps]
 
-source_file="res://Pixel Adventure 1/ChatGPT Image 21_35_10 20 thg 9, 2025.png"
-dest_files=["res://.godot/imported/ChatGPT Image 21_35_10 20 thg 9, 2025.png-1e0f1979e6ed0527bde8fee17ac230fb.ctex"]
+source_file="res://Enemies/Zombies/__MACOSX/Zombie_2/._Idle.png"
 
 [params]
 
