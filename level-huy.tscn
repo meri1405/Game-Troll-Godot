@@ -1,4 +1,4 @@
-[gd_scene load_steps=114 format=3 uid="uid://bpygehhl3bo4i"]
+[gd_scene load_steps=115 format=3 uid="uid://bpygehhl3bo4i"]
 
 [ext_resource type="Texture2D" uid="uid://c2q1auamo4dbd" path="res://Pixel Adventure 1/Free/Background/Brown.png" id="1_nlysc"]
 [ext_resource type="Texture2D" uid="uid://cmx6ev0y0fkb7" path="res://Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="2_85qp7"]
@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://c0o4lan426lse" path="res://Pixel Adventure 1/fire asset blue/Group 7 - 5/Group 7 - 5.png" id="20_xnn3g"]
 [ext_resource type="Script" uid="uid://b3x2d01nsdj6s" path="res://fire_ball_left_trap_left_move.gd" id="21_hevad"]
 [ext_resource type="Texture2D" uid="uid://kayxpqmjorbv" path="res://Pixel Adventure 1/fire asset blue/Group 7 - 3/Group 7 - 3.png" id="22_ke184"]
+[ext_resource type="AudioStream" uid="uid://qc5nnahayu3b" path="res://audio/chase.wav" id="23_ke184"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mmktn"]
 size = Vector2(60, 27)
@@ -3377,6 +3378,9 @@ position = Vector2(-5, 0)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy_Chase/Hit"]
 position = Vector2(7.75, 1.5)
 shape = SubResource("RectangleShape2D_ldd4g")
+
+[node name="AudioSpawnEnemy" type="AudioStreamPlayer2D" parent="Enemy/Enemy_Chase"]
+stream = ExtResource("23_ke184")
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(13498, 181)

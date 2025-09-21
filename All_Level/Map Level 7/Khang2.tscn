@@ -5,45 +5,45 @@
 [ext_resource type="PackedScene" uid="uid://dt1tth682nenl" path="res://Scenes/character_body_2d.tscn" id="3_m3c78"]
 [ext_resource type="Texture2D" uid="uid://dql52hmljkam3" path="res://Pixel Adventure 1/Free/Items/Fruits/Cherries.png" id="4_74qg3"]
 [ext_resource type="Texture2D" uid="uid://bqavq07uxfp58" path="res://Pixel Adventure 1/Free/Other/radial_gradient_light.png" id="4_b18dv"]
-[ext_resource type="Script" uid="uid://cn1fekgoexvw1" path="res://Khang-Level/cherries.gd" id="4_dt8um"]
-[ext_resource type="Script" uid="uid://d0cc5x8sixp8u" path="res://Khang-Level/apple.gd" id="6_knx3k"]
+[ext_resource type="Script" uid="uid://cn1fekgoexvw1" path="res://All_Level/Map Level 7/cherries.gd" id="4_dt8um"]
+[ext_resource type="Script" uid="uid://d0cc5x8sixp8u" path="res://All_Level/Map Level 7/apple.gd" id="6_knx3k"]
 [ext_resource type="Texture2D" uid="uid://cbd3py7f0eg1k" path="res://Pixel Adventure 1/Free/Items/Fruits/Apple.png" id="7_dxu5o"]
-[ext_resource type="Script" uid="uid://qw3iohx3lthb" path="res://Khang-Level/red_door.gd" id="8_dxu5o"]
-[ext_resource type="Script" uid="uid://c5ouytnc7c1nq" path="res://Khang-Level/banana.gd" id="9_2oodb"]
+[ext_resource type="Script" uid="uid://qw3iohx3lthb" path="res://All_Level/Map Level 7/red_door.gd" id="8_dxu5o"]
+[ext_resource type="Script" uid="uid://c5ouytnc7c1nq" path="res://All_Level/Map Level 7/banana.gd" id="9_2oodb"]
 [ext_resource type="Texture2D" uid="uid://b4vl4ririsoem" path="res://Pixel Adventure 1/Free/Items/Fruits/Bananas.png" id="10_8wxwq"]
-[ext_resource type="Script" uid="uid://c5v5hsbrr6upl" path="res://Khang-Level/yellow_door.gd" id="11_8wxwq"]
-[ext_resource type="Script" uid="uid://7f4754wefk68" path="res://Khang-Level/room_1.gd" id="15_1cmpo"]
-[ext_resource type="Script" uid="uid://byf8137bcg1tr" path="res://Khang-Level/open.gd" id="16_y8e6e"]
-[ext_resource type="Script" uid="uid://b28fto3t4s1iv" path="res://Khang-Level/fire_trap.gd" id="17_5fd8d"]
+[ext_resource type="Script" uid="uid://c5v5hsbrr6upl" path="res://All_Level/Map Level 7/yellow_door.gd" id="11_8wxwq"]
+[ext_resource type="Script" uid="uid://7f4754wefk68" path="res://All_Level/Map Level 7/room_1.gd" id="15_1cmpo"]
+[ext_resource type="Script" uid="uid://byf8137bcg1tr" path="res://All_Level/Map Level 7/open.gd" id="16_y8e6e"]
+[ext_resource type="Script" uid="uid://b28fto3t4s1iv" path="res://All_Level/Map Level 7/fire_trap.gd" id="17_5fd8d"]
 [ext_resource type="Texture2D" uid="uid://q3fjmsrxoena" path="res://Pixel Adventure 1/Free/Traps/Fire/On (16x32).png" id="18_sti5y"]
-[ext_resource type="Script" uid="uid://co62f1x68ejw4" path="res://Khang-Level/box_left_move.gd" id="19_2vc5p"]
-[ext_resource type="Script" uid="uid://xrj00bh4ekiy" path="res://Khang-Level/box_push.gd" id="19_sti5y"]
-[ext_resource type="Script" uid="uid://bjeukcsw66fln" path="res://Khang-Level/box_trigger.gd" id="21_gv5we"]
+[ext_resource type="Script" uid="uid://co62f1x68ejw4" path="res://All_Level/Map Level 7/box_left_move.gd" id="19_2vc5p"]
+[ext_resource type="Script" uid="uid://xrj00bh4ekiy" path="res://All_Level/Map Level 7/box_push.gd" id="19_sti5y"]
+[ext_resource type="Script" uid="uid://bjeukcsw66fln" path="res://All_Level/Map Level 7/box_trigger.gd" id="21_gv5we"]
 [ext_resource type="Texture2D" uid="uid://sg5gxyeqs7dq" path="res://Pixel Adventure 1/Free/Traps/Rock Head/Blink (42x42).png" id="22_b18dv"]
-[ext_resource type="Script" uid="uid://djr6geridfa4h" path="res://Khang-Level/Push.gd" id="22_kb7mi"]
-[ext_resource type="Script" uid="uid://faoi7kv7bbd8" path="res://Khang-Level/ghost_trigger.gd" id="24_ee023"]
+[ext_resource type="Script" uid="uid://djr6geridfa4h" path="res://All_Level/Map Level 7/Push.gd" id="22_kb7mi"]
+[ext_resource type="Script" uid="uid://faoi7kv7bbd8" path="res://All_Level/Map Level 7/ghost_trigger.gd" id="24_ee023"]
 [ext_resource type="AudioStream" uid="uid://2ccs1vx0kcm" path="res://audio/Scream.wav" id="24_xq5hv"]
-[ext_resource type="Script" uid="uid://blwh88g0yx5dp" path="res://Khang-Level/ghost_pumpkin.gd" id="25_xq5hv"]
+[ext_resource type="Script" uid="uid://blwh88g0yx5dp" path="res://All_Level/Map Level 7/ghost_pumpkin.gd" id="25_xq5hv"]
 [ext_resource type="Texture2D" uid="uid://dpgxsvpc6tx4j" path="res://Pixel Adventure 1/Boo-tiful Beasts - Tiny Halloween Pack [Creatures]/Pumpkin/Pumpkin-160x160.png" id="26_fm2tx"]
 [ext_resource type="PackedScene" uid="uid://cn3fdwy7umk4h" path="res://Checkpoint/Level_2/checkpoint_2.tscn" id="27_e5q1a"]
 [ext_resource type="Script" uid="uid://cfchxus616laa" path="res://spike_trap_down_move.gd" id="28_e5q1a"]
 [ext_resource type="Texture2D" uid="uid://3o72ly24grlg" path="res://Pixel Adventure 1/Free/Items/Checkpoints/Checkpoint/Checkpoint (Flag Idle)(64x64).png" id="28_fm2tx"]
-[ext_resource type="Script" uid="uid://c50kff5th7oh2" path="res://Khang-Level/saw_left.gd" id="29_c2yck"]
+[ext_resource type="Script" uid="uid://c50kff5th7oh2" path="res://All_Level/Map Level 7/saw_left.gd" id="29_c2yck"]
 [ext_resource type="Texture2D" uid="uid://crhk04in7jmsy" path="res://Pixel Adventure 1/Free/Traps/Spikes/Idle.png" id="29_p2d81"]
-[ext_resource type="Script" uid="uid://bgwvxou3p1wtx" path="res://Khang-Level/saw_trigger.gd" id="29_qq15c"]
+[ext_resource type="Script" uid="uid://bgwvxou3p1wtx" path="res://All_Level/Map Level 7/saw_trigger.gd" id="29_qq15c"]
 [ext_resource type="Texture2D" uid="uid://26g1nyycfuji" path="res://Pixel Adventure 1/Free/Traps/Saw/On (38x38).png" id="30_qq15c"]
-[ext_resource type="Script" uid="uid://c0ud3xxbeh020" path="res://Khang-Level/TrapFall.gd" id="32_qq15c"]
-[ext_resource type="Script" uid="uid://otjlh2lgfku8" path="res://Khang-Level/pineapple.gd" id="34_02bmd"]
+[ext_resource type="Script" uid="uid://c0ud3xxbeh020" path="res://All_Level/Map Level 7/TrapFall.gd" id="32_qq15c"]
+[ext_resource type="Script" uid="uid://otjlh2lgfku8" path="res://All_Level/Map Level 7/pineapple.gd" id="34_02bmd"]
 [ext_resource type="Texture2D" uid="uid://bo70th70h5yus" path="res://Pixel Adventure 1/Free/Items/Fruits/Pineapple.png" id="35_u8lca"]
 [ext_resource type="AudioStream" uid="uid://f55vb7uroq4" path="res://audio/Pickup.wav" id="36_7sh8s"]
-[ext_resource type="Script" uid="uid://cv1wj3ihi8i7r" path="res://Khang-Level/kiwi.gd" id="36_t7d4d"]
+[ext_resource type="Script" uid="uid://cv1wj3ihi8i7r" path="res://All_Level/Map Level 7/kiwi.gd" id="36_t7d4d"]
 [ext_resource type="Texture2D" uid="uid://4a6dses1pbs6" path="res://Pixel Adventure 1/Free/Items/Fruits/Kiwi.png" id="36_u8lca"]
-[ext_resource type="Script" uid="uid://dkydj3maw8hu7" path="res://Khang-Level/melon.gd" id="38_unoqn"]
+[ext_resource type="Script" uid="uid://dkydj3maw8hu7" path="res://All_Level/Map Level 7/melon.gd" id="38_unoqn"]
 [ext_resource type="Texture2D" uid="uid://botcrprduecxb" path="res://Pixel Adventure 1/Free/Items/Fruits/Melon.png" id="39_evtkc"]
 [ext_resource type="Texture2D" uid="uid://b55xprnuf4puk" path="res://Pixel Adventure 1/Free/Items/Fruits/Strawberry.png" id="40_7sh8s"]
-[ext_resource type="Script" uid="uid://55uyxty2tpm6" path="res://Khang-Level/strawberry.gd" id="40_evtkc"]
+[ext_resource type="Script" uid="uid://55uyxty2tpm6" path="res://All_Level/Map Level 7/strawberry.gd" id="40_evtkc"]
 [ext_resource type="Texture2D" uid="uid://dcqcksj8ktmqh" path="res://Pixel Adventure 1/Free/Items/Fruits/Orange.png" id="41_330pp"]
-[ext_resource type="Script" uid="uid://fqowpomrgm4h" path="res://Khang-Level/orange.gd" id="42_7sh8s"]
+[ext_resource type="Script" uid="uid://fqowpomrgm4h" path="res://All_Level/Map Level 7/orange.gd" id="42_7sh8s"]
 [ext_resource type="Texture2D" uid="uid://bvmv30isvhk2y" path="res://Pixel Adventure 1/Free/Menu/Buttons/Back.png" id="45_330pp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_74qg3"]
@@ -1731,10 +1731,10 @@ format = 2
 layer_0/tile_data = PackedInt32Array(327679, 65536, 8, -65533, 65536, 10, -65532, 65536, 10, -65531, 65536, 10, -65530, 65536, 10, -65529, 65536, 10, -65528, 65536, 10, -65527, 65536, 10, -65526, 65536, 10, -65525, 65536, 10, -65524, 65536, 10, 262144, 65536, 8, 262145, 65536, 8, 262146, 65536, 8, 262149, 65536, 8, 262150, 65536, 8, 262151, 65536, 8, 262152, 65536, 8, 262154, 65536, 8, 262155, 65536, 8, 262156, 65536, 8, 262157, 65536, 8, 262153, 65536, 8, 262147, 65536, 8, 262148, 65536, 8, 11, 1114112, 4, 65547, 1114112, 5, 131083, 1114112, 5, 196619, 1114112, 6, 12, 1245184, 4, 65548, 1245184, 5, 131084, 1245184, 5, 196620, 1245184, 6, 327678, 65536, 8, 327677, 65536, 8, 327676, 65536, 8, 327675, 65536, 8, 327674, 65536, 8, 327673, 65536, 8, 327672, 65536, 8, 327671, 65536, 8, 327670, 65536, 8, 327669, 65536, 8, -11, 65536, 10, -10, 65536, 10, -9, 65536, 10, -8, 65536, 10, -7, 65536, 10, -6, 65536, 10, -5, 65536, 10, -4, 65536, 10, -3, 65536, 10, -2, 65536, 10, -1, 65536, 10, -65536, 65536, 10, -65535, 65536, 10, -65534, 65536, 10, 196612, 524288, 0, 131075, 524288, 0, 196611, 589824, 1, 131074, 393216, 0, 196610, 393216, 1, 65532, 131072, 9, 131068, 131072, 9, 196604, 131072, 9, 262140, 131072, 9, 655373, 65536, 8, 655372, 65536, 8, 458764, 65536, 10, 327693, 65536, 9, 393229, 196608, 8, 393228, 65536, 9, 327692, 65536, 9, 393227, 65536, 9, 327691, 65536, 9, -131061, 131072, 9, -393205, 131072, 9, -327669, 131072, 9, -262133, 131072, 9, -196597, 131072, 9, -720885, 131072, 9, -655349, 131072, 9, -589813, 131072, 9, -524277, 131072, 9, -458741, 131072, 9, -131060, 65536, 9, -327668, 1245184, 0, -16, 196608, 8, 65520, 131072, 9, 131056, 131072, 9, 196592, 131072, 9, 262128, 131072, 9, 327664, 196608, 9, 327668, 65536, 8, 327667, 65536, 8, 327666, 65536, 8, 327665, 65536, 8, -12, 65536, 10, -13, 196608, 8, -14, 262144, 8, -15, 65536, 10, 65523, 131072, 10, 65522, 0, 10, 655376, 65536, 8, 655377, 65536, 8, 262162, 0, 9, 393234, 0, 9, 655378, 65536, 8, 393235, 196608, 9, 458771, 65536, 10, 655379, 65536, 8, 393236, 65536, 8, 458772, 65536, 10, 655380, 65536, 8, 393237, 65536, 8, 458773, 65536, 10, 655381, 65536, 8, 131094, 1114112, 0, 393238, 65536, 8, 458774, 65536, 10, 655382, 65536, 8, 65559, 0, 8, 131095, 0, 9, 196631, 0, 10, 393239, 65536, 8, 458775, 65536, 10, 655383, 65536, 8, 65560, 65536, 8, 131096, 65536, 9, 196632, 65536, 10, 393240, 65536, 8, 458776, 65536, 10, 655384, 65536, 8, 65561, 65536, 8, 131097, 65536, 9, 196633, 65536, 10, 393241, 65536, 8, 458777, 65536, 10, 655385, 65536, 8, 65562, 65536, 8, 131098, 65536, 9, 196634, 65536, 10, 393242, 65536, 8, 458778, 65536, 10, 655386, 65536, 8, 65563, 65536, 8, 131099, 65536, 9, 196635, 65536, 10, 393243, 65536, 8, 458779, 65536, 10, 655387, 65536, 8, 65564, 65536, 8, 131100, 65536, 9, 196636, 65536, 10, 393244, 65536, 8, 458780, 65536, 10, 655388, 65536, 8, 65565, 65536, 8, 131101, 65536, 9, 196637, 65536, 10, 393245, 65536, 8, 458781, 65536, 10, 655389, 65536, 8, 65566, 65536, 8, 131102, 65536, 9, 196638, 65536, 10, 393246, 65536, 8, 458782, 65536, 10, 655390, 65536, 8, 65567, 65536, 8, 131103, 65536, 9, 196639, 65536, 10, 393247, 65536, 8, 458783, 65536, 10, 655391, 65536, 8, 65568, 65536, 8, 131104, 65536, 9, 196640, 65536, 10, 393248, 65536, 8, 458784, 65536, 10, 655392, 65536, 8, 65569, 65536, 8, 131105, 65536, 9, 196641, 65536, 10, 393249, 65536, 8, 458785, 65536, 10, 655393, 65536, 8, 65570, 65536, 8, 131106, 65536, 9, 196642, 65536, 10, 393250, 65536, 8, 458786, 65536, 10, 655394, 65536, 8, 65571, 65536, 8, 131107, 65536, 9, 196643, 65536, 10, 393251, 65536, 8, 458787, 65536, 10, 655395, 65536, 8, 65572, 65536, 8, 131108, 65536, 9, 196644, 65536, 10, 393252, 65536, 8, 458788, 65536, 10, 655396, 65536, 8, 65573, 65536, 8, 131109, 65536, 9, 196645, 65536, 10, 393253, 65536, 8, 458789, 65536, 10, 655397, 65536, 8, 65574, 65536, 8, 131110, 65536, 9, 196646, 65536, 10, 393254, 65536, 8, 458790, 65536, 10, 655398, 65536, 8, 65575, 65536, 8, 131111, 65536, 9, 196647, 65536, 10, 393255, 65536, 8, 458791, 65536, 10, 655399, 65536, 8, 65576, 65536, 8, 131112, 65536, 9, 196648, 65536, 10, 655400, 65536, 8, 65577, 131072, 8, 131113, 131072, 9, 196649, 131072, 10, 655401, 65536, 8, 655402, 65536, 8, 655403, 65536, 8, 65554, 0, 9, 131090, 0, 9, 196626, 0, 9, 327698, 0, 9, 65555, 131072, 9, 131091, 131072, 9, 196627, 131072, 9, 262163, 131072, 9, 327699, 131072, 9, 262164, 1245184, 1, 393256, 65536, 8, 458792, 65536, 10, 393257, 131072, 8, 458793, 131072, 10, 524332, 0, 8, 655404, 65536, 8, 65581, 0, 9, 131117, 0, 9, 196653, 0, 9, 262189, 0, 9, 327725, 0, 9, 393261, 0, 9, 458797, 0, 9, 524333, 0, 9, 589869, 0, 9, 655405, 262144, 9, 262158, 131072, 8, 327694, 131072, 9, 655374, 65536, 8, 655375, 65536, 8, 327695, 1245184, 1, 393230, 131072, 10, 458765, 131072, 10, 458763, 196608, 8, 524299, 131072, 9, 589835, 131072, 9, 655371, 196608, 9, 589839, 786432, 5, 458770, 0, 10, 458769, 1114112, 1, 262188, 1114112, 2, 131114, 1245184, 2, -196595, 65536, 9, -131059, 65536, 10, -196594, 65536, 9, -131058, 65536, 10, -196593, 65536, 9, -131057, 65536, 10, -196592, 65536, 9, -131056, 65536, 10, -458735, 0, 10, -196591, 65536, 9, -131055, 65536, 10, -458734, 65536, 10, -196590, 65536, 9, -131054, 262144, 8, -65518, 0, 9, -786413, 1310720, 8, -720877, 1310720, 9, -655341, 1310720, 9, -589805, 1310720, 10, -524269, 65536, 8, -458733, 65536, 10, -196589, 196608, 8, -131053, 131072, 9, -65517, 131072, 9, -458732, 65536, 10, -196588, 65536, 10, -458731, 65536, 10, -196587, 65536, 10, -458730, 65536, 10, -196586, 65536, 10, -458729, 65536, 10, -196585, 65536, 10, -458728, 65536, 10, -196584, 65536, 10, -786407, 0, 9, -720871, 0, 9, -655335, 0, 9, -589799, 0, 9, -524263, 196608, 8, -458727, 131072, 10, -196583, 65536, 10, -786406, 131072, 9, -720870, 131072, 9, -655334, 131072, 9, -589798, 131072, 9, -524262, 131072, 10, -196582, 65536, 10, -262117, 65536, 8, -196581, 65536, 10, -196580, 65536, 10, -196579, 65536, 10, -458722, 0, 10, -196578, 65536, 10, -458721, 65536, 10, -196577, 65536, 10, -458720, 65536, 10, -196576, 65536, 10, -458719, 65536, 10, -196575, 65536, 10, -458718, 65536, 10, -196574, 65536, 10, -458717, 65536, 10, -196573, 65536, 10, -458716, 65536, 10, -196572, 65536, 10, -458715, 65536, 10, -196571, 65536, 10, -458714, 65536, 10, -196570, 65536, 10, -458713, 65536, 10, -196569, 65536, 10, -458712, 65536, 10, -196568, 65536, 10, -458711, 65536, 10, -196567, 131072, 10, -458710, 65536, 10, -458709, 65536, 10, -458708, 65536, 10, -786387, 0, 9, -720851, 0, 9, -655315, 0, 9, -589779, 0, 9, -524243, 0, 9, -458707, 0, 9, -393171, 0, 9, -327635, 0, 9, -262099, 0, 9, -196563, 0, 9, -131027, 0, 9, -65491, 0, 9, -851955, 65536, 10, -262131, 65536, 8, -851954, 65536, 10, -262130, 65536, 8, -851953, 65536, 10, -262129, 65536, 8, -851952, 65536, 10, -458736, 1114112, 0, -262128, 65536, 8, -851951, 65536, 10, -524271, 0, 8, -262127, 65536, 8, -851950, 65536, 10, -524270, 65536, 8, -262126, 65536, 8, -851949, 65536, 10, -262125, 65536, 8, -851948, 65536, 10, -524268, 65536, 8, -262124, 65536, 8, -851947, 65536, 10, -524267, 65536, 8, -262123, 65536, 8, -851946, 65536, 10, -524266, 65536, 8, -262122, 65536, 8, -851945, 65536, 10, -524265, 65536, 8, -262121, 65536, 8, -851944, 65536, 10, -524264, 65536, 8, -262120, 65536, 8, -851943, 65536, 10, -262119, 65536, 8, -851942, 65536, 10, -262118, 65536, 8, -851941, 65536, 10, -327653, 786432, 1, -851940, 65536, 10, -262116, 65536, 8, -851939, 65536, 10, -458723, 1114112, 2, -262115, 65536, 8, -851938, 65536, 10, -524258, 0, 8, -262114, 65536, 8, -851937, 65536, 10, -524257, 65536, 8, -262113, 65536, 8, -851936, 65536, 10, -524256, 65536, 8, -262112, 65536, 8, -851935, 65536, 10, -524255, 65536, 8, -262111, 65536, 8, -851934, 65536, 10, -524254, 65536, 8, -262110, 65536, 8, -851933, 65536, 10, -524253, 65536, 8, -262109, 65536, 8, -851932, 65536, 10, -524252, 65536, 8, -262108, 65536, 8, -851931, 65536, 10, -524251, 65536, 8, -262107, 65536, 8, -851930, 65536, 10, -524250, 65536, 8, -262106, 65536, 8, -851929, 65536, 10, -524249, 65536, 8, -262105, 65536, 8, -851928, 65536, 10, -524248, 65536, 8, -262104, 65536, 8, -851927, 65536, 10, -524247, 65536, 8, -262103, 131072, 8, -851926, 65536, 10, -524246, 65536, 8, -851925, 65536, 10, -524245, 65536, 8, -851924, 65536, 10, -524244, 65536, 8, -851923, 262144, 8, -262132, 65536, 8, -851957, 196608, 8, -851956, 65536, 10, -786421, 131072, 9, -196596, 65536, 9, 18, 0, 9, 19, 131072, 9, 45, 0, 9, -65492, 1114112, 2, -196566, 1245184, 2)
 
 [node name="Player" parent="." groups=["Player", "player"] instance=ExtResource("3_m3c78")]
-position = Vector2(-586, -446)
+position = Vector2(394, 158)
 
 [node name="PointLight2D" type="PointLight2D" parent="Player"]
-position = Vector2(333.967, 195.333)
+position = Vector2(-1, -1.52588e-05)
 scale = Vector2(0.21224, 0.179036)
 energy = 1.2
 blend_mode = 2
@@ -1956,7 +1956,6 @@ position = Vector2(41.25, 24.5)
 shape = SubResource("RectangleShape2D_b18dv")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="checkpoint2" parent="." groups=["Player", "player"] instance=ExtResource("27_e5q1a")]
