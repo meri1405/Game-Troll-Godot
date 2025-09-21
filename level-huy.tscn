@@ -1771,7 +1771,7 @@ animations = [{
 [node name="Level-huy" type="Node"]
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_left = 4083.0
+offset_left = 4025.0
 offset_top = -896.0
 offset_right = 15210.0
 offset_bottom = 1808.0
