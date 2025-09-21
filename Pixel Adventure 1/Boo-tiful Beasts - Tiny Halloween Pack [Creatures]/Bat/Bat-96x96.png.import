@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbkmxmq434vnp"
-path="res://.godot/imported/Brown Off.png-e58d53d63604541edb77db7cc2501ef7.ctex"
+uid="uid://cgjfgkkrnkrnf"
+path="res://.godot/imported/Bat-96x96.png-21265c8d67243e814746c494192be621.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Pixel Adventure 1/Free/Traps/Platforms/Brown Off.png"
-dest_files=["res://.godot/imported/Brown Off.png-e58d53d63604541edb77db7cc2501ef7.ctex"]
+source_file="res://Pixel Adventure 1/Boo-tiful Beasts - Tiny Halloween Pack [Creatures]/Bat/Bat-96x96.png"
+dest_files=["res://.godot/imported/Bat-96x96.png-21265c8d67243e814746c494192be621.ctex"]
 
 [params]
 

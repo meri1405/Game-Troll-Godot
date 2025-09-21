@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var speed: float = 900.0
+@export var speed: float = 1000.0
 @export var direction: int = 1
 
 var triggered: bool = false
@@ -21,3 +21,7 @@ func _on_saw_trigger_body_entered(body: Node2D) -> void:
 func reset_trap():
 	global_position = start_position
 	triggered = false
+
+
+func _on_spike_trigger_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.
