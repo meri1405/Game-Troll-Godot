@@ -1,26 +1,26 @@
 [gd_scene load_steps=36 format=3 uid="uid://mhwnib7cebs5"]
 
-[ext_resource type="Script" uid="uid://c85pk27sc71ds" path="res://level_1.gd" id="1_c3dvo"]
-[ext_resource type="Texture2D" uid="uid://dhkt1prc5cciq" path="res://Pixel Adventure 1/Free/Background/Blue.png" id="1_vm84t"]
-[ext_resource type="Script" uid="uid://f7wkvuj85q1u" path="res://CHiTAN/Trap-up-Low.gd" id="2_7xtlm"]
-[ext_resource type="Texture2D" uid="uid://crhk04in7jmsy" path="res://Pixel Adventure 1/Free/Traps/Spikes/Idle.png" id="3_hlycl"]
-[ext_resource type="PackedScene" uid="uid://b6ag1ctw4nvis" path="res://CHiTAN/TrapCoDinh.tscn" id="4_c3dvo"]
-[ext_resource type="PackedScene" uid="uid://cvvso2wo21aec" path="res://CHiTAN/MoveR.tscn" id="5_jchsq"]
-[ext_resource type="Script" path="res://CHiTAN/TrapMoveRight.gd" id="5_t3540"]
-[ext_resource type="PackedScene" uid="uid://qllh8td5b7kn" path="res://CHiTAN/TrapUp.tscn" id="6_enh1l"]
-[ext_resource type="Texture2D" uid="uid://cv75emh7is5wj" path="res://UI/ImgBlock/TrapImg.tres" id="7_0imk0"]
-[ext_resource type="Texture2D" uid="uid://crnswvpxwaj4b" path="res://UI/ImgBlock/Block.tres" id="8_0imk0"]
-[ext_resource type="Texture2D" uid="uid://cmx6ev0y0fkb7" path="res://Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="8_kvda6"]
-[ext_resource type="Script" uid="uid://wr7a4jnf71jt" path="res://CHiTAN/move_d.gd" id="8_wulba"]
-[ext_resource type="PackedScene" uid="uid://m4c8hp47kokd" path="res://UI/pause_menu.tscn" id="9_hlycl"]
-[ext_resource type="Texture2D" uid="uid://cbhtkwag7pn5d" path="res://Pixel Adventure 1/Free/Menu/Buttons/Settings.png" id="10_c3dvo"]
-[ext_resource type="Script" uid="uid://cpfhwj5ri1y7d" path="res://CHiTAN/BIG.gd" id="10_d3vyv"]
-[ext_resource type="PackedScene" uid="uid://dt1tth682nenl" path="res://Scenes/character_body_2d.tscn" id="10_t3540"]
-[ext_resource type="Texture2D" uid="uid://c82u71xim8u8g" path="res://Hello.png" id="10_wulba"]
-[ext_resource type="Script" uid="uid://dhbe4nrvokkhm" path="res://CHiTAN/ChiTanNV.gd" id="11_d3vyv"]
-[ext_resource type="Script" uid="uid://d0i3764jsu8oy" path="res://CHiTAN/TrapXoay.gd" id="12_kt7kh"]
-[ext_resource type="Script" path="res://CHiTAN/Move_L.gd" id="16_jchsq"]
-[ext_resource type="Texture2D" uid="uid://bg14ereu48jp2" path="res://Pixel Adventure 1/Free/Traps/Spiked Ball/Spiked Ball.png" id="17_enh1l"]
+[ext_resource type="Script" uid="uid://c85pk27sc71ds" path="res://level_1.gd" id="1_l6rsp"]
+[ext_resource type="Texture2D" uid="uid://dhkt1prc5cciq" path="res://Pixel Adventure 1/Free/Background/Blue.png" id="2_vyy0j"]
+[ext_resource type="Script" uid="uid://f7wkvuj85q1u" path="res://CHiTAN/Trap-up-Low.gd" id="3_h464w"]
+[ext_resource type="Texture2D" uid="uid://crhk04in7jmsy" path="res://Pixel Adventure 1/Free/Traps/Spikes/Idle.png" id="4_5o4ay"]
+[ext_resource type="Script" uid="uid://d7j87xllr3qh" path="res://CHiTAN/TrapMoveRight.gd" id="5_iw4wi"]
+[ext_resource type="PackedScene" uid="uid://b6ag1ctw4nvis" path="res://CHiTAN/TrapCoDinh.tscn" id="6_bxp7a"]
+[ext_resource type="PackedScene" uid="uid://cvvso2wo21aec" path="res://CHiTAN/MoveR.tscn" id="7_8qenx"]
+[ext_resource type="PackedScene" uid="uid://qllh8td5b7kn" path="res://CHiTAN/TrapUp.tscn" id="8_ysi3m"]
+[ext_resource type="Script" uid="uid://wr7a4jnf71jt" path="res://CHiTAN/move_d.gd" id="9_ja6p7"]
+[ext_resource type="Texture2D" uid="uid://crnswvpxwaj4b" path="res://UI/ImgBlock/Block.tres" id="10_tua1w"]
+[ext_resource type="Script" uid="uid://cpfhwj5ri1y7d" path="res://CHiTAN/BIG.gd" id="11_pilmb"]
+[ext_resource type="Texture2D" uid="uid://c82u71xim8u8g" path="res://Hello.png" id="12_67ojw"]
+[ext_resource type="Texture2D" uid="uid://cv75emh7is5wj" path="res://UI/ImgBlock/TrapImg.tres" id="13_7ewan"]
+[ext_resource type="Texture2D" uid="uid://cmx6ev0y0fkb7" path="res://Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="14_a7ecl"]
+[ext_resource type="PackedScene" uid="uid://dt1tth682nenl" path="res://Scenes/character_body_2d.tscn" id="15_1mm4f"]
+[ext_resource type="Script" uid="uid://dhbe4nrvokkhm" path="res://CHiTAN/ChiTanNV.gd" id="16_mulqr"]
+[ext_resource type="Script" uid="uid://d0i3764jsu8oy" path="res://CHiTAN/TrapXoay.gd" id="17_dg0fw"]
+[ext_resource type="PackedScene" uid="uid://m4c8hp47kokd" path="res://UI/pause_menu.tscn" id="18_yit4x"]
+[ext_resource type="Texture2D" uid="uid://cbhtkwag7pn5d" path="res://Pixel Adventure 1/Free/Menu/Buttons/Settings.png" id="19_5xq3u"]
+[ext_resource type="Script" uid="uid://d1obb2soqoptq" path="res://CHiTAN/Trap_tái_sử_dụng/Trap_U_L_D.gd" id="20_rj36p"]
+[ext_resource type="Texture2D" uid="uid://bg14ereu48jp2" path="res://Pixel Adventure 1/Free/Traps/Spiked Ball/Spiked Ball.png" id="21_gotjd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dj87x"]
 size = Vector2(106.82, 15.3959)
@@ -44,7 +44,7 @@ size = Vector2(21, 73)
 size = Vector2(47.8915, 15.9551)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t3540"]
-texture = ExtResource("8_kvda6")
+texture = ExtResource("14_a7ecl")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -221,7 +221,7 @@ size = Vector2(20, 56)
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(2, -1)
-script = ExtResource("1_c3dvo")
+script = ExtResource("1_l6rsp")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
@@ -232,18 +232,18 @@ offset_right = 2038.0
 offset_bottom = 668.0
 grow_vertical = 2
 size_flags_horizontal = 0
-texture = ExtResource("1_vm84t")
+texture = ExtResource("2_vyy0j")
 stretch_mode = 1
 
 [node name="Area2D2" type="Area2D" parent="."]
 position = Vector2(0, -4)
-script = ExtResource("2_7xtlm")
+script = ExtResource("3_h464w")
 
 [node name="NewAtlasTexture" type="Sprite2D" parent="Area2D2"]
 position = Vector2(108, 216)
 rotation = -0.0108285
 scale = Vector2(3.2132, 2.63862)
-texture = ExtResource("3_hlycl")
+texture = ExtResource("4_5o4ay")
 
 [node name="TriggerArea" type="Area2D" parent="Area2D2"]
 position = Vector2(6, 368)
@@ -264,13 +264,13 @@ shape = SubResource("RectangleShape2D_rbddr")
 
 [node name="Area2D6" type="Area2D" parent="."]
 position = Vector2(111, 241)
-script = ExtResource("2_7xtlm")
+script = ExtResource("3_h464w")
 
 [node name="NewAtlasTexture" type="Sprite2D" parent="Area2D6"]
 position = Vector2(108, 216)
 rotation = -0.0108285
 scale = Vector2(3.2132, 2.63862)
-texture = ExtResource("3_hlycl")
+texture = ExtResource("4_5o4ay")
 
 [node name="TriggerArea" type="Area2D" parent="Area2D6"]
 position = Vector2(-141, 391)
@@ -291,13 +291,13 @@ shape = SubResource("RectangleShape2D_rbddr")
 
 [node name="Area2D4" type="Area2D" parent="."]
 position = Vector2(1404, 240)
-script = ExtResource("2_7xtlm")
+script = ExtResource("3_h464w")
 
 [node name="NewAtlasTexture" type="Sprite2D" parent="Area2D4"]
 position = Vector2(108, 216)
 rotation = -0.0108285
 scale = Vector2(3.14582, 2.42886)
-texture = ExtResource("3_hlycl")
+texture = ExtResource("4_5o4ay")
 
 [node name="TriggerArea" type="Area2D" parent="Area2D4"]
 position = Vector2(-44, 276)
@@ -318,13 +318,13 @@ shape = SubResource("RectangleShape2D_rbddr")
 
 [node name="Area2D5" type="Area2D" parent="."]
 position = Vector2(1602, 233)
-script = ExtResource("2_7xtlm")
+script = ExtResource("3_h464w")
 
 [node name="NewAtlasTexture" type="Sprite2D" parent="Area2D5"]
 position = Vector2(108, 216)
 rotation = -0.0108285
 scale = Vector2(3.14582, 2.42886)
-texture = ExtResource("3_hlycl")
+texture = ExtResource("4_5o4ay")
 
 [node name="TriggerArea" type="Area2D" parent="Area2D5"]
 position = Vector2(-14, 291)
@@ -345,13 +345,13 @@ shape = SubResource("RectangleShape2D_rbddr")
 
 [node name="Area2D7" type="Area2D" parent="."]
 position = Vector2(636, 197)
-script = ExtResource("5_t3540")
+script = ExtResource("5_iw4wi")
 
 [node name="NewAtlasTexture" type="Sprite2D" parent="Area2D7"]
 position = Vector2(108, 216)
 rotation = -0.0108285
 scale = Vector2(3.14582, 2.42886)
-texture = ExtResource("3_hlycl")
+texture = ExtResource("4_5o4ay")
 
 [node name="TriggerArea" type="Area2D" parent="Area2D7"]
 position = Vector2(-148, 404)
@@ -372,13 +372,13 @@ shape = SubResource("RectangleShape2D_rbddr")
 
 [node name="Area2D8" type="Area2D" parent="."]
 position = Vector2(1453, -40)
-script = ExtResource("5_t3540")
+script = ExtResource("5_iw4wi")
 
 [node name="NewAtlasTexture" type="Sprite2D" parent="Area2D8"]
 position = Vector2(108, 216)
 rotation = -0.0108285
 scale = Vector2(3.14582, 2.42886)
-texture = ExtResource("3_hlycl")
+texture = ExtResource("4_5o4ay")
 
 [node name="TriggerArea" type="Area2D" parent="Area2D8"]
 position = Vector2(-20, 395)
@@ -399,27 +399,27 @@ shape = SubResource("RectangleShape2D_rbddr")
 
 [node name="Trap" type="Node" parent="."]
 
-[node name="DeadlyObject2" parent="Trap" instance=ExtResource("4_c3dvo")]
+[node name="DeadlyObject2" parent="Trap" instance=ExtResource("6_bxp7a")]
 position = Vector2(242, 299)
 
-[node name="DeadlyObject3" parent="Trap" instance=ExtResource("4_c3dvo")]
+[node name="DeadlyObject3" parent="Trap" instance=ExtResource("6_bxp7a")]
 position = Vector2(1012, 299)
 
-[node name="MoveR" parent="Trap" instance=ExtResource("5_jchsq")]
+[node name="MoveR" parent="Trap" instance=ExtResource("7_8qenx")]
 position = Vector2(1461, 272)
 scale = Vector2(1.07107, 0.996257)
 
-[node name="TrapUp" parent="Trap" instance=ExtResource("6_enh1l")]
+[node name="TrapUp" parent="Trap" instance=ExtResource("8_ysi3m")]
 position = Vector2(878, 332)
 
 [node name="Move_D" type="AnimatableBody2D" parent="Trap"]
 position = Vector2(1582, 226)
-script = ExtResource("8_wulba")
+script = ExtResource("9_ja6p7")
 
 [node name="Block" type="Sprite2D" parent="Trap/Move_D"]
 position = Vector2(364, 133)
 scale = Vector2(2.84861, 3.1894)
-texture = ExtResource("8_0imk0")
+texture = ExtResource("10_tua1w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Trap/Move_D"]
 position = Vector2(364, 133.5)
@@ -434,11 +434,11 @@ position = Vector2(324, 50)
 shape = SubResource("SegmentShape2D_wulba")
 
 [node name="Area2D" type="Area2D" parent="Trap"]
-script = ExtResource("10_d3vyv")
+script = ExtResource("11_pilmb")
 
 [node name="Sprite2D" type="Sprite2D" parent="Trap/Area2D"]
 position = Vector2(593, 1323)
-texture = ExtResource("10_wulba")
+texture = ExtResource("12_67ojw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Trap/Area2D"]
 position = Vector2(593.5, 1322)
@@ -457,7 +457,7 @@ position = Vector2(-899, -63)
 [node name="TrapImg" type="Sprite2D" parent="CharacterBody2D"]
 position = Vector2(1516.66, 278.43)
 scale = Vector2(2.9024, 3.0538)
-texture = ExtResource("7_0imk0")
+texture = ExtResource("13_7ewan")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(1515.16, 278.43)
@@ -470,9 +470,9 @@ tile_set = SubResource("TileSet_mdw60")
 format = 2
 layer_0/tile_data = PackedInt32Array(65535, 983040, 1, 131071, 983040, 1, 196607, 983040, 1, 262143, 983040, 1, 327679, 983040, 1, 393215, 983040, 1, 458751, 983040, 1, 524287, 983040, 1, 589823, 983040, 1, 655359, 983040, 1, 720895, 983040, 1, 786431, 983040, 1, 851967, 983040, 1, 917503, 983040, 2, -1, 786432, 1, -65536, 851968, 0, -65535, 851968, 0, -65534, 851968, 0, -65533, 851968, 0, -65532, 851968, 0, -65531, 851968, 0, -65530, 851968, 0, -65529, 851968, 0, -65528, 851968, 0, -65527, 851968, 0, -65526, 851968, 0, -65525, 851968, 0, -65524, 851968, 0, -65523, 851968, 0, -65522, 851968, 0, -65521, 851968, 0, -65520, 851968, 0, -65519, 851968, 0, -65518, 851968, 0, -65517, 851968, 0, -65516, 851968, 0, -65515, 851968, 0, -65514, 851968, 0, -65513, 851968, 0, 917504, 851968, 0, 917505, 851968, 0, 917506, 851968, 0, 917507, 851968, 0, 917508, 851968, 0, 917509, 851968, 0, 917510, 851968, 0, 917511, 851968, 0, 917512, 851968, 0, 917513, 851968, 0, 917514, 851968, 0, 917515, 851968, 0, 917516, 851968, 0, 917517, 851968, 0, 917518, 851968, 0, 917519, 851968, 0, 917520, 851968, 0, 917521, 851968, 0, 917522, 851968, 0, 917523, 851968, 0, 917524, 851968, 0, 917525, 851968, 0, 917526, 851968, 0, 917527, 851968, 0, 983039, 786432, 1, 589824, 786432, 5, 589825, 786432, 5, 589828, 786432, 4, 589829, 917504, 4, 589834, 917504, 4, 589840, 917504, 4, 589844, 786432, 5, 589839, 786432, 4, 589833, 786432, 4, -65512, 851968, 0, -65511, 851968, 0, -65510, 851968, 0, -65509, 851968, 0, -65508, 851968, 0, -65507, 851968, 0, -65506, 851968, 0, -65505, 851968, 0, -65504, 851968, 0, -65503, 851968, 0, -65502, 851968, 0, -65501, 851968, 0, -65500, 851968, 0, 917528, 851968, 0, 917529, 851968, 0, 917530, 851968, 0, 917531, 851968, 0, 917532, 851968, 0, 917533, 851968, 0, 917534, 851968, 0, 917535, 851968, 0, 917536, 851968, 0, 917537, 851968, 0, 917538, 851968, 0, 917539, 851968, 0, 917540, 851968, 0, 917541, 851968, 0, -65499, 851968, 0, -65498, 851968, 0, -65497, 851968, 0, -65496, 851968, 0, -65495, 851968, 0, 917542, 851968, 0, 917543, 851968, 0, 917544, 851968, 0, 917545, 851968, 0, 917546, 786432, 1, -65494, 786432, 1, 42, 983040, 1, 65578, 983040, 1, 131114, 983040, 1, 196650, 983040, 1, 262186, 983040, 1, 327722, 983040, 1, 393258, 983040, 1, 458794, 983040, 1, 524330, 983040, 1, 589866, 983040, 1, 655402, 983040, 1, 720938, 983040, 1, 786474, 983040, 1, 852010, 983040, 1, 589849, 786432, 4, 589859, 786432, 4, 589860, 917504, 4, 589850, 917504, 4, 262182, 917504, 4, 262181, 786432, 4, 262177, 917504, 4, 262176, 786432, 4, 262167, 917504, 4, 262166, 786432, 4, 262162, 917504, 4, 262161, 786432, 4, 458791, 786432, 5, 458793, 786432, 5, 393257, 786432, 5, 589855, 786432, 5, 589843, 786432, 5, 262149, 786432, 5)
 
-[node name="CharacterBody2D2" parent="." groups=["Player"] instance=ExtResource("10_t3540")]
-position = Vector2(-932, -182)
-script = ExtResource("11_d3vyv")
+[node name="CharacterBody2D2" parent="." groups=["Player"] instance=ExtResource("15_1mm4f")]
+position = Vector2(43, 394)
+script = ExtResource("16_mulqr")
 
 [node name="Camera2D2" type="Camera2D" parent="CharacterBody2D2"]
 position = Vector2(325.333, 194.667)
@@ -487,7 +487,7 @@ position = Vector2(-299, 79)
 [node name="Block" type="Sprite2D" parent="Area2D"]
 position = Vector2(364, 133)
 scale = Vector2(2.84861, 3.1894)
-texture = ExtResource("7_0imk0")
+texture = ExtResource("13_7ewan")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(364, 133.5)
@@ -502,12 +502,12 @@ shape = SubResource("SegmentShape2D_dj87x")
 
 [node name="Trapxoay" type="AnimatableBody2D" parent="."]
 position = Vector2(1295, 190)
-script = ExtResource("12_kt7kh")
+script = ExtResource("17_dg0fw")
 
 [node name="Block" type="Sprite2D" parent="Trapxoay"]
 position = Vector2(68.3666, 25.5152)
 scale = Vector2(2.84861, 3.1894)
-texture = ExtResource("7_0imk0")
+texture = ExtResource("13_7ewan")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Trapxoay"]
 position = Vector2(69, 25.5)
@@ -522,12 +522,12 @@ shape = SubResource("SegmentShape2D_dj87x")
 
 [node name="Trapxoay2" type="AnimatableBody2D" parent="."]
 position = Vector2(424, 239)
-script = ExtResource("12_kt7kh")
+script = ExtResource("17_dg0fw")
 
 [node name="Block" type="Sprite2D" parent="Trapxoay2"]
 position = Vector2(-67.6334, -23.4848)
 scale = Vector2(2.84861, 3.1894)
-texture = ExtResource("7_0imk0")
+texture = ExtResource("13_7ewan")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Trapxoay2"]
 position = Vector2(-67, -23.5)
@@ -540,7 +540,7 @@ position = Vector2(-304, -199)
 position = Vector2(360, 53)
 shape = SubResource("SegmentShape2D_dj87x")
 
-[node name="PauseMenu" parent="." instance=ExtResource("9_hlycl")]
+[node name="PauseMenu" parent="." instance=ExtResource("18_yit4x")]
 visible = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -552,7 +552,7 @@ offset_top = 17.0
 offset_right = 51.0
 offset_bottom = 47.0
 scale = Vector2(3, 3)
-icon = ExtResource("10_c3dvo")
+icon = ExtResource("19_5xq3u")
 flat = true
 metadata/_edit_use_anchors_ = true
 
@@ -565,14 +565,16 @@ shape = SubResource("RectangleShape2D_c3dvo")
 
 [node name="rtapap" type="Area2D" parent="."]
 position = Vector2(2240, 156)
-script = ExtResource("16_jchsq")
-move_distance = null
-move_speed = null
+script = ExtResource("20_rj36p")
+move_distance_up = 0.0
+move_distance_left = 3000.0
+move_distance_down = 0.0
+move_speed = 3.0
 
 [node name="Sprite2D" type="Sprite2D" parent="rtapap"]
 position = Vector2(470.21, 7.97385)
 scale = Vector2(3.15789, 3.06956)
-texture = ExtResource("17_enh1l")
+texture = ExtResource("21_gotjd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="rtapap" groups=["hurt"]]
 position = Vector2(470.21, 7.97385)
@@ -586,7 +588,7 @@ position = Vector2(-1316, -76)
 position = Vector2(360, 71)
 shape = SubResource("RectangleShape2D_enh1l")
 
-[node name="MoveR" parent="." instance=ExtResource("5_jchsq")]
+[node name="MoveR" parent="." instance=ExtResource("7_8qenx")]
 position = Vector2(667, 323)
 
 [connection signal="pressed" from="CanvasLayer/MenuButton" to="." method="_on_menu_button_pressed"]
