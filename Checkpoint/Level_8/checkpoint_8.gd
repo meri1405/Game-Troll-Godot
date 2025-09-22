@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var next_level: String = "res://All_Level/Map Level 3/Level 3.tscn"
+@export var next_level: String = "res://All_Level/Map Level 9/level9.tscn"
 @onready var sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 func _ready():
