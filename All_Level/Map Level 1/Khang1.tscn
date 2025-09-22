@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://brph0jex1nn14"]
+[gd_scene load_steps=22 format=3 uid="uid://brph0jex1nn14"]
 
 [ext_resource type="Script" uid="uid://bhq1cuvf6gqfl" path="res://All_Level/Map Level 1/khang_1.gd" id="1_v40dk"]
 [ext_resource type="Texture2D" uid="uid://bo3gi6m4w3jkx" path="res://Pixel Adventure 1/Free/Background/Pink.png" id="2_nsnvd"]
@@ -12,6 +12,7 @@
 [ext_resource type="Script" uid="uid://3tr73kf052bh" path="res://All_Level/Map Level 1/trap_push_left.gd" id="10_7gd2o"]
 [ext_resource type="Script" uid="uid://4h60cwtm8d6b" path="res://All_Level/Map Level 1/plane.gd" id="11_jpr5p"]
 [ext_resource type="Script" uid="uid://7n1rwfgocgbp" path="res://All_Level/Map Level 1/plane_2.gd" id="12_n7akb"]
+[ext_resource type="PackedScene" uid="uid://b0b8d8fe0ga2a" path="res://Touch_Controls/scene/touch_controls.tscn" id="13_nsnvd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h0yon"]
 texture = ExtResource("3_g5vt1")
@@ -377,6 +378,8 @@ position = Vector2(203, 390)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(15.5, -28)
 shape = SubResource("RectangleShape2D_fmfvw")
+
+[node name="TouchControls" parent="." instance=ExtResource("13_nsnvd")]
 
 [connection signal="body_entered" from="TrapTrigger" to="TrapTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="TrapTrigger2" to="TrapTrigger2" method="_on_body_entered"]

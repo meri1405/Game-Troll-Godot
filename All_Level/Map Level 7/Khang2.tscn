@@ -1,4 +1,4 @@
-[gd_scene load_steps=259 format=3 uid="uid://df0fypxok4wvy"]
+[gd_scene load_steps=260 format=3 uid="uid://df0fypxok4wvy"]
 
 [ext_resource type="Texture2D" uid="uid://b2cvefql3txu0" path="res://Pixel Adventure 1/Free/Background/Gray.png" id="1_7adjs"]
 [ext_resource type="Texture2D" uid="uid://cmx6ev0y0fkb7" path="res://Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="2_m3c78"]
@@ -45,6 +45,7 @@
 [ext_resource type="Texture2D" uid="uid://dcqcksj8ktmqh" path="res://Pixel Adventure 1/Free/Items/Fruits/Orange.png" id="41_330pp"]
 [ext_resource type="Script" uid="uid://fqowpomrgm4h" path="res://All_Level/Map Level 7/orange.gd" id="42_7sh8s"]
 [ext_resource type="Texture2D" uid="uid://bvmv30isvhk2y" path="res://Pixel Adventure 1/Free/Menu/Buttons/Back.png" id="45_330pp"]
+[ext_resource type="PackedScene" uid="uid://b0b8d8fe0ga2a" path="res://Touch_Controls/scene/touch_controls.tscn" id="46_1d5uo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_74qg3"]
 texture = ExtResource("2_m3c78")
@@ -2215,6 +2216,8 @@ position = Vector2(856, -543)
 rotation = -3.14159
 scale = Vector2(3.6217, 2.01756)
 texture = ExtResource("45_330pp")
+
+[node name="TouchControls" parent="." instance=ExtResource("46_1d5uo")]
 
 [connection signal="body_entered" from="Apple" to="Apple" method="_on_body_entered"]
 [connection signal="body_entered" from="RedDoor" to="RedDoor" method="_on_body_entered"]
