@@ -1,8 +1,10 @@
+
 [gd_scene load_steps=28 format=3 uid="uid://besfbgrgvx1sp"]
 
 [ext_resource type="Texture2D" uid="uid://dhkt1prc5cciq" path="res://Pixel Adventure 1/Free/Background/Blue.png" id="1_ryfv1"]
 [ext_resource type="Texture2D" uid="uid://b2cvefql3txu0" path="res://Pixel Adventure 1/Free/Background/Gray.png" id="2_5w2h8"]
 [ext_resource type="Texture2D" uid="uid://dps2vak3wrpfb" path="res://Pixel Adventure 1/Free/Background/Purple.png" id="3_a1x2x"]
+[ext_resource type="Texture2D" uid="uid://c3odeq1pdn71b" path="res://Pixel Adventure 1/Card/Blue_Reverse.png" id="4_5w2h8"]
 [ext_resource type="PackedScene" uid="uid://b0b8d8fe0ga2a" path="res://Touch_Controls/scene/touch_controls.tscn" id="4_nqxxl"]
 [ext_resource type="Script" uid="uid://ckuyjpr6m1qgq" path="res://spike_trap_right_move.gd" id="5_gjjg7"]
 [ext_resource type="Texture2D" uid="uid://crhk04in7jmsy" path="res://Pixel Adventure 1/Free/Traps/Spikes/Idle.png" id="6_55gjo"]
@@ -519,14 +521,14 @@ texture = ExtResource("3_a1x2x")
 stretch_mode = 1
 flip_h = true
 
-[node name="TextEdit" type="TextEdit" parent="Background"]
-offset_left = 330.0
-offset_top = -829.0
-offset_right = 717.0
-offset_bottom = -793.0
-text = "Từ đây nút bên trái đi qua phải còn phải qua trái "
-placeholder_text = "
-"
+[node name="Reverse" type="TextureRect" parent="Background"]
+texture_filter = 1
+offset_left = 410.0
+offset_top = -864.0
+offset_right = 798.0
+offset_bottom = -302.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_5w2h8")
 
 [node name="TouchControls" parent="Background" instance=ExtResource("4_nqxxl")]
 
