@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var next_level: String = "res://All_Level/Map Level 3/Level 3.tscn"
+@export var next_level: String = "res://All_Level/Map Level 6/Level 6.tscn"
 @onready var sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 func _ready():
@@ -12,5 +12,4 @@ func _on_body_entered(body):
 		$"/root/AudioController".play_level_up()
 
 		# Đợi 1 giây rồi chuyển scene
-		await get_tree().create_timer(2.0).timeout
 		get_tree().change_scene_to_file(next_level)

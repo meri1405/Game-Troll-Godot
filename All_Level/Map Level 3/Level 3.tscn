@@ -1,11 +1,11 @@
-[gd_scene load_steps=35 format=3 uid="uid://dv55l6kd8ty8u"]
+[gd_scene load_steps=36 format=3 uid="uid://dv55l6kd8ty8u"]
 
 [ext_resource type="Texture2D" uid="uid://dhkt1prc5cciq" path="res://Pixel Adventure 1/Free/Background/Blue.png" id="1_ob51v"]
-[ext_resource type="Script" uid="uid://bp83ku5px3qw5" path="res://CHiTAN/ChiTanLevel/Xam.gd" id="2_ctjtg"]
-[ext_resource type="Script" uid="uid://cyjh2e8sd10t4" path="res://CHiTAN/ChiTanLevel/Trap_Plus.gd" id="3_efsth"]
+[ext_resource type="Script" path="res://CHiTAN/ChiTanLevel/Xam.gd" id="2_ctjtg"]
+[ext_resource type="Script" path="res://CHiTAN/ChiTanLevel/Trap_Plus.gd" id="3_efsth"]
 [ext_resource type="Texture2D" uid="uid://crhk04in7jmsy" path="res://Pixel Adventure 1/Free/Traps/Spikes/Idle.png" id="4_nitv0"]
-[ext_resource type="Script" uid="uid://ct04dphm552vt" path="res://CHiTAN/ChiTanLevel/activation_zone.gd" id="5_v7xyw"]
-[ext_resource type="Script" uid="uid://di5465m55skol" path="res://CHiTAN/Move_down.gd" id="6_22728"]
+[ext_resource type="Script" path="res://CHiTAN/ChiTanLevel/activation_zone.gd" id="5_v7xyw"]
+[ext_resource type="Script" path="res://CHiTAN/Move_down.gd" id="6_22728"]
 [ext_resource type="Texture2D" uid="uid://fs3vd4y6dk8i" path="res://UI/ImgBlock/MapChiTanq2.tres" id="7_2e0m2"]
 [ext_resource type="Script" uid="uid://dmwtg3a5hhtfi" path="res://CHiTAN/Trap_tái_sử_dụng/Move_U_L_D.gd" id="8_ikqrb"]
 [ext_resource type="Texture2D" uid="uid://6pch5atfx7tn" path="res://UI/ImgBlock/MapChiTan2.tres" id="9_sw7ry"]
@@ -15,9 +15,10 @@
 [ext_resource type="Texture2D" uid="uid://cmx6ev0y0fkb7" path="res://Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="13_13k21"]
 [ext_resource type="Script" uid="uid://irremkkx1a01" path="res://CHiTAN/Trap_tái_sử_dụng/remove_tile_map_xxx.gd" id="14_fd3gd"]
 [ext_resource type="Texture2D" uid="uid://bqcygrpxkexkd" path="res://CHiTAN/ChiTanLevel/pngimg.com - doge_meme_PNG8.png" id="15_1mlod"]
+[ext_resource type="PackedScene" uid="uid://btdfqc4qp1j67" path="res://Checkpoint/Level_1/checkpoint.tscn" id="16_ctjtg"]
 [ext_resource type="PackedScene" uid="uid://dt1tth682nenl" path="res://Scenes/character_body_2d.tscn" id="16_twp7j"]
 [ext_resource type="Script" uid="uid://dhbe4nrvokkhm" path="res://CHiTAN/ChiTanNV.gd" id="17_37f1v"]
-[ext_resource type="Texture2D" uid="uid://m0qlxx0uwevm" path="res://UI/ImgBlock/Check.tres" id="18_os0pw"]
+[ext_resource type="Script" uid="uid://da4i60m7nl6k7" path="res://Checkpoint/Level_3/checkpoint_3.gd" id="17_efsth"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jnol3"]
 size = Vector2(78, 31)
@@ -484,7 +485,7 @@ scale = Vector2(0.516, 0.484756)
 texture = ExtResource("15_1mlod")
 
 [node name="CharacterBody2D2" parent="." groups=["Player"] instance=ExtResource("16_twp7j")]
-position = Vector2(146, 286)
+position = Vector2(93, 301)
 script = ExtResource("17_37f1v")
 
 [node name="Camera2D2" type="Camera2D" parent="CharacterBody2D2"]
@@ -494,9 +495,9 @@ position_smoothing_speed = 3.0
 rotation_smoothing_enabled = true
 rotation_smoothing_speed = 3.0
 
-[node name="Check" type="Sprite2D" parent="."]
-position = Vector2(1961.82, 280.311)
-scale = Vector2(1.68571, 1.54545)
-texture = ExtResource("18_os0pw")
+[node name="Checkpoint" parent="." instance=ExtResource("16_ctjtg")]
+position = Vector2(825, 180)
+script = ExtResource("17_efsth")
+next_level = "res://All_Level/Map Level 4/level4.tscn"
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

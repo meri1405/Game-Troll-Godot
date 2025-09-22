@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://bnxaudji70anp"]
+[gd_scene load_steps=29 format=3 uid="uid://bnxaudji70anp"]
 
 [ext_resource type="PackedScene" uid="uid://b0b8d8fe0ga2a" path="res://Touch_Controls/scene/touch_controls.tscn" id="1_ylymy"]
 [ext_resource type="PackedScene" uid="uid://dcw1f5su5l2w5" path="res://Scenes/Spike4set.tscn" id="2_6er5h"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://cn68kf01nitbs" path="res://appearingBox.gd" id="9_owq7v"]
 [ext_resource type="Script" uid="uid://b8dyhs0vodeit" path="res://disappearingBox.gd" id="10_y80nr"]
 [ext_resource type="Script" uid="uid://7f4754wefk68" path="res://All_Level/Map Level 7/room_1.gd" id="11_ckcxv"]
+[ext_resource type="PackedScene" uid="uid://btdfqc4qp1j67" path="res://Checkpoint/Level_1/checkpoint.tscn" id="12_6er5h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jp7we"]
 texture = ExtResource("5_uyqxm")
@@ -907,6 +908,9 @@ cam_zoom = Vector2(1.2, 1.2)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Room1"]
 position = Vector2(1244.5, 252.5)
 shape = SubResource("RectangleShape2D_8qhcr")
+
+[node name="Checkpoint" parent="." instance=ExtResource("12_6er5h")]
+position = Vector2(1687, -83)
 
 [connection signal="body_entered" from="Plat" to="Plat/Plat" method="_on_plat_player_entered"]
 [connection signal="body_entered" from="Plat" to="Plat/Plat" method="_on_plat_body_entered"]

@@ -1,16 +1,16 @@
 [gd_scene load_steps=14 format=3 uid="uid://ck2xe8ck0gd6q"]
 
-[ext_resource type="Script" uid="uid://ckd2xojagcq0x" path="res://tuanmap.gd" id="1_sq0mv"]
+[ext_resource type="Script" path="res://tuanmap.gd" id="1_sq0mv"]
 [ext_resource type="Texture2D" uid="uid://dhkt1prc5cciq" path="res://Pixel Adventure 1/Free/Background/Blue.png" id="1_ymafs"]
 [ext_resource type="PackedScene" uid="uid://cibklyepbriw8" path="res://Scenes/Spike3set.tscn" id="2_4lncf"]
 [ext_resource type="Texture2D" uid="uid://cmx6ev0y0fkb7" path="res://Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="2_j1crw"]
 [ext_resource type="PackedScene" uid="uid://dt1tth682nenl" path="res://Scenes/character_body_2d.tscn" id="3_4lncf"]
-[ext_resource type="Script" uid="uid://27f4fjhd22u6" path="res://tile_map.gd" id="4_w3lwf"]
+[ext_resource type="Script" path="res://tile_map.gd" id="4_w3lwf"]
 [ext_resource type="PackedScene" uid="uid://dcw1f5su5l2w5" path="res://Scenes/Spike4set.tscn" id="5_4lncf"]
 [ext_resource type="PackedScene" uid="uid://b0b8d8fe0ga2a" path="res://Touch_Controls/scene/touch_controls.tscn" id="6_0byyk"]
 [ext_resource type="PackedScene" uid="uid://m4c8hp47kokd" path="res://UI/pause_menu.tscn" id="10_oua1n"]
 [ext_resource type="PackedScene" uid="uid://cn3fdwy7umk4h" path="res://Checkpoint/Level_2/checkpoint_2.tscn" id="11_3yd5f"]
-[ext_resource type="Script" uid="uid://srw060fiwh1g" path="res://tuancheckpoint.gd" id="12_3yd5f"]
+[ext_resource type="Script" path="res://tuancheckpoint.gd" id="12_3yd5f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0byyk"]
 texture = ExtResource("2_j1crw")
