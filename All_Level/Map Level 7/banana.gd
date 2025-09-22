@@ -2,7 +2,7 @@ extends Area2D
 
 @onready var sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var collision: CollisionShape2D = $CollisionShape2D
-@export var fruit_color: int = 2  # ví dụ 1 = Red
+@export var fruit_color: int = 7  # ví dụ 1 = Red
 
 var triggered: bool = false
 var start_position: Vector2
