@@ -4,6 +4,7 @@ const SPEED = 280.0
 const JUMP_VELOCITY = -430.0
 @onready var sprite_2d: AnimatedSprite2D = $Sprite2D
 var is_alive = true
+var control_inverted: bool = false
 
 var spawn_point_x=0
 var spawn_point_y=0
@@ -43,6 +44,8 @@ func _physics_process(delta: float) -> void:
 		# Get the input direction and handle the movement/deceleration.
 		# As good practice, you should replace UI actions with custom gameplay actions.
 		var direction := Input.get_axis("left", "right")
+		if control_inverted:
+			direction = -direction #Đảo trí phải 
 		if direction:
 			velocity.x = direction * SPEED
 		else:

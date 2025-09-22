@@ -12,6 +12,9 @@ func _ready():
 func _physics_process(delta: float) -> void:
 	if triggered:
 		global_position.x += direction * speed * delta
+	if global_position.x > 960:
+		visible = false
+		set_physics_process(false)
 
 func _on_saw_trigger_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
@@ -21,3 +24,5 @@ func _on_saw_trigger_body_entered(body: Node2D) -> void:
 func reset_trap():
 	global_position = start_position
 	triggered = false
+	visible = true
+	set_physics_process(true)

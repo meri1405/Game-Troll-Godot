@@ -16,7 +16,8 @@ func _physics_process(delta: float) -> void:
 		global_position.y += direction * speed * delta
 		sprite_2d.animation = "drop"
 	if global_position.y > 600:
-		queue_free()
+		visible = false
+		set_physics_process(false)
 
 func _on_saw_trigger_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
@@ -27,3 +28,5 @@ func reset_trap():
 	global_position = start_position
 	triggered = false
 	sprite_2d.animation = "drop"
+	visible = true
+	set_physics_process(true)
