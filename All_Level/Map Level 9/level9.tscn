@@ -1,5 +1,4 @@
-
-[gd_scene load_steps=28 format=3 uid="uid://besfbgrgvx1sp"]
+[gd_scene load_steps=29 format=3 uid="uid://besfbgrgvx1sp"]
 
 [ext_resource type="Texture2D" uid="uid://dhkt1prc5cciq" path="res://Pixel Adventure 1/Free/Background/Blue.png" id="1_ryfv1"]
 [ext_resource type="Texture2D" uid="uid://b2cvefql3txu0" path="res://Pixel Adventure 1/Free/Background/Gray.png" id="2_5w2h8"]
@@ -487,7 +486,7 @@ size = Vector2(965, 928)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6boes"]
 size = Vector2(963, 691)
 
-[node name="Level5" type="Node"]
+[node name="Level9" type="Node"]
 
 [node name="Background" type="Node" parent="."]
 
@@ -945,13 +944,11 @@ spawn_interval = 0.8
 [node name="Zone" type="Node" parent="."]
 
 [node name="DarkZone" type="Area2D" parent="Zone"]
-visible = false
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Zone/DarkZone"]
 color = Color(0, 0, 0, 1)
 
 [node name="RoomLight" type="Area2D" parent="Zone" node_paths=PackedStringArray("canvas_mod") groups=["Room_light"]]
-visible = false
 position = Vector2(496, 310)
 script = ExtResource("13_fg8sv")
 canvas_mod = NodePath("../DarkZone/CanvasModulate")
@@ -961,7 +958,6 @@ position = Vector2(-18.5, 1)
 shape = SubResource("RectangleShape2D_vabxw")
 
 [node name="RoomLDark" type="Area2D" parent="Zone" node_paths=PackedStringArray("canvas_mod") groups=["Room_dark"]]
-visible = false
 position = Vector2(501, -349)
 script = ExtResource("13_fg8sv")
 canvas_mod = NodePath("../DarkZone/CanvasModulate")
@@ -971,7 +967,6 @@ position = Vector2(-18.5, -18)
 shape = SubResource("RectangleShape2D_vabxw")
 
 [node name="RoomLight2" type="Area2D" parent="Zone" node_paths=PackedStringArray("canvas_mod") groups=["Room_light"]]
-visible = false
 position = Vector2(499, -1250)
 script = ExtResource("13_fg8sv")
 canvas_mod = NodePath("../DarkZone/CanvasModulate")
@@ -981,7 +976,6 @@ position = Vector2(-16.5, 81)
 shape = SubResource("RectangleShape2D_amuqg")
 
 [node name="TriggerChangeDir" type="Area2D" parent="."]
-visible = false
 position = Vector2(109, -971)
 script = ExtResource("14_vmy6h")
 
