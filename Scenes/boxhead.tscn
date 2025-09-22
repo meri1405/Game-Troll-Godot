@@ -11,6 +11,7 @@ size = Vector2(27, 27.5)
 [node name="spikeHead" type="CharacterBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
 texture = ExtResource("1_jvkf1")
 
 [node name="Area2D" type="Area2D" parent="." groups=["hurt"]]

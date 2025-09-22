@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Project-1"
-run/main_scene="uid://bnxaudji70anp"
+run/main_scene="uid://df0fypxok4wvy"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
 
@@ -34,6 +34,7 @@ project/assembly_name="Project-1"
 hurt=""
 saws=""
 Camera=""
+Player=""
 
 [input]
 
