@@ -17,7 +17,8 @@ func _physics_process(delta: float) -> void:
 		global_position.x += direction * speed * delta
 		sprite_2d.animation = "run"
 	if global_position.x < 9000 :
-		queue_free()
+		visible = false
+		set_physics_process(false)
 		print("Delete_fire")
 	
 
@@ -30,3 +31,5 @@ func reset_trap():
 	global_position = start_position
 	triggered = false
 	sprite_2d.animation = "run"
+	visible = true
+	set_physics_process(true)
