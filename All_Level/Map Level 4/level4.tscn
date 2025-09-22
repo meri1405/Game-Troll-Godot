@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://ckuyjpr6m1qgq" path="res://spike_trap_right_move.gd" id="5_0r20c"]
 [ext_resource type="Texture2D" uid="uid://crhk04in7jmsy" path="res://Pixel Adventure 1/Free/Traps/Spikes/Idle.png" id="6_2iqxc"]
 [ext_resource type="Script" uid="uid://bvhj68g1ggo7h" path="res://spike_trap_left_move.gd" id="7_thaky"]
+[ext_resource type="Script" uid="uid://go8mpna6yh4b" path="res://Checkpoint/Level_4/checkpoint_4.gd" id="8_7fp0q"]
 [ext_resource type="Script" uid="uid://s8pdr1olwmhl" path="res://spike_trap_up_move.gd" id="8_xubek"]
 [ext_resource type="Script" uid="uid://cfchxus616laa" path="res://spike_trap_down_move.gd" id="9_ohwkm"]
 [ext_resource type="Texture2D" uid="uid://cmx6ev0y0fkb7" path="res://Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="10_838p7"]
@@ -14,7 +15,6 @@
 [ext_resource type="Script" uid="uid://63yfh466kob" path="res://box_left_move.gd" id="12_b1cp5"]
 [ext_resource type="Texture2D" uid="uid://sg5gxyeqs7dq" path="res://Pixel Adventure 1/Free/Traps/Rock Head/Blink (42x42).png" id="13_o7ldr"]
 [ext_resource type="PackedScene" uid="uid://b0b8d8fe0ga2a" path="res://Touch_Controls/scene/touch_controls.tscn" id="14_ct3fb"]
-[ext_resource type="Script" uid="uid://nc73wr03mhn6" path="res://Checkpoint/Level_Huy/check_point.gd" id="15_yodsc"]
 [ext_resource type="Texture2D" uid="uid://3o72ly24grlg" path="res://Pixel Adventure 1/Free/Items/Checkpoints/Checkpoint/Checkpoint (Flag Idle)(64x64).png" id="16_3gn68"]
 [ext_resource type="Texture2D" uid="uid://b0oni833t64u3" path="res://Pixel Adventure 1/Cat/Cat/CAT 2.png" id="17_ve8y3"]
 
@@ -727,9 +727,10 @@ shape = SubResource("RectangleShape2D_yxclo")
 
 [node name="TouchControls" parent="." instance=ExtResource("14_ct3fb")]
 
-[node name="CheckPoint" type="Area2D" parent="."]
+[node name="CheckPoint" type="Area2D" parent="." groups=["Player"]]
 position = Vector2(2087, 258)
-script = ExtResource("15_yodsc")
+script = ExtResource("8_7fp0q")
+metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CheckPoint"]
 sprite_frames = SubResource("SpriteFrames_0fpet")

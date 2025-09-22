@@ -1,0 +1,503 @@
+[gd_scene load_steps=36 format=3 uid="uid://dv55l6kd8ty8u"]
+
+[ext_resource type="Texture2D" uid="uid://dhkt1prc5cciq" path="res://Pixel Adventure 1/Free/Background/Blue.png" id="1_ob51v"]
+[ext_resource type="Script" path="res://CHiTAN/ChiTanLevel/Xam.gd" id="2_ctjtg"]
+[ext_resource type="Script" path="res://CHiTAN/ChiTanLevel/Trap_Plus.gd" id="3_efsth"]
+[ext_resource type="Texture2D" uid="uid://crhk04in7jmsy" path="res://Pixel Adventure 1/Free/Traps/Spikes/Idle.png" id="4_nitv0"]
+[ext_resource type="Script" path="res://CHiTAN/ChiTanLevel/activation_zone.gd" id="5_v7xyw"]
+[ext_resource type="Script" path="res://CHiTAN/Move_down.gd" id="6_22728"]
+[ext_resource type="Texture2D" uid="uid://fs3vd4y6dk8i" path="res://UI/ImgBlock/MapChiTanq2.tres" id="7_2e0m2"]
+[ext_resource type="Script" uid="uid://dmwtg3a5hhtfi" path="res://CHiTAN/Trap_tái_sử_dụng/Move_U_L_D.gd" id="8_ikqrb"]
+[ext_resource type="Texture2D" uid="uid://6pch5atfx7tn" path="res://UI/ImgBlock/MapChiTan2.tres" id="9_sw7ry"]
+[ext_resource type="Script" uid="uid://d1obb2soqoptq" path="res://CHiTAN/Trap_tái_sử_dụng/Trap_U_L_D.gd" id="10_yh0kx"]
+[ext_resource type="Texture2D" uid="uid://bv3m3qsh8rpor" path="res://Pixel Adventure 1/Free/Traps/Saw/Off.png" id="11_wr503"]
+[ext_resource type="Script" uid="uid://ow7lj5frkx85" path="res://CHiTAN/Trap_tái_sử_dụng/Trap_DULR.gd" id="12_501wg"]
+[ext_resource type="Texture2D" uid="uid://cmx6ev0y0fkb7" path="res://Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="13_13k21"]
+[ext_resource type="Script" uid="uid://irremkkx1a01" path="res://CHiTAN/Trap_tái_sử_dụng/remove_tile_map_xxx.gd" id="14_fd3gd"]
+[ext_resource type="Texture2D" uid="uid://bqcygrpxkexkd" path="res://CHiTAN/ChiTanLevel/pngimg.com - doge_meme_PNG8.png" id="15_1mlod"]
+[ext_resource type="PackedScene" uid="uid://btdfqc4qp1j67" path="res://Checkpoint/Level_1/checkpoint.tscn" id="16_ctjtg"]
+[ext_resource type="PackedScene" uid="uid://dt1tth682nenl" path="res://Scenes/character_body_2d.tscn" id="16_twp7j"]
+[ext_resource type="Script" uid="uid://dhbe4nrvokkhm" path="res://CHiTAN/ChiTanNV.gd" id="17_37f1v"]
+[ext_resource type="Script" uid="uid://da4i60m7nl6k7" path="res://Checkpoint/Level_3/checkpoint_3.gd" id="17_efsth"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jnol3"]
+size = Vector2(78, 31)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nhfeh"]
+size = Vector2(20, 54)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wys4g"]
+size = Vector2(20, 56)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vtv6u"]
+size = Vector2(40.671, 75.1184)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v7nk6"]
+size = Vector2(116.937, 19.4914)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y02rr"]
+size = Vector2(97, 85)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ju5n"]
+size = Vector2(94, 47)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yr1o4"]
+size = Vector2(20, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2sl4e"]
+size = Vector2(2034, 61)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h711c"]
+size = Vector2(85, 47)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gl73r"]
+size = Vector2(20, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fiqh6"]
+size = Vector2(116.937, 19.4914)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h3scc"]
+size = Vector2(40.671, 75.1184)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y02rr"]
+texture = ExtResource("13_13k21")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+6:0/0 = 0
+6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:0/0 = 0
+7:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:0/0 = 0
+8:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:0/0 = 0
+10:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+13:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+14:0/0 = 0
+15:0/0 = 0
+17:0/0 = 0
+18:0/0 = 0
+19:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+15:1/0 = 0
+15:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+17:1/0 = 0
+18:1/0 = 0
+19:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+15:2/0 = 0
+17:2/0 = 0
+18:2/0 = 0
+18:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+19:2/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+12:4/0 = 0
+12:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+13:4/0 = 0
+13:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+14:4/0 = 0
+14:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+15:4/0 = 0
+15:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+17:4/0 = 0
+18:4/0 = 0
+19:4/0 = 0
+20:4/0 = 0
+21:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+12:5/0 = 0
+12:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+13:5/0 = 0
+14:5/0 = 0
+15:5/0 = 0
+15:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+17:5/0 = 0
+18:5/0 = 0
+19:5/0 = 0
+20:5/0 = 0
+21:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+15:6/0 = 0
+15:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+17:6/0 = 0
+18:6/0 = 0
+19:6/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+14:8/0 = 0
+15:8/0 = 0
+17:8/0 = 0
+18:8/0 = 0
+19:8/0 = 0
+20:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+10:9/0 = 0
+12:9/0 = 0
+13:9/0 = 0
+14:9/0 = 0
+15:9/0 = 0
+17:9/0 = 0
+18:9/0 = 0
+19:9/0 = 0
+20:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+13:10/0 = 0
+14:10/0 = 0
+15:10/0 = 0
+18:10/0 = 0
+19:10/0 = 0
+20:10/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_ydjpo"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_y02rr")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x5y7t"]
+size = Vector2(39, 71)
+
+[node name="ChiTanLevel3" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 2016.0
+offset_bottom = 575.0
+grow_vertical = 2
+size_flags_horizontal = 0
+texture = ExtResource("1_ob51v")
+stretch_mode = 1
+
+[node name="Area2D2" type="Area2D" parent="."]
+position = Vector2(1773, 146)
+script = ExtResource("2_ctjtg")
+move_speed = 0.3
+appear_delay = 0.2
+
+[node name="Sprite2D" type="Button" parent="Area2D2"]
+offset_left = -25.0
+offset_top = 4.0
+offset_right = 56.0
+offset_bottom = 35.0
+scale = Vector2(1.17331, 1.2152)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "GÂU GÂU"
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(22, 25)
+scale = Vector2(1.45977, 1.56)
+shape = SubResource("RectangleShape2D_jnol3")
+
+[node name="TriggerArea1" type="Area2D" parent="Area2D2"]
+position = Vector2(-58, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2/TriggerArea1"]
+position = Vector2(-137, 151)
+shape = SubResource("RectangleShape2D_nhfeh")
+
+[node name="TriggerArea2" type="Area2D" parent="Area2D2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2/TriggerArea2"]
+position = Vector2(-4, 151)
+shape = SubResource("RectangleShape2D_wys4g")
+
+[node name="Trap_Face_2" type="Node2D" parent="."]
+
+[node name="DeadlyTrap" type="Area2D" parent="Trap_Face_2"]
+position = Vector2(94, 142)
+scale = Vector2(1.11064, 0.917245)
+script = ExtResource("3_efsth")
+move_distance_up = 45.0
+move_distance_left = 0.0
+move_distance_down = 0.0
+
+[node name="NewAtlasTexture" type="Sprite2D" parent="Trap_Face_2/DeadlyTrap"]
+position = Vector2(107, 240)
+rotation = -6.27918
+scale = Vector2(3.2132, 2.63862)
+texture = ExtResource("4_nitv0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trap_Face_2/DeadlyTrap"]
+position = Vector2(107.146, 252.931)
+rotation = -1.5706
+scale = Vector2(0.37512, 0.566092)
+shape = SubResource("RectangleShape2D_vtv6u")
+
+[node name="TriggerArea" type="Area2D" parent="Trap_Face_2/DeadlyTrap"]
+position = Vector2(11.705, 419.735)
+rotation = -0.34932
+scale = Vector2(0.878281, 0.8882)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trap_Face_2/DeadlyTrap/TriggerArea"]
+position = Vector2(275.444, -220.698)
+rotation = 1.9197
+scale = Vector2(0.999975, 1.03161)
+shape = SubResource("RectangleShape2D_v7nk6")
+
+[node name="ActivationZone" type="Area2D" parent="Trap_Face_2" groups=["Player"]]
+position = Vector2(730, 290)
+script = ExtResource("5_v7xyw")
+target_traps = Array[NodePath]([NodePath("../DeadlyTrap")])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trap_Face_2/ActivationZone"]
+position = Vector2(-32, -3)
+shape = SubResource("RectangleShape2D_y02rr")
+
+[node name="Trap" type="Node2D" parent="."]
+
+[node name="Area2D4" type="AnimatableBody2D" parent="Trap"]
+position = Vector2(133, 387)
+script = ExtResource("6_22728")
+
+[node name="MapChiTan2" type="Sprite2D" parent="Trap/Area2D4"]
+texture_filter = 2
+position = Vector2(155, -27)
+scale = Vector2(2.7878, 2.99113)
+texture = ExtResource("7_2e0m2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trap/Area2D4"]
+position = Vector2(154, -27.571)
+shape = SubResource("RectangleShape2D_6ju5n")
+
+[node name="TriggerArea" type="Area2D" parent="Trap/Area2D4"]
+position = Vector2(130, -85)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trap/Area2D4/TriggerArea"]
+position = Vector2(-27, 0)
+shape = SubResource("RectangleShape2D_yr1o4")
+
+[node name="Area2D3" type="Area2D" parent="Trap" groups=["hurt"]]
+position = Vector2(421, 453)
+scale = Vector2(3, 3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trap/Area2D3"]
+position = Vector2(685, 51)
+shape = SubResource("RectangleShape2D_2sl4e")
+
+[node name="Area2D2" type="AnimatableBody2D" parent="Trap"]
+position = Vector2(429, 388)
+script = ExtResource("8_ikqrb")
+move_up_distance = 60.0
+move_left_distance = 215.0
+move_down_distance = 59.0
+move_speed = 0.5
+
+[node name="MapChiTan2" type="Sprite2D" parent="Trap/Area2D2"]
+texture_filter = 2
+position = Vector2(151.211, -27.071)
+scale = Vector2(2.7878, 2.99113)
+texture = ExtResource("9_sw7ry")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trap/Area2D2"]
+position = Vector2(152.711, -27.571)
+shape = SubResource("RectangleShape2D_h711c")
+
+[node name="TriggerArea" type="Area2D" parent="Trap/Area2D2"]
+position = Vector2(43, -76)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trap/Area2D2/TriggerArea"]
+position = Vector2(-10, -9)
+shape = SubResource("RectangleShape2D_gl73r")
+
+[node name="Area2D5" type="AnimatableBody2D" parent="Trap"]
+position = Vector2(1221, 387)
+script = ExtResource("8_ikqrb")
+move_up_distance = 0.0
+move_left_distance = 315.0
+move_down_distance = 0.0
+move_speed = 2.0
+
+[node name="MapChiTan2" type="Sprite2D" parent="Trap/Area2D5"]
+texture_filter = 2
+position = Vector2(151.211, -27.071)
+scale = Vector2(2.7878, 2.99113)
+texture = ExtResource("9_sw7ry")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trap/Area2D5"]
+position = Vector2(152.711, -27.571)
+shape = SubResource("RectangleShape2D_h711c")
+
+[node name="TriggerArea" type="Area2D" parent="Trap/Area2D5"]
+position = Vector2(-266, -76)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trap/Area2D5/TriggerArea"]
+position = Vector2(-10, -9)
+shape = SubResource("RectangleShape2D_gl73r")
+
+[node name="Trap-d3" type="Area2D" parent="Trap"]
+position = Vector2(657, 138)
+script = ExtResource("10_yh0kx")
+move_distance_up = 80.0
+move_distance_left = 360.0
+move_distance_down = 80.0
+move_speed = 1.0
+
+[node name="NewAtlasTexture" type="Sprite2D" parent="Trap/Trap-d3"]
+position = Vector2(111.243, 219.579)
+rotation = -0.002491
+scale = Vector2(1.5, 1.09011)
+texture = ExtResource("11_wr503")
+
+[node name="TriggerArea" type="Area2D" parent="Trap/Trap-d3"]
+position = Vector2(-124, 411)
+rotation = -0.34932
+scale = Vector2(0.878281, 0.8882)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trap/Trap-d3/TriggerArea"]
+position = Vector2(275.444, -220.698)
+rotation = 1.9197
+scale = Vector2(0.999975, 1.03161)
+shape = SubResource("RectangleShape2D_fiqh6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trap/Trap-d3"]
+position = Vector2(108.027, 228.498)
+rotation = -1.58177
+scale = Vector2(0.37512, 0.566092)
+shape = SubResource("RectangleShape2D_h3scc")
+
+[node name="DeadlyTrap2" type="Area2D" parent="Trap"]
+position = Vector2(953, 17)
+scale = Vector2(1.11064, 0.917245)
+script = ExtResource("12_501wg")
+move_distance_down = 20.0
+move_distance_up = 0.0
+move_distance_left = 0.0
+move_distance_right = 0.0
+move_speed = 0.01
+
+[node name="NewAtlasTexture" type="Sprite2D" parent="Trap/DeadlyTrap2"]
+position = Vector2(107, 240)
+rotation = -9.41199
+scale = Vector2(3.2132, 2.63862)
+texture = ExtResource("4_nitv0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trap/DeadlyTrap2"]
+position = Vector2(108.946, 226.766)
+rotation = -1.5706
+scale = Vector2(0.37512, 0.566092)
+shape = SubResource("RectangleShape2D_vtv6u")
+
+[node name="TriggerArea" type="Area2D" parent="Trap/DeadlyTrap2"]
+position = Vector2(-97.2412, 506.953)
+rotation = -0.34932
+scale = Vector2(0.878281, 0.8882)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trap/DeadlyTrap2/TriggerArea"]
+position = Vector2(275.444, -220.698)
+rotation = 1.9197
+scale = Vector2(0.999975, 1.03161)
+shape = SubResource("RectangleShape2D_v7nk6")
+
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2(3, 3)
+tile_set = SubResource("TileSet_ydjpo")
+format = 2
+layer_0/tile_data = PackedInt32Array(458752, 458752, 0, 458753, 458752, 0, 458754, 458752, 0, 458755, 458752, 0, 458756, 458752, 0, 458759, 458752, 0, 458760, 458752, 0, 458761, 458752, 0, 458762, 458752, 0, 458763, 458752, 0, 458764, 458752, 0, 458765, 458752, 0, 458766, 458752, 0, 458767, 458752, 0, 458768, 458752, 0, 458769, 458752, 0, 458770, 458752, 0, 458771, 458752, 0, 458772, 458752, 0, 458773, 458752, 0, 458774, 458752, 0, 458775, 458752, 0, 458776, 458752, 0, 458777, 458752, 0, 458778, 458752, 0, 458779, 458752, 0, 458780, 458752, 0, 458781, 458752, 0, 458782, 458752, 0, 458783, 458752, 0, 458784, 458752, 0, 458785, 458752, 0, 458786, 458752, 0, 458787, 458752, 0, 458788, 458752, 0, 458789, 458752, 0, 458790, 458752, 0, 458791, 458752, 0, 458792, 458752, 0, 458793, 458752, 0, 0, 851968, 4, 1, 851968, 4, 2, 851968, 4, 3, 851968, 4, 4, 851968, 4, 5, 786432, 5, 65541, 983040, 5, 131077, 983040, 5, 196613, 983040, 5, 262149, 786432, 5, 262150, 851968, 4, 262151, 851968, 4, 262152, 851968, 4, 262153, 851968, 4, 262154, 851968, 4, 262155, 851968, 4, 262156, 851968, 4, 262157, 851968, 4, 262158, 851968, 4, 262159, 851968, 4, 262160, 851968, 4, 262161, 851968, 4, 262162, 851968, 4, 262163, 851968, 4, 262164, 851968, 4, 262165, 851968, 4, 262166, 851968, 4, 262167, 851968, 4, 262168, 851968, 4, 262169, 851968, 4, 262170, 851968, 4, 262171, 851968, 4, 262172, 851968, 4, 262173, 851968, 4, 262174, 851968, 4, 262175, 851968, 4, 262176, 851968, 4, 262177, 851968, 4, 262178, 851968, 4, 262179, 786432, 5, 196643, 983040, 5, 131107, 983040, 5, 65571, 983040, 5, 35, 786432, 5, 36, 851968, 4, 37, 851968, 4, 38, 851968, 4, 39, 851968, 4, 40, 851968, 4, 41, 851968, 4, 720896, 65536, 10, 720897, 65536, 10, 720898, 65536, 10, 720899, 65536, 10, 720900, 65536, 10, 720901, 65536, 10, 720902, 65536, 10, 720903, 65536, 10, 720904, 65536, 10, 720905, 65536, 10, 720906, 65536, 10, 720907, 65536, 10, 720908, 65536, 10, 720909, 65536, 10, 720910, 65536, 10, 720911, 65536, 10, 720912, 65536, 10, 720913, 65536, 10, 720914, 65536, 10, 720915, 65536, 10, 720916, 65536, 10, 720917, 65536, 10, 720918, 65536, 10, 720919, 65536, 10, 720920, 65536, 10, 720921, 65536, 10, 720922, 65536, 10, 720923, 65536, 10, 720924, 65536, 10, 720925, 65536, 10, 720926, 65536, 10, 720927, 65536, 10, 720928, 65536, 10, 720929, 65536, 10, 720930, 65536, 10, 720931, 65536, 10, 720932, 65536, 10, 720933, 65536, 10, 720934, 65536, 10, 720935, 65536, 10, 720936, 65536, 10, 720937, 65536, 10)
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(1174, 308)
+script = ExtResource("14_fd3gd")
+individual_tiles = Array[Vector2i]([Vector2i(21, 7), Vector2i(22, 7)])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-182, -9)
+shape = SubResource("RectangleShape2D_x5y7t")
+
+[node name="Pngimg_com-DogeMemePng8" type="Sprite2D" parent="."]
+position = Vector2(1954.82, 219.311)
+rotation = -0.110998
+scale = Vector2(0.516, 0.484756)
+texture = ExtResource("15_1mlod")
+
+[node name="CharacterBody2D2" parent="." groups=["Player"] instance=ExtResource("16_twp7j")]
+position = Vector2(93, 301)
+script = ExtResource("17_37f1v")
+
+[node name="Camera2D2" type="Camera2D" parent="CharacterBody2D2"]
+position = Vector2(-5.66669, 1.66666)
+position_smoothing_enabled = true
+position_smoothing_speed = 3.0
+rotation_smoothing_enabled = true
+rotation_smoothing_speed = 3.0
+
+[node name="Checkpoint" parent="." instance=ExtResource("16_ctjtg")]
+position = Vector2(825, 180)
+script = ExtResource("17_efsth")
+next_level = "res://All_Level/Map Level 4/level4.tscn"
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

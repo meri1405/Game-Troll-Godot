@@ -1,4 +1,5 @@
-[gd_scene load_steps=39 format=3 uid="uid://besfbgrgvx1sp"]
+
+[gd_scene load_steps=28 format=3 uid="uid://besfbgrgvx1sp"]
 
 [ext_resource type="Texture2D" uid="uid://dhkt1prc5cciq" path="res://Pixel Adventure 1/Free/Background/Blue.png" id="1_ryfv1"]
 [ext_resource type="Texture2D" uid="uid://b2cvefql3txu0" path="res://Pixel Adventure 1/Free/Background/Gray.png" id="2_5w2h8"]
@@ -9,12 +10,13 @@
 [ext_resource type="Texture2D" uid="uid://crhk04in7jmsy" path="res://Pixel Adventure 1/Free/Traps/Spikes/Idle.png" id="6_55gjo"]
 [ext_resource type="Script" uid="uid://bvhj68g1ggo7h" path="res://spike_trap_left_move.gd" id="7_guwio"]
 [ext_resource type="Texture2D" uid="uid://cmx6ev0y0fkb7" path="res://Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="8_4ghkf"]
-[ext_resource type="Texture2D" uid="uid://3o72ly24grlg" path="res://Pixel Adventure 1/Free/Items/Checkpoints/Checkpoint/Checkpoint (Flag Idle)(64x64).png" id="9_7fe25"]
 [ext_resource type="PackedScene" uid="uid://dt1tth682nenl" path="res://Scenes/character_body_2d.tscn" id="10_oohob"]
 [ext_resource type="Script" uid="uid://cm5mhy0xl0mj4" path="res://spike_spawner.gd" id="11_l26rp"]
 [ext_resource type="PackedScene" uid="uid://ddgtlxu55dixr" path="res://spike_fall.tscn" id="12_347un"]
 [ext_resource type="Script" uid="uid://csnki2cmswyv1" path="res://Room_2.gd" id="13_fg8sv"]
+[ext_resource type="PackedScene" uid="uid://btdfqc4qp1j67" path="res://Checkpoint/Level_1/checkpoint.tscn" id="14_ryfv1"]
 [ext_resource type="Script" uid="uid://ymv7ewqim46k" path="res://trigger_change_dir.gd" id="14_vmy6h"]
+[ext_resource type="Script" uid="uid://ncmukyjtpslc" path="res://Checkpoint/Level_9/checkpoint_9.gd" id="15_5w2h8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yfwe1"]
 size = Vector2(15.6666, 7.33334)
@@ -473,84 +475,6 @@ texture = ExtResource("8_4ghkf")
 [sub_resource type="TileSet" id="TileSet_yfwe1"]
 sources/0 = SubResource("TileSetAtlasSource_87x5k")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_j0jtw"]
-atlas = ExtResource("9_7fe25")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_f3h1a"]
-atlas = ExtResource("9_7fe25")
-region = Rect2(64, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_upfqw"]
-atlas = ExtResource("9_7fe25")
-region = Rect2(128, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ldd4g"]
-atlas = ExtResource("9_7fe25")
-region = Rect2(192, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xnn3g"]
-atlas = ExtResource("9_7fe25")
-region = Rect2(256, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_t45yd"]
-atlas = ExtResource("9_7fe25")
-region = Rect2(320, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hevad"]
-atlas = ExtResource("9_7fe25")
-region = Rect2(384, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ke184"]
-atlas = ExtResource("9_7fe25")
-region = Rect2(448, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bnts7"]
-atlas = ExtResource("9_7fe25")
-region = Rect2(512, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_sv41x"]
-atlas = ExtResource("9_7fe25")
-region = Rect2(576, 0, 64, 64)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_csad3"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_j0jtw")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_f3h1a")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_upfqw")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ldd4g")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xnn3g")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_t45yd")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hevad")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ke184")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bnts7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_sv41x")
-}],
-"loop": true,
-"name": &"default",
-"speed": 18.0
-}]
-
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vabxw"]
 load_path = "res://.godot/imported/radial_gradient_light.png-a4d4002ca77f58ef17eca164e3908f7d.ctex"
 
@@ -999,15 +923,6 @@ tile_set = SubResource("TileSet_yfwe1")
 format = 2
 layer_0/tile_data = PackedInt32Array(18, 851968, 1, 65554, 851968, 2, 19, 917504, 1, 65555, 917504, 2, 17, 786432, 1, 131091, 786432, 1, 720896, 851968, 1, 786432, 851968, 2, 720897, 917504, 1, 786433, 917504, 2, 655360, 786432, 1, 786434, 786432, 1, -917504, 851968, 5, -851968, 851968, 6, -917503, 917504, 5, -851967, 917504, 6, -917502, 786432, 5, -786432, 786432, 5, -131055, 786432, 5, -196590, 851968, 5, -131054, 851968, 6, -196589, 917504, 5, -131053, 917504, 6, -262125, 786432, 5, -1703936, 524288, 10, -1769471, 524288, 10, -1835006, 524288, 10, -1900544, 589824, 8, -1835008, 589824, 9, -1900543, 655360, 8, -1835007, 655360, 9, -1900542, 524288, 9, -1769472, 458752, 9)
 
-[node name="CheckPoint" type="Area2D" parent="."]
-position = Vector2(32, -1469)
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CheckPoint"]
-texture_filter = 1
-sprite_frames = SubResource("SpriteFrames_csad3")
-autoplay = "default"
-frame_progress = 0.375514
-
 [node name="Player" parent="." groups=["Player", "player"] instance=ExtResource("10_oohob")]
 unique_name_in_owner = true
 position = Vector2(50, 580)
@@ -1030,11 +945,13 @@ spawn_interval = 0.8
 [node name="Zone" type="Node" parent="."]
 
 [node name="DarkZone" type="Area2D" parent="Zone"]
+visible = false
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Zone/DarkZone"]
 color = Color(0, 0, 0, 1)
 
 [node name="RoomLight" type="Area2D" parent="Zone" node_paths=PackedStringArray("canvas_mod") groups=["Room_light"]]
+visible = false
 position = Vector2(496, 310)
 script = ExtResource("13_fg8sv")
 canvas_mod = NodePath("../DarkZone/CanvasModulate")
@@ -1044,6 +961,7 @@ position = Vector2(-18.5, 1)
 shape = SubResource("RectangleShape2D_vabxw")
 
 [node name="RoomLDark" type="Area2D" parent="Zone" node_paths=PackedStringArray("canvas_mod") groups=["Room_dark"]]
+visible = false
 position = Vector2(501, -349)
 script = ExtResource("13_fg8sv")
 canvas_mod = NodePath("../DarkZone/CanvasModulate")
@@ -1053,6 +971,7 @@ position = Vector2(-18.5, -18)
 shape = SubResource("RectangleShape2D_vabxw")
 
 [node name="RoomLight2" type="Area2D" parent="Zone" node_paths=PackedStringArray("canvas_mod") groups=["Room_light"]]
+visible = false
 position = Vector2(499, -1250)
 script = ExtResource("13_fg8sv")
 canvas_mod = NodePath("../DarkZone/CanvasModulate")
@@ -1062,12 +981,18 @@ position = Vector2(-16.5, 81)
 shape = SubResource("RectangleShape2D_amuqg")
 
 [node name="TriggerChangeDir" type="Area2D" parent="."]
+visible = false
 position = Vector2(109, -971)
 script = ExtResource("14_vmy6h")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerChangeDir"]
 position = Vector2(371.5, -271.5)
 shape = SubResource("RectangleShape2D_6boes")
+
+[node name="Checkpoint" parent="." instance=ExtResource("14_ryfv1")]
+position = Vector2(-1054, -1585)
+script = ExtResource("15_5w2h8")
+next_level = "res://All_Level/Map Level 10/Level 10.tscn"
 
 [connection signal="body_entered" from="Trap/SpikeTrap_RightMove/SpikeTrigger" to="Trap/SpikeTrap_RightMove/SpikeTrap_RightMove" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="Trap/SpikeTrap_RightMove2/SpikeTrigger" to="Trap/SpikeTrap_RightMove2/SpikeTrap_RightMove" method="_on_saw_trigger_body_entered"]

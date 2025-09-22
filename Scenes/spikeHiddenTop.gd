@@ -22,7 +22,7 @@ func _on_player_body_entered(body: Node2D) -> void:
 
 
 func _on_disappearing_body_entered(body: Node2D) -> void:
-	pass # Replace with function body.
+	pass # Replace with function b"res://Scenes/spikeHiddenTop.gd"ody.
 
 
 func _on_reset_traps_body_entered(body: Node2D) -> void:
