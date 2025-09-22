@@ -4,10 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://l8gwdmxtel2c" path="res://Pixel Adventure 1/Free/Menu/Buttons/Restart.png" id="2_wruqd"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3y5qq"]
-load_path = "res://.godot/imported/home_icon_21x22.png-917a8eed2f4973aa2d28d10367b181e5.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wruqd"]
-load_path = "res://.godot/imported/GameOver.png-af4108a7a55d071e943b7682d9bbd5bf.ctex"
 
 [node name="Node" type="CanvasLayer"]
 script = ExtResource("1_yxx3c")

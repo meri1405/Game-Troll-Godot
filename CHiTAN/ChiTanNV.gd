@@ -76,6 +76,13 @@ func reset_all_objects():
 		if platform.has_method("reset_platform"):
 			platform.reset_platform()
 			print("Reset platform at: ", platform.global_position)
+			
+				# Reset activation zones
+	var zones = get_tree().get_nodes_in_group("activation_zones")
+	for zone in zones:
+		if zone.has_method("reset_zone"):
+			zone.reset_zone()
+			print("Reset activation zone: ", zone.name)
 	
 	# Reset bất kỳ object nào khác có method reset
 	var resetables = get_tree().get_nodes_in_group("resetable")
