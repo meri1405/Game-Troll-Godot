@@ -6,6 +6,7 @@ extends CharacterBody2D
 
 @onready var target: Node2D = %Player
 @onready var anim: AnimatedSprite2D = %AnimatedSprite2D
+@onready var spawn_enemy_audio: AudioStreamPlayer2D = $AudioSpawnEnemy
 
 var state: String = "idle"
 var start_position: Vector2   # lưu vị trí gốc
@@ -20,6 +21,9 @@ func start_spawn():
 	state = "spawning"
 	set_physics_process(true)
 	anim.play("spawn")
+	
+	if spawn_enemy_audio:
+			spawn_enemy_audio.play()
 
 	await get_tree().create_timer(1.0).timeout
 	state = "waiting"
