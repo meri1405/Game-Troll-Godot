@@ -276,10 +276,8 @@ shape = SubResource("RectangleShape2D_t38ji")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
-
 [node name="Camera2D" type="Camera2D" parent="." groups=["MainCamera"]]
-position = Vector2(325.333, 194.667)
-
+position = Vector2(-1, 4.33333)
 limit_smoothed = true
 position_smoothing_enabled = true
 position_smoothing_speed = 3.0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://dv55l6kd8ty8u"]
+[gd_scene load_steps=30 format=3 uid="uid://dv55l6kd8ty8u"]
 
 [ext_resource type="Texture2D" uid="uid://dhkt1prc5cciq" path="res://Pixel Adventure 1/Free/Background/Blue.png" id="1_sa043"]
 [ext_resource type="Texture2D" uid="uid://cmx6ev0y0fkb7" path="res://Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="2_2wjew"]
@@ -6,13 +6,16 @@
 [ext_resource type="PackedScene" uid="uid://dt1tth682nenl" path="res://Scenes/character_body_2d.tscn" id="3_y02rr"]
 [ext_resource type="Script" uid="uid://dhbe4nrvokkhm" path="res://CHiTAN/ChiTanNV.gd" id="4_ydjpo"]
 [ext_resource type="Script" uid="uid://ct04dphm552vt" path="res://CHiTAN/ChiTanLevel/activation_zone.gd" id="5_ydjpo"]
-[ext_resource type="Script" uid="uid://dmwtg3a5hhtfi" path="res://CHiTAN/ChiTanLevel/Move_U_L_D.gd" id="7_6ju5n"]
+[ext_resource type="Script" uid="uid://dmwtg3a5hhtfi" path="res://CHiTAN/Trap_tái_sử_dụng/Move_U_L_D.gd" id="7_6ju5n"]
 [ext_resource type="Texture2D" uid="uid://crhk04in7jmsy" path="res://Pixel Adventure 1/Free/Traps/Spikes/Idle.png" id="7_l5tkq"]
 [ext_resource type="Script" uid="uid://di5465m55skol" path="res://CHiTAN/Move_down.gd" id="8_v7nk6"]
 [ext_resource type="Texture2D" uid="uid://fs3vd4y6dk8i" path="res://UI/ImgBlock/MapChiTanq2.tres" id="9_v7nk6"]
 [ext_resource type="Texture2D" uid="uid://6pch5atfx7tn" path="res://UI/ImgBlock/MapChiTan2.tres" id="9_vtv6u"]
-[ext_resource type="Script" uid="uid://d1obb2soqoptq" path="res://CHiTAN/ChiTanLevel/Trap_U_L_D.gd" id="9_yr1o4"]
+[ext_resource type="Script" uid="uid://d1obb2soqoptq" path="res://CHiTAN/Trap_tái_sử_dụng/Trap_U_L_D.gd" id="9_yr1o4"]
 [ext_resource type="Texture2D" uid="uid://bv3m3qsh8rpor" path="res://Pixel Adventure 1/Free/Traps/Saw/Off.png" id="10_2sl4e"]
+[ext_resource type="Script" uid="uid://ow7lj5frkx85" path="res://CHiTAN/Trap_tái_sử_dụng/Trap_DULR.gd" id="11_h711c"]
+[ext_resource type="Script" uid="uid://irremkkx1a01" path="res://CHiTAN/Trap_tái_sử_dụng/remove_tile_map_xxx.gd" id="15_gl73r"]
+[ext_resource type="Texture2D" uid="uid://bqcygrpxkexkd" path="res://CHiTAN/ChiTanLevel/pngimg.com - doge_meme_PNG8.png" id="16_fiqh6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vtv6u"]
 size = Vector2(40.671, 75.1184)
@@ -208,6 +211,9 @@ texture = ExtResource("2_2wjew")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_y02rr")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x5y7t"]
+size = Vector2(39, 71)
+
 [node name="ChiTanLevel3" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -321,6 +327,31 @@ position = Vector2(43, -76)
 position = Vector2(-10, -9)
 shape = SubResource("RectangleShape2D_gl73r")
 
+[node name="Area2D5" type="AnimatableBody2D" parent="Trap"]
+position = Vector2(1221, 387)
+script = ExtResource("7_6ju5n")
+move_up_distance = 0.0
+move_left_distance = 315.0
+move_down_distance = 0.0
+move_speed = 2.0
+
+[node name="MapChiTan2" type="Sprite2D" parent="Trap/Area2D5"]
+texture_filter = 2
+position = Vector2(151.211, -27.071)
+scale = Vector2(2.7878, 2.99113)
+texture = ExtResource("9_vtv6u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trap/Area2D5"]
+position = Vector2(152.711, -27.571)
+shape = SubResource("RectangleShape2D_h711c")
+
+[node name="TriggerArea" type="Area2D" parent="Trap/Area2D5"]
+position = Vector2(-266, -76)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trap/Area2D5/TriggerArea"]
+position = Vector2(-10, -9)
+shape = SubResource("RectangleShape2D_gl73r")
+
 [node name="Trap-d3" type="Area2D" parent="Trap"]
 position = Vector2(657, 138)
 script = ExtResource("9_yr1o4")
@@ -352,6 +383,39 @@ rotation = -1.58177
 scale = Vector2(0.37512, 0.566092)
 shape = SubResource("RectangleShape2D_h3scc")
 
+[node name="DeadlyTrap2" type="Area2D" parent="Trap"]
+position = Vector2(953, 17)
+scale = Vector2(1.11064, 0.917245)
+script = ExtResource("11_h711c")
+move_distance_down = 20.0
+move_distance_up = 0.0
+move_distance_left = 0.0
+move_distance_right = 0.0
+move_speed = 0.01
+
+[node name="NewAtlasTexture" type="Sprite2D" parent="Trap/DeadlyTrap2"]
+position = Vector2(107, 240)
+rotation = -9.41199
+scale = Vector2(3.2132, 2.63862)
+texture = ExtResource("7_l5tkq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trap/DeadlyTrap2"]
+position = Vector2(108.946, 226.766)
+rotation = -1.5706
+scale = Vector2(0.37512, 0.566092)
+shape = SubResource("RectangleShape2D_vtv6u")
+
+[node name="TriggerArea" type="Area2D" parent="Trap/DeadlyTrap2"]
+position = Vector2(-97.2412, 506.953)
+rotation = -0.34932
+scale = Vector2(0.878281, 0.8882)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trap/DeadlyTrap2/TriggerArea"]
+position = Vector2(275.444, -220.698)
+rotation = 1.9197
+scale = Vector2(0.999975, 1.03161)
+shape = SubResource("RectangleShape2D_v7nk6")
+
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2(3, 3)
 tile_set = SubResource("TileSet_ydjpo")
@@ -359,12 +423,29 @@ format = 2
 layer_0/tile_data = PackedInt32Array(458752, 458752, 0, 458753, 458752, 0, 458754, 458752, 0, 458755, 458752, 0, 458756, 458752, 0, 458759, 458752, 0, 458760, 458752, 0, 458761, 458752, 0, 458762, 458752, 0, 458763, 458752, 0, 458764, 458752, 0, 458765, 458752, 0, 458766, 458752, 0, 458767, 458752, 0, 458768, 458752, 0, 458769, 458752, 0, 458770, 458752, 0, 458771, 458752, 0, 458772, 458752, 0, 458773, 458752, 0, 458774, 458752, 0, 458775, 458752, 0, 458776, 458752, 0, 458777, 458752, 0, 458778, 458752, 0, 458779, 458752, 0, 458780, 458752, 0, 458781, 458752, 0, 458782, 458752, 0, 458783, 458752, 0, 458784, 458752, 0, 458785, 458752, 0, 458786, 458752, 0, 458787, 458752, 0, 458788, 458752, 0, 458789, 458752, 0, 458790, 458752, 0, 458791, 458752, 0, 458792, 458752, 0, 458793, 458752, 0, 0, 851968, 4, 1, 851968, 4, 2, 851968, 4, 3, 851968, 4, 4, 851968, 4, 5, 786432, 5, 65541, 983040, 5, 131077, 983040, 5, 196613, 983040, 5, 262149, 786432, 5, 262150, 851968, 4, 262151, 851968, 4, 262152, 851968, 4, 262153, 851968, 4, 262154, 851968, 4, 262155, 851968, 4, 262156, 851968, 4, 262157, 851968, 4, 262158, 851968, 4, 262159, 851968, 4, 262160, 851968, 4, 262161, 851968, 4, 262162, 851968, 4, 262163, 851968, 4, 262164, 851968, 4, 262165, 851968, 4, 262166, 851968, 4, 262167, 851968, 4, 262168, 851968, 4, 262169, 851968, 4, 262170, 851968, 4, 262171, 851968, 4, 262172, 851968, 4, 262173, 851968, 4, 262174, 851968, 4, 262175, 851968, 4, 262176, 851968, 4, 262177, 851968, 4, 262178, 851968, 4, 262179, 786432, 5, 196643, 983040, 5, 131107, 983040, 5, 65571, 983040, 5, 35, 786432, 5, 36, 851968, 4, 37, 851968, 4, 38, 851968, 4, 39, 851968, 4, 40, 851968, 4, 41, 851968, 4, 720896, 65536, 10, 720897, 65536, 10, 720898, 65536, 10, 720899, 65536, 10, 720900, 65536, 10, 720901, 65536, 10, 720902, 65536, 10, 720903, 65536, 10, 720904, 65536, 10, 720905, 65536, 10, 720906, 65536, 10, 720907, 65536, 10, 720908, 65536, 10, 720909, 65536, 10, 720910, 65536, 10, 720911, 65536, 10, 720912, 65536, 10, 720913, 65536, 10, 720914, 65536, 10, 720915, 65536, 10, 720916, 65536, 10, 720917, 65536, 10, 720918, 65536, 10, 720919, 65536, 10, 720920, 65536, 10, 720921, 65536, 10, 720922, 65536, 10, 720923, 65536, 10, 720924, 65536, 10, 720925, 65536, 10, 720926, 65536, 10, 720927, 65536, 10, 720928, 65536, 10, 720929, 65536, 10, 720930, 65536, 10, 720931, 65536, 10, 720932, 65536, 10, 720933, 65536, 10, 720934, 65536, 10, 720935, 65536, 10, 720936, 65536, 10, 720937, 65536, 10)
 
 [node name="CharacterBody2D2" parent="." groups=["Player"] instance=ExtResource("3_y02rr")]
-position = Vector2(143, 297)
+position = Vector2(891, 307)
 script = ExtResource("4_ydjpo")
 
 [node name="Camera2D2" type="Camera2D" parent="CharacterBody2D2"]
-position = Vector2(325.333, 194.667)
+position = Vector2(-5.66669, 1.66666)
 position_smoothing_enabled = true
 position_smoothing_speed = 3.0
 rotation_smoothing_enabled = true
 rotation_smoothing_speed = 3.0
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(1174, 308)
+script = ExtResource("15_gl73r")
+individual_tiles = Array[Vector2i]([Vector2i(21, 7), Vector2i(22, 7)])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-182, -9)
+shape = SubResource("RectangleShape2D_x5y7t")
+
+[node name="Pngimg_com-DogeMemePng8" type="Sprite2D" parent="."]
+position = Vector2(1930, 224)
+rotation = -0.110998
+scale = Vector2(0.516, 0.484756)
+texture = ExtResource("16_fiqh6")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

@@ -10,6 +10,7 @@ var current_step: int = 0
 var move_positions: Array[Vector2] = []
 var has_triggered = false
 var is_moving = false
+var current_tween: Tween  # Lưu reference tween hiện tại
 
 @onready var trigger_area = $TriggerArea
 
@@ -34,14 +35,29 @@ func _ready():
 	
 	add_to_group("moving_platforms")
 	
+	# Kết nối với player death signal
+	connect_to_player_death()
+	
 	print("MovingPlatform ready at: ", global_position)
 	print("Move sequence: Up(", move_up_distance, ") -> Left(", move_left_distance, ") -> Down(", move_down_distance, ")")
+
+func connect_to_player_death():
+	"""Kết nối với player death signal"""
+	var player = get_tree().get_first_node_in_group("player")
+	if player and player.has_signal("player_died"):
+		player.player_died.connect(_on_player_died)
+		print("Platform connected to player death signal")
 
 func _on_trigger_entered(body):
 	if body.name.begins_with("CharacterBody2D") and not has_triggered:
 		print("Player triggered platform movement!")
 		has_triggered = true
 		move_platform()
+
+func _on_player_died():
+	"""Reset ngay lập tức khi player chết"""
+	print("Player died - resetting platform immediately!")
+	reset_platform()
 
 func move_platform():
 	if is_moving or current_step >= move_positions.size():
@@ -58,9 +74,13 @@ func move_platform():
 		2:
 			print("Step 3: Moving DOWN ", move_down_distance, " pixels to ", target)
 	
-	var tween = create_tween()
-	tween.tween_property(self, "global_position", target, move_speed)
-	tween.tween_callback(func(): 
+	# Dừng tween cũ nếu có
+	if current_tween:
+		current_tween.kill()
+	
+	current_tween = create_tween()
+	current_tween.tween_property(self, "global_position", target, move_speed)
+	current_tween.tween_callback(func(): 
 		is_moving = false
 		current_step += 1
 		print("Step ", current_step, " completed")
@@ -71,18 +91,27 @@ func move_platform():
 			move_platform()
 		else:
 			print("All movement completed!")
+			current_tween = null
 	)
 
 func reset_platform():
 	print("Resetting platform to start position")
 	
-	if is_moving:
-		var tweens = get_tree().get_nodes_in_group("Tween")
-		for tween in tweens:
-			if tween.get_parent() == self:
-				tween.kill()
+	# Dừng tween hiện tại
+	if current_tween:
+		current_tween.kill()
+		current_tween = null
 	
+	# Dừng tất cả tweens khác (backup)
+	var tweens = get_tree().get_nodes_in_group("Tween")
+	for tween in tweens:
+		if tween.get_parent() == self:
+			tween.kill()
+	
+	# Reset vị trí và trạng thái
 	global_position = start_position
 	has_triggered = false
 	is_moving = false
 	current_step = 0
+	
+	print("Platform reset complete!")
