@@ -22,3 +22,11 @@ func _ready():
 	# Khi scene vừa load -> xóa tile
 	for coords in grass_tiles:
 		tilemap.set_cell(0, coords, -1)  # -1 = clear tile
+		
+	# Tải cài đặt âm thanh khi khởi động game
+	var config = ConfigFile.new()
+	if config.load("user://settings.cfg") == OK:
+		AudioServer.set_bus_mute(0, config.get_value("audio", "muted", false))
+
+func _on_menu_button_pressed():
+	$PauseMenu.show_menu()

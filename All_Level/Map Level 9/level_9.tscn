@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://besfbgrgvx1sp"]
+[gd_scene load_steps=31 format=3 uid="uid://besfbgrgvx1sp"]
 
 [ext_resource type="Texture2D" uid="uid://dhkt1prc5cciq" path="res://Pixel Adventure 1/Free/Background/Blue.png" id="1_ryfv1"]
 [ext_resource type="Texture2D" uid="uid://b2cvefql3txu0" path="res://Pixel Adventure 1/Free/Background/Gray.png" id="2_5w2h8"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://btdfqc4qp1j67" path="res://Checkpoint/Level_1/checkpoint.tscn" id="14_ryfv1"]
 [ext_resource type="Script" uid="uid://ymv7ewqim46k" path="res://trigger_change_dir.gd" id="14_vmy6h"]
 [ext_resource type="Script" uid="uid://ncmukyjtpslc" path="res://Checkpoint/Level_9/checkpoint_9.gd" id="15_5w2h8"]
+[ext_resource type="Script" uid="uid://descmo0bgforf" path="res://All_Level/Map Level 9/dis_trigger_change_dir.gd" id="15_nqxxl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yfwe1"]
 size = Vector2(15.6666, 7.33334)
@@ -484,7 +485,10 @@ size = Vector2(965, 676)
 size = Vector2(965, 928)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6boes"]
-size = Vector2(963, 691)
+size = Vector2(10.1875, 180.125)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a1x2x"]
+size = Vector2(149, 17)
 
 [node name="Level9" type="Node"]
 
@@ -922,7 +926,7 @@ tile_set = SubResource("TileSet_yfwe1")
 format = 2
 layer_0/tile_data = PackedInt32Array(18, 851968, 1, 65554, 851968, 2, 19, 917504, 1, 65555, 917504, 2, 17, 786432, 1, 131091, 786432, 1, 720896, 851968, 1, 786432, 851968, 2, 720897, 917504, 1, 786433, 917504, 2, 655360, 786432, 1, 786434, 786432, 1, -917504, 851968, 5, -851968, 851968, 6, -917503, 917504, 5, -851967, 917504, 6, -917502, 786432, 5, -786432, 786432, 5, -131055, 786432, 5, -196590, 851968, 5, -131054, 851968, 6, -196589, 917504, 5, -131053, 917504, 6, -262125, 786432, 5, -1703936, 524288, 10, -1769471, 524288, 10, -1835006, 524288, 10, -1900544, 589824, 8, -1835008, 589824, 9, -1900543, 655360, 8, -1835007, 655360, 9, -1900542, 524288, 9, -1769472, 458752, 9)
 
-[node name="Player" parent="." groups=["Player", "player"] instance=ExtResource("10_oohob")]
+[node name="Player" parent="." groups=["Player"] instance=ExtResource("10_oohob")]
 unique_name_in_owner = true
 position = Vector2(50, 580)
 
@@ -975,17 +979,28 @@ canvas_mod = NodePath("../DarkZone/CanvasModulate")
 position = Vector2(-16.5, 81)
 shape = SubResource("RectangleShape2D_amuqg")
 
-[node name="TriggerChangeDir" type="Area2D" parent="."]
+[node name="TriggerDir" type="Node" parent="."]
+
+[node name="TriggerChangeDir" type="Area2D" parent="TriggerDir"]
 position = Vector2(109, -971)
 script = ExtResource("14_vmy6h")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerChangeDir"]
-position = Vector2(371.5, -271.5)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerDir/TriggerChangeDir"]
+position = Vector2(469, 161)
 shape = SubResource("RectangleShape2D_6boes")
+
+[node name="DisTriggerChangeDir" type="Area2D" parent="TriggerDir"]
+position = Vector2(824, -713)
+script = ExtResource("15_nqxxl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerDir/DisTriggerChangeDir"]
+position = Vector2(64.5, 2.5)
+shape = SubResource("RectangleShape2D_a1x2x")
 
 [node name="Checkpoint" parent="." instance=ExtResource("14_ryfv1")]
 position = Vector2(-1054, -1585)
 script = ExtResource("15_5w2h8")
+current_level_number = 9
 next_level = "res://All_Level/Map Level 10/Level 10.tscn"
 
 [connection signal="body_entered" from="Trap/SpikeTrap_RightMove/SpikeTrigger" to="Trap/SpikeTrap_RightMove/SpikeTrap_RightMove" method="_on_saw_trigger_body_entered"]
@@ -1006,5 +1021,5 @@ next_level = "res://All_Level/Map Level 10/Level 10.tscn"
 [connection signal="body_entered" from="Zone/RoomLight" to="Zone/RoomLight" method="_on_body_entered"]
 [connection signal="body_entered" from="Zone/RoomLDark" to="Zone/RoomLDark" method="_on_body_entered"]
 [connection signal="body_entered" from="Zone/RoomLight2" to="Zone/RoomLight2" method="_on_body_entered"]
-[connection signal="body_entered" from="TriggerChangeDir" to="TriggerChangeDir" method="_on_body_entered"]
-[connection signal="body_exited" from="TriggerChangeDir" to="TriggerChangeDir" method="_on_body_exited"]
+[connection signal="body_entered" from="TriggerDir/TriggerChangeDir" to="TriggerDir/TriggerChangeDir" method="_on_body_entered"]
+[connection signal="body_entered" from="TriggerDir/DisTriggerChangeDir" to="TriggerDir/DisTriggerChangeDir" method="_on_body_entered"]

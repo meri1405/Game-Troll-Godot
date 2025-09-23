@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://b4yiv85ljk2lk"]
+[gd_scene load_steps=60 format=3 uid="uid://b4yiv85ljk2lk"]
 
 [ext_resource type="Texture2D" uid="uid://dps2vak3wrpfb" path="res://Pixel Adventure 1/Free/Background/Purple.png" id="1_7fp0q"]
 [ext_resource type="Texture2D" uid="uid://c2q1auamo4dbd" path="res://Pixel Adventure 1/Free/Background/Brown.png" id="2_byij0"]
@@ -17,6 +17,8 @@
 [ext_resource type="PackedScene" uid="uid://b0b8d8fe0ga2a" path="res://Touch_Controls/scene/touch_controls.tscn" id="14_ct3fb"]
 [ext_resource type="Texture2D" uid="uid://3o72ly24grlg" path="res://Pixel Adventure 1/Free/Items/Checkpoints/Checkpoint/Checkpoint (Flag Idle)(64x64).png" id="16_3gn68"]
 [ext_resource type="Texture2D" uid="uid://b0oni833t64u3" path="res://Pixel Adventure 1/Cat/Cat/CAT 2.png" id="17_ve8y3"]
+[ext_resource type="PackedScene" uid="uid://m4c8hp47kokd" path="res://UI/pause_menu.tscn" id="19_2uxeg"]
+[ext_resource type="Texture2D" uid="uid://cbhtkwag7pn5d" path="res://Pixel Adventure 1/Free/Menu/Buttons/Settings.png" id="20_ftneb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0bk12"]
 texture = ExtResource("10_838p7")
@@ -706,7 +708,7 @@ tile_set = SubResource("TileSet_pklw6")
 format = 2
 layer_0/tile_data = PackedInt32Array(786435, 786432, 4, 786436, 851968, 4, 786437, 917504, 4, 393216, 1179648, 2, 393217, 1245184, 2, 458752, 1245184, 2, 786438, 786432, 5, 720902, 786432, 5, 327703, 1114112, 2)
 
-[node name="Player" parent="." groups=["player"] instance=ExtResource("11_bcxyw")]
+[node name="Player" parent="." instance=ExtResource("11_bcxyw")]
 unique_name_in_owner = true
 position = Vector2(72, 539)
 
@@ -730,6 +732,7 @@ shape = SubResource("RectangleShape2D_yxclo")
 [node name="CheckPoint" type="Area2D" parent="." groups=["Player"]]
 position = Vector2(2087, 258)
 script = ExtResource("8_7fp0q")
+current_level_number = 4
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CheckPoint"]
@@ -1439,6 +1442,22 @@ texture = ExtResource("6_2iqxc")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Trap/SpikeUp/Spike12/Area2D"]
 position = Vector2(-2, 15.5)
 shape = SubResource("RectangleShape2D_13mid")
+
+[node name="PauseMenu" parent="." instance=ExtResource("19_2uxeg")]
+visible = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MenuButton" type="Button" parent="CanvasLayer"]
+texture_filter = 1
+offset_left = 22.0
+offset_top = 17.0
+offset_right = 51.0
+offset_bottom = 47.0
+scale = Vector2(3, 3)
+icon = ExtResource("20_ftneb")
+flat = true
+metadata/_edit_use_anchors_ = true
 
 [connection signal="body_entered" from="CheckPoint" to="CheckPoint" method="_on_body_entered"]
 [connection signal="body_entered" from="Trap/SpikeTrap_RightMove/SpikeTrigger" to="Trap/SpikeTrap_RightMove/SpikeTrap_RightMove" method="_on_saw_trigger_body_entered"]

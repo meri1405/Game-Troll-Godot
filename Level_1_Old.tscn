@@ -235,6 +235,7 @@ offset_bottom = 47.0
 scale = Vector2(3, 3)
 icon = ExtResource("7_smwyr")
 flat = true
+metadata/_edit_use_anchors_ = true
 
 [node name="Saw" parent="." instance=ExtResource("8_tedvs")]
 texture_filter = 1
