@@ -922,7 +922,7 @@ tile_set = SubResource("TileSet_yfwe1")
 format = 2
 layer_0/tile_data = PackedInt32Array(18, 851968, 1, 65554, 851968, 2, 19, 917504, 1, 65555, 917504, 2, 17, 786432, 1, 131091, 786432, 1, 720896, 851968, 1, 786432, 851968, 2, 720897, 917504, 1, 786433, 917504, 2, 655360, 786432, 1, 786434, 786432, 1, -917504, 851968, 5, -851968, 851968, 6, -917503, 917504, 5, -851967, 917504, 6, -917502, 786432, 5, -786432, 786432, 5, -131055, 786432, 5, -196590, 851968, 5, -131054, 851968, 6, -196589, 917504, 5, -131053, 917504, 6, -262125, 786432, 5, -1703936, 524288, 10, -1769471, 524288, 10, -1835006, 524288, 10, -1900544, 589824, 8, -1835008, 589824, 9, -1900543, 655360, 8, -1835007, 655360, 9, -1900542, 524288, 9, -1769472, 458752, 9)
 
-[node name="Player" parent="." groups=["Player", "player"] instance=ExtResource("10_oohob")]
+[node name="Player" parent="." groups=["Player"] instance=ExtResource("10_oohob")]
 unique_name_in_owner = true
 position = Vector2(50, 580)
 
@@ -986,6 +986,7 @@ shape = SubResource("RectangleShape2D_6boes")
 [node name="Checkpoint" parent="." instance=ExtResource("14_ryfv1")]
 position = Vector2(-1054, -1585)
 script = ExtResource("15_5w2h8")
+current_level_number = 9
 next_level = "res://All_Level/Map Level 10/Level 10.tscn"
 
 [connection signal="body_entered" from="Trap/SpikeTrap_RightMove/SpikeTrigger" to="Trap/SpikeTrap_RightMove/SpikeTrap_RightMove" method="_on_saw_trigger_body_entered"]
