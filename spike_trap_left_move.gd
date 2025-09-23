@@ -12,7 +12,7 @@ func _ready():
 func _physics_process(delta: float) -> void:
 	if triggered:
 		global_position.x += direction * speed * delta
-	if global_position.x < -100:
+	if global_position.x < -800:
 		visible = false
 		set_physics_process(false)
 

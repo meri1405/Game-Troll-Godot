@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://besfbgrgvx1sp"]
+[gd_scene load_steps=33 format=3 uid="uid://besfbgrgvx1sp"]
 
 [ext_resource type="Texture2D" uid="uid://dhkt1prc5cciq" path="res://Pixel Adventure 1/Free/Background/Blue.png" id="1_ryfv1"]
 [ext_resource type="Texture2D" uid="uid://b2cvefql3txu0" path="res://Pixel Adventure 1/Free/Background/Gray.png" id="2_5w2h8"]
@@ -17,6 +17,7 @@
 [ext_resource type="Script" uid="uid://ymv7ewqim46k" path="res://trigger_change_dir.gd" id="14_vmy6h"]
 [ext_resource type="Script" uid="uid://ncmukyjtpslc" path="res://Checkpoint/Level_9/checkpoint_9.gd" id="15_5w2h8"]
 [ext_resource type="Script" uid="uid://descmo0bgforf" path="res://All_Level/Map Level 9/dis_trigger_change_dir.gd" id="15_nqxxl"]
+[ext_resource type="Script" uid="uid://7f4754wefk68" path="res://All_Level/Map Level 7/room_1.gd" id="18_gjjg7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yfwe1"]
 size = Vector2(15.6666, 7.33334)
@@ -490,11 +491,15 @@ size = Vector2(10.1875, 180.125)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a1x2x"]
 size = Vector2(149, 17)
 
-[node name="Level9" type="Node"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_55gjo"]
+size = Vector2(1152, 2496)
+
+[node name="Level9" type="Node2D"]
 
 [node name="Background" type="Node" parent="."]
 
 [node name="blue_bg" type="TextureRect" parent="Background"]
+z_index = -2
 texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -506,6 +511,7 @@ texture = ExtResource("1_ryfv1")
 stretch_mode = 1
 
 [node name="gray_bg" type="TextureRect" parent="Background"]
+z_index = -2
 texture_filter = 1
 offset_left = 1.0
 offset_top = -652.0
@@ -515,6 +521,7 @@ texture = ExtResource("2_5w2h8")
 stretch_mode = 1
 
 [node name="pink_bg" type="TextureRect" parent="Background"]
+z_index = -2
 texture_filter = 1
 offset_left = 1.0
 offset_top = -1613.0
@@ -525,6 +532,7 @@ stretch_mode = 1
 flip_h = true
 
 [node name="Reverse" type="TextureRect" parent="Background"]
+z_index = -2
 texture_filter = 1
 offset_left = 410.0
 offset_top = -864.0
@@ -540,6 +548,7 @@ texture = ExtResource("4_5w2h8")
 [node name="SpikeTrap_RightMove" type="Node" parent="Trap"]
 
 [node name="SpikeTrap_RightMove" type="Area2D" parent="Trap/SpikeTrap_RightMove" groups=["hurt", "saws"]]
+z_index = -1
 position = Vector2(-45, 439)
 rotation = 1.5708
 scale = Vector2(3, 3)
@@ -565,6 +574,7 @@ shape = SubResource("RectangleShape2D_p3j2p")
 [node name="SpikeTrap_RightMove2" type="Node" parent="Trap"]
 
 [node name="SpikeTrap_RightMove" type="Area2D" parent="Trap/SpikeTrap_RightMove2" groups=["hurt", "saws"]]
+z_index = -1
 position = Vector2(-43, 389)
 rotation = 1.5708
 scale = Vector2(3, 3)
@@ -590,6 +600,7 @@ shape = SubResource("RectangleShape2D_p3j2p")
 [node name="SpikeTrap_RightMove3" type="Node" parent="Trap"]
 
 [node name="SpikeTrap_RightMove" type="Area2D" parent="Trap/SpikeTrap_RightMove3" groups=["hurt", "saws"]]
+z_index = -1
 position = Vector2(-72, 388)
 rotation = 1.5708
 scale = Vector2(3, 3)
@@ -615,6 +626,7 @@ shape = SubResource("RectangleShape2D_p3j2p")
 [node name="SpikeTrap_RightMove4" type="Node" parent="Trap"]
 
 [node name="SpikeTrap_RightMove" type="Area2D" parent="Trap/SpikeTrap_RightMove4" groups=["hurt", "saws"]]
+z_index = -1
 position = Vector2(-44, 337)
 rotation = 1.5708
 scale = Vector2(3, 3)
@@ -640,6 +652,7 @@ shape = SubResource("RectangleShape2D_p3j2p")
 [node name="SpikeTrap_RightMove5" type="Node" parent="Trap"]
 
 [node name="SpikeTrap_RightMove" type="Area2D" parent="Trap/SpikeTrap_RightMove5" groups=["hurt", "saws"]]
+z_index = -1
 position = Vector2(-43, 276)
 rotation = 1.5708
 scale = Vector2(3, 3)
@@ -665,6 +678,7 @@ shape = SubResource("RectangleShape2D_p3j2p")
 [node name="SpikeTrap_RightMove6" type="Node" parent="Trap"]
 
 [node name="SpikeTrap_RightMove" type="Area2D" parent="Trap/SpikeTrap_RightMove6" groups=["hurt", "saws"]]
+z_index = -1
 position = Vector2(-44, 280)
 rotation = 1.5708
 scale = Vector2(3, 3)
@@ -690,6 +704,7 @@ shape = SubResource("RectangleShape2D_p3j2p")
 [node name="SpikeTrap_LeftMove" type="Node" parent="Trap"]
 
 [node name="SpikeTrap_LeftMove" type="Area2D" parent="Trap/SpikeTrap_LeftMove" groups=["hurt", "saws"]]
+z_index = -1
 position = Vector2(1006, 402)
 script = ExtResource("7_guwio")
 
@@ -715,6 +730,7 @@ shape = SubResource("RectangleShape2D_rlwt4")
 [node name="SpikeTrap_LeftMove2" type="Node" parent="Trap"]
 
 [node name="SpikeTrap_LeftMove" type="Area2D" parent="Trap/SpikeTrap_LeftMove2" groups=["hurt", "saws"]]
+z_index = -1
 position = Vector2(1004, 354)
 script = ExtResource("7_guwio")
 
@@ -740,6 +756,7 @@ shape = SubResource("RectangleShape2D_rlwt4")
 [node name="SpikeTrap_LeftMove3" type="Node" parent="Trap"]
 
 [node name="SpikeTrap_LeftMove" type="Area2D" parent="Trap/SpikeTrap_LeftMove3" groups=["hurt", "saws"]]
+z_index = -1
 position = Vector2(1004, 309)
 script = ExtResource("7_guwio")
 
@@ -765,6 +782,7 @@ shape = SubResource("RectangleShape2D_rlwt4")
 [node name="SpikeTrap_LeftMove4" type="Node" parent="Trap"]
 
 [node name="SpikeTrap_LeftMove" type="Area2D" parent="Trap/SpikeTrap_LeftMove4" groups=["hurt", "saws"]]
+z_index = -1
 position = Vector2(1005, 310)
 script = ExtResource("7_guwio")
 
@@ -790,6 +808,7 @@ shape = SubResource("RectangleShape2D_rlwt4")
 [node name="SpikeTrap_LeftMove5" type="Node" parent="Trap"]
 
 [node name="SpikeTrap_LeftMove" type="Area2D" parent="Trap/SpikeTrap_LeftMove5" groups=["hurt", "saws"]]
+z_index = -1
 position = Vector2(1004, 263)
 script = ExtResource("7_guwio")
 
@@ -815,6 +834,7 @@ shape = SubResource("RectangleShape2D_rlwt4")
 [node name="SpikeTrap_LeftMove6" type="Node" parent="Trap"]
 
 [node name="SpikeTrap_LeftMove" type="Area2D" parent="Trap/SpikeTrap_LeftMove6" groups=["hurt", "saws"]]
+z_index = -1
 position = Vector2(1005, 217)
 script = ExtResource("7_guwio")
 
@@ -840,6 +860,7 @@ shape = SubResource("RectangleShape2D_rlwt4")
 [node name="SpikeTrap_LeftMove7" type="Node" parent="Trap"]
 
 [node name="SpikeTrap_LeftMove" type="Area2D" parent="Trap/SpikeTrap_LeftMove7" groups=["hurt", "saws"]]
+z_index = -1
 position = Vector2(1005, 172)
 script = ExtResource("7_guwio")
 
@@ -865,6 +886,7 @@ shape = SubResource("RectangleShape2D_rlwt4")
 [node name="SpikeTrap_LeftMove8" type="Node" parent="Trap"]
 
 [node name="SpikeTrap_LeftMove" type="Area2D" parent="Trap/SpikeTrap_LeftMove8" groups=["hurt", "saws"]]
+z_index = -1
 position = Vector2(1005, 122)
 script = ExtResource("7_guwio")
 
@@ -890,6 +912,7 @@ shape = SubResource("RectangleShape2D_rlwt4")
 [node name="SpikeTrap_LeftMove9" type="Node" parent="Trap"]
 
 [node name="SpikeTrap_LeftMove" type="Area2D" parent="Trap/SpikeTrap_LeftMove9" groups=["hurt", "saws"]]
+z_index = -1
 position = Vector2(1003, 72)
 script = ExtResource("7_guwio")
 
@@ -1002,6 +1025,22 @@ position = Vector2(-1054, -1585)
 script = ExtResource("15_5w2h8")
 next_level = "res://All_Level/Map Level 10/Level 10.tscn"
 
+[node name="Room1" type="Area2D" parent="." node_paths=PackedStringArray("canvas_mod") groups=["Room_light"]]
+visible = false
+position = Vector2(182, -15)
+script = ExtResource("18_gjjg7")
+canvas_mod = NodePath("../CanvasModulate")
+cam_limit_left = -96
+cam_limit_right = 1056
+cam_limit_top = -1728
+cam_limit_bottom = 768
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room1"]
+position = Vector2(298, -465)
+shape = SubResource("RectangleShape2D_55gjo")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+
 [connection signal="body_entered" from="Trap/SpikeTrap_RightMove/SpikeTrigger" to="Trap/SpikeTrap_RightMove/SpikeTrap_RightMove" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="Trap/SpikeTrap_RightMove2/SpikeTrigger" to="Trap/SpikeTrap_RightMove2/SpikeTrap_RightMove" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="Trap/SpikeTrap_RightMove3/SpikeTrigger" to="Trap/SpikeTrap_RightMove3/SpikeTrap_RightMove" method="_on_saw_trigger_body_entered"]
@@ -1022,3 +1061,4 @@ next_level = "res://All_Level/Map Level 10/Level 10.tscn"
 [connection signal="body_entered" from="Zone/RoomLight2" to="Zone/RoomLight2" method="_on_body_entered"]
 [connection signal="body_entered" from="TriggerDir/TriggerChangeDir" to="TriggerDir/TriggerChangeDir" method="_on_body_entered"]
 [connection signal="body_entered" from="TriggerDir/DisTriggerChangeDir" to="TriggerDir/DisTriggerChangeDir" method="_on_body_entered"]
+[connection signal="body_entered" from="Room1" to="Room1" method="_on_body_entered"]

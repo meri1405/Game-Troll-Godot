@@ -1,4 +1,4 @@
-[gd_scene load_steps=188 format=3 uid="uid://bpygehhl3bo4i"]
+[gd_scene load_steps=190 format=3 uid="uid://bpygehhl3bo4i"]
 
 [ext_resource type="Texture2D" uid="uid://c2q1auamo4dbd" path="res://Pixel Adventure 1/Free/Background/Brown.png" id="1_37wwv"]
 [ext_resource type="PackedScene" uid="uid://btdfqc4qp1j67" path="res://Checkpoint/Level_1/checkpoint.tscn" id="1_sce2q"]
@@ -34,6 +34,7 @@
 [ext_resource type="Texture2D" uid="uid://3xi78mg6blbp" path="res://Enemies/Flying Demon/Flying Demon 2D Pixel Art/Sprites/with_outline/FLYING.png" id="32_5abw1"]
 [ext_resource type="Texture2D" uid="uid://boimb8vlnevmd" path="res://Enemies/Flying Demon/Flying Demon 2D Pixel Art/Sprites/with_outline/DEATH.png" id="33_2yagf"]
 [ext_resource type="AudioStream" uid="uid://qc5nnahayu3b" path="res://audio/chase.wav" id="34_wxcms"]
+[ext_resource type="Script" uid="uid://7f4754wefk68" path="res://All_Level/Map Level 7/room_1.gd" id="35_sce2q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mmktn"]
 size = Vector2(60, 27)
@@ -2228,6 +2229,9 @@ radius = 102.176
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ldd4g"]
 size = Vector2(306.5, 307)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d50vw"]
+size = Vector2(14731, 719)
+
 [node name="Level-huy" type="Node"]
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -2476,6 +2480,9 @@ layer_0/tile_data = PackedInt32Array(131157, 131073, 13, 196693, 131073, 14, 656
 [node name="Player" parent="." groups=["Player", "player"] instance=ExtResource("11_x410f")]
 unique_name_in_owner = true
 position = Vector2(179, 590)
+
+[node name="PointLight2D" type="PointLight2D" parent="Player"]
+position = Vector2(1786.66, -221.955)
 
 [node name="FireBallDown" type="Node" parent="."]
 
@@ -3660,6 +3667,22 @@ position = Vector2(13602, 477)
 script = ExtResource("6_37wwv")
 next_level = "res://All_Level/Map Level 6/Level 6.tscn"
 
+[node name="Room1" type="Area2D" parent="." node_paths=PackedStringArray("canvas_mod") groups=["Room_light"]]
+visible = false
+position = Vector2(182, -15)
+script = ExtResource("35_sce2q")
+canvas_mod = NodePath("../CanvasModulate")
+cam_limit_left = 49
+cam_limit_right = 14783
+cam_limit_top = -48
+cam_limit_bottom = 670
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room1"]
+position = Vector2(7231.5, 325.5)
+shape = SubResource("RectangleShape2D_d50vw")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+
 [connection signal="body_entered" from="SceneOld/SpikeTrap_LeftMove/SpikeTrigger" to="SceneOld/SpikeTrap_LeftMove/SpikeTrap_LeftMove" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="FireBallDown/FireBallTrap_DownMove/SpikeTrigger" to="FireBallDown/FireBallTrap_DownMove/SpikeTrap_DownMove" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="FireBallDown/FireBallTrap_DownMove2/SpikeTrigger" to="FireBallDown/FireBallTrap_DownMove2/SpikeTrap_DownMove" method="_on_saw_trigger_body_entered"]
@@ -3699,3 +3722,4 @@ next_level = "res://All_Level/Map Level 6/Level 6.tscn"
 [connection signal="body_entered" from="Zombies/Zombies1/zombietrigger" to="Zombies/Zombies1/zombie3" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="Zombies/Zombies2/zombietrigger" to="Zombies/Zombies2/zombie3" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="Enemy/EnemyTrigger" to="Enemy/EnemyTrigger" method="_on_body_entered"]
+[connection signal="body_entered" from="Room1" to="Room1" method="_on_body_entered"]

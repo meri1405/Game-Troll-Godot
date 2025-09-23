@@ -76,6 +76,8 @@ func die():
 	# Reset lại màu
 	current_color = 0
 	sprite_2d.modulate = Color.WHITE
+	#reset lại cơ chế nút trái phải 
+	control_inverted = false
 	
 	await get_tree().create_timer(1.0).timeout
 	_do_reset()
