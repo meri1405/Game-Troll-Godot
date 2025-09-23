@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://besfbgrgvx1sp"]
+[gd_scene load_steps=33 format=3 uid="uid://ceuo7hasemksb"]
 
 [ext_resource type="Texture2D" uid="uid://dhkt1prc5cciq" path="res://Pixel Adventure 1/Free/Background/Blue.png" id="1_ryfv1"]
 [ext_resource type="Texture2D" uid="uid://b2cvefql3txu0" path="res://Pixel Adventure 1/Free/Background/Gray.png" id="2_5w2h8"]
@@ -1023,8 +1023,7 @@ shape = SubResource("RectangleShape2D_a1x2x")
 [node name="Checkpoint" parent="." instance=ExtResource("14_ryfv1")]
 position = Vector2(-1054, -1585)
 script = ExtResource("15_5w2h8")
-current_level_number = 9
-next_level = "res://All_Level/Map Level 10/Level 10.tscn"
+next_level = "res://All_Level/Map Level 10/Level_10.tscn"
 
 [node name="Room1" type="Area2D" parent="." node_paths=PackedStringArray("canvas_mod") groups=["Room_light"]]
 visible = false

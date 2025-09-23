@@ -21,13 +21,13 @@ func start_spawn():
 	state = "spawning"
 	set_physics_process(true)
 	anim.play("spawn")
-	
-	if spawn_enemy_audio:
-			spawn_enemy_audio.play()
 
 	await get_tree().create_timer(1.0).timeout
 	state = "waiting"
 	anim.play("idle")
+	
+	if spawn_enemy_audio:
+			spawn_enemy_audio.play()
 
 	await get_tree().create_timer(3.0).timeout
 	if state == "waiting":
@@ -68,4 +68,5 @@ func reset_trap():
 	state = "spawning"
 	set_physics_process(false)         # ngừng hoạt động
 	anim.play("spwan")
+	spawn_enemy_audio.stop()
 	hide()
