@@ -1,4 +1,4 @@
-[gd_scene load_steps=190 format=3 uid="uid://bpygehhl3bo4i"]
+[gd_scene load_steps=190 format=3 uid="uid://co8x3rrlpohs3"]
 
 [ext_resource type="Texture2D" uid="uid://c2q1auamo4dbd" path="res://Pixel Adventure 1/Free/Background/Brown.png" id="1_37wwv"]
 [ext_resource type="PackedScene" uid="uid://btdfqc4qp1j67" path="res://Checkpoint/Level_1/checkpoint.tscn" id="1_sce2q"]
@@ -2232,7 +2232,7 @@ size = Vector2(306.5, 307)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d50vw"]
 size = Vector2(14731, 719)
 
-[node name="Level-huy" type="Node"]
+[node name="Level-huy" type="Node2D"]
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = 4025.0
@@ -2247,9 +2247,9 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 88.0
-offset_top = 2.0
-offset_right = 2876.0
-offset_bottom = 7.0
+offset_top = -27.0
+offset_right = 4028.0
+offset_bottom = 671.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_37wwv")

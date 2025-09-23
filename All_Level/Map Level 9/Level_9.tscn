@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://besfbgrgvx1sp"]
+[gd_scene load_steps=36 format=3 uid="uid://besfbgrgvx1sp"]
 
 [ext_resource type="Texture2D" uid="uid://dhkt1prc5cciq" path="res://Pixel Adventure 1/Free/Background/Blue.png" id="1_svh1q"]
 [ext_resource type="Texture2D" uid="uid://b2cvefql3txu0" path="res://Pixel Adventure 1/Free/Background/Gray.png" id="2_8et30"]
@@ -18,6 +18,8 @@
 [ext_resource type="PackedScene" uid="uid://btdfqc4qp1j67" path="res://Checkpoint/Level_1/checkpoint.tscn" id="16_456wn"]
 [ext_resource type="Script" uid="uid://ncmukyjtpslc" path="res://Checkpoint/Level_9/checkpoint_9.gd" id="17_5hth4"]
 [ext_resource type="Script" uid="uid://7f4754wefk68" path="res://All_Level/Map Level 7/room_1.gd" id="18_w16di"]
+[ext_resource type="Script" uid="uid://distnvfjbs27t" path="res://All_Level/Map Level 7/checkpoint_respawn.gd" id="19_ww018"]
+[ext_resource type="Texture2D" uid="uid://c8v1kucqyrpvq" path="res://Pixel Adventure 1/Free/Items/Checkpoints/Start/Start (Idle).png" id="20_1kn8q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yfwe1"]
 size = Vector2(15.6666, 7.33334)
@@ -493,6 +495,9 @@ size = Vector2(149, 17)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_55gjo"]
 size = Vector2(1152, 2496)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rgm6c"]
+size = Vector2(64.5, 72)
 
 [node name="Level9" type="Node2D"]
 
@@ -1035,12 +1040,41 @@ cam_limit_left = -96
 cam_limit_right = 1056
 cam_limit_top = -1728
 cam_limit_bottom = 768
+cam_zoom = Vector2(1.07, 1.07)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Room1"]
 position = Vector2(298, -465)
 shape = SubResource("RectangleShape2D_55gjo")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+
+[node name="CheckPointSpwan" type="Node" parent="."]
+
+[node name="CheckpointRespawn" type="Area2D" parent="CheckPointSpwan"]
+texture_filter = 1
+position = Vector2(199, -81)
+script = ExtResource("19_ww018")
+
+[node name="Start(idle)" type="Sprite2D" parent="CheckPointSpwan/CheckpointRespawn"]
+position = Vector2(-16, 2)
+texture = ExtResource("20_1kn8q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CheckPointSpwan/CheckpointRespawn"]
+position = Vector2(-19.25, 0)
+shape = SubResource("RectangleShape2D_rgm6c")
+
+[node name="CheckpointRespawn2" type="Area2D" parent="CheckPointSpwan"]
+texture_filter = 1
+position = Vector2(678, -753)
+script = ExtResource("19_ww018")
+
+[node name="Start(idle)" type="Sprite2D" parent="CheckPointSpwan/CheckpointRespawn2"]
+position = Vector2(-16, 2)
+texture = ExtResource("20_1kn8q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CheckPointSpwan/CheckpointRespawn2"]
+position = Vector2(-19.25, 0)
+shape = SubResource("RectangleShape2D_rgm6c")
 
 [connection signal="body_entered" from="Trap/SpikeTrap_RightMove/SpikeTrigger" to="Trap/SpikeTrap_RightMove/SpikeTrap_RightMove" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="Trap/SpikeTrap_RightMove2/SpikeTrigger" to="Trap/SpikeTrap_RightMove2/SpikeTrap_RightMove" method="_on_saw_trigger_body_entered"]
@@ -1063,3 +1097,5 @@ shape = SubResource("RectangleShape2D_55gjo")
 [connection signal="body_entered" from="TriggerDir/TriggerChangeDir" to="TriggerDir/TriggerChangeDir" method="_on_body_entered"]
 [connection signal="body_entered" from="TriggerDir/DisTriggerChangeDir" to="TriggerDir/DisTriggerChangeDir" method="_on_body_entered"]
 [connection signal="body_entered" from="Room1" to="Room1" method="_on_body_entered"]
+[connection signal="body_entered" from="CheckPointSpwan/CheckpointRespawn" to="CheckPointSpwan/CheckpointRespawn" method="_on_body_entered"]
+[connection signal="body_entered" from="CheckPointSpwan/CheckpointRespawn2" to="CheckPointSpwan/CheckpointRespawn2" method="_on_body_entered"]
