@@ -1,6 +1,7 @@
-[gd_scene load_steps=63 format=3 uid="uid://lfd5ojmblqso"]
+[gd_scene load_steps=66 format=3 uid="uid://lfd5ojmblqso"]
 
 [ext_resource type="Texture2D" uid="uid://c2urtr66gce31" path="res://Pixel Adventure 1/Free/Background/Green.png" id="1_bwthd"]
+[ext_resource type="Script" uid="uid://c85pk27sc71ds" path="res://level_1.gd" id="1_p2ip3"]
 [ext_resource type="PackedScene" uid="uid://cibklyepbriw8" path="res://Scenes/Spike3set.tscn" id="2_ac2ol"]
 [ext_resource type="PackedScene" uid="uid://v4xh8kgqeipn" path="res://Scenes/pig_mob.tscn" id="3_ldmp2"]
 [ext_resource type="Script" uid="uid://bw2yocruhygj8" path="res://Scenes/pig_popup.gd" id="4_m3amu"]
@@ -23,6 +24,8 @@
 [ext_resource type="PackedScene" uid="uid://b0b8d8fe0ga2a" path="res://Touch_Controls/scene/touch_controls.tscn" id="22_rpatg"]
 [ext_resource type="PackedScene" uid="uid://btdfqc4qp1j67" path="res://Checkpoint/Level_1/checkpoint.tscn" id="23_ac2ol"]
 [ext_resource type="Script" uid="uid://def717sujik1u" path="res://Checkpoint/Level_2/checkpoint_2.gd" id="23_ldmp2"]
+[ext_resource type="PackedScene" uid="uid://m4c8hp47kokd" path="res://UI/pause_menu.tscn" id="25_5bq71"]
+[ext_resource type="Texture2D" uid="uid://cbhtkwag7pn5d" path="res://Pixel Adventure 1/Free/Menu/Buttons/Settings.png" id="26_eklgj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_11jn5"]
 size = Vector2(87, 52)
@@ -541,6 +544,7 @@ size = Vector2(101, 55)
 size = Vector2(1723, 758.5)
 
 [node name="Levelnhat1" type="Node2D"]
+script = ExtResource("1_p2ip3")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
@@ -1039,6 +1043,22 @@ position = Vector2(-27, 14)
 script = ExtResource("23_ldmp2")
 next_level = "res://All_Level/Map Level 3/Level_3.tscn"
 
+[node name="PauseMenu" parent="." instance=ExtResource("25_5bq71")]
+visible = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MenuButton" type="Button" parent="CanvasLayer"]
+texture_filter = 1
+offset_left = 22.0
+offset_top = 17.0
+offset_right = 51.0
+offset_bottom = 47.0
+scale = Vector2(3, 3)
+icon = ExtResource("26_eklgj")
+flat = true
+metadata/_edit_use_anchors_ = true
+
 [connection signal="body_entered" from="Area2D3" to="Area2D3/Pig PopUp2" method="_on_area_2d_2_body_entered"]
 [connection signal="body_entered" from="Area2D2" to="Area2D2/Pig PopUp1" method="_on_area_2d_2_body_entered"]
 [connection signal="body_entered" from="SawUp" to="SawUp/RotateController2" method="_player_trigger_entered"]
@@ -1062,6 +1082,7 @@ next_level = "res://All_Level/Map Level 3/Level_3.tscn"
 [connection signal="body_entered" from="Area2D" to="Area2D/Apple" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="tile byebye/Area2D" to="tile byebye" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Room1" to="Room1" method="_on_body_entered"]
+[connection signal="pressed" from="CanvasLayer/MenuButton" to="." method="_on_menu_button_pressed"]
 
 [editable path="Area2D3/Pig PopUp2"]
 [editable path="Area2D2/Pig PopUp1"]
