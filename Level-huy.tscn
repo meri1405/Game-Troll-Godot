@@ -291,4 +291,4 @@ position = Vector2(-103, 124)
 position = Vector2(1590, 167)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_yi4nh")
-frame_progress = 0.11914
+frame_progress = 0.705854
