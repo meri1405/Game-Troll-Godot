@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dfpywa1ixfp7b"
+path="res://.godot/imported/(580) Checkpoint Sound Effect - YouTube (mp3cut.net).wav-f633b683e5d56ef39950409671b2f19f.sample"
+
+[deps]
+
+source_file="res://audio/(580) Checkpoint Sound Effect - YouTube (mp3cut.net).wav"
+dest_files=["res://.godot/imported/(580) Checkpoint Sound Effect - YouTube (mp3cut.net).wav-f633b683e5d56ef39950409671b2f19f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
