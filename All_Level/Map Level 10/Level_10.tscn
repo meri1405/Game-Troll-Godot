@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://mhwnib7cebs5"]
+[gd_scene load_steps=39 format=3 uid="uid://mhwnib7cebs5"]
 
 [ext_resource type="Script" uid="uid://c85pk27sc71ds" path="res://level_1.gd" id="1_4y57e"]
 [ext_resource type="Texture2D" uid="uid://dhkt1prc5cciq" path="res://Pixel Adventure 1/Free/Background/Blue.png" id="2_epwhl"]
@@ -21,6 +21,8 @@
 [ext_resource type="Texture2D" uid="uid://cbhtkwag7pn5d" path="res://Pixel Adventure 1/Free/Menu/Buttons/Settings.png" id="19_w1kt0"]
 [ext_resource type="Script" uid="uid://d1obb2soqoptq" path="res://CHiTAN/Trap_tái_sử_dụng/Trap_U_L_D.gd" id="20_s45qw"]
 [ext_resource type="Texture2D" uid="uid://bg14ereu48jp2" path="res://Pixel Adventure 1/Free/Traps/Spiked Ball/Spiked Ball.png" id="21_lghkr"]
+[ext_resource type="PackedScene" uid="uid://b0b8d8fe0ga2a" path="res://Touch_Controls/scene/touch_controls.tscn" id="22_wib0y"]
+[ext_resource type="Script" uid="uid://11o0nnucsv8j" path="res://All_Level/Map Level 1/room.gd" id="23_cgcne"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dj87x"]
 size = Vector2(106.82, 15.3959)
@@ -218,6 +220,9 @@ size = Vector2(2034, 61)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_enh1l"]
 size = Vector2(20, 56)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_slgrp"]
+size = Vector2(1251, 720)
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(2, -1)
@@ -474,12 +479,7 @@ layer_0/tile_data = PackedInt32Array(65535, 983040, 1, 131071, 983040, 1, 196607
 position = Vector2(43, 394)
 script = ExtResource("16_xyv3u")
 
-[node name="Camera2D2" type="Camera2D" parent="CharacterBody2D2"]
-position = Vector2(325.333, 194.667)
-position_smoothing_enabled = true
-position_smoothing_speed = 3.0
-rotation_smoothing_enabled = true
-rotation_smoothing_speed = 3.0
+[node name="PointLight2D" type="PointLight2D" parent="CharacterBody2D2"]
 
 [node name="Area2D" type="AnimatableBody2D" parent="."]
 position = Vector2(-299, 79)
@@ -591,4 +591,24 @@ shape = SubResource("RectangleShape2D_enh1l")
 [node name="MoveR" parent="." instance=ExtResource("7_duw73")]
 position = Vector2(667, 323)
 
+[node name="TouchControls" parent="." instance=ExtResource("22_wib0y")]
+
+[node name="Room" type="Area2D" parent="." node_paths=PackedStringArray("canvas_mod") groups=["Room_light"]]
+position = Vector2(182, -15)
+script = ExtResource("23_cgcne")
+canvas_mod = NodePath("../CanvasModulate")
+cam_limit_left = -46
+cam_limit_right = 2066
+cam_limit_top = -49
+cam_limit_bottom = 719
+cam_zoom = Vector2(1.1, 1.1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room"]
+visible = false
+position = Vector2(394.5, 328)
+shape = SubResource("RectangleShape2D_slgrp")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+
 [connection signal="pressed" from="CanvasLayer/MenuButton" to="." method="_on_menu_button_pressed"]
+[connection signal="body_entered" from="Room" to="Room" method="_on_body_entered"]
