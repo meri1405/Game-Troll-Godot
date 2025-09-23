@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://brph0jex1nn14"]
+[gd_scene load_steps=36 format=3 uid="uid://brph0jex1nn14"]
 
 [ext_resource type="Script" uid="uid://bhq1cuvf6gqfl" path="res://All_Level/Map Level 1/khang_1.gd" id="1_v40dk"]
 [ext_resource type="Texture2D" uid="uid://bo3gi6m4w3jkx" path="res://Pixel Adventure 1/Free/Background/Pink.png" id="2_nsnvd"]
@@ -11,9 +11,12 @@
 [ext_resource type="Script" uid="uid://bsbcbvtf2hphu" path="res://All_Level/Map Level 1/trap_trigger_2.gd" id="9_3hqpo"]
 [ext_resource type="Script" uid="uid://3tr73kf052bh" path="res://All_Level/Map Level 1/trap_push_left.gd" id="10_7gd2o"]
 [ext_resource type="Script" uid="uid://4h60cwtm8d6b" path="res://All_Level/Map Level 1/plane.gd" id="11_jpr5p"]
+[ext_resource type="Texture2D" uid="uid://dsjsv7id83una" path="res://Pixel Adventure 1/Free/Traps/Trampoline/Jump (28x28).png" id="11_yh20x"]
 [ext_resource type="Script" uid="uid://7n1rwfgocgbp" path="res://All_Level/Map Level 1/plane_2.gd" id="12_n7akb"]
 [ext_resource type="PackedScene" uid="uid://b0b8d8fe0ga2a" path="res://Touch_Controls/scene/touch_controls.tscn" id="13_nsnvd"]
 [ext_resource type="Script" uid="uid://11o0nnucsv8j" path="res://All_Level/Map Level 1/room.gd" id="14_g5vt1"]
+[ext_resource type="PackedScene" uid="uid://m4c8hp47kokd" path="res://UI/pause_menu.tscn" id="15_u4meq"]
+[ext_resource type="Texture2D" uid="uid://cbhtkwag7pn5d" path="res://Pixel Adventure 1/Free/Menu/Buttons/Settings.png" id="16_oil2x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h0yon"]
 texture = ExtResource("3_g5vt1")
@@ -216,6 +219,70 @@ size = Vector2(160, 99)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_se430"]
 size = Vector2(30.5, 20)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_u4meq"]
+atlas = ExtResource("11_yh20x")
+region = Rect2(0, 0, 28, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oil2x"]
+atlas = ExtResource("11_yh20x")
+region = Rect2(28, 0, 28, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f2xym"]
+atlas = ExtResource("11_yh20x")
+region = Rect2(56, 0, 28, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eclmm"]
+atlas = ExtResource("11_yh20x")
+region = Rect2(84, 0, 28, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xlofs"]
+atlas = ExtResource("11_yh20x")
+region = Rect2(112, 0, 28, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4f3vh"]
+atlas = ExtResource("11_yh20x")
+region = Rect2(140, 0, 28, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ewvgg"]
+atlas = ExtResource("11_yh20x")
+region = Rect2(168, 0, 28, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c3ju3"]
+atlas = ExtResource("11_yh20x")
+region = Rect2(196, 0, 28, 28)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hooet"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u4meq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oil2x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f2xym")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eclmm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xlofs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4f3vh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ewvgg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c3ju3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dgk48"]
 size = Vector2(489, 43)
 
@@ -356,6 +423,13 @@ script = ExtResource("10_7gd2o")
 position = Vector2(223.417, 69.6667)
 shape = SubResource("RectangleShape2D_se430")
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="TrapPushLeft"]
+position = Vector2(224.333, 58.6667)
+scale = Vector2(1.26191, 1)
+sprite_frames = SubResource("SpriteFrames_hooet")
+frame = 2
+frame_progress = 0.694379
+
 [node name="Plane" type="Area2D" parent="."]
 position = Vector2(96, 108)
 script = ExtResource("11_jpr5p")
@@ -398,6 +472,22 @@ visible = false
 position = Vector2(394.5, 328)
 shape = SubResource("RectangleShape2D_ufjkb")
 
+[node name="PauseMenu" parent="." instance=ExtResource("15_u4meq")]
+visible = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MenuButton" type="Button" parent="CanvasLayer"]
+texture_filter = 1
+offset_left = 22.0
+offset_top = 17.0
+offset_right = 51.0
+offset_bottom = 47.0
+scale = Vector2(3, 3)
+icon = ExtResource("16_oil2x")
+flat = true
+metadata/_edit_use_anchors_ = true
+
 [connection signal="body_entered" from="TrapTrigger" to="TrapTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="TrapTrigger2" to="TrapTrigger2" method="_on_body_entered"]
 [connection signal="body_entered" from="TrapPushLeft" to="TrapPushLeft" method="_on_body_entered"]
@@ -405,3 +495,4 @@ shape = SubResource("RectangleShape2D_ufjkb")
 [connection signal="body_entered" from="Plane2" to="Plane2" method="_on_body_entered"]
 [connection signal="body_entered" from="Area2D" to="Spike3set/Spike3set-Trap" method="_on_fan_trigger_body_entered"]
 [connection signal="body_entered" from="Room" to="Room" method="_on_body_entered"]
+[connection signal="pressed" from="CanvasLayer/MenuButton" to="." method="_on_menu_button_pressed"]
