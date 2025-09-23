@@ -19,7 +19,7 @@
 [ext_resource type="Script" uid="uid://de05mel54uj2a" path="res://Scenes/pig_mob_trigger.gd" id="16_5qkmp"]
 [ext_resource type="Script" uid="uid://bkcgtm6uv2avi" path="res://apple.gd" id="17_ynole"]
 [ext_resource type="Texture2D" uid="uid://cbd3py7f0eg1k" path="res://Pixel Adventure 1/Free/Items/Fruits/Apple.png" id="18_803gu"]
-[ext_resource type="Script" path="res://tile_byebye.gd" id="20_v0khy"]
+[ext_resource type="Script" uid="uid://cuk7tr87iv8if" path="res://tile_byebye.gd" id="20_v0khy"]
 [ext_resource type="Script" uid="uid://7f4754wefk68" path="res://All_Level/Map Level 7/room_1.gd" id="21_ec6mm"]
 [ext_resource type="PackedScene" uid="uid://b0b8d8fe0ga2a" path="res://Touch_Controls/scene/touch_controls.tscn" id="22_rpatg"]
 [ext_resource type="PackedScene" uid="uid://btdfqc4qp1j67" path="res://Checkpoint/Level_1/checkpoint.tscn" id="23_ac2ol"]
