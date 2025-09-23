@@ -3,5 +3,5 @@ extends Area2D
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
-		body.control_inverted = true
-		print("Troll mode ON: controls inverted!")
+		body.control_inverted = false
+		print("Controls back to normal")
