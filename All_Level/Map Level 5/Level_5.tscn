@@ -1,6 +1,7 @@
-[gd_scene load_steps=190 format=3 uid="uid://co8x3rrlpohs3"]
+[gd_scene load_steps=193 format=3 uid="uid://co8x3rrlpohs3"]
 
 [ext_resource type="Texture2D" uid="uid://c2q1auamo4dbd" path="res://Pixel Adventure 1/Free/Background/Brown.png" id="1_37wwv"]
+[ext_resource type="Script" uid="uid://c85pk27sc71ds" path="res://level_1.gd" id="1_q7w8j"]
 [ext_resource type="PackedScene" uid="uid://btdfqc4qp1j67" path="res://Checkpoint/Level_1/checkpoint.tscn" id="1_sce2q"]
 [ext_resource type="Texture2D" uid="uid://bm0qoe8upp5ds" path="res://Bg-Dark/Layer_0011_0.png" id="2_sce2q"]
 [ext_resource type="Texture2D" uid="uid://crhk04in7jmsy" path="res://Pixel Adventure 1/Free/Traps/Spikes/Idle.png" id="3_d50vw"]
@@ -35,6 +36,8 @@
 [ext_resource type="Texture2D" uid="uid://boimb8vlnevmd" path="res://Enemies/Flying Demon/Flying Demon 2D Pixel Art/Sprites/with_outline/DEATH.png" id="33_2yagf"]
 [ext_resource type="AudioStream" uid="uid://qc5nnahayu3b" path="res://audio/chase.wav" id="34_wxcms"]
 [ext_resource type="Script" uid="uid://7f4754wefk68" path="res://All_Level/Map Level 7/room_1.gd" id="35_sce2q"]
+[ext_resource type="PackedScene" uid="uid://m4c8hp47kokd" path="res://UI/pause_menu.tscn" id="37_85s4d"]
+[ext_resource type="Texture2D" uid="uid://cbhtkwag7pn5d" path="res://Pixel Adventure 1/Free/Menu/Buttons/Settings.png" id="38_5m8cm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mmktn"]
 size = Vector2(60, 27)
@@ -2233,6 +2236,7 @@ size = Vector2(306.5, 307)
 size = Vector2(14731, 719)
 
 [node name="Level-huy" type="Node2D"]
+script = ExtResource("1_q7w8j")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = 4025.0
@@ -3684,6 +3688,22 @@ shape = SubResource("RectangleShape2D_d50vw")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 
+[node name="PauseMenu" parent="." instance=ExtResource("37_85s4d")]
+visible = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MenuButton" type="Button" parent="CanvasLayer"]
+texture_filter = 1
+offset_left = 22.0
+offset_top = 17.0
+offset_right = 51.0
+offset_bottom = 47.0
+scale = Vector2(3, 3)
+icon = ExtResource("38_5m8cm")
+flat = true
+metadata/_edit_use_anchors_ = true
+
 [connection signal="body_entered" from="SceneOld/SpikeTrap_LeftMove/SpikeTrigger" to="SceneOld/SpikeTrap_LeftMove/SpikeTrap_LeftMove" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="FireBallDown/FireBallTrap_DownMove/SpikeTrigger" to="FireBallDown/FireBallTrap_DownMove/SpikeTrap_DownMove" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="FireBallDown/FireBallTrap_DownMove2/SpikeTrigger" to="FireBallDown/FireBallTrap_DownMove2/SpikeTrap_DownMove" method="_on_saw_trigger_body_entered"]
@@ -3724,3 +3744,4 @@ shape = SubResource("RectangleShape2D_d50vw")
 [connection signal="body_entered" from="Zombies/Zombies2/zombietrigger" to="Zombies/Zombies2/zombie3" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="Enemy/EnemyTrigger" to="Enemy/EnemyTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="Room1" to="Room1" method="_on_body_entered"]
+[connection signal="pressed" from="CanvasLayer/MenuButton" to="." method="_on_menu_button_pressed"]
