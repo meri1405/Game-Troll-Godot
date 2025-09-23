@@ -1,5 +1,6 @@
-[gd_scene load_steps=60 format=3 uid="uid://b762vd7488s5d"]
+[gd_scene load_steps=63 format=3 uid="uid://b762vd7488s5d"]
 
+[ext_resource type="Script" uid="uid://c85pk27sc71ds" path="res://level_1.gd" id="1_4w5w6"]
 [ext_resource type="Texture2D" uid="uid://dps2vak3wrpfb" path="res://Pixel Adventure 1/Free/Background/Purple.png" id="1_714j2"]
 [ext_resource type="Texture2D" uid="uid://c2q1auamo4dbd" path="res://Pixel Adventure 1/Free/Background/Brown.png" id="2_y52he"]
 [ext_resource type="PackedScene" uid="uid://be08yvn3m3mkx" path="res://Scenes/saw_trap_left_move.tscn" id="3_bnsfo"]
@@ -18,6 +19,8 @@
 [ext_resource type="Texture2D" uid="uid://3o72ly24grlg" path="res://Pixel Adventure 1/Free/Items/Checkpoints/Checkpoint/Checkpoint (Flag Idle)(64x64).png" id="16_jgrkv"]
 [ext_resource type="Texture2D" uid="uid://b0oni833t64u3" path="res://Pixel Adventure 1/Cat/Cat/CAT 2.png" id="17_ej4hj"]
 [ext_resource type="Script" uid="uid://7f4754wefk68" path="res://All_Level/Map Level 7/room_1.gd" id="18_4unjl"]
+[ext_resource type="PackedScene" uid="uid://m4c8hp47kokd" path="res://UI/pause_menu.tscn" id="19_bnsfo"]
+[ext_resource type="Texture2D" uid="uid://cbhtkwag7pn5d" path="res://Pixel Adventure 1/Free/Menu/Buttons/Settings.png" id="20_4w5w6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sx4db"]
 size = Vector2(15.6666, 7.33334)
@@ -676,6 +679,7 @@ animations = [{
 size = Vector2(2448, 768)
 
 [node name="Level4" type="Node2D"]
+script = ExtResource("1_4w5w6")
 
 [node name="PinkGround" type="TextureRect" parent="."]
 z_index = -2
@@ -1467,6 +1471,22 @@ shape = SubResource("RectangleShape2D_f2nj0")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 
+[node name="PauseMenu" parent="." instance=ExtResource("19_bnsfo")]
+visible = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MenuButton" type="Button" parent="CanvasLayer"]
+texture_filter = 1
+offset_left = 22.0
+offset_top = 17.0
+offset_right = 51.0
+offset_bottom = 47.0
+scale = Vector2(3, 3)
+icon = ExtResource("20_4w5w6")
+flat = true
+metadata/_edit_use_anchors_ = true
+
 [connection signal="body_entered" from="Trap/SpikeTrap_RightMove/SpikeTrigger" to="Trap/SpikeTrap_RightMove/SpikeTrap_RightMove" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="Trap/SpikeTrap_RightMove2/SpikeTrigger" to="Trap/SpikeTrap_RightMove2/SpikeTrap_RightMove" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="Trap/SpikeTrap_RightMove3/SpikeTrigger" to="Trap/SpikeTrap_RightMove3/SpikeTrap_RightMove" method="_on_saw_trigger_body_entered"]
@@ -1485,3 +1505,4 @@ shape = SubResource("RectangleShape2D_f2nj0")
 [connection signal="body_entered" from="Trap/SpikeTrap_DownMove5/SpikeTrigger" to="Trap/SpikeTrap_DownMove5/SpikeTrap_DownMove" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="CheckPoint" to="CheckPoint" method="_on_body_entered"]
 [connection signal="body_entered" from="Room1" to="Room1" method="_on_body_entered"]
+[connection signal="pressed" from="CanvasLayer/MenuButton" to="." method="_on_menu_button_pressed"]

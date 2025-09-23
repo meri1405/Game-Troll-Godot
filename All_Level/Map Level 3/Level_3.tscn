@@ -62,7 +62,7 @@ size = Vector2(20, 64)
 size = Vector2(116.937, 19.4914)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h3scc"]
-size = Vector2(40.671, 75.1184)
+size = Vector2(64.3434, 75.1184)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y02rr"]
 texture = ExtResource("13_203x5")
@@ -390,7 +390,7 @@ position = Vector2(152.711, -27.571)
 shape = SubResource("RectangleShape2D_h711c")
 
 [node name="TriggerArea" type="Area2D" parent="Trap/Area2D2"]
-position = Vector2(43, -76)
+position = Vector2(-14, -83)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Trap/Area2D2/TriggerArea"]
 position = Vector2(-10, -9)
@@ -427,7 +427,7 @@ script = ExtResource("10_24uu7")
 move_distance_up = 80.0
 move_distance_left = 360.0
 move_distance_down = 80.0
-move_speed = 1.0
+move_speed = 0.8
 
 [node name="NewAtlasTexture" type="Sprite2D" parent="Trap/Trap-d3"]
 position = Vector2(111.243, 219.579)
@@ -436,7 +436,7 @@ scale = Vector2(1.5, 1.09011)
 texture = ExtResource("11_fwcvx")
 
 [node name="TriggerArea" type="Area2D" parent="Trap/Trap-d3"]
-position = Vector2(-124, 411)
+position = Vector2(-158, 412)
 rotation = -0.34932
 scale = Vector2(0.878281, 0.8882)
 
@@ -447,7 +447,7 @@ scale = Vector2(0.999975, 1.03161)
 shape = SubResource("RectangleShape2D_fiqh6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Trap/Trap-d3"]
-position = Vector2(108.027, 228.498)
+position = Vector2(107.978, 224.058)
 rotation = -1.58177
 scale = Vector2(0.37512, 0.566092)
 shape = SubResource("RectangleShape2D_h3scc")
