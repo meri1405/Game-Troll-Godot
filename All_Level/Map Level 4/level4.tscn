@@ -678,6 +678,7 @@ size = Vector2(2448, 768)
 [node name="Level4" type="Node"]
 
 [node name="PinkGround" type="TextureRect" parent="."]
+z_index = -2
 texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -688,6 +689,7 @@ texture = ExtResource("1_7fp0q")
 stretch_mode = 1
 
 [node name="SandGround" type="TextureRect" parent="."]
+z_index = -2
 texture_filter = 1
 offset_left = 1153.0
 offset_top = -1.0
