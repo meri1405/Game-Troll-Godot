@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://besfbgrgvx1sp"]
+[gd_scene load_steps=31 format=3 uid="uid://besfbgrgvx1sp"]
 
 [ext_resource type="Texture2D" uid="uid://dhkt1prc5cciq" path="res://Pixel Adventure 1/Free/Background/Blue.png" id="1_ryfv1"]
 [ext_resource type="Texture2D" uid="uid://b2cvefql3txu0" path="res://Pixel Adventure 1/Free/Background/Gray.png" id="2_5w2h8"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://btdfqc4qp1j67" path="res://Checkpoint/Level_1/checkpoint.tscn" id="14_ryfv1"]
 [ext_resource type="Script" uid="uid://ymv7ewqim46k" path="res://trigger_change_dir.gd" id="14_vmy6h"]
 [ext_resource type="Script" uid="uid://ncmukyjtpslc" path="res://Checkpoint/Level_9/checkpoint_9.gd" id="15_5w2h8"]
+[ext_resource type="Script" uid="uid://descmo0bgforf" path="res://All_Level/Map Level 9/dis_trigger_change_dir.gd" id="15_nqxxl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yfwe1"]
 size = Vector2(15.6666, 7.33334)
@@ -484,7 +485,10 @@ size = Vector2(965, 676)
 size = Vector2(965, 928)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6boes"]
-size = Vector2(963, 691)
+size = Vector2(10.1875, 180.125)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a1x2x"]
+size = Vector2(149, 17)
 
 [node name="Level9" type="Node"]
 
@@ -975,13 +979,23 @@ canvas_mod = NodePath("../DarkZone/CanvasModulate")
 position = Vector2(-16.5, 81)
 shape = SubResource("RectangleShape2D_amuqg")
 
-[node name="TriggerChangeDir" type="Area2D" parent="."]
+[node name="TriggerDir" type="Node" parent="."]
+
+[node name="TriggerChangeDir" type="Area2D" parent="TriggerDir"]
 position = Vector2(109, -971)
 script = ExtResource("14_vmy6h")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerChangeDir"]
-position = Vector2(371.5, -271.5)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerDir/TriggerChangeDir"]
+position = Vector2(469, 161)
 shape = SubResource("RectangleShape2D_6boes")
+
+[node name="DisTriggerChangeDir" type="Area2D" parent="TriggerDir"]
+position = Vector2(824, -713)
+script = ExtResource("15_nqxxl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerDir/DisTriggerChangeDir"]
+position = Vector2(64.5, 2.5)
+shape = SubResource("RectangleShape2D_a1x2x")
 
 [node name="Checkpoint" parent="." instance=ExtResource("14_ryfv1")]
 position = Vector2(-1054, -1585)
@@ -1006,5 +1020,5 @@ next_level = "res://All_Level/Map Level 10/Level 10.tscn"
 [connection signal="body_entered" from="Zone/RoomLight" to="Zone/RoomLight" method="_on_body_entered"]
 [connection signal="body_entered" from="Zone/RoomLDark" to="Zone/RoomLDark" method="_on_body_entered"]
 [connection signal="body_entered" from="Zone/RoomLight2" to="Zone/RoomLight2" method="_on_body_entered"]
-[connection signal="body_entered" from="TriggerChangeDir" to="TriggerChangeDir" method="_on_body_entered"]
-[connection signal="body_exited" from="TriggerChangeDir" to="TriggerChangeDir" method="_on_body_exited"]
+[connection signal="body_entered" from="TriggerDir/TriggerChangeDir" to="TriggerDir/TriggerChangeDir" method="_on_body_entered"]
+[connection signal="body_entered" from="TriggerDir/DisTriggerChangeDir" to="TriggerDir/DisTriggerChangeDir" method="_on_body_entered"]
