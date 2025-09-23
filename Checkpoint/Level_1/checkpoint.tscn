@@ -86,6 +86,7 @@ size = Vector2(42, 64)
 
 [node name="Checkpoint" type="Area2D"]
 script = ExtResource("1_pgce5")
+current_level_number = 1
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(1125, 102)
