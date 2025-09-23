@@ -1,7 +1,6 @@
 [gd_scene load_steps=423 format=3 uid="uid://df0fypxok4wvy"]
 
 [ext_resource type="Texture2D" uid="uid://b2cvefql3txu0" path="res://Pixel Adventure 1/Free/Background/Gray.png" id="1_7adjs"]
-[ext_resource type="Script" uid="uid://c85pk27sc71ds" path="res://level_1.gd" id="1_ktq56"]
 [ext_resource type="Texture2D" uid="uid://cmx6ev0y0fkb7" path="res://Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="2_m3c78"]
 [ext_resource type="PackedScene" uid="uid://dt1tth682nenl" path="res://Scenes/character_body_2d.tscn" id="3_m3c78"]
 [ext_resource type="Texture2D" uid="uid://bqavq07uxfp58" path="res://Pixel Adventure 1/Free/Other/radial_gradient_light.png" id="4_b18dv"]
@@ -42,10 +41,8 @@
 [ext_resource type="Script" uid="uid://faoi7kv7bbd8" path="res://All_Level/Map Level 7/ghost_trigger.gd" id="24_ee023"]
 [ext_resource type="Texture2D" uid="uid://byelv8yeydfjk" path="res://floor spikes/Keys/Keys/Red Key/File19.png" id="24_nd1vx"]
 [ext_resource type="AudioStream" uid="uid://2ccs1vx0kcm" path="res://audio/Scream.wav" id="24_xq5hv"]
-[ext_resource type="PackedScene" uid="uid://btdfqc4qp1j67" path="res://Checkpoint/Level_1/checkpoint.tscn" id="25_a87au"]
 [ext_resource type="Texture2D" uid="uid://d0607b8s5vd4p" path="res://floor spikes/Keys/Keys/Red Key/File20.png" id="25_vmlw7"]
 [ext_resource type="Script" uid="uid://blwh88g0yx5dp" path="res://All_Level/Map Level 7/ghost_pumpkin.gd" id="25_xq5hv"]
-[ext_resource type="Script" uid="uid://crih4kvr5cys" path="res://Checkpoint/Level_7/checkpoint_7.gd" id="26_a87au"]
 [ext_resource type="Texture2D" uid="uid://dpgxsvpc6tx4j" path="res://Pixel Adventure 1/Boo-tiful Beasts - Tiny Halloween Pack [Creatures]/Pumpkin/Pumpkin-160x160.png" id="26_fm2tx"]
 [ext_resource type="Texture2D" uid="uid://cbgujry12ss7v" path="res://floor spikes/Keys/Keys/Red Key/File21.png" id="26_xmfu1"]
 [ext_resource type="Texture2D" uid="uid://b5wwyrbwa667s" path="res://floor spikes/Keys/Keys/Red Key/File22.png" id="27_7574u"]
@@ -108,13 +105,13 @@
 [ext_resource type="Texture2D" uid="uid://do16ps5dajvfy" path="res://floor spikes/Keys/Keys/Red Key/File51.png" id="56_cen3c"]
 [ext_resource type="Texture2D" uid="uid://rxyk3r3ijuqu" path="res://floor spikes/Keys/Keys/Red Key/File52.png" id="57_nb64w"]
 [ext_resource type="Texture2D" uid="uid://bx03py2fb0hru" path="res://floor spikes/Keys/Keys/Red Key/File53.png" id="58_142xk"]
+[ext_resource type="PackedScene" uid="uid://btdfqc4qp1j67" path="res://Checkpoint/Level_1/checkpoint.tscn" id="59_a87au"]
 [ext_resource type="Texture2D" uid="uid://bsvnibn1fklml" path="res://floor spikes/Keys/Keys/Red Key/File54.png" id="59_lhcwu"]
+[ext_resource type="Script" uid="uid://crih4kvr5cys" path="res://Checkpoint/Level_7/checkpoint_7.gd" id="60_ktq56"]
 [ext_resource type="Texture2D" uid="uid://c8snkbya6rjta" path="res://floor spikes/Keys/Keys/Red Key/File55.png" id="60_ntn7r"]
 [ext_resource type="Texture2D" uid="uid://cobva41ix8mak" path="res://floor spikes/Keys/Keys/Red Key/File56.png" id="61_snkhq"]
 [ext_resource type="Texture2D" uid="uid://nagvxkhqfnou" path="res://floor spikes/Keys/Keys/Red Key/File57.png" id="62_jitvd"]
-[ext_resource type="PackedScene" uid="uid://m4c8hp47kokd" path="res://UI/pause_menu.tscn" id="62_uefbp"]
 [ext_resource type="Texture2D" uid="uid://bgvqw28k4x1os" path="res://floor spikes/Keys/Keys/Red Key/File58.png" id="63_8ynfi"]
-[ext_resource type="Texture2D" uid="uid://cbhtkwag7pn5d" path="res://Pixel Adventure 1/Free/Menu/Buttons/Settings.png" id="63_xeq4n"]
 [ext_resource type="Texture2D" uid="uid://bdkxe4obg5pyo" path="res://floor spikes/Keys/Keys/Red Key/File59.png" id="64_lq625"]
 [ext_resource type="Texture2D" uid="uid://e1abr38jum87" path="res://floor spikes/Keys/Keys/Blue Key/File1.png" id="69_eypiq"]
 [ext_resource type="Texture2D" uid="uid://c2wgrdrabgagk" path="res://floor spikes/Keys/Keys/Blue Key/File2.png" id="70_y4iqu"]
@@ -296,6 +293,8 @@
 [ext_resource type="Texture2D" uid="uid://b2oahw1sqseae" path="res://floor spikes/Keys/Keys/Gold Key/File57.png" id="286_yf577"]
 [ext_resource type="Texture2D" uid="uid://bxuesnrc2lov3" path="res://floor spikes/Keys/Keys/Gold Key/File58.png" id="287_ry4w1"]
 [ext_resource type="Texture2D" uid="uid://ctyqkkxf2ouqt" path="res://floor spikes/Keys/Keys/Gold Key/File59.png" id="288_lhodp"]
+[ext_resource type="Script" uid="uid://distnvfjbs27t" path="res://All_Level/Map Level 7/checkpoint_respawn.gd" id="294_mqqgr"]
+[ext_resource type="Texture2D" uid="uid://c8v1kucqyrpvq" path="res://Pixel Adventure 1/Free/Items/Checkpoints/Start/Start (Idle).png" id="295_db5fy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_74qg3"]
 texture = ExtResource("2_m3c78")
@@ -2264,8 +2263,10 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3078f"]
 size = Vector2(29, 29)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mqqgr"]
+size = Vector2(64.5, 72)
+
 [node name="Khang2" type="Node2D"]
-script = ExtResource("1_ktq56")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 modulate = Color(0.758192, 0.758192, 0.758192, 1)
@@ -2380,7 +2381,6 @@ scale = Vector2(0.0996094, 0.189453)
 texture = ExtResource("131_8t1ly")
 
 [node name="Room1" type="Area2D" parent="." node_paths=PackedStringArray("canvas_mod") groups=["Room_light"]]
-visible = false
 position = Vector2(182, -15)
 script = ExtResource("15_1cmpo")
 canvas_mod = NodePath("../CanvasModulate")
@@ -2536,12 +2536,6 @@ shape = SubResource("RectangleShape2D_b18dv")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0, 0, 0, 1)
-
-[node name="Checkpoint" parent="." instance=ExtResource("25_a87au")]
-position = Vector2(961, -730)
-script = ExtResource("26_a87au")
-current_level_number = 7
-next_level = "res://All_Level/Map Level 8/Level_8.tscn"
 
 [node name="SpikeTrap_DownMove" type="Node" parent="."]
 
@@ -2973,22 +2967,27 @@ texture = ExtResource("45_330pp")
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(1180, -817)
 
-[node name="PauseMenu" parent="." instance=ExtResource("62_uefbp")]
-visible = false
+[node name="Checkpoint" parent="." instance=ExtResource("59_a87au")]
+position = Vector2(-69, -723)
+script = ExtResource("60_ktq56")
+next_level = "res://All_Level/Map Level 8/Level_8.tscn"
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="HUD" type="CanvasLayer" parent="."]
 
-[node name="MenuButton" type="Button" parent="CanvasLayer"]
-texture_filter = 1
-offset_left = 22.0
-offset_top = 17.0
-offset_right = 51.0
-offset_bottom = 47.0
-scale = Vector2(3, 3)
-icon = ExtResource("63_xeq4n")
-flat = true
-metadata/_edit_use_anchors_ = true
+[node name="CheckpointRespawn" type="Area2D" parent="."]
+position = Vector2(2004, 157)
+script = ExtResource("294_mqqgr")
 
+[node name="Start(idle)" type="Sprite2D" parent="CheckpointRespawn"]
+position = Vector2(-16, 2)
+texture = ExtResource("295_db5fy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CheckpointRespawn"]
+position = Vector2(-19.25, 0)
+shape = SubResource("RectangleShape2D_mqqgr")
+
+[connection signal="body_entered" from="FakeKey" to="FakeKey" method="_on_body_entered"]
+[connection signal="body_entered" from="RedKey" to="RedKey" method="_on_body_entered"]
 [connection signal="body_entered" from="RedDoor" to="RedDoor" method="_on_body_entered"]
 [connection signal="body_entered" from="BlueKey" to="BlueKey" method="_on_body_entered"]
 [connection signal="body_entered" from="YellowDoor" to="YellowDoor" method="_on_body_entered"]
@@ -3027,4 +3026,4 @@ metadata/_edit_use_anchors_ = true
 [connection signal="body_entered" from="Fruits/Melon" to="Fruits/Melon" method="_on_body_entered"]
 [connection signal="body_entered" from="Fruits/Strawberry" to="Fruits/Strawberry" method="_on_body_entered"]
 [connection signal="body_entered" from="Fruits/Orange" to="Fruits/Orange" method="_on_body_entered"]
-[connection signal="pressed" from="CanvasLayer/MenuButton" to="." method="_on_menu_button_pressed"]
+[connection signal="body_entered" from="CheckpointRespawn" to="CheckpointRespawn" method="_on_body_entered"]
