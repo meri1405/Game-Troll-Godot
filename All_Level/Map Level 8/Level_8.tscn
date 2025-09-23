@@ -915,8 +915,8 @@ position = Vector2(1687, -83)
 script = ExtResource("13_2ial3")
 next_level = "res://All_Level/Map Level 9/level9.tscn"
 
-[connection signal="body_entered" from="Plat" to="Plat/Plat" method="_on_plat_body_entered"]
 [connection signal="body_entered" from="Plat" to="Plat/Plat" method="_on_plat_player_entered"]
+[connection signal="body_entered" from="Plat" to="Plat/Plat" method="_on_plat_body_entered"]
 [connection signal="body_exited" from="Plat" to="Plat/Plat" method="_on_Plat_movebox_body_exited"]
 [connection signal="body_exited" from="Plat" to="Plat/Plat" method="_on_player_body_exited"]
 [connection signal="body_exited" from="Plat2" to="Plat2/Plat2" method="_on_Plat_2_body_exited"]
@@ -953,8 +953,8 @@ next_level = "res://All_Level/Map Level 9/level9.tscn"
 [connection signal="body_exited" from="Appearing12" to="Appearing12/Box5" method="_on_appearing_2_body_exited"]
 [connection signal="body_entered" from="Disappearing" to="Disappearing/disBox1" method="_on_player_body_entered_box1"]
 [connection signal="body_exited" from="Disappearing" to="Disappearing/disBox1" method="_on_player_body_exited_box1"]
-[connection signal="body_entered" from="Disappearing2" to="Disappearing2/disBox2" method="_on_player_body_entered_box1"]
 [connection signal="body_entered" from="Disappearing2" to="Disappearing2/disBox2" method="_on_disappearing_body_entered"]
+[connection signal="body_entered" from="Disappearing2" to="Disappearing2/disBox2" method="_on_player_body_entered_box1"]
 [connection signal="body_entered" from="Disappearing3" to="Disappearing3/disBox3" method="_on_player_body_entered_box1"]
 [connection signal="body_entered" from="Disappearing4" to="Disappearing4/disBox4" method="_on_player_body_entered_box1"]
 [connection signal="body_entered" from="Room1" to="Room1" method="_on_body_entered"]

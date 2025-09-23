@@ -31,6 +31,9 @@ func play_level_up() -> void:
 	if not mute:
 		$LevelUp.play()
 
+func play_checkpoint() -> void:
+	if not mute:
+		$checkpoint.play()
 
 func play_respawn() -> void:
 	if not mute:	

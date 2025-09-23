@@ -3,7 +3,7 @@ extends Area2D
 @onready var sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var collision: CollisionShape2D = $CollisionShape2D
 @onready var pickup_player: AudioStreamPlayer2D = $Pickup
-@export var fruit_color: int = 7
+@export var fruit_color: int = 2
 
 var triggered: bool = false
 var start_position: Vector2
