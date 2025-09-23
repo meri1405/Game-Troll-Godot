@@ -2483,7 +2483,7 @@ layer_0/tile_data = PackedInt32Array(131157, 131073, 13, 196693, 131073, 14, 656
 
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("11_x410f")]
 unique_name_in_owner = true
-position = Vector2(179, 590)
+position = Vector2(14575, 532)
 
 [node name="PointLight2D" type="PointLight2D" parent="Player"]
 position = Vector2(1786.66, -221.955)
@@ -3670,7 +3670,7 @@ stream = ExtResource("34_wxcms")
 position = Vector2(13602, 477)
 script = ExtResource("6_37wwv")
 current_level_number = 5
-next_level = "res://All_Level/Map Level 6/Level 6.tscn"
+next_level = "res://All_Level/Map Level 6/Level_6.tscn"
 
 [node name="Room1" type="Area2D" parent="." node_paths=PackedStringArray("canvas_mod") groups=["Room_light"]]
 visible = false

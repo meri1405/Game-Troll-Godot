@@ -918,7 +918,7 @@ shape = SubResource("RectangleShape2D_8qhcr")
 position = Vector2(1687, -83)
 script = ExtResource("13_2ial3")
 current_level_number = 8
-next_level = "res://All_Level/Map Level 9/level9.tscn"
+next_level = "res://All_Level/Map Level 9/Level_9.tscn"
 
 [node name="PauseMenu" parent="." instance=ExtResource("15_fh2sk")]
 visible = false
@@ -938,8 +938,8 @@ metadata/_edit_use_anchors_ = true
 
 [connection signal="body_entered" from="Plat" to="Plat/Plat" method="_on_plat_player_entered"]
 [connection signal="body_entered" from="Plat" to="Plat/Plat" method="_on_plat_body_entered"]
-[connection signal="body_exited" from="Plat" to="Plat/Plat" method="_on_Plat_movebox_body_exited"]
 [connection signal="body_exited" from="Plat" to="Plat/Plat" method="_on_player_body_exited"]
+[connection signal="body_exited" from="Plat" to="Plat/Plat" method="_on_Plat_movebox_body_exited"]
 [connection signal="body_exited" from="Plat2" to="Plat2/Plat2" method="_on_Plat_2_body_exited"]
 [connection signal="body_entered" from="Plat2/FasterBox" to="Plat2/Plat2" method="_on_faster_box_body_entered"]
 [connection signal="body_exited" from="Plat2/FasterBox" to="Plat2/Plat2" method="_on_faster_box_body_exited"]
