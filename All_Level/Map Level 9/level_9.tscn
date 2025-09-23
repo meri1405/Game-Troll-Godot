@@ -1,23 +1,23 @@
 [gd_scene load_steps=33 format=3 uid="uid://besfbgrgvx1sp"]
 
-[ext_resource type="Texture2D" uid="uid://dhkt1prc5cciq" path="res://Pixel Adventure 1/Free/Background/Blue.png" id="1_ryfv1"]
-[ext_resource type="Texture2D" uid="uid://b2cvefql3txu0" path="res://Pixel Adventure 1/Free/Background/Gray.png" id="2_5w2h8"]
-[ext_resource type="Texture2D" uid="uid://dps2vak3wrpfb" path="res://Pixel Adventure 1/Free/Background/Purple.png" id="3_a1x2x"]
-[ext_resource type="Texture2D" uid="uid://c3odeq1pdn71b" path="res://Pixel Adventure 1/Card/Blue_Reverse.png" id="4_5w2h8"]
-[ext_resource type="PackedScene" uid="uid://b0b8d8fe0ga2a" path="res://Touch_Controls/scene/touch_controls.tscn" id="4_nqxxl"]
-[ext_resource type="Script" uid="uid://ckuyjpr6m1qgq" path="res://spike_trap_right_move.gd" id="5_gjjg7"]
-[ext_resource type="Texture2D" uid="uid://crhk04in7jmsy" path="res://Pixel Adventure 1/Free/Traps/Spikes/Idle.png" id="6_55gjo"]
-[ext_resource type="Script" uid="uid://bvhj68g1ggo7h" path="res://spike_trap_left_move.gd" id="7_guwio"]
-[ext_resource type="Texture2D" uid="uid://cmx6ev0y0fkb7" path="res://Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="8_4ghkf"]
-[ext_resource type="PackedScene" uid="uid://dt1tth682nenl" path="res://Scenes/character_body_2d.tscn" id="10_oohob"]
-[ext_resource type="Script" uid="uid://cm5mhy0xl0mj4" path="res://spike_spawner.gd" id="11_l26rp"]
-[ext_resource type="PackedScene" uid="uid://ddgtlxu55dixr" path="res://spike_fall.tscn" id="12_347un"]
-[ext_resource type="Script" uid="uid://csnki2cmswyv1" path="res://Room_2.gd" id="13_fg8sv"]
-[ext_resource type="PackedScene" uid="uid://btdfqc4qp1j67" path="res://Checkpoint/Level_1/checkpoint.tscn" id="14_ryfv1"]
-[ext_resource type="Script" uid="uid://ymv7ewqim46k" path="res://trigger_change_dir.gd" id="14_vmy6h"]
-[ext_resource type="Script" uid="uid://ncmukyjtpslc" path="res://Checkpoint/Level_9/checkpoint_9.gd" id="15_5w2h8"]
-[ext_resource type="Script" uid="uid://descmo0bgforf" path="res://All_Level/Map Level 9/dis_trigger_change_dir.gd" id="15_nqxxl"]
-[ext_resource type="Script" uid="uid://7f4754wefk68" path="res://All_Level/Map Level 7/room_1.gd" id="18_gjjg7"]
+[ext_resource type="Texture2D" uid="uid://dhkt1prc5cciq" path="res://Pixel Adventure 1/Free/Background/Blue.png" id="1_svh1q"]
+[ext_resource type="Texture2D" uid="uid://b2cvefql3txu0" path="res://Pixel Adventure 1/Free/Background/Gray.png" id="2_8et30"]
+[ext_resource type="Texture2D" uid="uid://dps2vak3wrpfb" path="res://Pixel Adventure 1/Free/Background/Purple.png" id="3_ww018"]
+[ext_resource type="Texture2D" uid="uid://c3odeq1pdn71b" path="res://Pixel Adventure 1/Card/Blue_Reverse.png" id="4_1kn8q"]
+[ext_resource type="PackedScene" uid="uid://b0b8d8fe0ga2a" path="res://Touch_Controls/scene/touch_controls.tscn" id="5_rgm6c"]
+[ext_resource type="Script" uid="uid://ckuyjpr6m1qgq" path="res://spike_trap_right_move.gd" id="6_lxlle"]
+[ext_resource type="Texture2D" uid="uid://crhk04in7jmsy" path="res://Pixel Adventure 1/Free/Traps/Spikes/Idle.png" id="7_vith0"]
+[ext_resource type="Script" uid="uid://bvhj68g1ggo7h" path="res://spike_trap_left_move.gd" id="8_fpx0g"]
+[ext_resource type="Texture2D" uid="uid://cmx6ev0y0fkb7" path="res://Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="9_8xqkw"]
+[ext_resource type="PackedScene" uid="uid://dt1tth682nenl" path="res://Scenes/character_body_2d.tscn" id="10_2p83l"]
+[ext_resource type="Script" uid="uid://cm5mhy0xl0mj4" path="res://spike_spawner.gd" id="11_upj1t"]
+[ext_resource type="PackedScene" uid="uid://ddgtlxu55dixr" path="res://spike_fall.tscn" id="12_ihet1"]
+[ext_resource type="Script" uid="uid://csnki2cmswyv1" path="res://Room_2.gd" id="13_5lkrk"]
+[ext_resource type="Script" uid="uid://ymv7ewqim46k" path="res://trigger_change_dir.gd" id="14_olx4f"]
+[ext_resource type="Script" uid="uid://descmo0bgforf" path="res://All_Level/Map Level 9/dis_trigger_change_dir.gd" id="15_y75xd"]
+[ext_resource type="PackedScene" uid="uid://btdfqc4qp1j67" path="res://Checkpoint/Level_1/checkpoint.tscn" id="16_456wn"]
+[ext_resource type="Script" uid="uid://ncmukyjtpslc" path="res://Checkpoint/Level_9/checkpoint_9.gd" id="17_5hth4"]
+[ext_resource type="Script" uid="uid://7f4754wefk68" path="res://All_Level/Map Level 7/room_1.gd" id="18_w16di"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yfwe1"]
 size = Vector2(15.6666, 7.33334)
@@ -32,7 +32,7 @@ size = Vector2(21, 45)
 size = Vector2(3, 102)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x2odi"]
-texture = ExtResource("8_4ghkf")
+texture = ExtResource("9_8xqkw")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -327,7 +327,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_x2odi")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_87x5k"]
-texture = ExtResource("8_4ghkf")
+texture = ExtResource("9_8xqkw")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -507,7 +507,7 @@ anchor_bottom = 1.0
 offset_right = -196.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_ryfv1")
+texture = ExtResource("1_svh1q")
 stretch_mode = 1
 
 [node name="gray_bg" type="TextureRect" parent="Background"]
@@ -517,7 +517,7 @@ offset_left = 1.0
 offset_top = -652.0
 offset_right = 956.0
 offset_bottom = 2.0
-texture = ExtResource("2_5w2h8")
+texture = ExtResource("2_8et30")
 stretch_mode = 1
 
 [node name="pink_bg" type="TextureRect" parent="Background"]
@@ -527,7 +527,7 @@ offset_left = 1.0
 offset_top = -1613.0
 offset_right = 956.0
 offset_bottom = -652.0
-texture = ExtResource("3_a1x2x")
+texture = ExtResource("3_ww018")
 stretch_mode = 1
 flip_h = true
 
@@ -539,9 +539,9 @@ offset_top = -864.0
 offset_right = 798.0
 offset_bottom = -302.0
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("4_5w2h8")
+texture = ExtResource("4_1kn8q")
 
-[node name="TouchControls" parent="Background" instance=ExtResource("4_nqxxl")]
+[node name="TouchControls" parent="Background" instance=ExtResource("5_rgm6c")]
 
 [node name="Trap" type="Node" parent="."]
 
@@ -552,11 +552,11 @@ z_index = -1
 position = Vector2(-45, 439)
 rotation = 1.5708
 scale = Vector2(3, 3)
-script = ExtResource("5_gjjg7")
+script = ExtResource("6_lxlle")
 
 [node name="Sprite2D" type="Sprite2D" parent="Trap/SpikeTrap_RightMove/SpikeTrap_RightMove"]
 texture_filter = 1
-texture = ExtResource("6_55gjo")
+texture = ExtResource("7_vith0")
 
 [node name="Area2D" type="Area2D" parent="Trap/SpikeTrap_RightMove/SpikeTrap_RightMove" groups=["hurt"]]
 
@@ -578,11 +578,11 @@ z_index = -1
 position = Vector2(-43, 389)
 rotation = 1.5708
 scale = Vector2(3, 3)
-script = ExtResource("5_gjjg7")
+script = ExtResource("6_lxlle")
 
 [node name="Sprite2D" type="Sprite2D" parent="Trap/SpikeTrap_RightMove2/SpikeTrap_RightMove"]
 texture_filter = 1
-texture = ExtResource("6_55gjo")
+texture = ExtResource("7_vith0")
 
 [node name="Area2D" type="Area2D" parent="Trap/SpikeTrap_RightMove2/SpikeTrap_RightMove" groups=["hurt"]]
 
@@ -604,11 +604,11 @@ z_index = -1
 position = Vector2(-72, 388)
 rotation = 1.5708
 scale = Vector2(3, 3)
-script = ExtResource("5_gjjg7")
+script = ExtResource("6_lxlle")
 
 [node name="Sprite2D" type="Sprite2D" parent="Trap/SpikeTrap_RightMove3/SpikeTrap_RightMove"]
 texture_filter = 1
-texture = ExtResource("6_55gjo")
+texture = ExtResource("7_vith0")
 
 [node name="Area2D" type="Area2D" parent="Trap/SpikeTrap_RightMove3/SpikeTrap_RightMove" groups=["hurt"]]
 
@@ -630,11 +630,11 @@ z_index = -1
 position = Vector2(-44, 337)
 rotation = 1.5708
 scale = Vector2(3, 3)
-script = ExtResource("5_gjjg7")
+script = ExtResource("6_lxlle")
 
 [node name="Sprite2D" type="Sprite2D" parent="Trap/SpikeTrap_RightMove4/SpikeTrap_RightMove"]
 texture_filter = 1
-texture = ExtResource("6_55gjo")
+texture = ExtResource("7_vith0")
 
 [node name="Area2D" type="Area2D" parent="Trap/SpikeTrap_RightMove4/SpikeTrap_RightMove" groups=["hurt"]]
 
@@ -656,11 +656,11 @@ z_index = -1
 position = Vector2(-43, 276)
 rotation = 1.5708
 scale = Vector2(3, 3)
-script = ExtResource("5_gjjg7")
+script = ExtResource("6_lxlle")
 
 [node name="Sprite2D" type="Sprite2D" parent="Trap/SpikeTrap_RightMove5/SpikeTrap_RightMove"]
 texture_filter = 1
-texture = ExtResource("6_55gjo")
+texture = ExtResource("7_vith0")
 
 [node name="Area2D" type="Area2D" parent="Trap/SpikeTrap_RightMove5/SpikeTrap_RightMove" groups=["hurt"]]
 
@@ -682,11 +682,11 @@ z_index = -1
 position = Vector2(-44, 280)
 rotation = 1.5708
 scale = Vector2(3, 3)
-script = ExtResource("5_gjjg7")
+script = ExtResource("6_lxlle")
 
 [node name="Sprite2D" type="Sprite2D" parent="Trap/SpikeTrap_RightMove6/SpikeTrap_RightMove"]
 texture_filter = 1
-texture = ExtResource("6_55gjo")
+texture = ExtResource("7_vith0")
 
 [node name="Area2D" type="Area2D" parent="Trap/SpikeTrap_RightMove6/SpikeTrap_RightMove" groups=["hurt"]]
 
@@ -706,13 +706,13 @@ shape = SubResource("RectangleShape2D_p3j2p")
 [node name="SpikeTrap_LeftMove" type="Area2D" parent="Trap/SpikeTrap_LeftMove" groups=["hurt", "saws"]]
 z_index = -1
 position = Vector2(1006, 402)
-script = ExtResource("7_guwio")
+script = ExtResource("8_fpx0g")
 
 [node name="Sprite2D" type="Sprite2D" parent="Trap/SpikeTrap_LeftMove/SpikeTrap_LeftMove"]
 texture_filter = 1
 rotation = -1.5708
 scale = Vector2(3, 3)
-texture = ExtResource("6_55gjo")
+texture = ExtResource("7_vith0")
 
 [node name="Area2D" type="Area2D" parent="Trap/SpikeTrap_LeftMove/SpikeTrap_LeftMove" groups=["hurt"]]
 
@@ -732,13 +732,13 @@ shape = SubResource("RectangleShape2D_rlwt4")
 [node name="SpikeTrap_LeftMove" type="Area2D" parent="Trap/SpikeTrap_LeftMove2" groups=["hurt", "saws"]]
 z_index = -1
 position = Vector2(1004, 354)
-script = ExtResource("7_guwio")
+script = ExtResource("8_fpx0g")
 
 [node name="Sprite2D" type="Sprite2D" parent="Trap/SpikeTrap_LeftMove2/SpikeTrap_LeftMove"]
 texture_filter = 1
 rotation = -1.5708
 scale = Vector2(3, 3)
-texture = ExtResource("6_55gjo")
+texture = ExtResource("7_vith0")
 
 [node name="Area2D" type="Area2D" parent="Trap/SpikeTrap_LeftMove2/SpikeTrap_LeftMove" groups=["hurt"]]
 
@@ -758,13 +758,13 @@ shape = SubResource("RectangleShape2D_rlwt4")
 [node name="SpikeTrap_LeftMove" type="Area2D" parent="Trap/SpikeTrap_LeftMove3" groups=["hurt", "saws"]]
 z_index = -1
 position = Vector2(1004, 309)
-script = ExtResource("7_guwio")
+script = ExtResource("8_fpx0g")
 
 [node name="Sprite2D" type="Sprite2D" parent="Trap/SpikeTrap_LeftMove3/SpikeTrap_LeftMove"]
 texture_filter = 1
 rotation = -1.5708
 scale = Vector2(3, 3)
-texture = ExtResource("6_55gjo")
+texture = ExtResource("7_vith0")
 
 [node name="Area2D" type="Area2D" parent="Trap/SpikeTrap_LeftMove3/SpikeTrap_LeftMove" groups=["hurt"]]
 
@@ -784,13 +784,13 @@ shape = SubResource("RectangleShape2D_rlwt4")
 [node name="SpikeTrap_LeftMove" type="Area2D" parent="Trap/SpikeTrap_LeftMove4" groups=["hurt", "saws"]]
 z_index = -1
 position = Vector2(1005, 310)
-script = ExtResource("7_guwio")
+script = ExtResource("8_fpx0g")
 
 [node name="Sprite2D" type="Sprite2D" parent="Trap/SpikeTrap_LeftMove4/SpikeTrap_LeftMove"]
 texture_filter = 1
 rotation = -1.5708
 scale = Vector2(3, 3)
-texture = ExtResource("6_55gjo")
+texture = ExtResource("7_vith0")
 
 [node name="Area2D" type="Area2D" parent="Trap/SpikeTrap_LeftMove4/SpikeTrap_LeftMove" groups=["hurt"]]
 
@@ -810,13 +810,13 @@ shape = SubResource("RectangleShape2D_rlwt4")
 [node name="SpikeTrap_LeftMove" type="Area2D" parent="Trap/SpikeTrap_LeftMove5" groups=["hurt", "saws"]]
 z_index = -1
 position = Vector2(1004, 263)
-script = ExtResource("7_guwio")
+script = ExtResource("8_fpx0g")
 
 [node name="Sprite2D" type="Sprite2D" parent="Trap/SpikeTrap_LeftMove5/SpikeTrap_LeftMove"]
 texture_filter = 1
 rotation = -1.5708
 scale = Vector2(3, 3)
-texture = ExtResource("6_55gjo")
+texture = ExtResource("7_vith0")
 
 [node name="Area2D" type="Area2D" parent="Trap/SpikeTrap_LeftMove5/SpikeTrap_LeftMove" groups=["hurt"]]
 
@@ -836,13 +836,13 @@ shape = SubResource("RectangleShape2D_rlwt4")
 [node name="SpikeTrap_LeftMove" type="Area2D" parent="Trap/SpikeTrap_LeftMove6" groups=["hurt", "saws"]]
 z_index = -1
 position = Vector2(1005, 217)
-script = ExtResource("7_guwio")
+script = ExtResource("8_fpx0g")
 
 [node name="Sprite2D" type="Sprite2D" parent="Trap/SpikeTrap_LeftMove6/SpikeTrap_LeftMove"]
 texture_filter = 1
 rotation = -1.5708
 scale = Vector2(3, 3)
-texture = ExtResource("6_55gjo")
+texture = ExtResource("7_vith0")
 
 [node name="Area2D" type="Area2D" parent="Trap/SpikeTrap_LeftMove6/SpikeTrap_LeftMove" groups=["hurt"]]
 
@@ -862,13 +862,13 @@ shape = SubResource("RectangleShape2D_rlwt4")
 [node name="SpikeTrap_LeftMove" type="Area2D" parent="Trap/SpikeTrap_LeftMove7" groups=["hurt", "saws"]]
 z_index = -1
 position = Vector2(1005, 172)
-script = ExtResource("7_guwio")
+script = ExtResource("8_fpx0g")
 
 [node name="Sprite2D" type="Sprite2D" parent="Trap/SpikeTrap_LeftMove7/SpikeTrap_LeftMove"]
 texture_filter = 1
 rotation = -1.5708
 scale = Vector2(3, 3)
-texture = ExtResource("6_55gjo")
+texture = ExtResource("7_vith0")
 
 [node name="Area2D" type="Area2D" parent="Trap/SpikeTrap_LeftMove7/SpikeTrap_LeftMove" groups=["hurt"]]
 
@@ -888,13 +888,13 @@ shape = SubResource("RectangleShape2D_rlwt4")
 [node name="SpikeTrap_LeftMove" type="Area2D" parent="Trap/SpikeTrap_LeftMove8" groups=["hurt", "saws"]]
 z_index = -1
 position = Vector2(1005, 122)
-script = ExtResource("7_guwio")
+script = ExtResource("8_fpx0g")
 
 [node name="Sprite2D" type="Sprite2D" parent="Trap/SpikeTrap_LeftMove8/SpikeTrap_LeftMove"]
 texture_filter = 1
 rotation = -1.5708
 scale = Vector2(3, 3)
-texture = ExtResource("6_55gjo")
+texture = ExtResource("7_vith0")
 
 [node name="Area2D" type="Area2D" parent="Trap/SpikeTrap_LeftMove8/SpikeTrap_LeftMove" groups=["hurt"]]
 
@@ -914,13 +914,13 @@ shape = SubResource("RectangleShape2D_rlwt4")
 [node name="SpikeTrap_LeftMove" type="Area2D" parent="Trap/SpikeTrap_LeftMove9" groups=["hurt", "saws"]]
 z_index = -1
 position = Vector2(1003, 72)
-script = ExtResource("7_guwio")
+script = ExtResource("8_fpx0g")
 
 [node name="Sprite2D" type="Sprite2D" parent="Trap/SpikeTrap_LeftMove9/SpikeTrap_LeftMove"]
 texture_filter = 1
 rotation = -1.5708
 scale = Vector2(3, 3)
-texture = ExtResource("6_55gjo")
+texture = ExtResource("7_vith0")
 
 [node name="Area2D" type="Area2D" parent="Trap/SpikeTrap_LeftMove9/SpikeTrap_LeftMove" groups=["hurt"]]
 
@@ -949,7 +949,7 @@ tile_set = SubResource("TileSet_yfwe1")
 format = 2
 layer_0/tile_data = PackedInt32Array(18, 851968, 1, 65554, 851968, 2, 19, 917504, 1, 65555, 917504, 2, 17, 786432, 1, 131091, 786432, 1, 720896, 851968, 1, 786432, 851968, 2, 720897, 917504, 1, 786433, 917504, 2, 655360, 786432, 1, 786434, 786432, 1, -917504, 851968, 5, -851968, 851968, 6, -917503, 917504, 5, -851967, 917504, 6, -917502, 786432, 5, -786432, 786432, 5, -131055, 786432, 5, -196590, 851968, 5, -131054, 851968, 6, -196589, 917504, 5, -131053, 917504, 6, -262125, 786432, 5, -1703936, 524288, 10, -1769471, 524288, 10, -1835006, 524288, 10, -1900544, 589824, 8, -1835008, 589824, 9, -1900543, 655360, 8, -1835007, 655360, 9, -1900542, 524288, 9, -1769472, 458752, 9)
 
-[node name="Player" parent="." groups=["Player"] instance=ExtResource("10_oohob")]
+[node name="Player" parent="." groups=["Player"] instance=ExtResource("10_2p83l")]
 unique_name_in_owner = true
 position = Vector2(50, 580)
 
@@ -964,8 +964,8 @@ texture_scale = 1.3
 [node name="SpikeSpawner" type="Node2D" parent="." groups=["hurt"]]
 position = Vector2(559, -1569)
 scale = Vector2(2.3, 1.1)
-script = ExtResource("11_l26rp")
-spike_scene = ExtResource("12_347un")
+script = ExtResource("11_upj1t")
+spike_scene = ExtResource("12_ihet1")
 spawn_interval = 0.8
 
 [node name="Zone" type="Node" parent="."]
@@ -977,7 +977,7 @@ color = Color(0, 0, 0, 1)
 
 [node name="RoomLight" type="Area2D" parent="Zone" node_paths=PackedStringArray("canvas_mod") groups=["Room_light"]]
 position = Vector2(496, 310)
-script = ExtResource("13_fg8sv")
+script = ExtResource("13_5lkrk")
 canvas_mod = NodePath("../DarkZone/CanvasModulate")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Zone/RoomLight"]
@@ -986,7 +986,7 @@ shape = SubResource("RectangleShape2D_vabxw")
 
 [node name="RoomLDark" type="Area2D" parent="Zone" node_paths=PackedStringArray("canvas_mod") groups=["Room_dark"]]
 position = Vector2(501, -349)
-script = ExtResource("13_fg8sv")
+script = ExtResource("13_5lkrk")
 canvas_mod = NodePath("../DarkZone/CanvasModulate")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Zone/RoomLDark"]
@@ -995,7 +995,7 @@ shape = SubResource("RectangleShape2D_vabxw")
 
 [node name="RoomLight2" type="Area2D" parent="Zone" node_paths=PackedStringArray("canvas_mod") groups=["Room_light"]]
 position = Vector2(499, -1250)
-script = ExtResource("13_fg8sv")
+script = ExtResource("13_5lkrk")
 canvas_mod = NodePath("../DarkZone/CanvasModulate")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Zone/RoomLight2"]
@@ -1006,7 +1006,7 @@ shape = SubResource("RectangleShape2D_amuqg")
 
 [node name="TriggerChangeDir" type="Area2D" parent="TriggerDir"]
 position = Vector2(109, -971)
-script = ExtResource("14_vmy6h")
+script = ExtResource("14_olx4f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerDir/TriggerChangeDir"]
 position = Vector2(469, 161)
@@ -1014,22 +1014,22 @@ shape = SubResource("RectangleShape2D_6boes")
 
 [node name="DisTriggerChangeDir" type="Area2D" parent="TriggerDir"]
 position = Vector2(824, -713)
-script = ExtResource("15_nqxxl")
+script = ExtResource("15_y75xd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerDir/DisTriggerChangeDir"]
 position = Vector2(64.5, 2.5)
 shape = SubResource("RectangleShape2D_a1x2x")
 
-[node name="Checkpoint" parent="." instance=ExtResource("14_ryfv1")]
+[node name="Checkpoint" parent="." instance=ExtResource("16_456wn")]
 position = Vector2(-1054, -1585)
-script = ExtResource("15_5w2h8")
+script = ExtResource("17_5hth4")
 current_level_number = 9
 next_level = "res://All_Level/Map Level 10/Level 10.tscn"
 
 [node name="Room1" type="Area2D" parent="." node_paths=PackedStringArray("canvas_mod") groups=["Room_light"]]
 visible = false
 position = Vector2(182, -15)
-script = ExtResource("18_gjjg7")
+script = ExtResource("18_w16di")
 canvas_mod = NodePath("../CanvasModulate")
 cam_limit_left = -96
 cam_limit_right = 1056
