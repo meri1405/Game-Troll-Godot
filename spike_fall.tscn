@@ -1,25 +1,26 @@
 [gd_scene load_steps=4 format=3 uid="uid://ddgtlxu55dixr"]
 
 [ext_resource type="Script" uid="uid://bt6w5jtgmrbbg" path="res://spike_fall.gd" id="1_qejcc"]
-[ext_resource type="Texture2D" uid="uid://crhk04in7jmsy" path="res://Pixel Adventure 1/Free/Traps/Spikes/Idle.png" id="2_fk7u6"]
+[ext_resource type="Texture2D" uid="uid://d0nkeypx6gol0" path="res://Pixel Adventure 1/Card/7ffcab6d-65c2-4349-8878-079a253f4ab3.png" id="2_qejcc"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8at3q"]
-size = Vector2(30, 15)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fk7u6"]
+size = Vector2(19, 21)
 
 [node name="SpikeFall" type="Area2D" groups=["hurt", "saws"]]
+texture_filter = 1
 script = ExtResource("1_qejcc")
 
 [node name="Sprite2D" type="Sprite2D" parent="." groups=["hurt"]]
 texture_filter = 1
-rotation = 3.14159
-scale = Vector2(2, 2)
-texture = ExtResource("2_fk7u6")
+position = Vector2(2, -11)
+scale = Vector2(0.028, 0.028)
+texture = ExtResource("2_qejcc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["hurt"]]
 visibility_layer = 2
-position = Vector2(1, -9.5)
-shape = SubResource("RectangleShape2D_8at3q")
+position = Vector2(1.5, -7.5)
+shape = SubResource("RectangleShape2D_fk7u6")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
-position = Vector2(1, -9.5)
-scale = Vector2(1.5, 0.75)
+position = Vector2(1.5, -8)
+scale = Vector2(1.05, 1.1)
