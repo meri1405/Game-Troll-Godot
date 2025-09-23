@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var door_color: int = 7 # màu cửa
+@export var door_color: int = 2 # màu cửa
 @onready var player: CharacterBody2D = get_tree().get_first_node_in_group("Player")
 
 

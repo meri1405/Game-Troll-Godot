@@ -6,10 +6,10 @@ extends Area2D
 var is_open: bool = false
 
 @export var tiles_to_remove: Array[Vector2i] = [
-	Vector2i(31, 1),
-	Vector2i(32, 1),
-	Vector2i(31, 2),
-	Vector2i(32, 2)
+	Vector2i(30, -3),
+	Vector2i(31, -3),
+	Vector2i(30, -2),
+	Vector2i(31, -2)
 ]
 
 
@@ -30,7 +30,7 @@ func open_door():
 
 func close_door():
 	is_open = false
-	tilemap.set_cell(0, Vector2i(31, 1), 0, Vector2i(1, 8))
-	tilemap.set_cell(0, Vector2i(32, 1), 0, Vector2i(1, 8))
-	tilemap.set_cell(0, Vector2i(31, 2), 0, Vector2i(1, 9))
-	tilemap.set_cell(0, Vector2i(32, 2), 0, Vector2i(1, 9))
+	tilemap.set_cell(0, Vector2i(30, -3), 0, Vector2i(1, 8))
+	tilemap.set_cell(0, Vector2i(31, -3), 0, Vector2i(1, 8))
+	tilemap.set_cell(0, Vector2i(30, -2), 0, Vector2i(1, 9))
+	tilemap.set_cell(0, Vector2i(31, -2), 0, Vector2i(1, 9))

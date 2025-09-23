@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cycjjylhb8mlt"]
+[gd_scene load_steps=10 format=3 uid="uid://cycjjylhb8mlt"]
 
 [ext_resource type="Script" uid="uid://eiveqxno2d2j" path="res://audio/audio_controller.gd" id="1_blxgy"]
 [ext_resource type="AudioStream" uid="uid://c8ejid5voycrr" path="res://audio/mr-23142.wav" id="2_xujww"]
@@ -8,6 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://b1rt73hhu16iw" path="res://audio/Respawn.wav" id="6_xujww"]
 [ext_resource type="AudioStream" uid="uid://c6l006xu58evx" path="res://audio/Walk.wav" id="7_vys8g"]
 [ext_resource type="AudioStream" uid="uid://cktwilg50yqw" path="res://audio/levelup.wav" id="8_h7rxg"]
+[ext_resource type="AudioStream" uid="uid://dfpywa1ixfp7b" path="res://audio/(580) Checkpoint Sound Effect - YouTube (mp3cut.net).wav" id="9_y6d7d"]
 
 [node name="AudioController" type="Node2D"]
 script = ExtResource("1_blxgy")
@@ -35,3 +36,7 @@ stream = ExtResource("7_vys8g")
 
 [node name="LevelUp" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("8_h7rxg")
+
+[node name="checkpoint" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_y6d7d")
+volume_db = -10.0
