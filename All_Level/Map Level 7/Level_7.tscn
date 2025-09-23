@@ -2381,7 +2381,6 @@ scale = Vector2(0.0996094, 0.189453)
 texture = ExtResource("131_8t1ly")
 
 [node name="Room1" type="Area2D" parent="." node_paths=PackedStringArray("canvas_mod") groups=["Room_light"]]
-visible = false
 position = Vector2(182, -15)
 script = ExtResource("15_1cmpo")
 canvas_mod = NodePath("../CanvasModulate")
