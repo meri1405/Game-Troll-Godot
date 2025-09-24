@@ -36,6 +36,7 @@ saws=""
 Camera=""
 Room_dark=""
 Room_light=""
+Player=""
 
 [input]
 

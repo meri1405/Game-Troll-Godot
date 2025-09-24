@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var speed = 250
+var speed = 200
 var triggered = false
 var option : String
 var direction = 1

@@ -7,3 +7,8 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		print("platform fall")
 		rotate(-45)
 		triggered = true
+
+func reset_trap():
+	rotate(45)
+	triggered = false
+	
