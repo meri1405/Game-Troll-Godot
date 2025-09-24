@@ -593,6 +593,7 @@ shape = SubResource("RectangleShape2D_enh1l")
 
 [node name="MoveR" parent="." instance=ExtResource("7_duw73")]
 position = Vector2(667, 323)
+move_distance = 100.0
 
 [node name="TouchControls" parent="." instance=ExtResource("22_wib0y")]
 
