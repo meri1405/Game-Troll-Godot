@@ -165,7 +165,7 @@ func _on_level_selected(level_number: int):
 
 func _on_back_pressed():
 	$"/root/AudioController".play_click()
-	get_tree().change_scene_to_file("res://main.tscn")
+	get_tree().change_scene_to_file("res://All_Level/Scene Main Start/main.tscn")
 
 func _on_reset_pressed():
 	GameManager.max_level_unlocked = 1
