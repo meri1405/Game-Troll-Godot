@@ -27,7 +27,7 @@ func _on_replay_button_pressed():
 func _on_home_button_pressed():
 	$"/root/AudioController".play_click()
 	get_tree().paused = false
-	get_tree().change_scene_to_file("res://main.tscn")
+	get_tree().change_scene_to_file("res://All_Level/Scene Main Start/main.tscn")
 
 func _on_sound_button_pressed():
 	$"/root/AudioController".play_click()
