@@ -1,7 +1,10 @@
-[gd_scene load_steps=50 format=3 uid="uid://hseiofumqiis"]
+[gd_scene load_steps=55 format=3 uid="uid://hseiofumqiis"]
 
 [ext_resource type="Texture2D" uid="uid://dhkt1prc5cciq" path="res://Pixel Adventure 1/Free/Background/Blue.png" id="1_o1b8n"]
+[ext_resource type="Script" uid="uid://sp0u2okl74w6" path="res://level_Switch.gd" id="1_pvktv"]
+[ext_resource type="Texture2D" uid="uid://c1tiwsufw1xe8" path="res://Bg-Dark/Layer_0009_2.png" id="2_8ee4r"]
 [ext_resource type="Texture2D" uid="uid://cmx6ev0y0fkb7" path="res://Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="2_47p50"]
+[ext_resource type="Texture2D" uid="uid://bm0qoe8upp5ds" path="res://Bg-Dark/Layer_0011_0.png" id="2_w5mgi"]
 [ext_resource type="Texture2D" uid="uid://df4x1pqr3p3l5" path="res://Bg-Dark/Tileset/Dark_Horror_Asset_pack.png" id="3_unvtv"]
 [ext_resource type="Script" uid="uid://gg4f2txp54og" path="res://player_2.gd" id="4_h6xnt"]
 [ext_resource type="Texture2D" uid="uid://qcbxsqa53epu" path="res://Pixel Adventure 1/Free/Main Characters/Virtual Guy/Idle (32x32).png" id="4_ji46k"]
@@ -9,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://c5tjfnirx6f1a" path="res://Pixel Adventure 1/Free/Main Characters/Virtual Guy/Hit (32x32).png" id="5_vw2nf"]
 [ext_resource type="Texture2D" uid="uid://lc1xq81ebcnp" path="res://Pixel Adventure 1/Free/Main Characters/Virtual Guy/Jump (32x32).png" id="7_sifmx"]
 [ext_resource type="Texture2D" uid="uid://b17vus05gmpsw" path="res://Pixel Adventure 1/Free/Main Characters/Virtual Guy/Run (32x32).png" id="8_8ee4r"]
+[ext_resource type="Script" uid="uid://crpxtqowskjjr" path="res://switch_box.gd" id="12_np84i"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v5fu8"]
 texture = ExtResource("2_47p50")
@@ -1299,7 +1303,13 @@ size = Vector2(11.6667, 16)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a0sj1"]
 size = Vector2(12.6666, 17)
 
-[node name="Level-huy" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pvktv"]
+size = Vector2(11, 141)
+
+[node name="Level-huy" type="Node2D" node_paths=PackedStringArray("player1", "player2")]
+script = ExtResource("1_pvktv")
+player1 = NodePath("Player")
+player2 = NodePath("Player2")
 
 [node name="Bg" type="TextureRect" parent="."]
 texture_filter = 1
@@ -1309,9 +1319,22 @@ offset_bottom = 418.0
 texture = ExtResource("1_o1b8n")
 stretch_mode = 1
 
+[node name="Bg_3" type="TextureRect" parent="."]
+offset_left = 2206.0
+offset_top = -690.0
+offset_right = 3134.0
+offset_bottom = 418.0
+scale = Vector2(0.78105, 1.4193)
+texture = ExtResource("2_w5mgi")
+
 [node name="Bg-2" type="TextureRect" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+texture_filter = 1
+offset_left = 2878.0
+offset_top = -395.0
+offset_right = 4435.0
+offset_bottom = 398.0
+texture = ExtResource("2_8ee4r")
+stretch_mode = 1
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
@@ -1327,19 +1350,20 @@ tile_set = SubResource("TileSet_w5mgi")
 format = 2
 layer_0/tile_data = PackedInt32Array(262233, 327680, 3, 327769, 0, 6, 327750, 720896, 5, 327753, 720896, 5, 327767, 0, 3, 327765, 0, 3, 262234, 589824, 4, 327770, 589824, 5, 327771, 0, 3, 327766, 0, 3, 327768, 0, 3, 327764, 0, 3, 327763, 0, 3, 327762, 131072, 10, 327761, 65536, 10, 327760, 0, 10, 327759, 0, 3, 327758, 0, 3, 327757, 196608, 10, 327756, 196608, 10, 327755, 0, 3, 327754, 1179648, 6, 327752, 1245184, 6, 327751, 1245184, 6, 327749, 1179648, 6, 327748, 65536, 6, 327747, 0, 3, 327746, 0, 3, 327745, 0, 3, 327744, 0, 3, 327743, 0, 3, 327742, 0, 3, 262209, 458752, 3, 262228, 327680, 3, 262210, 458752, 3, 262208, 458752, 3, 262211, 458752, 3, 196672, 524288, 6, 196674, 524288, 6, 196675, 524288, 6, 196673, 524288, 6)
 
-[node name="Player2" type="CharacterBody2D" parent="."]
+[node name="Player2" type="CharacterBody2D" parent="." groups=["Player", "player"]]
 texture_filter = 1
-position = Vector2(1410, 215)
+position = Vector2(4329, 254)
 scale = Vector2(3, 3)
 script = ExtResource("4_h6xnt")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player2"]
+unique_name_in_owner = true
 position = Vector2(-0.999999, -3.8147e-06)
 scale = Vector2(0.652, 0.678)
 sprite_frames = SubResource("SpriteFrames_yi4nh")
 animation = &"Running"
 autoplay = "Idle"
-frame_progress = 0.73460835
+frame_progress = 0.734608
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player2"]
 visible = false
@@ -1352,8 +1376,29 @@ shape = SubResource("RectangleShape2D_xypal")
 position = Vector2(-0.333313, 2.5)
 shape = SubResource("RectangleShape2D_a0sj1")
 
+[node name="Camera2D" type="Camera2D" parent="Player2"]
+
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("5_ji46k")]
 unique_name_in_owner = true
-position = Vector2(758, 247)
+position = Vector2(82, 319)
 
 [node name="PointLight2D" type="PointLight2D" parent="Player"]
+
+[node name="SwitchBox(1-2)" type="Area2D" parent="." groups=["switches_to_p2"]]
+position = Vector2(263, 321)
+script = ExtResource("12_np84i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SwitchBox(1-2)"]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_pvktv")
+
+[node name="SwitchBox(2-1)" type="Area2D" parent="." groups=["switches_to_p1"]]
+position = Vector2(4055, 213)
+script = ExtResource("12_np84i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SwitchBox(2-1)"]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_pvktv")
+
+[connection signal="body_entered" from="SwitchBox(1-2)" to="SwitchBox(1-2)" method="_on_body_entered"]
+[connection signal="body_entered" from="SwitchBox(2-1)" to="SwitchBox(2-1)" method="_on_body_entered"]

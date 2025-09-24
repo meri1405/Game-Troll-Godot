@@ -3,8 +3,10 @@ extends CharacterBody2D
 const SPEED = 280.0
 const JUMP_VELOCITY = -430.0
 @onready var sprite_2d: AnimatedSprite2D = $Sprite2D
+@onready var camera_2d: Camera2D = $Camera2D
 var is_alive = true
 var control_inverted: bool = false
+var is_active = false
 
 var spawn_point_x=0
 var spawn_point_y=0
@@ -19,7 +21,7 @@ func _ready() -> void:
 	
 
 func _physics_process(delta: float) -> void:
-	if is_alive:
+	if is_alive and is_active:
 		if (velocity.x > 1 || velocity.x < -1):
 			sprite_2d.animation = "Running"
 		else :
@@ -56,7 +58,15 @@ func _physics_process(delta: float) -> void:
 		var isLeft = velocity.x < 0
 		sprite_2d.flip_h = isLeft
 
+func activate():
+	is_active = true
+	camera_2d.enabled = true
 
+func deactivate():
+	is_active = false
+	velocity = Vector2.ZERO # Dừng player ngay lập tức
+	sprite_2d.animation = "Idle" # Chuyển về animation đứng yên
+	camera_2d.enabled = false
 
 func _do_reset():
 	$"/root/AudioController".play_respawn()
