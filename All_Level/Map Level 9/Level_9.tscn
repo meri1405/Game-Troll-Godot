@@ -1033,7 +1033,7 @@ shape = SubResource("RectangleShape2D_a1x2x")
 position = Vector2(-1054, -1585)
 script = ExtResource("17_5hth4")
 current_level_number = 9
-next_level = "res://All_Level/Map Level 10/Level 10.tscn"
+next_level = "res://All_Level/Map Level 10/Level_10.tscn"
 
 [node name="Room1" type="Area2D" parent="." node_paths=PackedStringArray("canvas_mod") groups=["Room_light"]]
 visible = false
