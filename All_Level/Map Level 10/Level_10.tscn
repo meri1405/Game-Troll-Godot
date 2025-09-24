@@ -451,10 +451,6 @@ texture = ExtResource("12_akww8")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Trap/Area2D"]
 position = Vector2(593.5, 1322)
 shape = SubResource("RectangleShape2D_wulba")
-script = ExtResource("20_s45qw")
-move_distance_up = 3000.0
-move_distance_left = 0.0
-move_distance_down = 0.0
 
 [node name="TriggerArea" type="Area2D" parent="Trap/Area2D"]
 position = Vector2(562, 759)
