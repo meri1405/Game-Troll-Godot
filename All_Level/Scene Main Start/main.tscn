@@ -24,33 +24,21 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("1_ig7tw")
 
-[node name="Start-BT" type="Button" parent="."]
-offset_left = 532.0
-offset_top = 67.0
-offset_right = 1564.0
-offset_bottom = 1099.0
-scale = Vector2(0.2, 0.2)
-icon = ExtResource("2_h2yge")
-flat = true
+[node name="Start-BT" type="TouchScreenButton" parent="."]
+position = Vector2(528, 61)
+scale = Vector2(0.208984, 0.21582)
+texture_normal = ExtResource("2_h2yge")
 
-[node name="Quit-BT" type="Button" parent="."]
-offset_left = 535.0
-offset_top = 300.0
-offset_right = 1567.0
-offset_bottom = 1332.0
-scale = Vector2(0.2, 0.2)
-icon = ExtResource("3_1bvp3")
-flat = true
-
-[node name="LevelSelectBt" type="Button" parent="."]
-offset_left = 540.0
-offset_top = 207.0
-offset_right = 2084.0
-offset_bottom = 1239.0
+[node name="LevelSelectBt" type="TouchScreenButton" parent="."]
+position = Vector2(538, 212)
 scale = Vector2(0.133143, 0.140526)
-icon = ExtResource("5_lquwl")
-flat = true
+texture_normal = ExtResource("5_lquwl")
+
+[node name="Quit-BT" type="TouchScreenButton" parent="."]
+position = Vector2(531, 309)
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("3_1bvp3")
 
 [connection signal="pressed" from="Start-BT" to="." method="_on_start_bt_pressed"]
-[connection signal="pressed" from="Quit-BT" to="." method="_on_quit_bt_pressed"]
 [connection signal="pressed" from="LevelSelectBt" to="." method="_on_level_select_bt_pressed"]
+[connection signal="pressed" from="Quit-BT" to="." method="_on_quit_bt_pressed"]

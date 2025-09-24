@@ -715,6 +715,7 @@ stretch_mode = 1
 [node name="SpikeTrap_RightMove" type="Node" parent="Trap"]
 
 [node name="SpikeTrap_RightMove" type="Area2D" parent="Trap/SpikeTrap_RightMove" groups=["hurt", "saws"]]
+z_index = -1
 position = Vector2(1293, 586)
 rotation = 1.5708
 scale = Vector2(3, 3)
@@ -790,6 +791,7 @@ shape = SubResource("RectangleShape2D_fx4lf")
 [node name="SpikeTrap_RightMove4" type="Node" parent="Trap"]
 
 [node name="SpikeTrap_RightMove" type="Area2D" parent="Trap/SpikeTrap_RightMove4" groups=["hurt", "saws"]]
+z_index = -1
 position = Vector2(1854, 259)
 rotation = 1.5708
 scale = Vector2(3, 3)
@@ -865,6 +867,7 @@ shape = SubResource("RectangleShape2D_fx4lf")
 [node name="SpikeTrap_LeftMove" type="Node" parent="Trap"]
 
 [node name="SpikeTrap_LeftMove" type="Area2D" parent="Trap/SpikeTrap_LeftMove" groups=["hurt", "saws"]]
+z_index = -1
 position = Vector2(2113, 358)
 script = ExtResource("7_s3lky")
 
@@ -890,6 +893,7 @@ shape = SubResource("RectangleShape2D_dguho")
 [node name="SpikeTrap_LeftMove2" type="Node" parent="Trap"]
 
 [node name="SpikeTrap_LeftMove" type="Area2D" parent="Trap/SpikeTrap_LeftMove2" groups=["hurt", "saws"]]
+z_index = -1
 position = Vector2(2112, 277)
 script = ExtResource("7_s3lky")
 
@@ -1383,6 +1387,7 @@ shape = SubResource("RectangleShape2D_13mid")
 position = Vector2(1147, 598)
 
 [node name="Sprite2D" type="Sprite2D" parent="Trap/SpikeUp/Spike12"]
+z_index = -1
 texture_filter = 1
 position = Vector2(1.48044e-07, -1.69342)
 scale = Vector2(4.032, 3.747)
