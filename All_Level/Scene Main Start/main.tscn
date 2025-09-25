@@ -30,12 +30,12 @@ scale = Vector2(0.208984, 0.21582)
 texture_normal = ExtResource("2_h2yge")
 
 [node name="LevelSelectBt" type="TouchScreenButton" parent="."]
-position = Vector2(497, 212)
+position = Vector2(499, 254)
 scale = Vector2(0.133143, 0.140526)
 texture_normal = ExtResource("5_lquwl")
 
 [node name="Quit-BT" type="TouchScreenButton" parent="."]
-position = Vector2(490, 309)
+position = Vector2(494, 387)
 scale = Vector2(0.2, 0.2)
 texture_normal = ExtResource("3_1bvp3")
 

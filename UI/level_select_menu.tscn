@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://c0p1gp1m0ehxd"]
+[gd_scene load_steps=15 format=3 uid="uid://c0p1gp1m0ehxd"]
 
 [ext_resource type="Script" uid="uid://bor0vn4cccx01" path="res://UI/level_select_menu.gd" id="1_3jria"]
 [ext_resource type="Texture2D" uid="uid://bbgwpoiadoloa" path="res://Pixel Adventure 1/Free/Background/background.png" id="2_3jria"]
@@ -75,52 +75,52 @@ theme_override_constants/v_separation = 20
 columns = 5
 
 [node name="Level1Button" type="TouchScreenButton" parent="VBoxContainer/GridContainer"]
-position = Vector2(-30, 22)
+position = Vector2(13, 34)
 scale = Vector2(5, 5.08)
 texture_normal = ExtResource("3_level1")
 
 [node name="Level2Button" type="TouchScreenButton" parent="VBoxContainer/GridContainer"]
-position = Vector2(106, 22)
+position = Vector2(149, 34)
 scale = Vector2(5, 5.08)
 texture_normal = ExtResource("4_level2")
 
 [node name="Level3Button" type="TouchScreenButton" parent="VBoxContainer/GridContainer"]
-position = Vector2(257, 21)
+position = Vector2(300, 33)
 scale = Vector2(5, 5.08)
 texture_normal = ExtResource("5_level3")
 
 [node name="Level4Button" type="TouchScreenButton" parent="VBoxContainer/GridContainer"]
-position = Vector2(406, 20)
+position = Vector2(449, 32)
 scale = Vector2(5, 5.08)
 texture_normal = ExtResource("6_level4")
 
 [node name="Level5Button" type="TouchScreenButton" parent="VBoxContainer/GridContainer"]
-position = Vector2(563, 18)
+position = Vector2(606, 30)
 scale = Vector2(5, 5.08)
 texture_normal = ExtResource("7_level5")
 
 [node name="Level6Button" type="TouchScreenButton" parent="VBoxContainer/GridContainer"]
-position = Vector2(-28, 149)
+position = Vector2(15, 161)
 scale = Vector2(5, 5.08)
 texture_normal = ExtResource("8_level6")
 
 [node name="Level7Button" type="TouchScreenButton" parent="VBoxContainer/GridContainer"]
-position = Vector2(107, 151)
+position = Vector2(150, 163)
 scale = Vector2(5, 5.08)
 texture_normal = ExtResource("9_level7")
 
 [node name="Level8Button" type="TouchScreenButton" parent="VBoxContainer/GridContainer"]
-position = Vector2(254, 151)
+position = Vector2(297, 163)
 scale = Vector2(5, 5.08)
 texture_normal = ExtResource("10_level8")
 
 [node name="Level9Button" type="TouchScreenButton" parent="VBoxContainer/GridContainer"]
-position = Vector2(400, 140)
+position = Vector2(443, 152)
 scale = Vector2(5, 5.08)
 texture_normal = ExtResource("11_level9")
 
 [node name="Level10Button" type="TouchScreenButton" parent="VBoxContainer/GridContainer"]
-position = Vector2(570, 149)
+position = Vector2(613, 161)
 scale = Vector2(5, 5.08)
 texture_normal = ExtResource("12_level10")
 
