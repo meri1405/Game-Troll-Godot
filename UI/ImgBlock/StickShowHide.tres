@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://cxgmroiwvgjh8"]
+
+[ext_resource type="Texture2D" uid="uid://df4x1pqr3p3l5" path="res://Bg-Dark/Tileset/Dark_Horror_Asset_pack.png" id="1_6g1ho"]
+
+[resource]
+atlas = ExtResource("1_6g1ho")
+region = Rect2(127.978, 17.9626, 16.1347, 6.10041)

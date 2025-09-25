@@ -1,0 +1,88 @@
+[gd_scene load_steps=13 format=3 uid="uid://cung3oadopm57"]
+
+[ext_resource type="Script" uid="uid://bw48uropgc8de" path="res://fire_fall.gd" id="1_333ir"]
+[ext_resource type="Texture2D" uid="uid://dx07caxd0lrgl" path="res://Pixel Adventure 1/fire asset blue/Group 7 - 4/Group 7 - 4.png" id="2_xdpvh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n75aw"]
+atlas = ExtResource("2_xdpvh")
+region = Rect2(0, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fedmp"]
+atlas = ExtResource("2_xdpvh")
+region = Rect2(32, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v7wp5"]
+atlas = ExtResource("2_xdpvh")
+region = Rect2(64, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gguxo"]
+atlas = ExtResource("2_xdpvh")
+region = Rect2(96, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vq1bi"]
+atlas = ExtResource("2_xdpvh")
+region = Rect2(128, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_truei"]
+atlas = ExtResource("2_xdpvh")
+region = Rect2(160, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tihiy"]
+atlas = ExtResource("2_xdpvh")
+region = Rect2(192, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xekb6"]
+atlas = ExtResource("2_xdpvh")
+region = Rect2(224, 0, 32, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w40xc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n75aw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fedmp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v7wp5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gguxo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vq1bi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_truei")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tihiy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xekb6")
+}],
+"loop": true,
+"name": &"Drop",
+"speed": 8.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kqn0p"]
+height = 44.0
+
+[node name="FireFall" type="Area2D" groups=["hurt", "saws"]]
+script = ExtResource("1_333ir")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_w40xc")
+animation = &"Drop"
+autoplay = "Drop"
+frame_progress = 0.446524
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["hurt"]]
+shape = SubResource("CapsuleShape2D_kqn0p")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(5.96046e-08, -0.500001)
+scale = Vector2(1.1, 2.25)
