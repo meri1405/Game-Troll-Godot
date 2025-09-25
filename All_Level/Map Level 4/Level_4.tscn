@@ -20,7 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://b0oni833t64u3" path="res://Pixel Adventure 1/Cat/Cat/CAT 2.png" id="17_ej4hj"]
 [ext_resource type="Script" uid="uid://7f4754wefk68" path="res://All_Level/Map Level 7/room_1.gd" id="18_4unjl"]
 [ext_resource type="PackedScene" uid="uid://m4c8hp47kokd" path="res://UI/pause_menu.tscn" id="19_bnsfo"]
-[ext_resource type="Texture2D" uid="uid://cbhtkwag7pn5d" path="res://Pixel Adventure 1/Free/Menu/Buttons/Settings.png" id="20_4w5w6"]
+[ext_resource type="PackedScene" uid="uid://0dybtnqg5l6c" path="res://PauseButton.tscn" id="21_4w5w6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sx4db"]
 size = Vector2(15.6666, 7.33334)
@@ -1479,18 +1479,7 @@ shape = SubResource("RectangleShape2D_f2nj0")
 [node name="PauseMenu" parent="." instance=ExtResource("19_bnsfo")]
 visible = false
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="MenuButton" type="Button" parent="CanvasLayer"]
-texture_filter = 1
-offset_left = 22.0
-offset_top = 17.0
-offset_right = 51.0
-offset_bottom = 47.0
-scale = Vector2(3, 3)
-icon = ExtResource("20_4w5w6")
-flat = true
-metadata/_edit_use_anchors_ = true
+[node name="PauseButton" parent="." instance=ExtResource("21_4w5w6")]
 
 [connection signal="body_entered" from="Trap/SpikeTrap_RightMove/SpikeTrigger" to="Trap/SpikeTrap_RightMove/SpikeTrap_RightMove" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="Trap/SpikeTrap_RightMove2/SpikeTrigger" to="Trap/SpikeTrap_RightMove2/SpikeTrap_RightMove" method="_on_saw_trigger_body_entered"]
@@ -1510,4 +1499,6 @@ metadata/_edit_use_anchors_ = true
 [connection signal="body_entered" from="Trap/SpikeTrap_DownMove5/SpikeTrigger" to="Trap/SpikeTrap_DownMove5/SpikeTrap_DownMove" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="CheckPoint" to="CheckPoint" method="_on_body_entered"]
 [connection signal="body_entered" from="Room1" to="Room1" method="_on_body_entered"]
-[connection signal="pressed" from="CanvasLayer/MenuButton" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="PauseButton/Pause" to="PauseMenu" method="show_menu"]
+
+[editable path="PauseButton"]

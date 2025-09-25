@@ -37,7 +37,7 @@
 [ext_resource type="AudioStream" uid="uid://qc5nnahayu3b" path="res://audio/chase.wav" id="34_wxcms"]
 [ext_resource type="Script" uid="uid://7f4754wefk68" path="res://All_Level/Map Level 7/room_1.gd" id="35_sce2q"]
 [ext_resource type="PackedScene" uid="uid://m4c8hp47kokd" path="res://UI/pause_menu.tscn" id="37_85s4d"]
-[ext_resource type="Texture2D" uid="uid://cbhtkwag7pn5d" path="res://Pixel Adventure 1/Free/Menu/Buttons/Settings.png" id="38_5m8cm"]
+[ext_resource type="PackedScene" uid="uid://0dybtnqg5l6c" path="res://PauseButton.tscn" id="38_q7w8j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mmktn"]
 size = Vector2(60, 27)
@@ -3691,18 +3691,7 @@ shape = SubResource("RectangleShape2D_d50vw")
 [node name="PauseMenu" parent="." instance=ExtResource("37_85s4d")]
 visible = false
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="MenuButton" type="Button" parent="CanvasLayer"]
-texture_filter = 1
-offset_left = 22.0
-offset_top = 17.0
-offset_right = 51.0
-offset_bottom = 47.0
-scale = Vector2(3, 3)
-icon = ExtResource("38_5m8cm")
-flat = true
-metadata/_edit_use_anchors_ = true
+[node name="PauseButton" parent="." instance=ExtResource("38_q7w8j")]
 
 [connection signal="body_entered" from="SceneOld/SpikeTrap_LeftMove/SpikeTrigger" to="SceneOld/SpikeTrap_LeftMove/SpikeTrap_LeftMove" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="FireBallDown/FireBallTrap_DownMove/SpikeTrigger" to="FireBallDown/FireBallTrap_DownMove/SpikeTrap_DownMove" method="_on_saw_trigger_body_entered"]
@@ -3744,4 +3733,6 @@ metadata/_edit_use_anchors_ = true
 [connection signal="body_entered" from="Zombies/Zombies2/zombietrigger" to="Zombies/Zombies2/zombie3" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="Enemy/EnemyTrigger" to="Enemy/EnemyTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="Room1" to="Room1" method="_on_body_entered"]
-[connection signal="pressed" from="CanvasLayer/MenuButton" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="PauseButton/Pause" to="PauseMenu" method="show_menu"]
+
+[editable path="PauseButton"]

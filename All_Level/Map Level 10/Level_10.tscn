@@ -17,11 +17,11 @@
 [ext_resource type="Script" uid="uid://dhbe4nrvokkhm" path="res://CHiTAN/ChiTanNV.gd" id="16_xyv3u"]
 [ext_resource type="Script" uid="uid://d0i3764jsu8oy" path="res://CHiTAN/TrapXoay.gd" id="17_di44y"]
 [ext_resource type="PackedScene" uid="uid://m4c8hp47kokd" path="res://UI/pause_menu.tscn" id="18_vp6q2"]
-[ext_resource type="Texture2D" uid="uid://cbhtkwag7pn5d" path="res://Pixel Adventure 1/Free/Menu/Buttons/Settings.png" id="19_w1kt0"]
 [ext_resource type="Script" uid="uid://d1obb2soqoptq" path="res://CHiTAN/Trap_tái_sử_dụng/Trap_U_L_D.gd" id="20_s45qw"]
 [ext_resource type="Texture2D" uid="uid://bg14ereu48jp2" path="res://Pixel Adventure 1/Free/Traps/Spiked Ball/Spiked Ball.png" id="21_lghkr"]
 [ext_resource type="PackedScene" uid="uid://b0b8d8fe0ga2a" path="res://Touch_Controls/scene/touch_controls.tscn" id="22_wib0y"]
 [ext_resource type="Script" uid="uid://11o0nnucsv8j" path="res://All_Level/Map Level 1/room.gd" id="23_cgcne"]
+[ext_resource type="PackedScene" uid="uid://0dybtnqg5l6c" path="res://PauseButton.tscn" id="23_wib0y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dj87x"]
 size = Vector2(106.82, 15.3959)
@@ -546,19 +546,6 @@ shape = SubResource("SegmentShape2D_dj87x")
 [node name="PauseMenu" parent="." instance=ExtResource("18_vp6q2")]
 visible = false
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="MenuButton" type="Button" parent="CanvasLayer"]
-texture_filter = 1
-offset_left = 22.0
-offset_top = 17.0
-offset_right = 51.0
-offset_bottom = 47.0
-scale = Vector2(3, 3)
-icon = ExtResource("19_w1kt0")
-flat = true
-metadata/_edit_use_anchors_ = true
-
 [node name="Area2D3" type="Area2D" parent="." groups=["hurt"]]
 position = Vector2(322, 595)
 
@@ -614,5 +601,9 @@ shape = SubResource("RectangleShape2D_slgrp")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 
-[connection signal="pressed" from="CanvasLayer/MenuButton" to="." method="_on_menu_button_pressed"]
+[node name="PauseButton" parent="." instance=ExtResource("23_wib0y")]
+
 [connection signal="body_entered" from="Room" to="Room" method="_on_body_entered"]
+[connection signal="pressed" from="PauseButton/Pause" to="PauseMenu" method="show_menu"]
+
+[editable path="PauseButton"]

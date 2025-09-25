@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c0p1gp1m0ehxd"]
+[gd_scene load_steps=5 format=3 uid="uid://c0p1gp1m0ehxd"]
 
 [ext_resource type="Script" uid="uid://bor0vn4cccx01" path="res://UI/level_select_menu.gd" id="1_3jria"]
 [ext_resource type="Texture2D" uid="uid://bbgwpoiadoloa" path="res://Pixel Adventure 1/Free/Background/background.png" id="2_3jria"]
@@ -12,6 +12,10 @@
 [ext_resource type="Texture2D" uid="uid://bbnxga8fskrif" path="res://UI/icons/level_8.png" id="10_level8"]
 [ext_resource type="Texture2D" uid="uid://p2x3gydjwmr8" path="res://UI/icons/level_9.png" id="11_level9"]
 [ext_resource type="Texture2D" uid="uid://dw3tbebw48l4e" path="res://UI/icons/level_10.png" id="12_level10"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3jria"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_07jyw"]
 
 [node name="LevelSelectMenu" type="Control"]
 texture_filter = 1
@@ -127,8 +131,22 @@ layout_mode = 2
 layout_mode = 2
 text = "Back"
 
+[node name="TouchScreenButton" type="TouchScreenButton" parent="VBoxContainer/HBoxContainer/BackButton"]
+position = Vector2(22, 15)
+rotation = 3.14159
+scale = Vector2(2.25264, -1.4756)
+shape = SubResource("RectangleShape2D_3jria")
+
 [node name="ResetButton" type="Button" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
 text = "Reset Level"
 
+[node name="TouchScreenButton" type="TouchScreenButton" parent="VBoxContainer/HBoxContainer/ResetButton"]
+position = Vector2(48, 15)
+scale = Vector2(4.74128, 1.56569)
+shape = SubResource("RectangleShape2D_07jyw")
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/BackButton/TouchScreenButton" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/ResetButton/TouchScreenButton" to="." method="_on_reset_pressed"]

@@ -20,6 +20,14 @@ config/icon="res://icon.svg"
 AudioController="*res://audio/audio_controller.tscn"
 GameManager="*res://GameManager.gd"
 
+[display]
+
+window/size/viewport_width=1270
+window/size/viewport_height=720
+window/size/mode=3
+window/size/initial_position_type=0
+window/stretch/mode="canvas_items"
+
 [dotnet]
 
 project/assembly_name="Project-1"

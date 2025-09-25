@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://btdfqc4qp1j67" path="res://Checkpoint/Level_1/checkpoint.tscn" id="12_6er5h"]
 [ext_resource type="Script" uid="uid://d3anwk2gxoxbe" path="res://Checkpoint/Level_8/checkpoint_8.gd" id="13_2ial3"]
 [ext_resource type="PackedScene" uid="uid://m4c8hp47kokd" path="res://UI/pause_menu.tscn" id="15_fh2sk"]
-[ext_resource type="Texture2D" uid="uid://cbhtkwag7pn5d" path="res://Pixel Adventure 1/Free/Menu/Buttons/Settings.png" id="16_tr5wh"]
+[ext_resource type="PackedScene" uid="uid://0dybtnqg5l6c" path="res://PauseButton.tscn" id="16_fh2sk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jp7we"]
 texture = ExtResource("5_uyqxm")
@@ -923,18 +923,7 @@ next_level = "res://All_Level/Map Level 9/Level_9.tscn"
 [node name="PauseMenu" parent="." instance=ExtResource("15_fh2sk")]
 visible = false
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="MenuButton" type="Button" parent="CanvasLayer"]
-texture_filter = 1
-offset_left = 22.0
-offset_top = 17.0
-offset_right = 51.0
-offset_bottom = 47.0
-scale = Vector2(3, 3)
-icon = ExtResource("16_tr5wh")
-flat = true
-metadata/_edit_use_anchors_ = true
+[node name="PauseButton" parent="." instance=ExtResource("16_fh2sk")]
 
 [connection signal="body_entered" from="Plat" to="Plat/Plat" method="_on_plat_body_entered"]
 [connection signal="body_entered" from="Plat" to="Plat/Plat" method="_on_plat_player_entered"]
@@ -979,4 +968,6 @@ metadata/_edit_use_anchors_ = true
 [connection signal="body_entered" from="Disappearing3" to="Disappearing3/disBox3" method="_on_player_body_entered_box1"]
 [connection signal="body_entered" from="Disappearing4" to="Disappearing4/disBox4" method="_on_player_body_entered_box1"]
 [connection signal="body_entered" from="Room1" to="Room1" method="_on_body_entered"]
-[connection signal="pressed" from="CanvasLayer/MenuButton" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="PauseButton/Pause" to="PauseMenu" method="show_menu"]
+
+[editable path="PauseButton"]

@@ -2,10 +2,11 @@ extends CharacterBody2D
 
 const SPEED = 280.0
 const JUMP_VELOCITY = -430.0
-@onready var sprite_2d: AnimatedSprite2D = $Sprite2D
+@onready var animated_sprite_2d: AnimatedSprite2D = %AnimatedSprite2D
 @onready var camera_2d: Camera2D = $Camera2D
 var is_alive = true
 var control_inverted: bool = false
+var is_active = false
 
 var spawn_point_x=0
 var spawn_point_y=0
@@ -20,14 +21,14 @@ func _ready() -> void:
 	
 
 func _physics_process(delta: float) -> void:
-	if is_alive:
+	if is_alive and is_active:
 		if (velocity.x > 1 || velocity.x < -1):
-			sprite_2d.animation = "Running"
+			animated_sprite_2d.animation = "Running"
 		else :
-			sprite_2d.animation = "Idle"
+			animated_sprite_2d.animation = "Idle"
 			
 		# Thêm kiểm tra bước chân
-		if sprite_2d.animation == "Running" and is_on_floor():
+		if animated_sprite_2d.animation == "Running" and is_on_floor():
 			$"/root/AudioController".play_walk()
 		else:
 			$"/root/AudioController".stop_walk()
@@ -35,7 +36,7 @@ func _physics_process(delta: float) -> void:
 		# Add the gravity.
 		if not is_on_floor():
 			velocity += get_gravity() * delta
-			sprite_2d.animation = "Jumping"
+			animated_sprite_2d.animation = "Jumping"
 
 		# Handle jump.
 		if Input.is_action_just_pressed("jump") and is_on_floor():
@@ -55,8 +56,17 @@ func _physics_process(delta: float) -> void:
 		move_and_slide()
 
 		var isLeft = velocity.x < 0
-		sprite_2d.flip_h = isLeft
+		animated_sprite_2d.flip_h = isLeft
 
+func activate():
+	is_active = true
+	camera_2d.enabled = true
+
+func deactivate():
+	is_active = false
+	velocity = Vector2.ZERO # Dừng player ngay lập tức
+	animated_sprite_2d.animation = "Idle" # Chuyển về animation đứng yên
+	camera_2d.enabled = false
 
 func _do_reset():
 	$"/root/AudioController".play_respawn()
@@ -65,9 +75,9 @@ func _do_reset():
 func die():
 	
 	is_alive = false
-	sprite_2d.stop()
-	sprite_2d.play("Hit")
-	sprite_2d.play_backwards("Hit")
+	animated_sprite_2d.stop()
+	animated_sprite_2d.play("Hit")
+	animated_sprite_2d.play_backwards("Hit")
 	# Reset tất cả các bẫy saw về vị trí ban đầu
 	for saw in get_tree().get_nodes_in_group("saws"):
 		if saw.has_method("reset_trap"):
@@ -75,7 +85,7 @@ func die():
 
 	# Reset lại màu
 	current_color = 0
-	sprite_2d.modulate = Color.WHITE
+	animated_sprite_2d.modulate = Color.WHITE
 	#reset lại cơ chế nút trái phải 
 	control_inverted = false
 	
@@ -94,19 +104,19 @@ func _on_hurt_box_area_entered(area: Area2D) -> void:
 func set_color(new_color: int):
 	current_color = new_color
 	match current_color:
-		1: sprite_2d.modulate = Color.RED
-		2: sprite_2d.modulate = Color.YELLOW
-		3: sprite_2d.modulate = Color.BLUE
-		4: sprite_2d.modulate = Color.GREEN
-		5: sprite_2d.modulate = Color.HOT_PINK
-		6: sprite_2d.modulate = Color.MAGENTA
-		7: sprite_2d.modulate = Color.DARK_GRAY
-		_: sprite_2d.modulate = Color.WHITE
+		1: animated_sprite_2d.modulate = Color.RED
+		2: animated_sprite_2d.modulate = Color.YELLOW
+		3: animated_sprite_2d.modulate = Color.BLUE
+		4: animated_sprite_2d.modulate = Color.GREEN
+		5: animated_sprite_2d.modulate = Color.HOT_PINK
+		6: animated_sprite_2d.modulate = Color.MAGENTA
+		7: animated_sprite_2d.modulate = Color.DARK_GRAY
+		_: animated_sprite_2d.modulate = Color.WHITE
 
 func reset_color():
 	# Reset lại màu
 	current_color = 0
-	sprite_2d.modulate = Color.WHITE
+	animated_sprite_2d.modulate = Color.WHITE
 		
 		
 func _on_force_jump_body_entered(body: Node2D) -> void:
