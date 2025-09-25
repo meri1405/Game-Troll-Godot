@@ -491,7 +491,7 @@ size = Vector2(965, 676)
 size = Vector2(965, 928)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6boes"]
-size = Vector2(10.1875, 180.125)
+size = Vector2(93, 135)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a1x2x"]
 size = Vector2(149, 17)
@@ -543,11 +543,11 @@ flip_h = true
 [node name="Reverse" type="TextureRect" parent="Background"]
 z_index = -2
 texture_filter = 1
-offset_left = 410.0
-offset_top = -864.0
-offset_right = 798.0
-offset_bottom = -302.0
-scale = Vector2(0.2, 0.2)
+offset_left = 391.0
+offset_top = -876.0
+offset_right = 779.0
+offset_bottom = -314.0
+scale = Vector2(0.24, 0.24)
 texture = ExtResource("4_1kn8q")
 
 [node name="TouchControls" parent="Background" instance=ExtResource("5_rgm6c")]
@@ -1018,7 +1018,7 @@ position = Vector2(109, -971)
 script = ExtResource("14_olx4f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerDir/TriggerChangeDir"]
-position = Vector2(469, 161)
+position = Vector2(328.5, 162.5)
 shape = SubResource("RectangleShape2D_6boes")
 
 [node name="DisTriggerChangeDir" type="Area2D" parent="TriggerDir"]
