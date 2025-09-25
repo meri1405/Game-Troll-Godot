@@ -62,7 +62,7 @@ size = Vector2(20, 64)
 size = Vector2(116.937, 19.4914)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h3scc"]
-size = Vector2(64.3434, 75.1184)
+size = Vector2(37.8032, 75.1184)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y02rr"]
 texture = ExtResource("13_203x5")
@@ -447,7 +447,7 @@ scale = Vector2(0.999975, 1.03161)
 shape = SubResource("RectangleShape2D_fiqh6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Trap/Trap-d3"]
-position = Vector2(107.978, 224.058)
+position = Vector2(108.033, 229.036)
 rotation = -1.58177
 scale = Vector2(0.37512, 0.566092)
 shape = SubResource("RectangleShape2D_h3scc")

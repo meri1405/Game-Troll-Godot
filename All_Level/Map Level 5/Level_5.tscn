@@ -3669,7 +3669,7 @@ stream = ExtResource("34_wxcms")
 [node name="Checkpoint" parent="." instance=ExtResource("1_sce2q")]
 position = Vector2(13602, 477)
 script = ExtResource("6_37wwv")
-current_level_number = 2
+current_level_number = 5
 next_level = "res://All_Level/Map Level 6/Level_6.tscn"
 
 [node name="Room1" type="Area2D" parent="." node_paths=PackedStringArray("canvas_mod") groups=["Room_light"]]

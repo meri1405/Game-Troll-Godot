@@ -918,7 +918,7 @@ shape = SubResource("RectangleShape2D_8qhcr")
 position = Vector2(1687, -83)
 script = ExtResource("13_2ial3")
 current_level_number = 8
-next_level = "res://All_Level/Map Level 9/level_9.tscn"
+next_level = "res://All_Level/Map Level 9/Level_9.tscn"
 
 [node name="PauseMenu" parent="." instance=ExtResource("15_fh2sk")]
 visible = false
