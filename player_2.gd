@@ -61,7 +61,7 @@ func _physics_process(delta: float) -> void:
 func activate():
 	is_active = true
 	camera_2d.enabled = true
-	
+
 func deactivate():
 	is_active = false
 	velocity = Vector2.ZERO # Dừng player ngay lập tức
