@@ -300,7 +300,7 @@
 [ext_resource type="Script" uid="uid://distnvfjbs27t" path="res://All_Level/Map Level 7/checkpoint_respawn.gd" id="294_mqqgr"]
 [ext_resource type="Texture2D" uid="uid://c8v1kucqyrpvq" path="res://Pixel Adventure 1/Free/Items/Checkpoints/Start/Start (Idle).png" id="295_db5fy"]
 [ext_resource type="PackedScene" uid="uid://m4c8hp47kokd" path="res://UI/pause_menu.tscn" id="296_7q148"]
-[ext_resource type="Texture2D" uid="uid://cbhtkwag7pn5d" path="res://Pixel Adventure 1/Free/Menu/Buttons/Settings.png" id="297_oxrg7"]
+[ext_resource type="PackedScene" uid="uid://0dybtnqg5l6c" path="res://PauseButton.tscn" id="301_flr2n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_74qg3"]
 texture = ExtResource("2_m3c78")
@@ -3151,18 +3151,7 @@ shape = SubResource("RectangleShape2D_mqqgr")
 [node name="PauseMenu" parent="." instance=ExtResource("296_7q148")]
 visible = false
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="MenuButton" type="Button" parent="CanvasLayer"]
-texture_filter = 1
-offset_left = 22.0
-offset_top = 17.0
-offset_right = 51.0
-offset_bottom = 47.0
-scale = Vector2(3, 3)
-icon = ExtResource("297_oxrg7")
-flat = true
-metadata/_edit_use_anchors_ = true
+[node name="PauseButton" parent="." instance=ExtResource("301_flr2n")]
 
 [connection signal="body_entered" from="FakeKey" to="FakeKey" method="_on_body_entered"]
 [connection signal="body_entered" from="RedKey" to="RedKey" method="_on_body_entered"]
@@ -3207,4 +3196,6 @@ metadata/_edit_use_anchors_ = true
 [connection signal="body_entered" from="Fruits/Trap-Pineapple/Pineapple" to="Fruits/Trap-Pineapple/Pineapple" method="_on_body_entered"]
 [connection signal="body_entered" from="Fruits/Trap-GreyKey/Kiwi" to="Fruits/Trap-GreyKey/Kiwi" method="_on_body_entered"]
 [connection signal="body_entered" from="CheckpointRespawn" to="CheckpointRespawn" method="_on_body_entered"]
-[connection signal="pressed" from="CanvasLayer/MenuButton" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="PauseButton/Pause" to="PauseMenu" method="show_menu"]
+
+[editable path="PauseButton"]

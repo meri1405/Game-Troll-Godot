@@ -9,22 +9,25 @@
 script = ExtResource("1_cbiyp")
 
 [node name="Left" type="TouchScreenButton" parent="."]
+self_modulate = Color(1, 1, 1, 0.196078)
 texture_filter = 1
-position = Vector2(60, 461)
+position = Vector2(60, 550)
 scale = Vector2(8.2, 8.2)
 texture_normal = ExtResource("1_hlngq")
 action = "left"
 
 [node name="Right" type="TouchScreenButton" parent="."]
+self_modulate = Color(1, 1, 1, 0.196078)
 texture_filter = 1
-position = Vector2(302, 461)
+position = Vector2(302, 550)
 scale = Vector2(8.2, 8.2)
 texture_normal = ExtResource("2_cbiyp")
 action = "right"
 
 [node name="Jump" type="TouchScreenButton" parent="."]
+self_modulate = Color(1, 1, 1, 0.196078)
 texture_filter = 1
-position = Vector2(1086, 453)
+position = Vector2(1086, 550)
 scale = Vector2(8.2, 8.2)
 texture_normal = ExtResource("3_yeusx")
 action = "jump"

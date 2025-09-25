@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://m4c8hp47kokd"]
+[gd_scene load_steps=7 format=3 uid="uid://m4c8hp47kokd"]
 
 [ext_resource type="Script" uid="uid://cie4765y7nai" path="res://UI/pause_menu.gd" id="1_ltd3m"]
 [ext_resource type="Texture2D" uid="uid://l8gwdmxtel2c" path="res://Pixel Adventure 1/Free/Menu/Buttons/Restart.png" id="2_0b5ob"]
 [ext_resource type="Texture2D" uid="uid://boqnewygascjc" path="res://home_icon_21x22.png" id="3_nben2"]
 [ext_resource type="Texture2D" uid="uid://bloq3xuxutf25" path="res://Pixel Adventure 1/Free/Menu/Buttons/Volume.png" id="3_pqlge"]
 [ext_resource type="Texture2D" uid="uid://braaoi1b501hw" path="res://Pixel Adventure 1/Free/Menu/Buttons/Play.png" id="4_nben2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pqlge"]
 
 [node name="PauseMenu" type="CanvasLayer"]
 script = ExtResource("1_ltd3m")
@@ -13,10 +15,10 @@ script = ExtResource("1_ltd3m")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -950.0
-offset_top = -498.0
-offset_right = -950.0
-offset_bottom = -498.0
+offset_left = -977.0
+offset_top = -536.0
+offset_right = -977.0
+offset_bottom = -536.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(2.5, 2.5)
@@ -25,26 +27,50 @@ scale = Vector2(2.5, 2.5)
 layout_mode = 2
 
 [node name="ReplayButton" type="Button" parent="CenterContainer/VBoxContainer"]
+texture_filter = 1
 layout_mode = 2
 text = "Chơi lại"
 icon = ExtResource("2_0b5ob")
 
+[node name="ReplayTouch" type="TouchScreenButton" parent="CenterContainer/VBoxContainer/ReplayButton"]
+position = Vector2(68.4, 15.2)
+scale = Vector2(6.744, 1.432)
+shape = SubResource("RectangleShape2D_pqlge")
+
 [node name="HomeButton" type="Button" parent="CenterContainer/VBoxContainer"]
+texture_filter = 1
 layout_mode = 2
 text = " Trở lại"
 icon = ExtResource("3_nben2")
 
+[node name="home" type="TouchScreenButton" parent="CenterContainer/VBoxContainer/HomeButton"]
+position = Vector2(68.4, 15)
+scale = Vector2(6.744, 1.432)
+shape = SubResource("RectangleShape2D_pqlge")
+
 [node name="SoundButton" type="Button" parent="CenterContainer/VBoxContainer"]
+texture_filter = 1
 layout_mode = 2
 text = "Tắt âm thanh"
 icon = ExtResource("3_pqlge")
 
+[node name="Sound" type="TouchScreenButton" parent="CenterContainer/VBoxContainer/SoundButton"]
+position = Vector2(68.4, 14.8)
+scale = Vector2(6.744, 1.432)
+shape = SubResource("RectangleShape2D_pqlge")
+
 [node name="Continue" type="Button" parent="CenterContainer/VBoxContainer"]
+texture_filter = 1
 layout_mode = 2
 text = "Tiếp Tục"
 icon = ExtResource("4_nben2")
 
-[connection signal="pressed" from="CenterContainer/VBoxContainer/ReplayButton" to="." method="_on_replay_button_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/HomeButton" to="." method="_on_home_button_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/SoundButton" to="." method="_on_sound_button_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/Continue" to="." method="_on_continue_pressed"]
+[node name="Continue" type="TouchScreenButton" parent="CenterContainer/VBoxContainer/Continue"]
+position = Vector2(67.6, 15.4)
+scale = Vector2(6.744, 1.432)
+shape = SubResource("RectangleShape2D_pqlge")
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/ReplayButton/ReplayTouch" to="." method="_on_replay_button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/HomeButton/home" to="." method="_on_home_button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/SoundButton/Sound" to="." method="_on_sound_button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Continue/Continue" to="." method="_on_continue_pressed"]

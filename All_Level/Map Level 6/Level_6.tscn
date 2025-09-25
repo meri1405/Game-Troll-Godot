@@ -31,8 +31,8 @@
 [ext_resource type="Script" uid="uid://60i8wtu03hrn" path="res://CHiTAN/sssssssss.gd" id="26_iq1tm"]
 [ext_resource type="Texture2D" uid="uid://m0qlxx0uwevm" path="res://UI/ImgBlock/Check.tres" id="27_6tfwg"]
 [ext_resource type="PackedScene" uid="uid://m4c8hp47kokd" path="res://UI/pause_menu.tscn" id="31_idb32"]
-[ext_resource type="Texture2D" uid="uid://cbhtkwag7pn5d" path="res://Pixel Adventure 1/Free/Menu/Buttons/Settings.png" id="32_paoph"]
 [ext_resource type="PackedScene" uid="uid://b0b8d8fe0ga2a" path="res://Touch_Controls/scene/touch_controls.tscn" id="33_7wvgo"]
+[ext_resource type="PackedScene" uid="uid://0dybtnqg5l6c" path="res://PauseButton.tscn" id="34_7wvgo"]
 [ext_resource type="Script" uid="uid://11o0nnucsv8j" path="res://All_Level/Map Level 1/room.gd" id="34_oj28q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vydm2"]
@@ -897,19 +897,6 @@ shape = SubResource("RectangleShape2D_mht5k")
 [node name="PauseMenu" parent="." instance=ExtResource("31_idb32")]
 visible = false
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="MenuButton" type="Button" parent="CanvasLayer"]
-texture_filter = 1
-offset_left = 22.0
-offset_top = 17.0
-offset_right = 51.0
-offset_bottom = 47.0
-scale = Vector2(3, 3)
-icon = ExtResource("32_paoph")
-flat = true
-metadata/_edit_use_anchors_ = true
-
 [node name="TouchControls" parent="." instance=ExtResource("33_7wvgo")]
 
 [node name="Room" type="Area2D" parent="." node_paths=PackedStringArray("canvas_mod") groups=["Room_light"]]
@@ -929,10 +916,14 @@ shape = SubResource("RectangleShape2D_535tm")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 
+[node name="PauseButton" parent="." instance=ExtResource("34_7wvgo")]
+
 [connection signal="body_entered" from="TrapTrigger" to="TrapTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="TrapTrigger1" to="TrapTrigger1" method="_on_body_entered"]
 [connection signal="body_entered" from="TrapTrigger2" to="TrapTrigger2" method="_on_body_entered"]
 [connection signal="body_entered" from="TrapTrigger3" to="TrapTrigger3" method="_on_body_entered"]
 [connection signal="body_entered" from="TrapTrigger4" to="TrapTrigger4" method="_on_body_entered"]
-[connection signal="pressed" from="CanvasLayer/MenuButton" to="." method="_on_menu_button_pressed"]
 [connection signal="body_entered" from="Room" to="Room" method="_on_body_entered"]
+[connection signal="pressed" from="PauseButton/Pause" to="PauseMenu" method="show_menu"]
+
+[editable path="PauseButton"]

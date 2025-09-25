@@ -16,7 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://b0b8d8fe0ga2a" path="res://Touch_Controls/scene/touch_controls.tscn" id="13_nsnvd"]
 [ext_resource type="Script" uid="uid://11o0nnucsv8j" path="res://All_Level/Map Level 1/room.gd" id="14_g5vt1"]
 [ext_resource type="PackedScene" uid="uid://m4c8hp47kokd" path="res://UI/pause_menu.tscn" id="15_u4meq"]
-[ext_resource type="Texture2D" uid="uid://cbhtkwag7pn5d" path="res://Pixel Adventure 1/Free/Menu/Buttons/Settings.png" id="16_oil2x"]
+[ext_resource type="PackedScene" uid="uid://0dybtnqg5l6c" path="res://PauseButton.tscn" id="17_oil2x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h0yon"]
 texture = ExtResource("3_g5vt1")
@@ -475,18 +475,7 @@ shape = SubResource("RectangleShape2D_ufjkb")
 [node name="PauseMenu" parent="." instance=ExtResource("15_u4meq")]
 visible = false
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="MenuButton" type="Button" parent="CanvasLayer"]
-texture_filter = 1
-offset_left = 22.0
-offset_top = 17.0
-offset_right = 51.0
-offset_bottom = 47.0
-scale = Vector2(3, 3)
-icon = ExtResource("16_oil2x")
-flat = true
-metadata/_edit_use_anchors_ = true
+[node name="PauseButton" parent="." instance=ExtResource("17_oil2x")]
 
 [connection signal="body_entered" from="TrapTrigger" to="TrapTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="TrapTrigger2" to="TrapTrigger2" method="_on_body_entered"]
@@ -495,4 +484,6 @@ metadata/_edit_use_anchors_ = true
 [connection signal="body_entered" from="Plane2" to="Plane2" method="_on_body_entered"]
 [connection signal="body_entered" from="Area2D" to="Spike3set/Spike3set-Trap" method="_on_fan_trigger_body_entered"]
 [connection signal="body_entered" from="Room" to="Room" method="_on_body_entered"]
-[connection signal="pressed" from="CanvasLayer/MenuButton" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="PauseButton/Pause" to="PauseMenu" method="show_menu"]
+
+[editable path="PauseButton"]

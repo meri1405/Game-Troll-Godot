@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://0dybtnqg5l6c"]
+
+[ext_resource type="Texture2D" uid="uid://cbhtkwag7pn5d" path="res://Pixel Adventure 1/Free/Menu/Buttons/Settings.png" id="1_bhs31"]
+
+[node name="PauseButton" type="CanvasLayer"]
+
+[node name="Pause" type="TouchScreenButton" parent="."]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture_normal = ExtResource("1_bhs31")
+metadata/_edit_use_anchors_ = true
