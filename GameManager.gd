@@ -6,8 +6,10 @@ const SAVE_FILE = "user://game_progress.save"
 # Dữ liệu game
 var max_level_unlocked: int = 1
 var current_level: int = 1
+var death_count: int = 0
 
 signal level_unlocked(level_number: int)
+signal death_count_changed(new_count: int)
 
 func _ready():
 	load_progress()
@@ -18,7 +20,8 @@ func save_progress():
 	if save_file:
 		var save_data = {
 			"max_level_unlocked": max_level_unlocked,
-			"current_level": current_level
+			"current_level": current_level,
+			"death_count": death_count
 		}
 		save_file.store_string(JSON.stringify(save_data))
 		save_file.close()
@@ -39,7 +42,8 @@ func load_progress():
 				var save_data = json.data
 				max_level_unlocked = save_data.get("max_level_unlocked", 1)
 				current_level = save_data.get("current_level", 1)
-				print("Progress loaded: Max level ", max_level_unlocked)
+				death_count = save_data.get("death_count", 0)
+				print("Progress loaded: Max level ", max_level_unlocked, ", Deaths: ", death_count)
 			else:
 				print("Error parsing save file")
 	else:
@@ -94,6 +98,24 @@ func is_level_unlocked(level_number: int) -> bool:
 func reset_progress():
 	max_level_unlocked = 1
 	current_level = 1
+	death_count = 0
+	save_progress()
+
+# Tăng death count
+func increment_death_count():
+	death_count += 1
+	death_count_changed.emit(death_count)
+	save_progress()
+	print("Death count: ", death_count)
+
+# Get death count
+func get_death_count() -> int:
+	return death_count
+
+# Reset death count
+func reset_death_count():
+	death_count = 0
+	death_count_changed.emit(death_count)
 	save_progress()
 
 # Helper function để list tất cả levels có sẵn

@@ -63,7 +63,7 @@ func _do_reset():
 	position = Vector2(spawn_point_x,spawn_point_y)
 
 func die():
-	
+	GameManager.increment_death_count()
 	is_alive = false
 	sprite_2d.stop()
 	sprite_2d.play("Hit")

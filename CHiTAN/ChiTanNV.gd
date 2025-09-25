@@ -92,6 +92,9 @@ func reset_all_objects():
 
 func die():
 	print("Player died!")
+	# Tăng death count trong GameManager
+	GameManager.increment_death_count()
+	
 	is_alive = false
 	sprite_2d.stop()
 	sprite_2d.play("Hit")
