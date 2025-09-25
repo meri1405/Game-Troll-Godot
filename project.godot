@@ -20,11 +20,6 @@ config/icon="res://icon.svg"
 AudioController="*res://audio/audio_controller.tscn"
 GameManager="*res://GameManager.gd"
 
-[display]
-
-window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
-
 [dotnet]
 
 project/assembly_name="Project-1"
