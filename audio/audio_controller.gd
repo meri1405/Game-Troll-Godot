@@ -57,3 +57,6 @@ func stop_all() -> void:
 	$Click.stop()
 	$EndLevel.stop()
 	
+func stop_music() -> void:
+	if $Music.playing:
+		$Music.stop()

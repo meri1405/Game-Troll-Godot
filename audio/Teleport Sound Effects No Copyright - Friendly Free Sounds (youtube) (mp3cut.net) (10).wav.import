@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c6iywcdi7kgur"
+path="res://.godot/imported/Teleport Sound Effects No Copyright - Friendly Free Sounds (youtube) (mp3cut.net) (10).wav-56bc994fec6c94680ef52ec413d3d135.sample"
+
+[deps]
+
+source_file="res://audio/Teleport Sound Effects No Copyright - Friendly Free Sounds (youtube) (mp3cut.net) (10).wav"
+dest_files=["res://.godot/imported/Teleport Sound Effects No Copyright - Friendly Free Sounds (youtube) (mp3cut.net) (10).wav-56bc994fec6c94680ef52ec413d3d135.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
