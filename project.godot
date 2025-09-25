@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 AudioController="*res://audio/audio_controller.tscn"
 GameManager="*res://GameManager.gd"
+DeathCounterUI="*res://UI/DeathCounterUI.tscn"
 
 [display]
 

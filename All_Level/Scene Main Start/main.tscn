@@ -25,17 +25,17 @@ size_flags_vertical = 4
 texture = ExtResource("1_ig7tw")
 
 [node name="Start-BT" type="TouchScreenButton" parent="."]
-position = Vector2(528, 61)
+position = Vector2(487, 61)
 scale = Vector2(0.208984, 0.21582)
 texture_normal = ExtResource("2_h2yge")
 
 [node name="LevelSelectBt" type="TouchScreenButton" parent="."]
-position = Vector2(538, 212)
+position = Vector2(499, 254)
 scale = Vector2(0.133143, 0.140526)
 texture_normal = ExtResource("5_lquwl")
 
 [node name="Quit-BT" type="TouchScreenButton" parent="."]
-position = Vector2(531, 309)
+position = Vector2(494, 387)
 scale = Vector2(0.2, 0.2)
 texture_normal = ExtResource("3_1bvp3")
 

@@ -21,7 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://btdfqc4qp1j67" path="res://Checkpoint/Level_1/checkpoint.tscn" id="18_s2rjt"]
 [ext_resource type="Script" uid="uid://da4i60m7nl6k7" path="res://Checkpoint/Level_3/checkpoint_3.gd" id="19_pmb6u"]
 [ext_resource type="PackedScene" uid="uid://m4c8hp47kokd" path="res://UI/pause_menu.tscn" id="21_bb31q"]
-[ext_resource type="Texture2D" uid="uid://cbhtkwag7pn5d" path="res://Pixel Adventure 1/Free/Menu/Buttons/Settings.png" id="22_0rc6n"]
+[ext_resource type="PackedScene" uid="uid://0dybtnqg5l6c" path="res://PauseButton.tscn" id="22_rc3a0"]
 [ext_resource type="PackedScene" uid="uid://b0b8d8fe0ga2a" path="res://Touch_Controls/scene/touch_controls.tscn" id="23_rc3a0"]
 [ext_resource type="Script" uid="uid://11o0nnucsv8j" path="res://All_Level/Map Level 1/room.gd" id="24_rtpcx"]
 
@@ -62,7 +62,7 @@ size = Vector2(20, 64)
 size = Vector2(116.937, 19.4914)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h3scc"]
-size = Vector2(64.3434, 75.1184)
+size = Vector2(37.8032, 75.1184)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y02rr"]
 texture = ExtResource("13_203x5")
@@ -447,7 +447,7 @@ scale = Vector2(0.999975, 1.03161)
 shape = SubResource("RectangleShape2D_fiqh6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Trap/Trap-d3"]
-position = Vector2(107.978, 224.058)
+position = Vector2(108.033, 229.036)
 rotation = -1.58177
 scale = Vector2(0.37512, 0.566092)
 shape = SubResource("RectangleShape2D_h3scc")
@@ -521,18 +521,7 @@ next_level = "res://All_Level/Map Level 4/Level_4.tscn"
 [node name="PauseMenu" parent="." instance=ExtResource("21_bb31q")]
 visible = false
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="MenuButton" type="Button" parent="CanvasLayer"]
-texture_filter = 1
-offset_left = 22.0
-offset_top = 17.0
-offset_right = 51.0
-offset_bottom = 47.0
-scale = Vector2(3, 3)
-icon = ExtResource("22_0rc6n")
-flat = true
-metadata/_edit_use_anchors_ = true
+[node name="PauseButton" parent="." instance=ExtResource("22_rc3a0")]
 
 [node name="TouchControls" parent="." instance=ExtResource("23_rc3a0")]
 
@@ -554,5 +543,7 @@ shape = SubResource("RectangleShape2D_7csua")
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
-[connection signal="pressed" from="CanvasLayer/MenuButton" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="PauseButton/Pause" to="PauseMenu" method="show_menu"]
 [connection signal="body_entered" from="Room" to="Room" method="_on_body_entered"]
+
+[editable path="PauseButton"]
