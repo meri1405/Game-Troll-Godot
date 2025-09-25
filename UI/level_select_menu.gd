@@ -65,6 +65,7 @@ func _on_back_pressed():
 func _on_reset_pressed():
 	GameManager.max_level_unlocked = 1
 	GameManager.current_level = 1
+	GameManager.reset_death_count()  # Reset death count cùng với progress
 	GameManager.save_progress()
 	create_level_buttons()
 

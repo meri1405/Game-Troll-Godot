@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfxbj1m0v8pku"]
+
+[ext_resource type="PackedScene" uid="uid://byrd1nnfej3k7" path="res://UI/DeathCounter.tscn" id="1_counter"]
+
+[node name="DeathCounterUI" type="CanvasLayer"]
+
+[node name="DeathCounter" parent="." instance=ExtResource("1_counter")]
