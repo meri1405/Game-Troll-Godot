@@ -6,7 +6,7 @@ func _physics_process(delta):
 	position.y += fall_speed * delta   # tự di chuyển xuống
 
 	# Nếu rơi xuống quá xa màn hình thì xóa để tiết kiệm bộ nhớ
-	if position.y > 700:  # tuỳ map
+	if position.y > 48:  # tuỳ map
 		queue_free()
 
 func _on_body_entered(body):

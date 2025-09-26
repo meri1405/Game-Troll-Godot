@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-@export var speed: float = 200.0
-@export var direction: int = 1
+@export var speed: float = 330.0
+@export var direction: int = -1
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var collision_shape_2d: CollisionShape2D = $Area2D/CollisionShape2D
 
@@ -22,13 +22,13 @@ func _physics_process(delta: float) -> void:
 		global_position.x += direction * speed * delta
 		animated_sprite_2d.animation = "running"
 		collision_shape_2d.call_deferred("set_disabled", false)
-	if global_position.x > 2700 :
+	if global_position.x < 3200 :
 		animated_sprite_2d.animation = "dead"
 		await get_tree().create_timer(1.0).timeout
-		visible = false
-		set_physics_process(false)
 		if collision_shape_2d:
 			collision_shape_2d.call_deferred("set_disabled", true)
+		visible = false
+		set_physics_process(false)
 		print("Delete_fire")
 	
 

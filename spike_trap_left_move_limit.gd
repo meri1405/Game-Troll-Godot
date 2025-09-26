@@ -2,13 +2,15 @@ extends Area2D
 
 @export var speed: float = 600.0
 @export var direction: int = 1
-@export var max_distance: float = 60.0  # khoảng cách tối đa
+@export var max_distance: float = 30.0  # khoảng cách tối đa
+@onready var spike_trigger: Area2D = $"../SpikeTrigger"
 
 var triggered: bool = false
 var start_position: Vector2
 
 func _ready():
 	start_position = global_position
+	
 
 func _physics_process(delta: float) -> void:
 	if triggered:
@@ -17,6 +19,8 @@ func _physics_process(delta: float) -> void:
 		# kiểm tra khoảng cách đã đi được
 		if abs(global_position.x - start_position.x) >= max_distance:
 			triggered = false   # dừng lại ở đó
+		
+		
 
 func _on_saw_trigger_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
