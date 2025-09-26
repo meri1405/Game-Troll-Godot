@@ -3603,6 +3603,7 @@ shape = SubResource("RectangleShape2D_jfhrd")
 [node name="zombie3" type="CharacterBody2D" parent="Zombies/Zombies2" groups=["hurt", "saws"]]
 texture_filter = 1
 position = Vector2(14266, 546)
+scale = Vector2(0.999925, 1)
 script = ExtResource("24_eku0b")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Zombies/Zombies2/zombie3"]
@@ -3621,6 +3622,7 @@ shape = SubResource("CapsuleShape2D_kqs4q")
 
 [node name="zombietrigger" type="Area2D" parent="Zombies/Zombies2"]
 position = Vector2(13972, 540)
+scale = Vector2(0.999925, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Zombies/Zombies2/zombietrigger"]
 position = Vector2(48.5, -103)
