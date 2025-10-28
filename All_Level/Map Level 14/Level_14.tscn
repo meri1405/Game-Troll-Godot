@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c85pk27sc71ds" path="res://level_1.gd" id="1_dk26m"]
 [ext_resource type="Texture2D" uid="uid://dykufv5680ij8" path="res://Pixel Adventure 1/Free/Background/Yellow.png" id="2_dk26m"]
-[ext_resource type="Script" uid="uid://dwfl0w5qqyjka" path="res://teleport.gd" id="3_5vrkw"]
+[ext_resource type="Script" uid="uid://ds33xd35kdrki" path="res://teleport.gd" id="3_5vrkw"]
 [ext_resource type="Texture2D" uid="uid://d1qutp1sa7ags" path="res://Pixel Adventure 1/Dimensional_Portal.png" id="4_2lamd"]
 [ext_resource type="AudioStream" uid="uid://b0hj08dk82lrn" path="res://audio/Teleport Sound Effects No Copyright - Friendly Free Sounds (youtube) (mp3cut.net) (1).wav" id="5_oflku"]
 [ext_resource type="Script" uid="uid://ow7lj5frkx85" path="res://CHiTAN/Trap_tái_sử_dụng/Trap_DULR.gd" id="6_5vrkw"]
@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dt1tth682nenl" path="res://Scenes/character_body_2d.tscn" id="7_eep2x"]
 [ext_resource type="Texture2D" uid="uid://bglou6eu75n13" path="res://CHiTAN/ChiTanLevel/PikPng.com_meme-png_2575455.png" id="8_2lamd"]
 [ext_resource type="Script" uid="uid://dhbe4nrvokkhm" path="res://CHiTAN/ChiTanNV.gd" id="8_8cf3m"]
-[ext_resource type="Script" uid="uid://deg3pt3o0e73b" path="res://CHiTAN/ChiTanLevel/changeSize.gd" id="9_enkxr"]
+[ext_resource type="Script" path="res://CHiTAN/ChiTanLevel/changeSize.gd" id="9_enkxr"]
 [ext_resource type="Script" uid="uid://ct04dphm552vt" path="res://CHiTAN/ChiTanLevel/activation_zone.gd" id="9_oflku"]
 [ext_resource type="Texture2D" uid="uid://bqcygrpxkexkd" path="res://CHiTAN/ChiTanLevel/pngimg.com - doge_meme_PNG8.png" id="10_i8gp3"]
 [ext_resource type="PackedScene" uid="uid://btdfqc4qp1j67" path="res://Checkpoint/Level_1/checkpoint.tscn" id="11_eep2x"]

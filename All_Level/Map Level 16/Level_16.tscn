@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cqpsq4hn375uo" path="res://Pixel Adventure 1/Free/Background/2DBackground_19.png" id="1_vwa5x"]
 [ext_resource type="Texture2D" uid="uid://df4x1pqr3p3l5" path="res://Bg-Dark/Tileset/Dark_Horror_Asset_pack.png" id="2_eg1ct"]
-[ext_resource type="Script" uid="uid://cpsekmx0g7lgi" path="res://lava_trap.gd" id="3_eg1ct"]
+[ext_resource type="Script" path="res://lava_trap.gd" id="3_eg1ct"]
 [ext_resource type="PackedScene" uid="uid://dt1tth682nenl" path="res://Scenes/character_body_2d.tscn" id="3_kjdhy"]
 [ext_resource type="Texture2D" uid="uid://cool2brf0gpfw" path="res://Pixel Adventure 1/Card/32x32 Lava Tiles/10001.png" id="3_qb3eu"]
 [ext_resource type="Texture2D" uid="uid://dirj3fodendma" path="res://Pixel Adventure 1/Card/32x32 Lava Tiles/10002.png" id="4_kjdhy"]

@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c2urtr66gce31" path="res://Pixel Adventure 1/Free/Background/Green.png" id="1_g74ai"]
 [ext_resource type="Texture2D" uid="uid://cmx6ev0y0fkb7" path="res://Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="2_ieqyb"]
 [ext_resource type="PackedScene" uid="uid://dt1tth682nenl" path="res://Scenes/character_body_2d.tscn" id="3_ieqyb"]
-[ext_resource type="Script" uid="uid://cbdoukmvx3kuy" path="res://All_Level/Map Level 11/tile_go_go.gd" id="4_b4mrp"]
+[ext_resource type="Script" path="res://All_Level/Map Level 11/tile_go_go.gd" id="4_b4mrp"]
 [ext_resource type="Script" uid="uid://7f4754wefk68" path="res://All_Level/Map Level 7/room_1.gd" id="4_hpmnp"]
 [ext_resource type="PackedScene" uid="uid://b0b8d8fe0ga2a" path="res://Touch_Controls/scene/touch_controls.tscn" id="5_dp8h8"]
 [ext_resource type="PackedScene" uid="uid://m4c8hp47kokd" path="res://UI/pause_menu.tscn" id="6_b4mrp"]

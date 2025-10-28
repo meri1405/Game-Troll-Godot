@@ -2,7 +2,11 @@
 
 importer="wav"
 type="AudioStreamWAV"
+<<<<<<< HEAD
 uid="uid://bs1b5vk3dfp1r"
+=======
+uid="uid://1akeedf865lm"
+>>>>>>> 8cbdea131be2545ac35de74fe103be710b14221a
 path="res://.godot/imported/8-bit-jump-001-171817.wav-b20061250a6f8207ae5b6e8f1e7c81fe.sample"
 
 [deps]
