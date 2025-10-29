@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://fl3ptdes687d"]
+
+[ext_resource type="Texture2D" uid="uid://cmx6ev0y0fkb7" path="res://Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="1_a5s2x"]
+
+[resource]
+atlas = ExtResource("1_a5s2x")
+region = Rect2(111.824, -0.0375805, 15.8869, 16.3222)
