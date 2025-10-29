@@ -14,7 +14,7 @@ func _physics_process(delta: float) -> void:
 	if triggered:
 		velocity.x = direction * SPEED
 		visible = true
-	if global_position.x > 3600:
+	if global_position.x > 5900:
 			triggered = false
 			velocity.x = 0
 	move_and_slide()
