@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const SPEED = 2000
+const SPEED = 2500
 const JUMP_VELOCITY = -400.0
 var direction= -1
 var triggered = false

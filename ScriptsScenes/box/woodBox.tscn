@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://i05rkcjy5d7q"]
+
+[ext_resource type="Script" uid="uid://cn68kf01nitbs" path="res://ScriptsScenes/box/appearingBox.gd" id="1_vgn05"]
+[ext_resource type="Texture2D" uid="uid://et81wap61p4f" path="res://Pixel Adventure 1/Free/Items/Boxes/Box1/Idle.png" id="2_i2spy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g5lo0"]
+
+[node name="Box4" type="CharacterBody2D"]
+texture_filter = 1
+script = ExtResource("1_vgn05")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_i2spy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_g5lo0")
