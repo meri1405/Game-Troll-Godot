@@ -614,7 +614,7 @@ scale = Vector2(0.881054, 0.85639)
 texture = ExtResource("3_ur2pt")
 
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("4_rdq32")]
-position = Vector2(235, 639)
+position = Vector2(47, 823)
 
 [node name="PointLight2D" type="PointLight2D" parent="Player"]
 
