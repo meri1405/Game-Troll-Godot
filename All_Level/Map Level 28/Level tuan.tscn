@@ -1,4 +1,5 @@
 [gd_scene load_steps=55 format=3 uid="uid://4huninu4e13n"]
+[gd_scene load_steps=57 format=3 uid="uid://4huninu4e13n"]
 
 [ext_resource type="Texture2D" uid="uid://cmx6ev0y0fkb7" path="res://Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="1_5dq7r"]
 [ext_resource type="Texture2D" uid="uid://c6hhr64uxscxc" path="res://Pixel Adventure 1/Free/Terrain/rock_ice_alt_tileset_5.png" id="2_rdq32"]
@@ -16,6 +17,7 @@
 [ext_resource type="Script" uid="uid://dlwht1vd6fno0" path="res://All_Level/Map Level 28/level_drop2.gd" id="14_5it8d"]
 [ext_resource type="Script" uid="uid://e3cnttgr7mkc" path="res://All_Level/Map Level 24/trigger_move.gd" id="15_tyljg"]
 [ext_resource type="PackedScene" uid="uid://btdfqc4qp1j67" path="res://Checkpoint/Level_1/checkpoint.tscn" id="16_tyljg"]
+[ext_resource type="Script" uid="uid://7f4754wefk68" path="res://All_Level/Map Level 7/room_1.gd" id="17_ud8kb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rgamw"]
 texture = ExtResource("1_5dq7r")
@@ -596,6 +598,9 @@ size = Vector2(239, 8)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_02twt"]
 size = Vector2(25, 420)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fim22"]
+size = Vector2(1385, 882)
+
 [node name="LevelTuan" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -614,7 +619,7 @@ scale = Vector2(0.881054, 0.85639)
 texture = ExtResource("3_ur2pt")
 
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("4_rdq32")]
-position = Vector2(47, 823)
+position = Vector2(142, 841)
 
 [node name="PointLight2D" type="PointLight2D" parent="Player"]
 
@@ -859,6 +864,24 @@ shape = SubResource("RectangleShape2D_vh7qx")
 [node name="Checkpoint" parent="." instance=ExtResource("16_tyljg")]
 position = Vector2(189, 310)
 
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+
+[node name="Room1" type="Area2D" parent="." node_paths=PackedStringArray("canvas_mod") groups=["Room_light"]]
+visible = false
+position = Vector2(182, -15)
+script = ExtResource("17_ud8kb")
+canvas_mod = NodePath("../CanvasModulate")
+cam_limit_left = -15
+cam_limit_right = 1373
+cam_limit_top = -15
+cam_limit_bottom = 873
+cam_zoom = Vector2(1, 1.1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room1"]
+position = Vector2(497.5, 444)
+scale = Vector2(1.5, 1.5)
+shape = SubResource("RectangleShape2D_fim22")
+
 [connection signal="body_entered" from="SpikesHide8/TriggerShow" to="SpikesHide8/SpikeHide" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="SpikesHide9/TriggerShow" to="SpikesHide9/SpikeHide" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="SpikeTrap_LeftMove4/SpikeTrigger" to="SpikeTrap_LeftMove4/SpikeTrap_LeftMove" method="_on_saw_trigger_body_entered"]
@@ -868,3 +891,4 @@ position = Vector2(189, 310)
 [connection signal="body_entered" from="TextLevelDrop/TriggerDrop" to="TextLevelDrop/LevelDrop" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="TextLevelDrop/TriggerDrop" to="TextLevelDrop/TriggerDrop" method="_on_body_entered"]
 [connection signal="body_entered" from="SpikesHide11/TriggerShow" to="SpikesHide11/SpikeHide" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Room1" to="Room1" method="_on_body_entered"]
