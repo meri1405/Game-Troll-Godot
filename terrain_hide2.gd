@@ -28,7 +28,7 @@ func _on_saw_trigger_body_entered(body: Node2D) -> void:
 		animated_sprite_2d.play("default")
 
 		# 5. Chờ 5 giây
-		await get_tree().create_timer(13.0).timeout
+		await get_tree().create_timer(15.0).timeout
 
 		# 6. Tắt bẫy
 		visible = false
