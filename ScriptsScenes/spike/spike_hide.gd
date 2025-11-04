@@ -22,4 +22,4 @@ func _on_saw_trigger_body_entered(body: Node2D) -> void:
 func reset_trap():
 	triggered = false
 	visible = false
-	_ready()
+	collision_shape_2d.call_deferred("set_disabled", true)

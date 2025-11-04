@@ -11,7 +11,6 @@ func _ready():
 
 func _physics_process(delta: float) -> void:
 	position.x += direction * speed * delta
-
 	# Đảo chiều khi đến giới hạn
 	if direction == 1 and position.x >= start_position.x + move_distance:
 		direction = -1

@@ -26,4 +26,4 @@ func _on_body_entered(body: Node2D) -> void:
 
 func reset_trap():
 	triggered = false
-	_ready()
+	collision_shape_2d.call_deferred("set_disabled", false)
