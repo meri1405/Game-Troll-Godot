@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://4huninu4e13n"]
+[gd_scene load_steps=60 format=3 uid="uid://4huninu4e13n"]
 
 [ext_resource type="Texture2D" uid="uid://cmx6ev0y0fkb7" path="res://Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="1_5dq7r"]
 [ext_resource type="Texture2D" uid="uid://c6hhr64uxscxc" path="res://Pixel Adventure 1/Free/Terrain/rock_ice_alt_tileset_5.png" id="2_rdq32"]
@@ -16,6 +16,10 @@
 [ext_resource type="Script" uid="uid://dlwht1vd6fno0" path="res://All_Level/Map Level 28/level_drop2.gd" id="14_5it8d"]
 [ext_resource type="Script" uid="uid://e3cnttgr7mkc" path="res://All_Level/Map Level 24/trigger_move.gd" id="15_tyljg"]
 [ext_resource type="PackedScene" uid="uid://btdfqc4qp1j67" path="res://Checkpoint/Level_1/checkpoint.tscn" id="16_tyljg"]
+[ext_resource type="PackedScene" uid="uid://0dybtnqg5l6c" path="res://CommonScripts/PauseButton.tscn" id="17_u3k05"]
+[ext_resource type="PackedScene" uid="uid://m4c8hp47kokd" path="res://UI/pause_menu.tscn" id="18_g1t7f"]
+[ext_resource type="Script" uid="uid://7f4754wefk68" path="res://All_Level/Map Level 7/room_1.gd" id="19_4bnx5"]
+[ext_resource type="PackedScene" uid="uid://b0b8d8fe0ga2a" path="res://Touch_Controls/scene/touch_controls.tscn" id="20_g1t7f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rgamw"]
 texture = ExtResource("1_5dq7r")
@@ -596,6 +600,9 @@ size = Vector2(239, 8)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_02twt"]
 size = Vector2(25, 420)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fim22"]
+size = Vector2(1386.5, 884)
+
 [node name="LevelTuan" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -859,6 +866,30 @@ shape = SubResource("RectangleShape2D_vh7qx")
 [node name="Checkpoint" parent="." instance=ExtResource("16_tyljg")]
 position = Vector2(189, 310)
 
+[node name="PauseButton" parent="." instance=ExtResource("17_u3k05")]
+
+[node name="PauseMenu" parent="." instance=ExtResource("18_g1t7f")]
+visible = false
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+
+[node name="Room1" type="Area2D" parent="." node_paths=PackedStringArray("canvas_mod") groups=["Room_light"]]
+visible = false
+position = Vector2(182, -15)
+script = ExtResource("19_4bnx5")
+canvas_mod = NodePath("../CanvasModulate")
+cam_limit_left = -14
+cam_limit_right = 1373
+cam_limit_top = -14
+cam_limit_bottom = 871
+cam_zoom = Vector2(0.9, 0.9)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room1"]
+position = Vector2(497.25, 444)
+shape = SubResource("RectangleShape2D_fim22")
+
+[node name="TouchControls" parent="." instance=ExtResource("20_g1t7f")]
+
 [connection signal="body_entered" from="SpikesHide8/TriggerShow" to="SpikesHide8/SpikeHide" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="SpikesHide9/TriggerShow" to="SpikesHide9/SpikeHide" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="SpikeTrap_LeftMove4/SpikeTrigger" to="SpikeTrap_LeftMove4/SpikeTrap_LeftMove" method="_on_saw_trigger_body_entered"]
@@ -868,3 +899,6 @@ position = Vector2(189, 310)
 [connection signal="body_entered" from="TextLevelDrop/TriggerDrop" to="TextLevelDrop/LevelDrop" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="TextLevelDrop/TriggerDrop" to="TextLevelDrop/TriggerDrop" method="_on_body_entered"]
 [connection signal="body_entered" from="SpikesHide11/TriggerShow" to="SpikesHide11/SpikeHide" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Room1" to="Room1" method="_on_body_entered"]
+
+[editable path="PauseButton"]
