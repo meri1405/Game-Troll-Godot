@@ -1,0 +1,1293 @@
+[gd_scene load_steps=32 format=3 uid="uid://b5pnqyna2cuyb"]
+
+[ext_resource type="Texture2D" uid="uid://c1tiwsufw1xe8" path="res://Bg-Dark/Layer_0009_2.png" id="1_w3lob"]
+[ext_resource type="Texture2D" uid="uid://bm0qoe8upp5ds" path="res://Bg-Dark/Layer_0011_0.png" id="2_64bml"]
+[ext_resource type="Texture2D" uid="uid://df4x1pqr3p3l5" path="res://Bg-Dark/Tileset/Dark_Horror_Asset_pack.png" id="3_6d04w"]
+[ext_resource type="PackedScene" uid="uid://dt1tth682nenl" path="res://ScriptsScenes/MainCharacter/character_body_2d.tscn" id="4_o77oc"]
+[ext_resource type="Script" uid="uid://j8v73k81shf8" path="res://All_Level/Map Level 33/terrain_hide2.gd" id="5_a0cd0"]
+[ext_resource type="Texture2D" uid="uid://cmbwbtoxe7nuv" path="res://UI/ImgBlock/Img_Level/Level_33.tres" id="6_n1aao"]
+[ext_resource type="Script" uid="uid://e3cnttgr7mkc" path="res://All_Level/Map Level 24/trigger_move.gd" id="7_21g4f"]
+[ext_resource type="Texture2D" uid="uid://cgdbmsy1ma5nx" path="res://Pixel Adventure 1/Free/Items/Buttons/ButtonBlue-Sheet.png" id="8_q5ood"]
+[ext_resource type="Script" uid="uid://cdx65t72fqvwd" path="res://ScriptsScenes/spike/spike_hide.gd" id="9_ocakp"]
+[ext_resource type="Texture2D" uid="uid://crhk04in7jmsy" path="res://Pixel Adventure 1/Free/Traps/Spikes/Idle.png" id="10_kxaau"]
+[ext_resource type="PackedScene" uid="uid://btdfqc4qp1j67" path="res://Checkpoint/Level_1/checkpoint.tscn" id="11_yxcp2"]
+[ext_resource type="Script" uid="uid://7f4754wefk68" path="res://All_Level/Map Level 7/room_1.gd" id="12_a4f2n"]
+[ext_resource type="PackedScene" uid="uid://b0b8d8fe0ga2a" path="res://Touch_Controls/scene/touch_controls.tscn" id="13_dt45v"]
+[ext_resource type="PackedScene" uid="uid://m4c8hp47kokd" path="res://UI/pause_menu.tscn" id="14_3kreb"]
+[ext_resource type="PackedScene" uid="uid://0dybtnqg5l6c" path="res://CommonScripts/PauseButton.tscn" id="15_nru33"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ui25f"]
+texture = ExtResource("3_6d04w")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:0/0 = 0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:0/0 = 0
+6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:0/0 = 0
+7:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:0/0 = 0
+8:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:0/0 = 0
+9:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+10:0/0 = 0
+10:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+11:0/0 = 0
+11:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+12:0/0 = 0
+12:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+13:0/0 = 0
+13:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+14:0/0 = 0
+14:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+15:0/0 = 0
+15:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+16:0/0 = 0
+16:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+17:0/0 = 0
+17:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+18:0/0 = 0
+18:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+19:0/0 = 0
+19:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+20:0/0 = 0
+20:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+21:0/0 = 0
+21:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:1/0 = 0
+5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:1/0 = 0
+6:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:1/0 = 0
+7:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:1/0 = 0
+8:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:2/0 = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:2/0 = 0
+4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:2/0 = 0
+5:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:2/0 = 0
+6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:3/0 = 0
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:3/0 = 0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:3/0 = 0
+4:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:3/0 = 0
+5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:3/0 = 0
+6:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:3/0 = 0
+7:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:3/0 = 0
+8:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:4/0 = 0
+2:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:4/0 = 0
+3:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:4/0 = 0
+5:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:4/0 = 0
+6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:4/0 = 0
+7:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:4/0 = 0
+8:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:4/0 = 0
+9:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:5/0 = 0
+5:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:5/0 = 0
+6:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:5/0 = 0
+7:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:5/0 = 0
+8:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:5/0 = 0
+9:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+10:5/0 = 0
+10:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+11:5/0 = 0
+11:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+12:5/0 = 0
+12:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+13:5/0 = 0
+13:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:6/0 = 0
+0:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:6/0 = 0
+1:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:6/0 = 0
+2:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:6/0 = 0
+3:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:6/0 = 0
+4:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:6/0 = 0
+5:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:6/0 = 0
+7:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:6/0 = 0
+8:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:6/0 = 0
+9:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+10:6/0 = 0
+10:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+11:6/0 = 0
+11:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+12:6/0 = 0
+12:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+13:6/0 = 0
+13:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+14:6/0 = 0
+14:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+15:6/0 = 0
+15:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+16:6/0 = 0
+16:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+17:6/0 = 0
+17:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+18:6/0 = 0
+18:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+19:6/0 = 0
+19:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+20:6/0 = 0
+20:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+21:6/0 = 0
+21:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+22:6/0 = 0
+22:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+23:6/0 = 0
+23:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:7/0 = 0
+2:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:7/0 = 0
+3:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:7/0 = 0
+4:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:7/0 = 0
+5:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:7/0 = 0
+6:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:7/0 = 0
+7:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+10:7/0 = 0
+10:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+11:7/0 = 0
+11:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+22:7/0 = 0
+22:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+23:7/0 = 0
+23:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:8/0 = 0
+4:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:8/0 = 0
+5:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:8/0 = 0
+6:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:8/0 = 0
+7:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:9/0 = 0
+4:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:9/0 = 0
+5:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:9/0 = 0
+6:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:9/0 = 0
+7:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:10/0 = 0
+0:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:10/0 = 0
+1:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:10/0 = 0
+2:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:10/0 = 0
+3:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:10/0 = 0
+4:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:11/0 = 0
+0:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:11/0 = 0
+1:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:13/size_in_atlas = Vector2i(5, 2)
+9:13/0 = 0
+2:12/size_in_atlas = Vector2i(7, 3)
+2:12/0 = 0
+14:12/size_in_atlas = Vector2i(7, 3)
+14:12/0 = 0
+21:13/size_in_atlas = Vector2i(5, 2)
+21:13/0 = 0
+26:12/size_in_atlas = Vector2i(3, 3)
+26:12/0 = 0
+0:15/size_in_atlas = Vector2i(9, 4)
+0:15/0 = 0
+9:15/size_in_atlas = Vector2i(9, 4)
+9:15/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_ua20o"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_ui25f")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cxris"]
+size = Vector2(64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dgple"]
+atlas = ExtResource("8_q5ood")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_skrf4"]
+atlas = ExtResource("8_q5ood")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vwa5x"]
+atlas = ExtResource("8_q5ood")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eg1ct"]
+atlas = ExtResource("8_q5ood")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qb3eu"]
+atlas = ExtResource("8_q5ood")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kjdhy"]
+atlas = ExtResource("8_q5ood")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dgple"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dgple")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_skrf4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vwa5x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eg1ct")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qb3eu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kjdhy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_skrf4"]
+size = Vector2(26, 19)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dgple"]
+size = Vector2(30, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vwa5x"]
+size = Vector2(3, 56)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eg1ct"]
+size = Vector2(18, 40.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qb3eu"]
+size = Vector2(5, 96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kjdhy"]
+size = Vector2(1344, 864)
+
+[node name="Level" type="Node2D"]
+
+[node name="bg1" type="TextureRect" parent="."]
+z_index = -2
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -396.0
+offset_right = 1270.0
+offset_bottom = 720.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_w3lob")
+
+[node name="bg2" type="TextureRect" parent="."]
+z_index = -3
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -73.0
+offset_right = 1270.0
+offset_bottom = 720.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_64bml")
+
+[node name="TileMap" type="TileMap" parent="."]
+texture_filter = 1
+position = Vector2(0, 1)
+scale = Vector2(3, 3)
+tile_set = SubResource("TileSet_ua20o")
+format = 2
+layer_0/tile_data = PackedInt32Array(983040, 0, 1, 983041, 0, 1, 983042, 0, 1, 983043, 0, 1, 983044, 0, 1, 983045, 0, 1, 983046, 0, 1, 983047, 0, 1, 983057, 0, 1, 983058, 0, 1, 983059, 0, 1, 983060, 0, 1, 983061, 0, 1, 983062, 0, 1, 983063, 0, 1, 983064, 0, 1, 983065, 0, 1, 983066, 0, 1, -131046, 0, 1, -65510, 0, 1, 26, 0, 1, 65562, 0, 1, 131098, 0, 1, 196634, 0, 1, 262170, 0, 1, 327706, 0, 1, 393242, 0, 1, 458778, 0, 1, 524314, 0, 1, 589850, 0, 1, 655386, 0, 1, 720922, 0, 1, 786458, 0, 1, 851994, 0, 1, 917530, 0, 1, -65537, 0, 1, -131072, 0, 1, -131071, 0, 1, -131070, 0, 1, -131069, 0, 1, -131068, 0, 1, -131067, 0, 1, -131066, 0, 1, -131065, 0, 1, -131064, 0, 1, -131063, 0, 1, -131062, 0, 1, -131061, 0, 1, -131060, 0, 1, -131059, 0, 1, -131058, 0, 1, -131057, 0, 1, -131056, 0, 1, -131055, 0, 1, -131054, 0, 1, -131053, 0, 1, -131052, 0, 1, -131051, 0, 1, -131050, 0, 1, -131049, 0, 1, -131048, 0, 1, -131047, 0, 1, -1, 0, 1, 65535, 0, 1, 131071, 0, 1, 196607, 0, 1, 262143, 0, 1, 327679, 0, 1, 393215, 0, 1, 458751, 0, 1, 524287, 0, 1, 589823, 0, 1, 655359, 0, 1, 720895, 0, 1, 786431, 0, 1, 851967, 0, 1, 917503, 0, 1, 983039, 0, 1, 1048575, 0, 1, 720905, 0, 1, 720906, 0, 1, 720907, 0, 1, 720908, 0, 1, 720909, 0, 1, 720910, 0, 1, 720911, 0, 1, 720912, 0, 1, 720904, 0, 1, 720913, 0, 1, 655369, 0, 1, 589833, 0, 1, 524297, 0, 1, 458761, 0, 1, 393225, 0, 1, 327689, 0, 1, 262153, 0, 1, 196617, 0, 1, 131081, 0, 1, 65545, 0, 1, 655376, 0, 1, 589840, 0, 1, 524304, 0, 1, 458768, 0, 1, 393232, 0, 1, 327696, 0, 1, 262160, 0, 1, 196624, 0, 1, 131088, 0, 1, 65552, 0, 1, 720903, 0, 1, 720902, 0, 1, 720901, 0, 1, 720900, 0, 1, 720899, 0, 1, 720914, 0, 1, 720915, 0, 1, 720916, 0, 1, 720917, 0, 1, 720918, 0, 1, 983048, 0, 1, 983049, 0, 1, 983050, 0, 1, 983052, 0, 1, 983053, 0, 1, 983054, 0, 1, 983055, 0, 1, 983056, 0, 1, 983051, 0, 1, 851968, 196608, 1, 851993, 131072, 1, 720898, 131072, 1, 720919, 196608, 1)
+
+[node name="Player" parent="." groups=["Player"] instance=ExtResource("4_o77oc")]
+unique_name_in_owner = true
+position = Vector2(630, 685)
+
+[node name="PointLight2D" type="PointLight2D" parent="Player"]
+position = Vector2(3.57628e-07, 6.25849e-06)
+scale = Vector2(0.25, 0.230369)
+energy = 1.2
+blend_mode = 2
+
+[node name="RayCast2D" type="RayCast2D" parent="Player"]
+target_position = Vector2(0, 10)
+
+[node name="TerrainHide" type="Node" parent="."]
+
+[node name="TerrainHide" type="AnimatableBody2D" parent="TerrainHide" groups=["saws"]]
+position = Vector2(92, 461)
+script = ExtResource("5_a0cd0")
+
+[node name="Sprite2D" type="Sprite2D" parent="TerrainHide/TerrainHide"]
+texture_filter = 1
+position = Vector2(7.75, -1.00003)
+scale = Vector2(2, 2.015)
+texture = ExtResource("6_n1aao")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TerrainHide/TerrainHide"]
+position = Vector2(8, -1)
+shape = SubResource("RectangleShape2D_cxris")
+
+[node name="TerrainHide2" type="AnimatableBody2D" parent="TerrainHide" groups=["saws"]]
+position = Vector2(192, 375)
+script = ExtResource("5_a0cd0")
+
+[node name="Sprite2D" type="Sprite2D" parent="TerrainHide/TerrainHide2"]
+texture_filter = 1
+position = Vector2(7.75, -1.00003)
+scale = Vector2(2, 2.015)
+texture = ExtResource("6_n1aao")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TerrainHide/TerrainHide2"]
+position = Vector2(7.5, -1)
+shape = SubResource("RectangleShape2D_cxris")
+
+[node name="TerrainHide3" type="AnimatableBody2D" parent="TerrainHide" groups=["saws"]]
+position = Vector2(47, 306)
+script = ExtResource("5_a0cd0")
+
+[node name="Sprite2D" type="Sprite2D" parent="TerrainHide/TerrainHide3"]
+texture_filter = 1
+position = Vector2(7.75, -1.00003)
+scale = Vector2(2, 2.015)
+texture = ExtResource("6_n1aao")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TerrainHide/TerrainHide3"]
+position = Vector2(7.5, -1)
+shape = SubResource("RectangleShape2D_cxris")
+
+[node name="TerrainHide4" type="AnimatableBody2D" parent="TerrainHide" groups=["saws"]]
+position = Vector2(189, 223)
+script = ExtResource("5_a0cd0")
+
+[node name="Sprite2D" type="Sprite2D" parent="TerrainHide/TerrainHide4"]
+texture_filter = 1
+position = Vector2(7.75, -1.00003)
+scale = Vector2(2, 2.015)
+texture = ExtResource("6_n1aao")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TerrainHide/TerrainHide4"]
+position = Vector2(7.5, -1)
+shape = SubResource("RectangleShape2D_cxris")
+
+[node name="TerrainHide5" type="AnimatableBody2D" parent="TerrainHide" groups=["saws"]]
+position = Vector2(55, 134)
+script = ExtResource("5_a0cd0")
+
+[node name="Sprite2D" type="Sprite2D" parent="TerrainHide/TerrainHide5"]
+texture_filter = 1
+position = Vector2(7.75, -1.00003)
+scale = Vector2(2, 2.015)
+texture = ExtResource("6_n1aao")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TerrainHide/TerrainHide5"]
+position = Vector2(7.5, -1)
+shape = SubResource("RectangleShape2D_cxris")
+
+[node name="TerrainHide6" type="AnimatableBody2D" parent="TerrainHide" groups=["saws"]]
+position = Vector2(297, 308)
+script = ExtResource("5_a0cd0")
+
+[node name="Sprite2D" type="Sprite2D" parent="TerrainHide/TerrainHide6"]
+texture_filter = 1
+position = Vector2(7.75, -1.00003)
+scale = Vector2(2, 2.015)
+texture = ExtResource("6_n1aao")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TerrainHide/TerrainHide6"]
+position = Vector2(7.5, -1)
+shape = SubResource("RectangleShape2D_cxris")
+
+[node name="TerrainHide7" type="AnimatableBody2D" parent="TerrainHide" groups=["saws"]]
+position = Vector2(345, 165)
+script = ExtResource("5_a0cd0")
+
+[node name="Sprite2D" type="Sprite2D" parent="TerrainHide/TerrainHide7"]
+texture_filter = 1
+position = Vector2(7.75, -1.00003)
+scale = Vector2(2, 2.015)
+texture = ExtResource("6_n1aao")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TerrainHide/TerrainHide7"]
+position = Vector2(7.5, -1)
+shape = SubResource("RectangleShape2D_cxris")
+
+[node name="TerrainHide8" type="AnimatableBody2D" parent="TerrainHide" groups=["saws"]]
+position = Vector2(164, 49)
+script = ExtResource("5_a0cd0")
+
+[node name="Sprite2D" type="Sprite2D" parent="TerrainHide/TerrainHide8"]
+texture_filter = 1
+position = Vector2(7.75, -1.00003)
+scale = Vector2(2, 2.015)
+texture = ExtResource("6_n1aao")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TerrainHide/TerrainHide8"]
+position = Vector2(7.5, -1)
+shape = SubResource("RectangleShape2D_cxris")
+
+[node name="TerrainHide9" type="AnimatableBody2D" parent="TerrainHide" groups=["saws"]]
+position = Vector2(314, 49)
+script = ExtResource("5_a0cd0")
+
+[node name="Sprite2D" type="Sprite2D" parent="TerrainHide/TerrainHide9"]
+texture_filter = 1
+position = Vector2(7.75, -1.00003)
+scale = Vector2(2, 2.015)
+texture = ExtResource("6_n1aao")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TerrainHide/TerrainHide9"]
+position = Vector2(7.5, -1)
+shape = SubResource("RectangleShape2D_cxris")
+
+[node name="TerrainHide10" type="AnimatableBody2D" parent="TerrainHide" groups=["saws"]]
+position = Vector2(344, 454)
+script = ExtResource("5_a0cd0")
+
+[node name="Sprite2D" type="Sprite2D" parent="TerrainHide/TerrainHide10"]
+texture_filter = 1
+position = Vector2(7.75, -1.00003)
+scale = Vector2(2, 2.015)
+texture = ExtResource("6_n1aao")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TerrainHide/TerrainHide10"]
+position = Vector2(8, -1)
+shape = SubResource("RectangleShape2D_cxris")
+
+[node name="TriggerTerrain" type="Area2D" parent="TerrainHide" groups=["saws"]]
+position = Vector2(417, 517)
+script = ExtResource("7_21g4f")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="TerrainHide/TriggerTerrain"]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_dgple")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TerrainHide/TriggerTerrain"]
+position = Vector2(0, 4.5)
+shape = SubResource("RectangleShape2D_skrf4")
+
+[node name="TerrainHide2" type="Node" parent="."]
+
+[node name="TerrainHide" type="AnimatableBody2D" parent="TerrainHide2" groups=["saws"]]
+position = Vector2(872, 450)
+script = ExtResource("5_a0cd0")
+
+[node name="Sprite2D" type="Sprite2D" parent="TerrainHide2/TerrainHide"]
+texture_filter = 1
+position = Vector2(7.75, -1.00003)
+scale = Vector2(2, 2.015)
+texture = ExtResource("6_n1aao")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TerrainHide2/TerrainHide"]
+position = Vector2(8, -1)
+shape = SubResource("RectangleShape2D_cxris")
+
+[node name="TerrainHide2" type="AnimatableBody2D" parent="TerrainHide2" groups=["saws"]]
+position = Vector2(1004, 367)
+script = ExtResource("5_a0cd0")
+
+[node name="Sprite2D" type="Sprite2D" parent="TerrainHide2/TerrainHide2"]
+texture_filter = 1
+position = Vector2(7.75, -1.00003)
+scale = Vector2(2, 2.015)
+texture = ExtResource("6_n1aao")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TerrainHide2/TerrainHide2"]
+position = Vector2(7.5, -1)
+shape = SubResource("RectangleShape2D_cxris")
+
+[node name="TerrainHide3" type="AnimatableBody2D" parent="TerrainHide2" groups=["saws"]]
+position = Vector2(859, 298)
+script = ExtResource("5_a0cd0")
+
+[node name="Sprite2D" type="Sprite2D" parent="TerrainHide2/TerrainHide3"]
+texture_filter = 1
+position = Vector2(7.75, -1.00003)
+scale = Vector2(2, 2.015)
+texture = ExtResource("6_n1aao")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TerrainHide2/TerrainHide3"]
+position = Vector2(7.5, -1)
+shape = SubResource("RectangleShape2D_cxris")
+
+[node name="TerrainHide4" type="AnimatableBody2D" parent="TerrainHide2" groups=["saws"]]
+position = Vector2(1001, 203)
+script = ExtResource("5_a0cd0")
+
+[node name="Sprite2D" type="Sprite2D" parent="TerrainHide2/TerrainHide4"]
+texture_filter = 1
+position = Vector2(7.75, -1.00003)
+scale = Vector2(2, 2.015)
+texture = ExtResource("6_n1aao")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TerrainHide2/TerrainHide4"]
+position = Vector2(7.5, -1)
+shape = SubResource("RectangleShape2D_cxris")
+
+[node name="TerrainHide5" type="AnimatableBody2D" parent="TerrainHide2" groups=["saws"]]
+position = Vector2(840, 126)
+script = ExtResource("5_a0cd0")
+
+[node name="Sprite2D" type="Sprite2D" parent="TerrainHide2/TerrainHide5"]
+texture_filter = 1
+position = Vector2(7.75, -1.00003)
+scale = Vector2(2, 2.015)
+texture = ExtResource("6_n1aao")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TerrainHide2/TerrainHide5"]
+position = Vector2(7.5, -1)
+shape = SubResource("RectangleShape2D_cxris")
+
+[node name="TerrainHide6" type="AnimatableBody2D" parent="TerrainHide2" groups=["saws"]]
+position = Vector2(1139, 296)
+script = ExtResource("5_a0cd0")
+
+[node name="Sprite2D" type="Sprite2D" parent="TerrainHide2/TerrainHide6"]
+texture_filter = 1
+position = Vector2(7.75, -1.00003)
+scale = Vector2(2, 2.015)
+texture = ExtResource("6_n1aao")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TerrainHide2/TerrainHide6"]
+position = Vector2(7.5, -1)
+shape = SubResource("RectangleShape2D_cxris")
+
+[node name="TerrainHide7" type="AnimatableBody2D" parent="TerrainHide2" groups=["saws"]]
+position = Vector2(1157, 135)
+script = ExtResource("5_a0cd0")
+
+[node name="Sprite2D" type="Sprite2D" parent="TerrainHide2/TerrainHide7"]
+texture_filter = 1
+position = Vector2(7.75, -1.00003)
+scale = Vector2(2, 2.015)
+texture = ExtResource("6_n1aao")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TerrainHide2/TerrainHide7"]
+position = Vector2(7.5, -1)
+shape = SubResource("RectangleShape2D_cxris")
+
+[node name="TerrainHide8" type="AnimatableBody2D" parent="TerrainHide2" groups=["saws"]]
+position = Vector2(925, 41)
+script = ExtResource("5_a0cd0")
+
+[node name="Sprite2D" type="Sprite2D" parent="TerrainHide2/TerrainHide8"]
+texture_filter = 1
+position = Vector2(7.75, -1.00003)
+scale = Vector2(2, 2.015)
+texture = ExtResource("6_n1aao")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TerrainHide2/TerrainHide8"]
+position = Vector2(7.5, -1)
+shape = SubResource("RectangleShape2D_cxris")
+
+[node name="TerrainHide9" type="AnimatableBody2D" parent="TerrainHide2" groups=["saws"]]
+position = Vector2(1067, 41)
+script = ExtResource("5_a0cd0")
+
+[node name="Sprite2D" type="Sprite2D" parent="TerrainHide2/TerrainHide9"]
+texture_filter = 1
+position = Vector2(7.75, -1.00003)
+scale = Vector2(2, 2.015)
+texture = ExtResource("6_n1aao")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TerrainHide2/TerrainHide9"]
+position = Vector2(7.5, -1)
+shape = SubResource("RectangleShape2D_cxris")
+
+[node name="TerrainHide10" type="AnimatableBody2D" parent="TerrainHide2" groups=["saws"]]
+position = Vector2(1128, 451)
+script = ExtResource("5_a0cd0")
+
+[node name="Sprite2D" type="Sprite2D" parent="TerrainHide2/TerrainHide10"]
+texture_filter = 1
+position = Vector2(7.75, -1.00003)
+scale = Vector2(2, 2.015)
+texture = ExtResource("6_n1aao")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TerrainHide2/TerrainHide10"]
+position = Vector2(8, -1)
+shape = SubResource("RectangleShape2D_cxris")
+
+[node name="TriggerTerrain" type="Area2D" parent="TerrainHide2" groups=["saws"]]
+position = Vector2(829, 516)
+script = ExtResource("7_21g4f")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="TerrainHide2/TriggerTerrain"]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_dgple")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TerrainHide2/TriggerTerrain"]
+position = Vector2(0, 4.5)
+shape = SubResource("RectangleShape2D_skrf4")
+
+[node name="Spike" type="Node" parent="."]
+
+[node name="SpikesHide" type="Node" parent="Spike"]
+
+[node name="SpikeHide" type="Area2D" parent="Spike/SpikesHide" groups=["hurt", "saws"]]
+position = Vector2(856, 96)
+script = ExtResource("9_ocakp")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spike/SpikesHide/SpikeHide"]
+texture_filter = 1
+position = Vector2(1.48044e-07, -1.69342)
+scale = Vector2(2, 1.859)
+texture = ExtResource("10_kxaau")
+
+[node name="Area2D" type="Area2D" parent="Spike/SpikesHide/SpikeHide" groups=["hurt"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spike/SpikesHide/SpikeHide/Area2D"]
+position = Vector2(-1, 6.5)
+shape = SubResource("RectangleShape2D_dgple")
+
+[node name="TriggerShow" type="Area2D" parent="Spike/SpikesHide"]
+position = Vector2(865, 89)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spike/SpikesHide/TriggerShow"]
+position = Vector2(6.5, -8)
+shape = SubResource("RectangleShape2D_vwa5x")
+
+[node name="SpikeHide_Left" type="Node" parent="Spike"]
+
+[node name="SpikeHide" type="Area2D" parent="Spike/SpikeHide_Left" groups=["saws"]]
+position = Vector2(504, 73)
+script = ExtResource("9_ocakp")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spike/SpikeHide_Left/SpikeHide"]
+texture_filter = 1
+rotation = 1.5708
+scale = Vector2(3, 3)
+texture = ExtResource("10_kxaau")
+
+[node name="Area2D" type="Area2D" parent="Spike/SpikeHide_Left/SpikeHide" groups=["hurt"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spike/SpikeHide_Left/SpikeHide/Area2D"]
+position = Vector2(-15, -0.625)
+shape = SubResource("RectangleShape2D_eg1ct")
+
+[node name="SpikeHide2" type="Area2D" parent="Spike/SpikeHide_Left" groups=["saws"]]
+position = Vector2(504, 118)
+script = ExtResource("9_ocakp")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spike/SpikeHide_Left/SpikeHide2"]
+texture_filter = 1
+rotation = 1.5708
+scale = Vector2(3, 3)
+texture = ExtResource("10_kxaau")
+
+[node name="Area2D" type="Area2D" parent="Spike/SpikeHide_Left/SpikeHide2" groups=["hurt"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spike/SpikeHide_Left/SpikeHide2/Area2D"]
+position = Vector2(-15, -1.5)
+shape = SubResource("RectangleShape2D_eg1ct")
+
+[node name="SpikeHide3" type="Area2D" parent="Spike/SpikeHide_Left" groups=["saws"]]
+position = Vector2(504, 163)
+script = ExtResource("9_ocakp")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spike/SpikeHide_Left/SpikeHide3"]
+texture_filter = 1
+rotation = 1.5708
+scale = Vector2(3, 3)
+texture = ExtResource("10_kxaau")
+
+[node name="Area2D" type="Area2D" parent="Spike/SpikeHide_Left/SpikeHide3" groups=["hurt"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spike/SpikeHide_Left/SpikeHide3/Area2D"]
+position = Vector2(-15, -1.5)
+shape = SubResource("RectangleShape2D_eg1ct")
+
+[node name="SpikeHide4" type="Area2D" parent="Spike/SpikeHide_Left" groups=["saws"]]
+position = Vector2(504, 208)
+script = ExtResource("9_ocakp")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spike/SpikeHide_Left/SpikeHide4"]
+texture_filter = 1
+rotation = 1.5708
+scale = Vector2(3, 3)
+texture = ExtResource("10_kxaau")
+
+[node name="Area2D" type="Area2D" parent="Spike/SpikeHide_Left/SpikeHide4" groups=["hurt"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spike/SpikeHide_Left/SpikeHide4/Area2D"]
+position = Vector2(-15, -1.5)
+shape = SubResource("RectangleShape2D_eg1ct")
+
+[node name="SpikeHide5" type="Area2D" parent="Spike/SpikeHide_Left" groups=["saws"]]
+position = Vector2(504, 253)
+script = ExtResource("9_ocakp")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spike/SpikeHide_Left/SpikeHide5"]
+texture_filter = 1
+rotation = 1.5708
+scale = Vector2(3, 3)
+texture = ExtResource("10_kxaau")
+
+[node name="Area2D" type="Area2D" parent="Spike/SpikeHide_Left/SpikeHide5" groups=["hurt"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spike/SpikeHide_Left/SpikeHide5/Area2D"]
+position = Vector2(-15, -1.5)
+shape = SubResource("RectangleShape2D_eg1ct")
+
+[node name="SpikeHide6" type="Area2D" parent="Spike/SpikeHide_Left" groups=["saws"]]
+position = Vector2(504, 298)
+script = ExtResource("9_ocakp")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spike/SpikeHide_Left/SpikeHide6"]
+texture_filter = 1
+rotation = 1.5708
+scale = Vector2(3, 3)
+texture = ExtResource("10_kxaau")
+
+[node name="Area2D" type="Area2D" parent="Spike/SpikeHide_Left/SpikeHide6" groups=["hurt"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spike/SpikeHide_Left/SpikeHide6/Area2D"]
+position = Vector2(-15, -1.5)
+shape = SubResource("RectangleShape2D_eg1ct")
+
+[node name="SpikeHide7" type="Area2D" parent="Spike/SpikeHide_Left" groups=["saws"]]
+position = Vector2(504, 343)
+script = ExtResource("9_ocakp")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spike/SpikeHide_Left/SpikeHide7"]
+texture_filter = 1
+rotation = 1.5708
+scale = Vector2(3, 3)
+texture = ExtResource("10_kxaau")
+
+[node name="Area2D" type="Area2D" parent="Spike/SpikeHide_Left/SpikeHide7" groups=["hurt"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spike/SpikeHide_Left/SpikeHide7/Area2D"]
+position = Vector2(-15, -1.5)
+shape = SubResource("RectangleShape2D_eg1ct")
+
+[node name="SpikeHide8" type="Area2D" parent="Spike/SpikeHide_Left" groups=["saws"]]
+position = Vector2(504, 388)
+script = ExtResource("9_ocakp")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spike/SpikeHide_Left/SpikeHide8"]
+texture_filter = 1
+rotation = 1.5708
+scale = Vector2(3, 3)
+texture = ExtResource("10_kxaau")
+
+[node name="Area2D" type="Area2D" parent="Spike/SpikeHide_Left/SpikeHide8" groups=["hurt"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spike/SpikeHide_Left/SpikeHide8/Area2D"]
+position = Vector2(-15, -1.5)
+shape = SubResource("RectangleShape2D_eg1ct")
+
+[node name="SpikeHide10" type="Area2D" parent="Spike/SpikeHide_Left" groups=["saws"]]
+position = Vector2(504, 418)
+script = ExtResource("9_ocakp")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spike/SpikeHide_Left/SpikeHide10"]
+texture_filter = 1
+rotation = 1.5708
+scale = Vector2(3, 3)
+texture = ExtResource("10_kxaau")
+
+[node name="Area2D" type="Area2D" parent="Spike/SpikeHide_Left/SpikeHide10" groups=["hurt"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spike/SpikeHide_Left/SpikeHide10/Area2D"]
+position = Vector2(-15, -1.5)
+shape = SubResource("RectangleShape2D_eg1ct")
+
+[node name="SpikeHide11" type="Area2D" parent="Spike/SpikeHide_Left" groups=["saws"]]
+position = Vector2(504, 463)
+script = ExtResource("9_ocakp")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spike/SpikeHide_Left/SpikeHide11"]
+texture_filter = 1
+rotation = 1.5708
+scale = Vector2(3, 3)
+texture = ExtResource("10_kxaau")
+
+[node name="Area2D" type="Area2D" parent="Spike/SpikeHide_Left/SpikeHide11" groups=["hurt"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spike/SpikeHide_Left/SpikeHide11/Area2D"]
+position = Vector2(-15, -1.5)
+shape = SubResource("RectangleShape2D_eg1ct")
+
+[node name="SpikeHide12" type="Area2D" parent="Spike/SpikeHide_Left" groups=["saws"]]
+position = Vector2(504, 508)
+script = ExtResource("9_ocakp")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spike/SpikeHide_Left/SpikeHide12"]
+texture_filter = 1
+rotation = 1.5708
+scale = Vector2(3, 3)
+texture = ExtResource("10_kxaau")
+
+[node name="Area2D" type="Area2D" parent="Spike/SpikeHide_Left/SpikeHide12" groups=["hurt"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spike/SpikeHide_Left/SpikeHide12/Area2D"]
+position = Vector2(-15, -1.5)
+shape = SubResource("RectangleShape2D_eg1ct")
+
+[node name="SpikeHide9" type="Area2D" parent="Spike/SpikeHide_Left" groups=["saws"]]
+position = Vector2(744, 70)
+rotation = -0.785398
+script = ExtResource("9_ocakp")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spike/SpikeHide_Left/SpikeHide9"]
+texture_filter = 1
+rotation = -0.785398
+scale = Vector2(3, 3)
+texture = ExtResource("10_kxaau")
+
+[node name="Area2D" type="Area2D" parent="Spike/SpikeHide_Left/SpikeHide9" groups=["hurt"]]
+rotation = -0.785398
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spike/SpikeHide_Left/SpikeHide9/Area2D"]
+position = Vector2(-3.25, 15)
+rotation = -1.5708
+shape = SubResource("RectangleShape2D_eg1ct")
+
+[node name="SpikeHide13" type="Area2D" parent="Spike/SpikeHide_Left" groups=["saws"]]
+position = Vector2(744, 115)
+rotation = -0.785398
+script = ExtResource("9_ocakp")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spike/SpikeHide_Left/SpikeHide13"]
+texture_filter = 1
+rotation = -0.785398
+scale = Vector2(3, 3)
+texture = ExtResource("10_kxaau")
+
+[node name="Area2D" type="Area2D" parent="Spike/SpikeHide_Left/SpikeHide13" groups=["hurt"]]
+rotation = -0.785398
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spike/SpikeHide_Left/SpikeHide13/Area2D"]
+position = Vector2(-2, 15)
+rotation = -1.5708
+shape = SubResource("RectangleShape2D_eg1ct")
+
+[node name="SpikeHide14" type="Area2D" parent="Spike/SpikeHide_Left" groups=["saws"]]
+position = Vector2(744, 160)
+rotation = -0.785398
+script = ExtResource("9_ocakp")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spike/SpikeHide_Left/SpikeHide14"]
+texture_filter = 1
+rotation = -0.785398
+scale = Vector2(3, 3)
+texture = ExtResource("10_kxaau")
+
+[node name="Area2D" type="Area2D" parent="Spike/SpikeHide_Left/SpikeHide14" groups=["hurt"]]
+rotation = -0.785398
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spike/SpikeHide_Left/SpikeHide14/Area2D"]
+position = Vector2(-2, 15)
+rotation = -1.5708
+shape = SubResource("RectangleShape2D_eg1ct")
+
+[node name="SpikeHide15" type="Area2D" parent="Spike/SpikeHide_Left" groups=["saws"]]
+position = Vector2(744, 205)
+rotation = -0.785398
+script = ExtResource("9_ocakp")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spike/SpikeHide_Left/SpikeHide15"]
+texture_filter = 1
+rotation = -0.785398
+scale = Vector2(3, 3)
+texture = ExtResource("10_kxaau")
+
+[node name="Area2D" type="Area2D" parent="Spike/SpikeHide_Left/SpikeHide15" groups=["hurt"]]
+rotation = -0.785398
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spike/SpikeHide_Left/SpikeHide15/Area2D"]
+position = Vector2(-2, 15)
+rotation = -1.5708
+shape = SubResource("RectangleShape2D_eg1ct")
+
+[node name="SpikeHide16" type="Area2D" parent="Spike/SpikeHide_Left" groups=["saws"]]
+position = Vector2(744, 250)
+rotation = -0.785398
+script = ExtResource("9_ocakp")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spike/SpikeHide_Left/SpikeHide16"]
+texture_filter = 1
+rotation = -0.785398
+scale = Vector2(3, 3)
+texture = ExtResource("10_kxaau")
+
+[node name="Area2D" type="Area2D" parent="Spike/SpikeHide_Left/SpikeHide16" groups=["hurt"]]
+rotation = -0.785398
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spike/SpikeHide_Left/SpikeHide16/Area2D"]
+position = Vector2(-2, 15)
+rotation = -1.5708
+shape = SubResource("RectangleShape2D_eg1ct")
+
+[node name="SpikeHide17" type="Area2D" parent="Spike/SpikeHide_Left" groups=["saws"]]
+position = Vector2(744, 295)
+rotation = -0.785398
+script = ExtResource("9_ocakp")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spike/SpikeHide_Left/SpikeHide17"]
+texture_filter = 1
+rotation = -0.785398
+scale = Vector2(3, 3)
+texture = ExtResource("10_kxaau")
+
+[node name="Area2D" type="Area2D" parent="Spike/SpikeHide_Left/SpikeHide17" groups=["hurt"]]
+rotation = -0.785398
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spike/SpikeHide_Left/SpikeHide17/Area2D"]
+position = Vector2(-2, 15)
+rotation = -1.5708
+shape = SubResource("RectangleShape2D_eg1ct")
+
+[node name="SpikeHide18" type="Area2D" parent="Spike/SpikeHide_Left" groups=["saws"]]
+position = Vector2(744, 340)
+rotation = -0.785398
+script = ExtResource("9_ocakp")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spike/SpikeHide_Left/SpikeHide18"]
+texture_filter = 1
+rotation = -0.785398
+scale = Vector2(3, 3)
+texture = ExtResource("10_kxaau")
+
+[node name="Area2D" type="Area2D" parent="Spike/SpikeHide_Left/SpikeHide18" groups=["hurt"]]
+rotation = -0.785398
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spike/SpikeHide_Left/SpikeHide18/Area2D"]
+position = Vector2(-2, 15)
+rotation = -1.5708
+shape = SubResource("RectangleShape2D_eg1ct")
+
+[node name="SpikeHide19" type="Area2D" parent="Spike/SpikeHide_Left" groups=["saws"]]
+position = Vector2(744, 385)
+rotation = -0.785398
+script = ExtResource("9_ocakp")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spike/SpikeHide_Left/SpikeHide19"]
+texture_filter = 1
+rotation = -0.785398
+scale = Vector2(3, 3)
+texture = ExtResource("10_kxaau")
+
+[node name="Area2D" type="Area2D" parent="Spike/SpikeHide_Left/SpikeHide19" groups=["hurt"]]
+rotation = -0.785398
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spike/SpikeHide_Left/SpikeHide19/Area2D"]
+position = Vector2(-2, 15)
+rotation = -1.5708
+shape = SubResource("RectangleShape2D_eg1ct")
+
+[node name="SpikeHide20" type="Area2D" parent="Spike/SpikeHide_Left" groups=["saws"]]
+position = Vector2(744, 415)
+rotation = -0.785398
+script = ExtResource("9_ocakp")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spike/SpikeHide_Left/SpikeHide20"]
+texture_filter = 1
+rotation = -0.785398
+scale = Vector2(3, 3)
+texture = ExtResource("10_kxaau")
+
+[node name="Area2D" type="Area2D" parent="Spike/SpikeHide_Left/SpikeHide20" groups=["hurt"]]
+rotation = -0.785398
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spike/SpikeHide_Left/SpikeHide20/Area2D"]
+position = Vector2(-2, 15)
+rotation = -1.5708
+shape = SubResource("RectangleShape2D_eg1ct")
+
+[node name="SpikeHide21" type="Area2D" parent="Spike/SpikeHide_Left" groups=["saws"]]
+position = Vector2(744, 460)
+rotation = -0.785398
+script = ExtResource("9_ocakp")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spike/SpikeHide_Left/SpikeHide21"]
+texture_filter = 1
+rotation = -0.785398
+scale = Vector2(3, 3)
+texture = ExtResource("10_kxaau")
+
+[node name="Area2D" type="Area2D" parent="Spike/SpikeHide_Left/SpikeHide21" groups=["hurt"]]
+rotation = -0.785398
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spike/SpikeHide_Left/SpikeHide21/Area2D"]
+position = Vector2(-2, 15)
+rotation = -1.5708
+shape = SubResource("RectangleShape2D_eg1ct")
+
+[node name="SpikeHide22" type="Area2D" parent="Spike/SpikeHide_Left" groups=["saws"]]
+position = Vector2(744, 505)
+rotation = -0.785398
+script = ExtResource("9_ocakp")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spike/SpikeHide_Left/SpikeHide22"]
+texture_filter = 1
+rotation = -0.785398
+scale = Vector2(3, 3)
+texture = ExtResource("10_kxaau")
+
+[node name="Area2D" type="Area2D" parent="Spike/SpikeHide_Left/SpikeHide22" groups=["hurt"]]
+rotation = -0.785398
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spike/SpikeHide_Left/SpikeHide22/Area2D"]
+position = Vector2(-2, 15)
+rotation = -1.5708
+shape = SubResource("RectangleShape2D_eg1ct")
+
+[node name="SpikeHide23" type="Area2D" parent="Spike/SpikeHide_Left" groups=["saws"]]
+position = Vector2(524, 505)
+rotation = -0.785398
+script = ExtResource("9_ocakp")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spike/SpikeHide_Left/SpikeHide23"]
+texture_filter = 1
+rotation = 0.785398
+scale = Vector2(3, 3)
+texture = ExtResource("10_kxaau")
+
+[node name="Area2D" type="Area2D" parent="Spike/SpikeHide_Left/SpikeHide23" groups=["hurt"]]
+rotation = -0.785398
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spike/SpikeHide_Left/SpikeHide23/Area2D"]
+position = Vector2(-15, -2)
+shape = SubResource("RectangleShape2D_eg1ct")
+
+[node name="SpikeHide24" type="Area2D" parent="Spike/SpikeHide_Left" groups=["saws"]]
+position = Vector2(547, 505)
+rotation = -0.785398
+script = ExtResource("9_ocakp")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spike/SpikeHide_Left/SpikeHide24"]
+texture_filter = 1
+rotation = 0.785398
+scale = Vector2(3, 3)
+texture = ExtResource("10_kxaau")
+
+[node name="Area2D" type="Area2D" parent="Spike/SpikeHide_Left/SpikeHide24" groups=["hurt"]]
+rotation = -0.785398
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spike/SpikeHide_Left/SpikeHide24/Area2D"]
+position = Vector2(-15, -2)
+shape = SubResource("RectangleShape2D_eg1ct")
+
+[node name="SpikeHide25" type="Area2D" parent="Spike/SpikeHide_Left" groups=["saws"]]
+position = Vector2(727, 505)
+rotation = -0.785398
+script = ExtResource("9_ocakp")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spike/SpikeHide_Left/SpikeHide25"]
+texture_filter = 1
+rotation = 0.785398
+scale = Vector2(3, 3)
+texture = ExtResource("10_kxaau")
+
+[node name="Area2D" type="Area2D" parent="Spike/SpikeHide_Left/SpikeHide25" groups=["hurt"]]
+rotation = -0.785398
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spike/SpikeHide_Left/SpikeHide25/Area2D"]
+position = Vector2(-15, -2)
+shape = SubResource("RectangleShape2D_eg1ct")
+
+[node name="SpikeHide26" type="Area2D" parent="Spike/SpikeHide_Left" groups=["saws"]]
+position = Vector2(703, 505)
+rotation = -0.785398
+script = ExtResource("9_ocakp")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spike/SpikeHide_Left/SpikeHide26"]
+texture_filter = 1
+rotation = 0.785398
+scale = Vector2(3, 3)
+texture = ExtResource("10_kxaau")
+
+[node name="Area2D" type="Area2D" parent="Spike/SpikeHide_Left/SpikeHide26" groups=["hurt"]]
+rotation = -0.785398
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spike/SpikeHide_Left/SpikeHide26/Area2D"]
+position = Vector2(-15, -2)
+shape = SubResource("RectangleShape2D_eg1ct")
+
+[node name="trigger" type="Area2D" parent="Spike/SpikeHide_Left"]
+position = Vector2(505, -24)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spike/SpikeHide_Left/trigger"]
+position = Vector2(-6, 25)
+shape = SubResource("RectangleShape2D_qb3eu")
+
+[node name="trigger2" type="Area2D" parent="Spike/SpikeHide_Left"]
+position = Vector2(781, -24)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spike/SpikeHide_Left/trigger2"]
+position = Vector2(-33, 25)
+shape = SubResource("RectangleShape2D_qb3eu")
+
+[node name="Checkpoint" parent="." instance=ExtResource("11_yxcp2")]
+position = Vector2(-502, 383)
+completed_level_number = 20
+next_level = "res://All_Level/Map Level 21/Level_21.tscn"
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+
+[node name="Room1" type="Area2D" parent="." node_paths=PackedStringArray("canvas_mod") groups=["Room_light"]]
+visible = false
+position = Vector2(182, -15)
+script = ExtResource("12_a4f2n")
+canvas_mod = NodePath("../CanvasModulate")
+cam_limit_left = -48
+cam_limit_right = 1296
+cam_limit_top = -95
+cam_limit_bottom = 769
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room1"]
+position = Vector2(442, 352)
+shape = SubResource("RectangleShape2D_kjdhy")
+
+[node name="TouchControls" parent="." instance=ExtResource("13_dt45v")]
+
+[node name="PauseMenu" parent="." instance=ExtResource("14_3kreb")]
+visible = false
+
+[node name="PauseButton" parent="." instance=ExtResource("15_nru33")]
+
+[connection signal="body_entered" from="TerrainHide/TriggerTerrain" to="TerrainHide/TerrainHide" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="TerrainHide/TriggerTerrain" to="TerrainHide/TerrainHide2" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="TerrainHide/TriggerTerrain" to="TerrainHide/TerrainHide3" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="TerrainHide/TriggerTerrain" to="TerrainHide/TerrainHide4" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="TerrainHide/TriggerTerrain" to="TerrainHide/TerrainHide5" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="TerrainHide/TriggerTerrain" to="TerrainHide/TerrainHide6" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="TerrainHide/TriggerTerrain" to="TerrainHide/TerrainHide7" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="TerrainHide/TriggerTerrain" to="TerrainHide/TerrainHide8" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="TerrainHide/TriggerTerrain" to="TerrainHide/TerrainHide9" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="TerrainHide/TriggerTerrain" to="TerrainHide/TerrainHide10" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="TerrainHide2/TriggerTerrain" to="TerrainHide2/TerrainHide" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="TerrainHide2/TriggerTerrain" to="TerrainHide2/TerrainHide2" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="TerrainHide2/TriggerTerrain" to="TerrainHide2/TerrainHide3" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="TerrainHide2/TriggerTerrain" to="TerrainHide2/TerrainHide4" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="TerrainHide2/TriggerTerrain" to="TerrainHide2/TerrainHide5" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="TerrainHide2/TriggerTerrain" to="TerrainHide2/TerrainHide6" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="TerrainHide2/TriggerTerrain" to="TerrainHide2/TerrainHide7" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="TerrainHide2/TriggerTerrain" to="TerrainHide2/TerrainHide8" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="TerrainHide2/TriggerTerrain" to="TerrainHide2/TerrainHide9" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="TerrainHide2/TriggerTerrain" to="TerrainHide2/TerrainHide10" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Spike/SpikesHide/TriggerShow" to="Spike/SpikesHide/SpikeHide" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Spike/SpikeHide_Left/trigger" to="Spike/SpikeHide_Left/SpikeHide" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Spike/SpikeHide_Left/trigger" to="Spike/SpikeHide_Left/SpikeHide2" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Spike/SpikeHide_Left/trigger" to="Spike/SpikeHide_Left/SpikeHide3" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Spike/SpikeHide_Left/trigger" to="Spike/SpikeHide_Left/SpikeHide4" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Spike/SpikeHide_Left/trigger" to="Spike/SpikeHide_Left/SpikeHide5" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Spike/SpikeHide_Left/trigger" to="Spike/SpikeHide_Left/SpikeHide6" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Spike/SpikeHide_Left/trigger" to="Spike/SpikeHide_Left/SpikeHide7" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Spike/SpikeHide_Left/trigger" to="Spike/SpikeHide_Left/SpikeHide8" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Spike/SpikeHide_Left/trigger" to="Spike/SpikeHide_Left/SpikeHide10" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Spike/SpikeHide_Left/trigger" to="Spike/SpikeHide_Left/SpikeHide11" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Spike/SpikeHide_Left/trigger" to="Spike/SpikeHide_Left/SpikeHide12" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Spike/SpikeHide_Left/trigger" to="Spike/SpikeHide_Left/SpikeHide9" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Spike/SpikeHide_Left/trigger" to="Spike/SpikeHide_Left/SpikeHide13" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Spike/SpikeHide_Left/trigger" to="Spike/SpikeHide_Left/SpikeHide14" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Spike/SpikeHide_Left/trigger" to="Spike/SpikeHide_Left/SpikeHide15" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Spike/SpikeHide_Left/trigger" to="Spike/SpikeHide_Left/SpikeHide16" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Spike/SpikeHide_Left/trigger" to="Spike/SpikeHide_Left/SpikeHide17" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Spike/SpikeHide_Left/trigger" to="Spike/SpikeHide_Left/SpikeHide18" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Spike/SpikeHide_Left/trigger" to="Spike/SpikeHide_Left/SpikeHide19" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Spike/SpikeHide_Left/trigger" to="Spike/SpikeHide_Left/SpikeHide20" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Spike/SpikeHide_Left/trigger" to="Spike/SpikeHide_Left/SpikeHide21" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Spike/SpikeHide_Left/trigger" to="Spike/SpikeHide_Left/SpikeHide22" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Spike/SpikeHide_Left/trigger" to="Spike/SpikeHide_Left/SpikeHide23" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Spike/SpikeHide_Left/trigger" to="Spike/SpikeHide_Left/SpikeHide24" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Spike/SpikeHide_Left/trigger" to="Spike/SpikeHide_Left/SpikeHide25" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Spike/SpikeHide_Left/trigger" to="Spike/SpikeHide_Left/SpikeHide26" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Spike/SpikeHide_Left/trigger2" to="Spike/SpikeHide_Left/SpikeHide" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Spike/SpikeHide_Left/trigger2" to="Spike/SpikeHide_Left/SpikeHide2" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Spike/SpikeHide_Left/trigger2" to="Spike/SpikeHide_Left/SpikeHide3" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Spike/SpikeHide_Left/trigger2" to="Spike/SpikeHide_Left/SpikeHide4" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Spike/SpikeHide_Left/trigger2" to="Spike/SpikeHide_Left/SpikeHide5" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Spike/SpikeHide_Left/trigger2" to="Spike/SpikeHide_Left/SpikeHide6" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Spike/SpikeHide_Left/trigger2" to="Spike/SpikeHide_Left/SpikeHide7" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Spike/SpikeHide_Left/trigger2" to="Spike/SpikeHide_Left/SpikeHide8" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Spike/SpikeHide_Left/trigger2" to="Spike/SpikeHide_Left/SpikeHide10" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Spike/SpikeHide_Left/trigger2" to="Spike/SpikeHide_Left/SpikeHide11" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Spike/SpikeHide_Left/trigger2" to="Spike/SpikeHide_Left/SpikeHide12" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Spike/SpikeHide_Left/trigger2" to="Spike/SpikeHide_Left/SpikeHide9" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Spike/SpikeHide_Left/trigger2" to="Spike/SpikeHide_Left/SpikeHide13" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Spike/SpikeHide_Left/trigger2" to="Spike/SpikeHide_Left/SpikeHide14" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Spike/SpikeHide_Left/trigger2" to="Spike/SpikeHide_Left/SpikeHide15" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Spike/SpikeHide_Left/trigger2" to="Spike/SpikeHide_Left/SpikeHide16" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Spike/SpikeHide_Left/trigger2" to="Spike/SpikeHide_Left/SpikeHide17" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Spike/SpikeHide_Left/trigger2" to="Spike/SpikeHide_Left/SpikeHide18" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Spike/SpikeHide_Left/trigger2" to="Spike/SpikeHide_Left/SpikeHide19" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Spike/SpikeHide_Left/trigger2" to="Spike/SpikeHide_Left/SpikeHide20" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Spike/SpikeHide_Left/trigger2" to="Spike/SpikeHide_Left/SpikeHide21" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Spike/SpikeHide_Left/trigger2" to="Spike/SpikeHide_Left/SpikeHide22" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Spike/SpikeHide_Left/trigger2" to="Spike/SpikeHide_Left/SpikeHide23" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Spike/SpikeHide_Left/trigger2" to="Spike/SpikeHide_Left/SpikeHide24" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Spike/SpikeHide_Left/trigger2" to="Spike/SpikeHide_Left/SpikeHide25" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Spike/SpikeHide_Left/trigger2" to="Spike/SpikeHide_Left/SpikeHide26" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="Room1" to="Room1" method="_on_body_entered"]
+
+[editable path="PauseButton"]
