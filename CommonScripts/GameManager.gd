@@ -100,7 +100,7 @@ func try_alternative_paths(level_number: int):
 
 # ✅ HÀM MỚI: Chuyển qua WinScene
 func go_to_win_scene():
-	var win_scene_path = "res://WinScene.tscn"
+	var win_scene_path = "res://winScreen/WinScene.tscn"
 	
 	if ResourceLoader.exists(win_scene_path):
 		get_tree().change_scene_to_file.call_deferred(win_scene_path)
