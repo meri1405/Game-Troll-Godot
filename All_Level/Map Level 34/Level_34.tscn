@@ -578,8 +578,8 @@ visible = false
 [connection signal="body_entered" from="SpikesHide/TriggerShow" to="SpikesHide/SpikeHide12" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="SpikeHide/Trigger" to="SpikeHide/SpikeHide" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="SpikeTrap_LeftMove/SpikeTrigger" to="SpikeTrap_LeftMove/SpikeTrap_LeftMove" method="_on_saw_trigger_body_entered"]
-[connection signal="body_entered" from="SpikeTrap_LeftMove/SpikeTrigger" to="SpikeTrap_LeftMove/SpikeTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="SpikeTrap_LeftMove/SpikeTrigger" to="SpikeTrap_LeftMove/SpikeTrap_LeftMove2" method="_on_saw_trigger_body_entered"]
+[connection signal="body_entered" from="SpikeTrap_LeftMove/SpikeTrigger" to="SpikeTrap_LeftMove/SpikeTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="Room1" to="Room1" method="_on_body_entered"]
 
 [editable path="PauseButton"]
