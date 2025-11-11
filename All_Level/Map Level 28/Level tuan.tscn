@@ -675,7 +675,7 @@ shape = SubResource("CapsuleShape2D_250a8")
 position = Vector2(707, 831)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SpikesHide9/TriggerShow"]
-position = Vector2(-43.5, -28)
+position = Vector2(-59, -26)
 shape = SubResource("RectangleShape2D_vh7qx")
 
 [node name="SpikeTrap_LeftMove4" type="Node" parent="."]
@@ -712,7 +712,7 @@ position = Vector2(438, 838)
 rotation = -3.14159
 scale = Vector2(4.10359, -3.74664)
 script = ExtResource("9_1cdtw")
-speed = 1000.0
+speed = 800.0
 
 [node name="Sprite2D" type="Sprite2D" parent="SpikeTrap_UpMove2/SpikeTrap_UpMove"]
 texture_filter = 1
