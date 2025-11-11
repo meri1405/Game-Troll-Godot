@@ -228,8 +228,8 @@ script = ExtResource("13_dwhea")
 [node name="Checkpoint" parent="." instance=ExtResource("14_n4vjj")]
 position = Vector2(-54, 189)
 script = ExtResource("15_x3qts")
-completed_level_number = 29
-next_level = "res://All_Level/Map Level 30/Level_30.tscn"
+completed_level_number = 36
+next_level = "res://All_Level/Map Level 37/Level_37.tscn"
 
 [node name="PauseMenu" parent="." instance=ExtResource("16_7i713")]
 visible = false
