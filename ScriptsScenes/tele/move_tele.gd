@@ -45,7 +45,7 @@ func _on_body_entered(body):
 	if not teleport:
 		return
 	if has_triggered:
-		return # 🔒 Đã kích hoạt 1 lần rồi thì không kích hoạt lại cho đến khi player chết
+		return #  Đã kích hoạt 1 lần rồi thì không kích hoạt lại cho đến khi player chết
 
 	has_triggered = true
 	_start_teleport_move()
@@ -59,14 +59,14 @@ func _start_teleport_move():
 	current_tween = get_tree().create_tween()
 	current_tween.connect("finished", Callable(self, "_on_tween_finished"))
 
-	# 1️⃣ Sang phải
+	# Sang phải
 	var target_right = teleport.global_position + Vector2(move_distance, 0)
 	current_tween.tween_property(teleport, "global_position", target_right, right_speed)
 
-	# 2️⃣ Dừng lại
+	# Dừng lại
 	current_tween.tween_interval(wait_time)
 
-	# 3️⃣ Sang trái (xa hơn vị trí ban đầu)
+	# Sang trái (xa hơn vị trí ban đầu)
 	var target_left = teleport_start_pos + Vector2(left_distance, 0)
 	current_tween.tween_property(
 		teleport,
@@ -85,7 +85,7 @@ func _on_player_died():
 
 
 func reset_state():
-	# 🔁 Cho phép trigger lại sau khi player chết
+	# Cho phép trigger lại sau khi player chết
 	has_triggered = false
 
 	if current_tween:

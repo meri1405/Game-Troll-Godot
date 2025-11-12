@@ -21,5 +21,6 @@ func _on_saw_trigger_body_entered(body: Node2D) -> void:
 
 func reset_trap():
 	triggered = false
+	await get_tree().create_timer(1.0).timeout
 	visible = false
 	collision_shape_2d.call_deferred("set_disabled", true)
