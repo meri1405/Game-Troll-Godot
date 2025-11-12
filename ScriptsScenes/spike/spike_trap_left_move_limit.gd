@@ -2,7 +2,7 @@ extends Area2D
 
 @export var speed: float = 600.0
 @export var direction: int = 1
-@export var max_distance: float = 30.0  # khoảng cách tối đa
+@export var max_distance: float = 100.0  # khoảng cách tối đa
 @onready var spike_trigger: Area2D = $"../SpikeTrigger"
 
 var triggered: bool = false
