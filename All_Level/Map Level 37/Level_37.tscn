@@ -9,12 +9,12 @@
 [ext_resource type="PackedScene" uid="uid://m4c8hp47kokd" path="res://UI/pause_menu.tscn" id="7_fx2ca"]
 [ext_resource type="PackedScene" uid="uid://0dybtnqg5l6c" path="res://CommonScripts/PauseButton.tscn" id="8_f3skj"]
 [ext_resource type="PackedScene" uid="uid://b0b8d8fe0ga2a" path="res://Touch_Controls/scene/touch_controls.tscn" id="9_c3kef"]
-[ext_resource type="Script" uid="uid://cqraenxsv41bb" path="res://Khang/trigger_plane.gd" id="10_f3skj"]
-[ext_resource type="Script" uid="uid://c3v6kwr7iwwra" path="res://Khang/move_plane.gd" id="11_c3kef"]
+[ext_resource type="Script" uid="uid://cqraenxsv41bb" path="res://All_Level/Map Level 37/trigger_plane.gd" id="10_f3skj"]
+[ext_resource type="Script" uid="uid://c3v6kwr7iwwra" path="res://All_Level/Map Level 37/move_plane.gd" id="11_c3kef"]
 [ext_resource type="Script" uid="uid://6uvkvr5at215" path="res://ScriptsScenes/misc/hide_block.gd" id="12_jf504"]
-[ext_resource type="Script" uid="uid://djnso71pu42ua" path="res://Khang/box_move.gd" id="13_nic18"]
+[ext_resource type="Script" uid="uid://djnso71pu42ua" path="res://All_Level/Map Level 37/box_move.gd" id="13_nic18"]
 [ext_resource type="Texture2D" uid="uid://crxy2arorn447" path="res://Pixel Adventure 1/Free/Traps/Blocks/Idle.png" id="14_bnv6q"]
-[ext_resource type="Script" uid="uid://cmc21gwb4xsii" path="res://Khang/box_left_trigger.gd" id="15_nic18"]
+[ext_resource type="Script" uid="uid://cmc21gwb4xsii" path="res://All_Level/Map Level 37/box_left_trigger.gd" id="15_nic18"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oeq5w"]
 texture = ExtResource("2_60ttg")
