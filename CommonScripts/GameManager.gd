@@ -13,6 +13,26 @@ signal death_count_changed(new_count: int)
 
 func _ready():
 	load_progress()
+	# Auto-load DeathMessageSystem using process method
+	set_process(true)
+
+var last_scene_path: String = ""
+
+func _process(_delta):
+	# Check for scene changes
+	var current_scene = get_tree().current_scene
+	if current_scene and current_scene.scene_file_path != last_scene_path:
+		last_scene_path = current_scene.scene_file_path
+		_on_scene_changed()
+
+func _on_scene_changed():
+	# Wait for scene to be fully ready
+	await get_tree().process_frame
+	await get_tree().process_frame
+	
+	var current_scene = get_tree().current_scene
+	if current_scene and is_level_scene(current_scene.scene_file_path):
+		_auto_load_death_message_system()
 
 # Lưu tiến độ
 func save_progress():
@@ -70,8 +90,9 @@ func go_to_level(level_number: int):
 	if ResourceLoader.exists(level_path):
 		get_tree().change_scene_to_file.call_deferred(level_path)
 		print("Loading level: ", level_path)
-		# Show level title after a short delay
+		# Show level title and load death message system after a short delay
 		call_deferred("show_simple_level_title")
+		call_deferred("_ensure_death_message_system")
 		print("Level title function called")
 	else:
 		print("Level file not found: ", level_path)
@@ -90,6 +111,7 @@ func try_alternative_paths(level_number: int):
 		if ResourceLoader.exists(path):
 			get_tree().change_scene_to_file.call_deferred(path)
 			print("Found alternative path: ", path)
+			call_deferred("_ensure_death_message_system")
 			return
 	
 	print("No valid level file found for level ", level_number)
@@ -256,6 +278,44 @@ func detect_level_from_scene() -> int:
 func test_level_title():
 	print("Testing level title display...")
 	create_level_title_ui()
+
+
+
+func is_level_scene(scene_path: String) -> bool:
+	# Check if scene is in All_Level directory or contains "Level" in path
+	return (scene_path.contains("All_Level") and scene_path.contains("Level")) or scene_path.contains("Level_")
+
+func _auto_load_death_message_system():
+	var current_scene = get_tree().current_scene
+	if not current_scene:
+		return
+		
+	# Check if DeathMessageSystem already exists
+	var existing_system = current_scene.get_node_or_null("DeathMessageSystem")
+	if existing_system:
+		print("DeathMessageSystem already exists in scene")
+		return
+	
+	# Create and add DeathMessageSystem node
+	var death_message_system = Node.new()
+	death_message_system.name = "DeathMessageSystem"
+	death_message_system.set_script(preload("res://UI/DeathMessageSystem.gd"))
+	current_scene.add_child(death_message_system)
+	print("✅ Auto-loaded DeathMessageSystem into ", current_scene.name, " (", current_scene.scene_file_path, ")")
+
+# Ensure DeathMessageSystem is loaded (called when explicitly loading levels)
+func _ensure_death_message_system():
+	await get_tree().process_frame
+	await get_tree().process_frame
+	await get_tree().process_frame  # Extra wait for safety
+	
+	var current_scene = get_tree().current_scene
+	if current_scene and is_level_scene(current_scene.scene_file_path):
+		_auto_load_death_message_system()
+
+# Manual function to load DeathMessageSystem (for testing)
+func manually_load_death_system():
+	_auto_load_death_message_system()
 
 # Debug function để in ra tất cả paths
 func debug_check_levels():
