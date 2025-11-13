@@ -2,16 +2,16 @@ extends Node
 
 # Milestone death counts and their messages (Vietnamese)
 var milestone_messages = {
-	5: "Chỉ mới 5 lần thôi, bạn còn lâu mới từ bỏ!",
-	10: "10 lần rồi... Nhưng đừng bỏ cuộc nhé!",
-	15: "Bạn đã thử 15 lần. Kiên trì là chìa khóa thành công!",
-	20: "20 lần chết... Bạn có muốn thử cách khác không?",
-	25: "25 lần! Bạn thực sự kiên trì đấy!",
-	30: "30 lần rồi... Có lẽ bạn đang học được gì đó?",
-	40: "40 lần! Bạn là một chiến binh thực thụ!",
-	50: "50 lần chết... Bạn xứng đáng được tôn trọng!",
-	75: "75 lần! Bạn đã vượt qua giới hạn của chính mình!",
-	100: "100 lần! Bạn là huyền thoại!"
+5: "It's only been 5 times, you're far from giving up!",
+10: "10 times already... But don't give up!",
+15: "You've tried 15 times. Persistence is the key to success!",
+20: "20 times dead... Do you want to try something else?",
+25: "25 times! You're really showing off!",
+30: "30 times already... Maybe you're learning something?",
+40: "40 times! You're a real warrior!",
+50: "50 times dead... You deserve respect!",
+75: "75 times! You've surpassed your own limits!",
+100: "100 times! You're a Legend!"
 }
 
 var shown_milestones = {}
