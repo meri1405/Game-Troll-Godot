@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://ceb4shje88prr"]
+[gd_scene load_steps=28 format=3 uid="uid://ceb4shje88prr"]
 
 [ext_resource type="Texture2D" uid="uid://b7frhybnuv3x0" path="res://Pixel Adventure 1/Free/Background/Background_3.png" id="1_xldq1"]
 [ext_resource type="Texture2D" uid="uid://cmx6ev0y0fkb7" path="res://Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="2_bhddu"]
@@ -9,6 +9,10 @@
 [ext_resource type="Texture2D" uid="uid://dycdavdvo4drb" path="res://Pixel Adventure 1/Free/Traps/Trap2/Spike_B.png" id="7_a1aux"]
 [ext_resource type="Script" uid="uid://bn0nh15yepald" path="res://ScriptsScenes/gai/gai_up.gd" id="8_a1aux"]
 [ext_resource type="Script" uid="uid://bvg7kd7t4c2e7" path="res://Khang/trigger_1.gd" id="8_pt6y6"]
+[ext_resource type="Script" uid="uid://2gk2pmqqedve" path="res://Khang/trigger_2.gd" id="10_2qntf"]
+[ext_resource type="PackedScene" uid="uid://b0b8d8fe0ga2a" path="res://Touch_Controls/scene/touch_controls.tscn" id="11_kpjop"]
+[ext_resource type="PackedScene" uid="uid://m4c8hp47kokd" path="res://UI/pause_menu.tscn" id="12_e7q3o"]
+[ext_resource type="PackedScene" uid="uid://0dybtnqg5l6c" path="res://CommonScripts/PauseButton.tscn" id="13_cv3by"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2qntf"]
 texture = ExtResource("2_bhddu")
@@ -334,6 +338,23 @@ size = Vector2(64.5, 24)
 [sub_resource type="SeparationRayShape2D" id="SeparationRayShape2D_n4edg"]
 length = 164.545
 
+[sub_resource type="SeparationRayShape2D" id="SeparationRayShape2D_kpjop"]
+length = 236.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e7q3o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k2crs")
+}],
+"loop": true,
+"name": &"default",
+"speed": 9.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cv3by"]
+size = Vector2(64.5, 24)
+
 [node name="KhangMap" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -519,6 +540,44 @@ rotation = 1.5708
 position = Vector2(-4.54544, 49.0909)
 shape = SubResource("SeparationRayShape2D_n4edg")
 
+[node name="Trigger2" type="Area2D" parent="." node_paths=PackedStringArray("tilemap", "gai_trap")]
+position = Vector2(1447, 152)
+script = ExtResource("10_2qntf")
+tilemap = NodePath("../TileMap")
+gai_trap = NodePath("../GaiTrap")
+move_distance = 2000.0
+move_speed = 1500.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trigger2"]
+position = Vector2(-39, -136)
+shape = SubResource("SeparationRayShape2D_kpjop")
+
+[node name="GaiTrap" type="Area2D" parent="." groups=["hurt"]]
+z_index = -1
+position = Vector2(1702, 473)
+rotation = -1.5708
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="GaiTrap"]
+texture_filter = 1
+position = Vector2(-27, 43)
+rotation = 1.18301e-05
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_e7q3o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GaiTrap"]
+position = Vector2(-27.25, 43)
+shape = SubResource("RectangleShape2D_cv3by")
+
+[node name="TouchControls" parent="." instance=ExtResource("11_kpjop")]
+
+[node name="PauseMenu" parent="." instance=ExtResource("12_e7q3o")]
+visible = false
+
+[node name="PauseButton" parent="." instance=ExtResource("13_cv3by")]
+
 [connection signal="body_entered" from="Room" to="Room" method="_on_body_entered"]
 [connection signal="body_entered" from="Trigger1" to="Trigger1" method="_on_body_entered"]
 [connection signal="body_entered" from="Gai_Up/Trigger" to="Gai_Up" method="_on_trigger_entered"]
+[connection signal="body_entered" from="Trigger2" to="Trigger2" method="_on_body_entered"]
+
+[editable path="PauseButton"]
