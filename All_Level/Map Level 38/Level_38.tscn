@@ -1004,8 +1004,8 @@ shape = SubResource("RectangleShape2D_1if3u")
 
 [node name="Checkpoint" parent="." instance=ExtResource("10_56fv2")]
 position = Vector2(145, -48)
-completed_level_number = 20
-next_level = "res://All_Level/Map Level 21/Level_21.tscn"
+completed_level_number = 38
+next_level = "res://All_Level/Map Level 39/Level_39.tscn"
 
 [node name="TouchControls" parent="." instance=ExtResource("11_3jtau")]
 

@@ -938,6 +938,8 @@ shape = SubResource("SeparationRayShape2D_beujv")
 [node name="Checkpoint" parent="." instance=ExtResource("10_46wpv")]
 position = Vector2(-383, 344)
 scale = Vector2(0.5, 0.5)
+completed_level_number = 22
+next_level = "res://All_Level/Map Level 23/Level_23.tscn"
 
 [node name="TileMap2" type="TileMap" parent="."]
 z_index = -3

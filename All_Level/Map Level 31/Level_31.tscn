@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://crhk04in7jmsy" path="res://Pixel Adventure 1/Free/Traps/Spikes/Idle.png" id="4_x63rl"]
 [ext_resource type="Script" uid="uid://dhkhi7tjfeah2" path="res://CHiTAN/Trap_tái_sử_dụng/MovePro.gd" id="5_khiio"]
 [ext_resource type="Texture2D" uid="uid://fl3ptdes687d" path="res://UI/ImgBlock/Lel29.tres" id="6_ay8jw"]
-[ext_resource type="Script" uid="uid://du8lyvsh7qf4x" path="res://CHiTAN/Trap_tái_sử_dụng/Move_ULDR.gd" id="7_hn5em"]
+[ext_resource type="Script" path="res://CHiTAN/Trap_tái_sử_dụng/Move_ULDR.gd" id="7_hn5em"]
 [ext_resource type="Script" uid="uid://cn68kf01nitbs" path="res://ScriptsScenes/box/appearingBox.gd" id="8_qiatc"]
 [ext_resource type="Texture2D" uid="uid://et81wap61p4f" path="res://Pixel Adventure 1/Free/Items/Boxes/Box1/Idle.png" id="9_8nxjr"]
 [ext_resource type="Texture2D" uid="uid://cmx6ev0y0fkb7" path="res://Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="10_xwlhh"]
@@ -718,6 +718,7 @@ position = Vector2(-3.5, -5.5)
 shape = SubResource("RectangleShape2D_4i0x1")
 
 [node name="Label" type="Label" parent="TextureRect"]
+layout_mode = 0
 offset_left = 5.0
 offset_top = 298.0
 offset_right = 209.0
@@ -740,8 +741,8 @@ script = ExtResource("12_30ig1")
 [node name="Checkpoint" parent="." instance=ExtResource("13_8lyo5")]
 position = Vector2(-1094, -99)
 script = ExtResource("14_bjg01")
-completed_level_number = 29
-next_level = "res://All_Level/Map Level 30/Level_30.tscn"
+completed_level_number = 31
+next_level = "res://All_Level/Map Level 32/Level_32.tscn"
 
 [node name="PauseMenu" parent="." instance=ExtResource("15_6h7bj")]
 visible = false
