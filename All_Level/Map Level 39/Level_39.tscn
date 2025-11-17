@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cmx6ev0y0fkb7" path="res://Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="2_qiip8"]
 [ext_resource type="Texture2D" uid="uid://h6v8xw84adyl" path="res://Pixel Adventure 1/Free/Background/2DBackground_46.png" id="3_feog7"]
 [ext_resource type="PackedScene" uid="uid://dt1tth682nenl" path="res://ScriptsScenes/MainCharacter/character_body_2d.tscn" id="4_pe6kf"]
-[ext_resource type="Script" uid="uid://c82pvtu66c33" path="res://ScriptsScenes/MainCharacter/character_body_2d2.gd" id="5_htqs0"]
+[ext_resource type="Script" path="res://ScriptsScenes/MainCharacter/character_body_2d2.gd" id="5_htqs0"]
 [ext_resource type="PackedScene" uid="uid://0dybtnqg5l6c" path="res://CommonScripts/PauseButton.tscn" id="6_pjsr7"]
 [ext_resource type="PackedScene" uid="uid://m4c8hp47kokd" path="res://UI/pause_menu.tscn" id="7_syno6"]
 [ext_resource type="PackedScene" uid="uid://b0b8d8fe0ga2a" path="res://Touch_Controls/scene/touch_controls.tscn" id="8_f8sps"]
@@ -588,6 +588,8 @@ shape = SubResource("RectangleShape2D_2umhv")
 [node name="Checkpoint" parent="." instance=ExtResource("15_u8xmo")]
 position = Vector2(-2073, 756)
 scale = Vector2(2, 1.996)
+completed_level_number = 39
+next_level = "res://All_Level/Map Level 40/Level_40.tscn"
 
 [node name="SpikesHide" type="Node" parent="."]
 
