@@ -733,7 +733,6 @@ cam_zoom = Vector2(1, 1.1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Room1"]
 position = Vector2(1109, 561.351)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_veej0")
 
 [connection signal="body_entered" from="SpikeTrap_LeftMove/SpikeTrigger" to="SpikeTrap_LeftMove/SpikeTrap_LeftMove" method="_on_saw_trigger_body_entered"]
