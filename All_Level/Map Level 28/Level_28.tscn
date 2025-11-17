@@ -865,6 +865,8 @@ shape = SubResource("RectangleShape2D_vh7qx")
 
 [node name="Checkpoint" parent="." instance=ExtResource("16_tyljg")]
 position = Vector2(189, 310)
+completed_level_number = 28
+next_level = "res://All_Level/Map Level 29/Level_29.tscn"
 
 [node name="PauseButton" parent="." instance=ExtResource("17_u3k05")]
 

@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://26g1nyycfuji" path="res://Pixel Adventure 1/Free/Traps/Saw/On (38x38).png" id="4_ua20o"]
 [ext_resource type="Script" uid="uid://e3cnttgr7mkc" path="res://All_Level/Map Level 24/trigger_move.gd" id="5_omgj7"]
 [ext_resource type="PackedScene" uid="uid://dt1tth682nenl" path="res://ScriptsScenes/MainCharacter/character_body_2d.tscn" id="6_ohxiu"]
-[ext_resource type="Texture2D" uid="uid://dxmvu6ndlpevu" path="res://UI/ImgBlock/Img_Level/BlockLevel27.tres" id="9_1jn21"]
+[ext_resource type="Texture2D" path="res://UI/ImgBlock/Img_Level/BlockLevel27.tres" id="9_1jn21"]
 [ext_resource type="Script" uid="uid://7f4754wefk68" path="res://All_Level/Map Level 7/room_1.gd" id="9_ohxiu"]
 [ext_resource type="Script" uid="uid://g5bpdt44h0x7" path="res://All_Level/Map Level 27/terrain_hide_level27.gd" id="10_1if3u"]
 [ext_resource type="PackedScene" uid="uid://btdfqc4qp1j67" path="res://Checkpoint/Level_1/checkpoint.tscn" id="11_1if3u"]
@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://0dybtnqg5l6c" path="res://CommonScripts/PauseButton.tscn" id="13_skrf4"]
 [ext_resource type="PackedScene" uid="uid://b0b8d8fe0ga2a" path="res://Touch_Controls/scene/touch_controls.tscn" id="14_skrf4"]
 [ext_resource type="Script" uid="uid://b45gfejpjqyfu" path="res://All_Level/Map Level 27/retry_text.gd" id="14_vwa5x"]
-[ext_resource type="Script" uid="uid://bcurfe288hc1t" path="res://block_check_point.gd" id="15_eg1ct"]
+[ext_resource type="Script" path="res://block_check_point.gd" id="15_eg1ct"]
 [ext_resource type="Texture2D" uid="uid://wk2asdrhpa2m" path="res://UI/ImgBlock/Img_Level/BlockLevel25.tres" id="15_vwa5x"]
 [ext_resource type="Script" uid="uid://baq7vi01hhxig" path="res://All_Level/Map Level 27/saw.gd" id="17_kjdhy"]
 [ext_resource type="Script" uid="uid://cyqggo8yfd6p4" path="res://All_Level/Map Level 27/trigger_saw.gd" id="19_6a2v7"]
@@ -626,8 +626,8 @@ shape = SubResource("RectangleShape2D_1jn21")
 
 [node name="Checkpoint" parent="." instance=ExtResource("11_1if3u")]
 position = Vector2(286, 623)
-completed_level_number = 20
-next_level = "res://All_Level/Map Level 21/Level_21.tscn"
+completed_level_number = 27
+next_level = "res://All_Level/Map Level 28/Level_28.tscn"
 
 [node name="PauseMenu" parent="." instance=ExtResource("12_dgple")]
 visible = false

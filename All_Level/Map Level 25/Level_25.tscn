@@ -609,8 +609,8 @@ shape = SubResource("RectangleShape2D_ptj6m")
 
 [node name="Checkpoint" parent="." instance=ExtResource("14_l6gxo")]
 position = Vector2(276, 141)
-completed_level_number = 20
-next_level = "res://All_Level/Map Level 21/Level_21.tscn"
+completed_level_number = 25
+next_level = "res://All_Level/Map Level 26/Level_26.tscn"
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 
