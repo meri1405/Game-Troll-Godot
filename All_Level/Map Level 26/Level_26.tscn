@@ -821,5 +821,6 @@ visible = false
 [connection signal="body_entered" from="triggersawMove" to="triggersawMove" method="_on_body_entered"]
 [connection signal="body_entered" from="triggersawMoveExtra" to="triggersawMoveExtra" method="_on_body_entered"]
 [connection signal="body_entered" from="Gai_Up/Trigger" to="Gai_Up" method="_on_trigger_entered"]
+[connection signal="pressed" from="PauseButton/Pause" to="PauseMenu" method="show_menu"]
 
 [editable path="PauseButton"]
