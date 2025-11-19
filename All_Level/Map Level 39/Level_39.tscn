@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cmx6ev0y0fkb7" path="res://Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="2_qiip8"]
 [ext_resource type="Texture2D" uid="uid://h6v8xw84adyl" path="res://Pixel Adventure 1/Free/Background/2DBackground_46.png" id="3_feog7"]
 [ext_resource type="PackedScene" uid="uid://dt1tth682nenl" path="res://ScriptsScenes/MainCharacter/character_body_2d.tscn" id="4_pe6kf"]
-[ext_resource type="Script" path="res://ScriptsScenes/MainCharacter/character_body_2d2.gd" id="5_htqs0"]
+[ext_resource type="Script" uid="uid://c82pvtu66c33" path="res://ScriptsScenes/MainCharacter/character_body_2d2.gd" id="5_htqs0"]
 [ext_resource type="PackedScene" uid="uid://0dybtnqg5l6c" path="res://CommonScripts/PauseButton.tscn" id="6_pjsr7"]
 [ext_resource type="PackedScene" uid="uid://m4c8hp47kokd" path="res://UI/pause_menu.tscn" id="7_syno6"]
 [ext_resource type="PackedScene" uid="uid://b0b8d8fe0ga2a" path="res://Touch_Controls/scene/touch_controls.tscn" id="8_f8sps"]
@@ -508,7 +508,6 @@ script = ExtResource("5_htqs0")
 target_position = Vector2(0, 10)
 
 [node name="PauseButton" parent="." instance=ExtResource("6_pjsr7")]
-visible = false
 
 [node name="PauseMenu" parent="." instance=ExtResource("7_syno6")]
 visible = false
@@ -737,6 +736,7 @@ cam_zoom = Vector2(1, 1.1)
 position = Vector2(1109, 561.351)
 shape = SubResource("RectangleShape2D_veej0")
 
+[connection signal="pressed" from="PauseButton/Pause" to="PauseMenu" method="show_menu"]
 [connection signal="body_entered" from="SpikeTrap_LeftMove/SpikeTrigger" to="SpikeTrap_LeftMove/SpikeTrap_LeftMove" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="SpikeTrap_LeftMove/SpikeTrigger" to="SpikeTrap_LeftMove/SpikeTrap_LeftMove2" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="SpikeTrap_LeftMove/SpikeTrigger" to="SpikeTrap_LeftMove/SpikeTrigger" method="_on_body_entered"]
