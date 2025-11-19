@@ -9,7 +9,7 @@
 [ext_resource type="Script" uid="uid://dhkhi7tjfeah2" path="res://CHiTAN/Trap_tái_sử_dụng/MovePro.gd" id="5_bdi7n"]
 [ext_resource type="Texture2D" uid="uid://fl3ptdes687d" path="res://UI/ImgBlock/Lel29.tres" id="6_ffuvs"]
 [ext_resource type="Script" uid="uid://cn68kf01nitbs" path="res://ScriptsScenes/box/appearingBox.gd" id="7_eghas"]
-[ext_resource type="Script" path="res://CHiTAN/Trap_tái_sử_dụng/Move_ULDR.gd" id="7_w3w02"]
+[ext_resource type="Script" uid="uid://du8lyvsh7qf4x" path="res://CHiTAN/Trap_tái_sử_dụng/Move_ULDR.gd" id="7_w3w02"]
 [ext_resource type="Texture2D" uid="uid://et81wap61p4f" path="res://Pixel Adventure 1/Free/Items/Boxes/Box1/Idle.png" id="8_w3w02"]
 [ext_resource type="PackedScene" uid="uid://c7hveipcmpxya" path="res://CHiTAN/GravityZone.tscn" id="12_5yfib"]
 [ext_resource type="PackedScene" uid="uid://b0b8d8fe0ga2a" path="res://Touch_Controls/scene/touch_controls.tscn" id="13_hxw5k"]
