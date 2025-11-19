@@ -1050,6 +1050,7 @@ position = Vector2(0, 4.5)
 shape = SubResource("RectangleShape2D_ptj6m")
 
 [connection signal="body_entered" from="Room1" to="Room1" method="_on_body_entered"]
+[connection signal="pressed" from="PauseButton/Pause" to="PauseMenu" method="show_menu"]
 [connection signal="body_entered" from="TerrainHide/TriggerTerrain" to="TerrainHide/TerrainHide" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="TerrainHide/TriggerTerrain" to="TerrainHide/TerrainHide2" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="TerrainHide2/TriggerTerrain" to="TerrainHide2/TerrainHide" method="_on_saw_trigger_body_entered"]

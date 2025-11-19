@@ -1289,5 +1289,6 @@ visible = false
 [connection signal="body_entered" from="Spike/SpikeHide_Left/trigger2" to="Spike/SpikeHide_Left/SpikeHide25" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="Spike/SpikeHide_Left/trigger2" to="Spike/SpikeHide_Left/SpikeHide26" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="Room1" to="Room1" method="_on_body_entered"]
+[connection signal="pressed" from="PauseButton/Pause" to="PauseMenu" method="show_menu"]
 
 [editable path="PauseButton"]
