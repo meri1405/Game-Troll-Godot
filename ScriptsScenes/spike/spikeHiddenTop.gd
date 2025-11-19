@@ -6,17 +6,17 @@ const JUMP_VELOCITY = -400.0
 
 func _on_force_jump_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
-		global_position.y = global_position.y + 15
+		visible = true
 		await get_tree().create_timer(1.5).timeout
-		global_position.y = global_position.y -15
+		visible = false
 		print("force jump")
 	
 
 func _on_player_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
-		global_position.y = global_position.y + 15
+		visible = true
 		await get_tree().create_timer(1.5).timeout
-		global_position.y = global_position.y -15
+		visible = false
 		print("force jump")
 	
 
