@@ -518,8 +518,8 @@ visible = false
 
 [node name="Checkpoint" parent="." instance=ExtResource("16_8mdp4")]
 position = Vector2(-639, 430)
-completed_level_number = 20
-next_level = "res://All_Level/Map Level 21/Level_21.tscn"
+completed_level_number = 24
+next_level = "res://All_Level/Map Level 25/Level_25.tscn"
 
 [connection signal="body_entered" from="TextLevelDrop/TriggerDrop" to="TextLevelDrop/LevelDrop" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="TextLevelDrop/TriggerDrop" to="TextLevelDrop/TriggerDrop" method="_on_body_entered"]
