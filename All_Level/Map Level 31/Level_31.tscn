@@ -723,6 +723,7 @@ offset_left = 5.0
 offset_top = 298.0
 offset_right = 209.0
 offset_bottom = 321.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 text = "Same same but different"
 
 [node name="TileMap" type="TileMap" parent="."]

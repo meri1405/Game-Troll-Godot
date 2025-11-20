@@ -17,6 +17,7 @@ var control_inverted: bool = false
 var is_on_ice = false
 var is_gravity_inverted = false
 var is_invincible_after_spawn = false
+var is_dying = false  # Ngăn multiple death calls
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 var spawn_point_x = 0
@@ -89,6 +90,11 @@ func _do_reset():
 	position = Vector2(spawn_point_x, spawn_point_y)
 
 func die():
+	# ✅ NGĂN MULTIPLE DEATH CALLS
+	if is_dying or not is_alive:
+		return
+		
+	is_dying = true
 	GameManager.increment_death_count()
 	is_alive = false
 	is_invincible_after_spawn = true
@@ -112,6 +118,7 @@ func die():
 	_do_reset()
 	
 	is_alive = true
+	is_dying = false  # ✅ Reset death flag để cho phép die() lần tiếp theo
 	await get_tree().create_timer(0.1).timeout
 	is_invincible_after_spawn = false
 
