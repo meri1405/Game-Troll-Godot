@@ -865,6 +865,8 @@ shape = SubResource("RectangleShape2D_vh7qx")
 
 [node name="Checkpoint" parent="." instance=ExtResource("16_tyljg")]
 position = Vector2(189, 310)
+completed_level_number = 28
+next_level = "res://All_Level/Map Level 29/Level_29.tscn"
 
 [node name="PauseButton" parent="." instance=ExtResource("17_u3k05")]
 
@@ -899,6 +901,7 @@ shape = SubResource("RectangleShape2D_fim22")
 [connection signal="body_entered" from="TextLevelDrop/TriggerDrop" to="TextLevelDrop/LevelDrop" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="TextLevelDrop/TriggerDrop" to="TextLevelDrop/TriggerDrop" method="_on_body_entered"]
 [connection signal="body_entered" from="SpikesHide11/TriggerShow" to="SpikesHide11/SpikeHide" method="_on_saw_trigger_body_entered"]
+[connection signal="pressed" from="PauseButton/Pause" to="PauseMenu" method="show_menu"]
 [connection signal="body_entered" from="Room1" to="Room1" method="_on_body_entered"]
 
 [editable path="PauseButton"]

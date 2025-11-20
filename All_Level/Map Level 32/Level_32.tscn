@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cmx6ev0y0fkb7" path="res://Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="2_c3tbf"]
 [ext_resource type="PackedScene" uid="uid://dt1tth682nenl" path="res://ScriptsScenes/MainCharacter/character_body_2d.tscn" id="3_u8556"]
 [ext_resource type="Script" uid="uid://62apkpggxlb4" path="res://All_Level/Map Level 32/terrain_hide2.gd" id="4_t5nts"]
-[ext_resource type="Texture2D" uid="uid://dxmvu6ndlpevu" path="res://UI/ImgBlock/Img_Level/BlockLevel27.tres" id="5_hjjo3"]
+[ext_resource type="Texture2D" path="res://UI/ImgBlock/Img_Level/BlockLevel27.tres" id="5_hjjo3"]
 [ext_resource type="Script" uid="uid://e3cnttgr7mkc" path="res://All_Level/Map Level 24/trigger_move.gd" id="6_2lvlb"]
 [ext_resource type="Texture2D" uid="uid://cgdbmsy1ma5nx" path="res://Pixel Adventure 1/Free/Items/Buttons/ButtonBlue-Sheet.png" id="7_5ygth"]
 [ext_resource type="Script" uid="uid://cks0mw436vgw5" path="res://box_left_move2.gd" id="8_eeqsa"]
@@ -1139,8 +1139,8 @@ shape = SubResource("RectangleShape2D_qb3eu")
 
 [node name="Checkpoint" parent="." instance=ExtResource("15_rp47q")]
 position = Vector2(271, 562)
-completed_level_number = 20
-next_level = "res://All_Level/Map Level 21/Level_21.tscn"
+completed_level_number = 32
+next_level = "res://All_Level/Map Level 33/Level_33.tscn"
 
 [node name="PauseButton" parent="." instance=ExtResource("16_yfxiq")]
 
@@ -1182,5 +1182,6 @@ visible = false
 [connection signal="body_entered" from="Spike/SpikeHide_Left2/trigger" to="Spike/SpikeHide_Left2/SpikeHide" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="Room1" to="Room1" method="_on_body_entered"]
 [connection signal="body_entered" from="Room2" to="Room2" method="_on_body_entered"]
+[connection signal="pressed" from="PauseButton/Pause" to="PauseMenu" method="show_menu"]
 
 [editable path="PauseButton"]

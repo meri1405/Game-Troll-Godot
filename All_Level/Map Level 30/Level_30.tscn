@@ -530,8 +530,8 @@ shape = SubResource("CapsuleShape2D_n4edg")
 
 [node name="Checkpoint" parent="." instance=ExtResource("9_2qntf")]
 position = Vector2(904, 190)
-completed_level_number = 18
-next_level = "res://All_Level/Map Level 19/Level_19.tscn"
+completed_level_number = 30
+next_level = "res://All_Level/Map Level 31/Level_31.tscn"
 
 [node name="MoveTele" type="Area2D" parent="."]
 position = Vector2(499, 513)
@@ -622,5 +622,6 @@ visible = false
 [connection signal="body_entered" from="MoveTele5" to="MoveTele5" method="_on_body_entered"]
 [connection signal="body_entered" from="MoveTele2" to="MoveTele2" method="_on_body_entered"]
 [connection signal="body_entered" from="MoveTele4" to="MoveTele4" method="_on_body_entered"]
+[connection signal="pressed" from="PauseButton/Pause" to="PauseMenu" method="show_menu"]
 
 [editable path="PauseButton"]

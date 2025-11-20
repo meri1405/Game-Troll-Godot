@@ -1189,8 +1189,8 @@ shape = SubResource("RectangleShape2D_qb3eu")
 
 [node name="Checkpoint" parent="." instance=ExtResource("11_yxcp2")]
 position = Vector2(-502, 383)
-completed_level_number = 20
-next_level = "res://All_Level/Map Level 21/Level_21.tscn"
+completed_level_number = 34
+next_level = "res://All_Level/Map Level 34/Level_34.tscn"
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 
@@ -1289,5 +1289,6 @@ visible = false
 [connection signal="body_entered" from="Spike/SpikeHide_Left/trigger2" to="Spike/SpikeHide_Left/SpikeHide25" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="Spike/SpikeHide_Left/trigger2" to="Spike/SpikeHide_Left/SpikeHide26" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="Room1" to="Room1" method="_on_body_entered"]
+[connection signal="pressed" from="PauseButton/Pause" to="PauseMenu" method="show_menu"]
 
 [editable path="PauseButton"]

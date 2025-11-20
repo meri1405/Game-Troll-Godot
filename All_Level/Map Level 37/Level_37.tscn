@@ -375,8 +375,8 @@ shape = SubResource("RectangleShape2D_7j117")
 
 [node name="Checkpoint" parent="." instance=ExtResource("6_7j117")]
 position = Vector2(1380, 285)
-completed_level_number = 18
-next_level = "res://All_Level/Map Level 19/Level_19.tscn"
+completed_level_number = 37
+next_level = "res://All_Level/Map Level 38/Level_38.tscn"
 
 [node name="PauseMenu" parent="." instance=ExtResource("7_fx2ca")]
 visible = false
@@ -447,6 +447,7 @@ position = Vector2(103, 55.5)
 shape = SubResource("RectangleShape2D_imbwy")
 
 [connection signal="body_entered" from="Room" to="Room" method="_on_body_entered"]
+[connection signal="pressed" from="PauseButton/Pause" to="PauseMenu" method="show_menu"]
 [connection signal="body_entered" from="TriggerPlane" to="TriggerPlane" method="_on_body_entered"]
 [connection signal="body_entered" from="MovePlane" to="MovePlane" method="_on_body_entered"]
 [connection signal="body_entered" from="HideBlock1" to="HideBlock1" method="_on_body_entered"]

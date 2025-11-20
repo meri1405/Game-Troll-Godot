@@ -803,8 +803,8 @@ shape = SubResource("SeparationRayShape2D_oe15g")
 
 [node name="Checkpoint" parent="." instance=ExtResource("16_krqc2")]
 position = Vector2(877, 525)
-completed_level_number = 18
-next_level = "res://All_Level/Map Level 19/Level_19.tscn"
+completed_level_number = 26
+next_level = "res://All_Level/Map Level 27/Level_27.tscn"
 
 [node name="PauseMenu" parent="." instance=ExtResource("17_oe15g")]
 visible = false
@@ -821,5 +821,6 @@ visible = false
 [connection signal="body_entered" from="triggersawMove" to="triggersawMove" method="_on_body_entered"]
 [connection signal="body_entered" from="triggersawMoveExtra" to="triggersawMoveExtra" method="_on_body_entered"]
 [connection signal="body_entered" from="Gai_Up/Trigger" to="Gai_Up" method="_on_trigger_entered"]
+[connection signal="pressed" from="PauseButton/Pause" to="PauseMenu" method="show_menu"]
 
 [editable path="PauseButton"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://cix44xfcqavcx"]
+[gd_scene load_steps=32 format=3 uid="uid://cix44xfcqavcx"]
 
 [ext_resource type="Texture2D" uid="uid://bo3gi6m4w3jkx" path="res://Pixel Adventure 1/Free/Background/Pink.png" id="1_c77y2"]
 [ext_resource type="Script" uid="uid://ow7lj5frkx85" path="res://CHiTAN/Trap_tái_sử_dụng/Trap_DULR.gd" id="2_kvlq1"]
@@ -10,12 +10,14 @@
 [ext_resource type="Texture2D" uid="uid://d32rmvwyc3w8w" path="res://UI/ImgBlock/new_atlas_texture.tres" id="5_7pknd"]
 [ext_resource type="PackedScene" uid="uid://0dybtnqg5l6c" path="res://CommonScripts/PauseButton.tscn" id="6_ucgpo"]
 [ext_resource type="PackedScene" uid="uid://c7hveipcmpxya" path="res://CHiTAN/GravityZone.tscn" id="7_ucgpo"]
-[ext_resource type="PackedScene" uid="uid://bm8dx3k7qy2w" path="res://CHiTAN/GravityFieldZone.tscn" id="12_7pknd"]
+[ext_resource type="PackedScene" path="res://CHiTAN/GravityFieldZone.tscn" id="12_7pknd"]
 [ext_resource type="Script" uid="uid://irremkkx1a01" path="res://CHiTAN/Trap_tái_sử_dụng/remove_tile_map_xxx.gd" id="13_oxi4v"]
 [ext_resource type="Script" uid="uid://dhkhi7tjfeah2" path="res://CHiTAN/Trap_tái_sử_dụng/MovePro.gd" id="14_g0hib"]
 [ext_resource type="Texture2D" uid="uid://cqhyknp06hc4x" path="res://UI/ImgBlock/blocksand.tres" id="14_l85uv"]
 [ext_resource type="Script" uid="uid://cyjh2e8sd10t4" path="res://CHiTAN/Trap_Face_2/Trap_Plus.gd" id="16_7oihw"]
 [ext_resource type="PackedScene" uid="uid://btdfqc4qp1j67" path="res://Checkpoint/Level_1/checkpoint.tscn" id="17_pdmoa"]
+[ext_resource type="PackedScene" uid="uid://b0b8d8fe0ga2a" path="res://Touch_Controls/scene/touch_controls.tscn" id="17_tocni"]
+[ext_resource type="Script" uid="uid://bn8752m1onop8" path="res://ScriptsScenes/switchBodyLevel/room.gd" id="18_tocni"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_imrcp"]
 size = Vector2(219.149, 31.6568)
@@ -236,6 +238,9 @@ size = Vector2(83, 48)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pdmoa"]
 size = Vector2(25.4091, 77.4878)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wq4bp"]
+size = Vector2(5909, 1056)
 
 [node name="Level23" type="Node2D"]
 
@@ -546,7 +551,26 @@ position = Vector2(3976, 470)
 completed_level_number = 23
 next_level = "res://All_Level/Map Level 24/Level_24.tscn"
 
+[node name="TouchControls" parent="." instance=ExtResource("17_tocni")]
+offset = Vector2(-10, -10)
+transform = Transform2D(1, 0, 0, 1, -10, -10)
+
+[node name="Room" type="Area2D" parent="." groups=["Room_light"]]
+visible = false
+position = Vector2(182, -15)
+script = ExtResource("18_tocni")
+cam_limit_left = -48
+cam_limit_right = 5856
+cam_limit_top = -192
+cam_limit_bottom = 864
+cam_zoom = Vector2(0.7, 0.7)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room"]
+position = Vector2(2721.5, 355)
+shape = SubResource("RectangleShape2D_wq4bp")
+
 [connection signal="pressed" from="PauseButton/Pause" to="PauseMenu" method="show_menu"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Room" to="Room" method="_on_body_entered"]
 
 [editable path="PauseButton"]
