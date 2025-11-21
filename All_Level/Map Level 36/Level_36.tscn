@@ -1,7 +1,13 @@
-[gd_scene load_steps=17 format=3 uid="uid://casyqb26yk8df"]
+[gd_scene load_steps=37 format=3 uid="uid://casyqb26yk8df"]
 
 [ext_resource type="Script" uid="uid://c85pk27sc71ds" path="res://ScriptsScenes/misc/level_1.gd" id="1_03ivf"]
 [ext_resource type="Texture2D" uid="uid://dhkt1prc5cciq" path="res://Pixel Adventure 1/Free/Background/Blue.png" id="2_0h753"]
+[ext_resource type="Script" uid="uid://ckhjwphkx7u6a" path="res://CHiTAN/Trap_tái_sử_dụng/Telepot.gd" id="3_jdwd4"]
+[ext_resource type="Texture2D" uid="uid://d1qutp1sa7ags" path="res://Pixel Adventure 1/Dimensional_Portal.png" id="4_ddpnu"]
+[ext_resource type="Script" uid="uid://ds33xd35kdrki" path="res://ScriptsScenes/tele/teleport.gd" id="5_ollbb"]
+[ext_resource type="AudioStream" uid="uid://b0hj08dk82lrn" path="res://audio/audioAssests/Teleport Sound Effects No Copyright - Friendly Free Sounds (youtube) (mp3cut.net) (1).wav" id="6_kriod"]
+[ext_resource type="Script" uid="uid://ow7lj5frkx85" path="res://CHiTAN/Trap_tái_sử_dụng/Trap_DULR.gd" id="7_qc36w"]
+[ext_resource type="Texture2D" uid="uid://crhk04in7jmsy" path="res://Pixel Adventure 1/Free/Traps/Spikes/Idle.png" id="8_sov76"]
 [ext_resource type="Texture2D" uid="uid://cmx6ev0y0fkb7" path="res://Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="11_jgcvr"]
 [ext_resource type="PackedScene" uid="uid://dt1tth682nenl" path="res://ScriptsScenes/MainCharacter/character_body_2d.tscn" id="12_htkbc"]
 [ext_resource type="Script" uid="uid://dhbe4nrvokkhm" path="res://CHiTAN/ChiTanNV.gd" id="13_dwhea"]
@@ -12,6 +18,101 @@
 [ext_resource type="PackedScene" uid="uid://b0b8d8fe0ga2a" path="res://Touch_Controls/scene/touch_controls.tscn" id="18_lnicy"]
 [ext_resource type="Script" uid="uid://11o0nnucsv8j" path="res://All_Level/Map Level 1/room.gd" id="19_dwb66"]
 [ext_resource type="PackedScene" uid="uid://c7hveipcmpxya" path="res://CHiTAN/GravityZone.tscn" id="20_h2vfd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gf767"]
+atlas = ExtResource("4_ddpnu")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rqwej"]
+atlas = ExtResource("4_ddpnu")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w04ql"]
+atlas = ExtResource("4_ddpnu")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rdeug"]
+atlas = ExtResource("4_ddpnu")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m7mxy"]
+atlas = ExtResource("4_ddpnu")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iq8ye"]
+atlas = ExtResource("4_ddpnu")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ollbb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gf767")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rqwej")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w04ql")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rdeug")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m7mxy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iq8ye")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kriod"]
+size = Vector2(10.794, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qc36w"]
+size = Vector2(7.84119, 12.0849)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sov76"]
+size = Vector2(20, 75)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qc36w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gf767")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rqwej")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w04ql")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rdeug")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m7mxy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iq8ye")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sov76"]
+radius = 36.0
+height = 202.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2l5fp"]
+size = Vector2(42.1054, 140.455)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a7e53"]
+size = Vector2(116.937, 19.4914)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y02rr"]
 texture = ExtResource("11_jgcvr")
@@ -212,6 +313,257 @@ size_flags_horizontal = 0
 texture = ExtResource("2_0h753")
 stretch_mode = 1
 
+[node name="Area2D5" type="Area2D" parent="TextureRect"]
+position = Vector2(672, 391)
+script = ExtResource("3_jdwd4")
+move_up_distance = 55.0
+move_left_distance = 0.0
+move_down_distance = 0.0
+teleport_target = Vector2(600, 300)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="TextureRect/Area2D5"]
+texture_filter = 1
+position = Vector2(126.507, 15.984)
+scale = Vector2(1.26987, 1.11845)
+sprite_frames = SubResource("SpriteFrames_ollbb")
+
+[node name="MapChiTan2" type="Area2D" parent="TextureRect/Area2D5"]
+position = Vector2(116.576, 12.5092)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Area2D5/MapChiTan2"]
+position = Vector2(11.4415, 2.49081)
+shape = SubResource("RectangleShape2D_kriod")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Area2D5"]
+position = Vector2(126, 20)
+shape = SubResource("RectangleShape2D_qc36w")
+
+[node name="TriggerArea" type="Area2D" parent="TextureRect/Area2D5"]
+position = Vector2(13, -110)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Area2D5/TriggerArea"]
+position = Vector2(20, 64)
+shape = SubResource("RectangleShape2D_sov76")
+
+[node name="Area2D6" type="Area2D" parent="TextureRect"]
+position = Vector2(779, 389)
+script = ExtResource("3_jdwd4")
+move_up_distance = 55.0
+move_left_distance = 0.0
+move_down_distance = 0.0
+teleport_target = Vector2(600, 300)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="TextureRect/Area2D6"]
+texture_filter = 1
+position = Vector2(126.507, 15.984)
+scale = Vector2(1.26987, 1.11845)
+sprite_frames = SubResource("SpriteFrames_ollbb")
+
+[node name="MapChiTan2" type="Area2D" parent="TextureRect/Area2D6"]
+position = Vector2(116.576, 12.5092)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Area2D6/MapChiTan2"]
+position = Vector2(11.4415, 3.47478)
+shape = SubResource("RectangleShape2D_kriod")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Area2D6"]
+position = Vector2(126, 20)
+shape = SubResource("RectangleShape2D_qc36w")
+
+[node name="TriggerArea" type="Area2D" parent="TextureRect/Area2D6"]
+position = Vector2(13, -110)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Area2D6/TriggerArea"]
+position = Vector2(85, 27)
+scale = Vector2(0.943835, 1.18788)
+shape = SubResource("RectangleShape2D_sov76")
+
+[node name="Area2D9" type="Area2D" parent="TextureRect"]
+position = Vector2(727, 388)
+script = ExtResource("3_jdwd4")
+move_up_distance = 55.0
+move_left_distance = 0.0
+move_down_distance = 0.0
+teleport_target = Vector2(600, 300)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="TextureRect/Area2D9"]
+texture_filter = 1
+position = Vector2(126.507, 15.984)
+scale = Vector2(1.26987, 1.11845)
+sprite_frames = SubResource("SpriteFrames_ollbb")
+
+[node name="MapChiTan2" type="Area2D" parent="TextureRect/Area2D9"]
+position = Vector2(116.576, 12.5092)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Area2D9/MapChiTan2"]
+position = Vector2(11.4415, 3.47478)
+shape = SubResource("RectangleShape2D_kriod")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Area2D9"]
+position = Vector2(126, 20)
+shape = SubResource("RectangleShape2D_qc36w")
+
+[node name="TriggerArea" type="Area2D" parent="TextureRect/Area2D9"]
+position = Vector2(13, -110)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Area2D9/TriggerArea"]
+position = Vector2(93, 24)
+scale = Vector2(0.943835, 1.18788)
+shape = SubResource("RectangleShape2D_sov76")
+
+[node name="Area2D7" type="Area2D" parent="TextureRect"]
+position = Vector2(894, 387)
+script = ExtResource("3_jdwd4")
+move_up_distance = 55.0
+move_left_distance = 0.0
+move_down_distance = 0.0
+teleport_target = Vector2(600, 300)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="TextureRect/Area2D7"]
+texture_filter = 1
+position = Vector2(126.507, 15.984)
+scale = Vector2(1.26987, 1.11845)
+sprite_frames = SubResource("SpriteFrames_ollbb")
+
+[node name="MapChiTan2" type="Area2D" parent="TextureRect/Area2D7"]
+position = Vector2(116.576, 12.5092)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Area2D7/MapChiTan2"]
+position = Vector2(11.4415, 3.47478)
+shape = SubResource("RectangleShape2D_kriod")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Area2D7"]
+position = Vector2(126, 20)
+shape = SubResource("RectangleShape2D_qc36w")
+
+[node name="TriggerArea" type="Area2D" parent="TextureRect/Area2D7"]
+position = Vector2(13, -110)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Area2D7/TriggerArea"]
+position = Vector2(82, 30)
+scale = Vector2(0.943835, 1.18788)
+shape = SubResource("RectangleShape2D_sov76")
+
+[node name="Area2D8" type="Area2D" parent="TextureRect"]
+position = Vector2(840, 388)
+script = ExtResource("3_jdwd4")
+move_up_distance = 55.0
+move_left_distance = 0.0
+move_down_distance = 0.0
+teleport_target = Vector2(600, 300)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="TextureRect/Area2D8"]
+texture_filter = 1
+position = Vector2(126.507, 15.984)
+scale = Vector2(1.26987, 1.11845)
+sprite_frames = SubResource("SpriteFrames_ollbb")
+
+[node name="MapChiTan2" type="Area2D" parent="TextureRect/Area2D8"]
+position = Vector2(116.576, 12.5092)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Area2D8/MapChiTan2"]
+position = Vector2(11.4415, 3.47478)
+shape = SubResource("RectangleShape2D_kriod")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Area2D8"]
+position = Vector2(126, 20)
+shape = SubResource("RectangleShape2D_qc36w")
+
+[node name="TriggerArea" type="Area2D" parent="TextureRect/Area2D8"]
+position = Vector2(13, -110)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Area2D8/TriggerArea"]
+position = Vector2(95, 26)
+scale = Vector2(0.943835, 1.18788)
+shape = SubResource("RectangleShape2D_sov76")
+
+[node name="Teleport" type="Area2D" parent="TextureRect"]
+position = Vector2(156, 329)
+scale = Vector2(0.70212, 0.379565)
+script = ExtResource("5_ollbb")
+target_position = Vector2(917, 200)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="TextureRect/Teleport"]
+texture_filter = 1
+position = Vector2(-181, 0)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_qc36w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Teleport"]
+position = Vector2(-176, -6)
+shape = SubResource("CapsuleShape2D_sov76")
+
+[node name="TeleportAudio" type="AudioStreamPlayer2D" parent="TextureRect/Teleport"]
+stream = ExtResource("6_kriod")
+
+[node name="Label" type="Label" parent="TextureRect"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 72.0
+offset_top = 264.0
+offset_right = 162.0
+offset_bottom = 287.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "Go this way"
+
+[node name="DeadlyTrap" type="Area2D" parent="TextureRect"]
+position = Vector2(221, 172)
+scale = Vector2(1.11064, 0.917245)
+script = ExtResource("7_qc36w")
+distances = Array[float]([0.0, 28.0, 0.0, 0.0])
+speeds = Array[float]([0.0, 0.3, 0.0, 0.0])
+reset_delay = 0.1
+is_active = true
+
+[node name="NewAtlasTexture" type="Sprite2D" parent="TextureRect/DeadlyTrap"]
+position = Vector2(102.388, 239.982)
+rotation = -6.27918
+scale = Vector2(2.63667, 2.63862)
+texture = ExtResource("8_sov76")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/DeadlyTrap"]
+position = Vector2(102.366, 254.563)
+rotation = -1.5706
+scale = Vector2(0.37512, 0.566092)
+shape = SubResource("RectangleShape2D_2l5fp")
+
+[node name="TriggerArea" type="Area2D" parent="TextureRect/DeadlyTrap"]
+position = Vector2(11.705, 419.735)
+rotation = -0.34932
+scale = Vector2(0.878281, 0.8882)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/DeadlyTrap/TriggerArea"]
+position = Vector2(251.07, -216.558)
+rotation = 1.9197
+scale = Vector2(0.999975, 1.03161)
+shape = SubResource("RectangleShape2D_a7e53")
+
+[node name="DeadlyTrap2" type="Area2D" parent="TextureRect"]
+position = Vector2(185, 24)
+scale = Vector2(1.11064, 0.917245)
+script = ExtResource("7_qc36w")
+distances = Array[float]([0.0, 28.0, 0.0, 0.0])
+speeds = Array[float]([0.0, 0.3, 0.0, 0.0])
+reset_delay = 0.1
+is_active = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/DeadlyTrap2"]
+position = Vector2(-61.226, 275.826)
+rotation = -1.5706
+scale = Vector2(0.37512, 0.566092)
+shape = SubResource("RectangleShape2D_2l5fp")
+
+[node name="TriggerArea" type="Area2D" parent="TextureRect/DeadlyTrap2"]
+position = Vector2(11.705, 419.735)
+rotation = -0.34932
+scale = Vector2(0.878281, 0.8882)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/DeadlyTrap2/TriggerArea"]
+position = Vector2(251.07, -216.558)
+rotation = 1.9197
+scale = Vector2(0.999975, 1.03161)
+shape = SubResource("RectangleShape2D_a7e53")
+
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
 scale = Vector2(3, 3)
@@ -220,16 +572,17 @@ format = 2
 layer_0/tile_data = PackedInt32Array(458752, 458752, 0, 458753, 458752, 0, 720896, 65536, 10, 720897, 65536, 10, 720898, 65536, 10, 720899, 65536, 10, 720900, 65536, 10, 720901, 65536, 10, 720902, 65536, 10, 720903, 65536, 10, 720904, 65536, 10, 720905, 65536, 10, 720906, 65536, 10, 720907, 65536, 10, 720908, 65536, 10, 720909, 65536, 10, 720910, 65536, 10, 720911, 65536, 10, 720912, 65536, 10, 720913, 65536, 10, 720914, 65536, 10, 720915, 65536, 10, 720916, 65536, 10, 720895, 1245184, 5, 655359, 1245184, 5, 589823, 1245184, 5, 524287, 1245184, 5, 458751, 1245184, 5, 393215, 1245184, 5, 327679, 1245184, 5, 262143, 1245184, 5, 196607, 1245184, 5, 131071, 1245184, 5, 786431, 1245184, 5, -1, 1179648, 5, -65537, 1179648, 4, -131072, 1179648, 4, -131071, 1179648, 4, -131070, 1179648, 4, -131069, 1179648, 4, -131068, 1179648, 4, -131067, 1179648, 4, -131066, 1179648, 4, -131065, 1179648, 4, -131064, 1179648, 4, -131063, 1179648, 4, -131062, 1179648, 4, -131061, 1179648, 4, -131060, 1179648, 4, -131059, 1179648, 4, -131058, 1179648, 4, -131057, 1179648, 4, -131056, 1179648, 4, -131055, 1179648, 4, -131054, 1179648, 4, -131053, 1179648, 4, -131052, 1179648, 4, 458754, 458752, 0, 458755, 458752, 0, 458756, 458752, 0, 458757, 458752, 0, 458758, 458752, 0, 458759, 458752, 0, 458760, 458752, 0, 458761, 458752, 0, 458762, 458752, 0, 458763, 458752, 0, 458764, 458752, 0, 458765, 458752, 0, 458766, 458752, 0, 458767, 458752, 0, 458768, 458752, 0, 458769, 458752, 0, 458770, 458752, 0, 458771, 458752, 0, 65535, 1179648, 5, -131051, 1179648, 5, 720917, 65536, 10, 458772, 458752, 0, -131050, 1179648, 5, -131049, 1179648, 5, 720918, 65536, 10, 720919, 1179648, 5, 458773, 458752, 0, 458774, 458752, 0, 655383, 1179648, 5, 589847, 1179648, 5, 524311, 1179648, 5, 458775, 1179648, 5, 393239, 1179648, 5, 327703, 1179648, 5, 262167, 1179648, 5, 196631, 1179648, 5, 131095, 1179648, 5, 65559, 1179648, 5, 23, 1179648, 5, -65513, 1179648, 5)
 
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("12_htkbc")]
-position = Vector2(43, 310)
+position = Vector2(599, 301)
 script = ExtResource("13_dwhea")
 
 [node name="PointLight2D" type="PointLight2D" parent="Player"]
+position = Vector2(6, -1.66667)
 
 [node name="Checkpoint" parent="." instance=ExtResource("14_n4vjj")]
 position = Vector2(-54, 189)
 script = ExtResource("15_x3qts")
-completed_level_number = 29
-next_level = "res://All_Level/Map Level 30/Level_30.tscn"
+completed_level_number = 36
+next_level = "res://All_Level/Map Level 37/Level_37.tscn"
 
 [node name="PauseMenu" parent="." instance=ExtResource("16_7i713")]
 visible = false
@@ -268,6 +621,7 @@ gravity_strength = 8000.0
 attraction_radius = 150.0
 max_pull_speed = 10000.0
 
+[connection signal="body_entered" from="TextureRect/Teleport" to="TextureRect/Teleport" method="_on_body_entered"]
 [connection signal="pressed" from="PauseButton/Pause" to="PauseMenu" method="show_menu"]
 [connection signal="body_entered" from="Room" to="Room" method="_on_body_entered"]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=77 format=3 uid="uid://bqewjukephym"]
+[gd_scene load_steps=80 format=3 uid="uid://bqewjukephym"]
 
 [ext_resource type="Texture2D" uid="uid://dykufv5680ij8" path="res://Pixel Adventure 1/Free/Background/Yellow.png" id="1_wo0o3"]
 [ext_resource type="Texture2D" uid="uid://cmx6ev0y0fkb7" path="res://Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="2_g418a"]
@@ -14,6 +14,9 @@
 [ext_resource type="Texture2D" uid="uid://b55xprnuf4puk" path="res://Pixel Adventure 1/Free/Items/Fruits/Strawberry.png" id="12_ol2bn"]
 [ext_resource type="Script" uid="uid://d1e1esyh54whf" path="res://All_Level/Map Level 22/Script_lv22/trigger_show.gd" id="13_uir80"]
 [ext_resource type="Script" uid="uid://fice40q36uxr" path="res://All_Level/Map Level 22/Script_lv22/trigger_show_2.gd" id="14_ifr1a"]
+[ext_resource type="PackedScene" uid="uid://b0b8d8fe0ga2a" path="res://Touch_Controls/scene/touch_controls.tscn" id="15_ms38m"]
+[ext_resource type="PackedScene" uid="uid://m4c8hp47kokd" path="res://UI/pause_menu.tscn" id="16_w4hwb"]
+[ext_resource type="PackedScene" uid="uid://0dybtnqg5l6c" path="res://CommonScripts/PauseButton.tscn" id="17_lh3w3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wo0o3"]
 texture = ExtResource("2_g418a")
@@ -1289,6 +1292,15 @@ gai_parent = NodePath("../Gai++")
 position = Vector2(-29, -81)
 shape = SubResource("SeparationRayShape2D_h5luw")
 
+[node name="TouchControls" parent="." instance=ExtResource("15_ms38m")]
+offset = Vector2(-10, -10)
+transform = Transform2D(1, 0, 0, 1, -10, -10)
+
+[node name="PauseMenu" parent="." instance=ExtResource("16_w4hwb")]
+visible = false
+
+[node name="PauseButton" parent="." instance=ExtResource("17_lh3w3")]
+
 [connection signal="body_entered" from="GaiTriggerShow" to="GaiTriggerShow" method="_on_body_entered"]
 [connection signal="body_entered" from="Room" to="Room" method="_on_body_entered"]
 [connection signal="body_entered" from="Room2" to="Room2" method="_on_body_entered"]
@@ -1296,3 +1308,6 @@ shape = SubResource("SeparationRayShape2D_h5luw")
 [connection signal="body_entered" from="Shrink" to="Shrink" method="_on_body_entered"]
 [connection signal="body_entered" from="TriggerShow" to="TriggerShow" method="_on_body_entered"]
 [connection signal="body_entered" from="TriggerShow2" to="TriggerShow2" method="_on_body_entered"]
+[connection signal="pressed" from="PauseButton/Pause" to="PauseMenu" method="show_menu"]
+
+[editable path="PauseButton"]

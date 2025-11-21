@@ -2,7 +2,6 @@ extends CharacterBody2D
 
 
 const SPEED = 260
-const JUMP_VELOCITY = -400.0
 var triggered = false
 var perma_end = false
 var start_pos : Vector2

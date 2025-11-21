@@ -2919,7 +2919,7 @@ size = Vector2(81, 67.3333)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8ylyg"]
 size = Vector2(32.6666, 33.6667)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y0tow"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hrquq"]
 texture = ExtResource("12_syat3")
 0:0/0 = 0
 1:0/0 = 0
@@ -3161,7 +3161,7 @@ texture = ExtResource("12_syat3")
 17:18/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_melll"]
-sources/0 = SubResource("TileSetAtlasSource_y0tow")
+sources/0 = SubResource("TileSetAtlasSource_hrquq")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y0tow"]
 size = Vector2(48, 32)
