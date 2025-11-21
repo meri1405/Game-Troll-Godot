@@ -20,7 +20,7 @@
 [ext_resource type="Script" uid="uid://cn68kf01nitbs" path="res://ScriptsScenes/box/appearingBox.gd" id="12_enkxr"]
 [ext_resource type="Texture2D" uid="uid://et81wap61p4f" path="res://Pixel Adventure 1/Free/Items/Boxes/Box1/Idle.png" id="13_i8gp3"]
 [ext_resource type="PackedScene" uid="uid://b0b8d8fe0ga2a" path="res://Touch_Controls/scene/touch_controls.tscn" id="14_i8gp3"]
-[ext_resource type="Texture2D" uid="uid://dofq4km6afxem" path="res://Pixel Adventure 1/Free/Items/Fruits/new_atlas_texture.tres" id="19_mpi2w"]
+[ext_resource type="Texture2D" path="res://Pixel Adventure 1/Free/Items/Fruits/new_atlas_texture.tres" id="19_mpi2w"]
 [ext_resource type="Script" uid="uid://bn8752m1onop8" path="res://ScriptsScenes/switchBodyLevel/room.gd" id="22_mpi2w"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gf767"]

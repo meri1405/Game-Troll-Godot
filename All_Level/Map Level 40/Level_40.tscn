@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://m4c8hp47kokd" path="res://UI/pause_menu.tscn" id="12_syno6"]
 [ext_resource type="PackedScene" uid="uid://0dybtnqg5l6c" path="res://CommonScripts/PauseButton.tscn" id="13_f8sps"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2qntf"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3y0hu"]
 texture = ExtResource("2_uhloe")
 0:0/0 = 0
 1:0/0 = 0
@@ -217,7 +217,7 @@ texture = ExtResource("2_uhloe")
 19:10/0 = 0
 20:10/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0yt1x"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6my23"]
 texture = ExtResource("3_f82lf")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -294,8 +294,8 @@ texture = ExtResource("3_f82lf")
 
 [sub_resource type="TileSet" id="TileSet_n4edg"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_2qntf")
-sources/1 = SubResource("TileSetAtlasSource_0yt1x")
+sources/0 = SubResource("TileSetAtlasSource_3y0hu")
+sources/1 = SubResource("TileSetAtlasSource_6my23")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kpjop"]
 size = Vector2(2009.5, 1074.5)
