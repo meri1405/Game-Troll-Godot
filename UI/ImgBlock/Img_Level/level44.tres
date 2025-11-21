@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://dlmvc8huyvh4m"]
+
+[ext_resource type="Texture2D" uid="uid://c6hhr64uxscxc" path="res://Pixel Adventure 1/Free/Terrain/rock_ice_alt_tileset_5.png" id="1_xj782"]
+
+[resource]
+atlas = ExtResource("1_xj782")
+region = Rect2(63.9804, -0.000235796, 48.0561, 16.0531)
