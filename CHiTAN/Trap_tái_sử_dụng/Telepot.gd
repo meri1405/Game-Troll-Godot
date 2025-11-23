@@ -1,4 +1,4 @@
-extends AnimatableBody2D
+extends Area2D
 
 @export var move_up_distance: float = 63.0
 @export var move_left_distance: float = 100.0

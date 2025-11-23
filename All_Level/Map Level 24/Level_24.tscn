@@ -529,5 +529,6 @@ next_level = "res://All_Level/Map Level 25/Level_25.tscn"
 [connection signal="body_entered" from="TerrainMoveLeft/TriggerTerrain" to="TerrainMoveLeft/TerrainMoveLeft" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="TerrainMoveLeft/TriggerTerrain" to="TerrainMoveLeft/TriggerTerrain" method="_on_body_entered"]
 [connection signal="body_entered" from="Room1" to="Room1" method="_on_body_entered"]
+[connection signal="pressed" from="PauseButton/Pause" to="PauseMenu" method="show_menu"]
 
 [editable path="PauseButton"]

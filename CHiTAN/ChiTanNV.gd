@@ -6,6 +6,7 @@ const JUMP_VELOCITY = -430.0
 
 var is_alive = true
 var can_move = true  # Thêm biến để control movement
+var is_dying = false  # Ngăn multiple death calls
 var spawn_point: Vector2
 var original_scale: Vector2
 var size_tween: Tween
@@ -79,6 +80,11 @@ func set_can_move(value: bool):
 		velocity = Vector2.ZERO
 
 func die():
+	# ✅ NGĂN MULTIPLE DEATH CALLS
+	if is_dying or not is_alive:
+		return
+		
+	is_dying = true
 	GameManager.increment_death_count()
 	is_alive = false
 	sprite_2d.play("Hit")
@@ -89,6 +95,7 @@ func _reset():
 	$"/root/AudioController".play_respawn()
 	global_position = spawn_point
 	is_alive = true
+	is_dying = false  # ✅ Reset death flag
 	can_move = true  # Reset movement
 	_reset_size()
 	_reset_objects()
