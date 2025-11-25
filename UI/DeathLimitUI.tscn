@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://c4k8r2n3pqyab"]
+[gd_scene load_steps=3 format=3 uid="uid://c4k8r2n3pqyab"]
 
 [ext_resource type="Script" uid="uid://bo0xoegfftmlm" path="res://UI/DeathLimitUI.gd" id="1_3k4j2"]
+[ext_resource type="Texture2D" uid="uid://boqnewygascjc" path="res://home_icon_21x22.png" id="2_n6qj7"]
 
 [node name="DeathLimitUI" type="CanvasLayer"]
 layer = 99
@@ -179,12 +180,10 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 16
 text = "Main Menu"
 
-[node name="RetryButton" type="Button" parent="LimitPopup/MessagePanel/ButtonContainer"]
-custom_minimum_size = Vector2(100, 35)
-layout_mode = 2
-tooltip_text = "Wait until tomorrow to try again"
-theme_override_font_sizes/font_size = 16
-disabled = true
-text = "Try Again"
+[node name="TouchScreenButton" type="TouchScreenButton" parent="LimitPopup/MessagePanel/ButtonContainer/MenuButton"]
+texture_filter = 1
+position = Vector2(3, -1.43051e-05)
+scale = Vector2(4.28571, 1.81818)
+texture_normal = ExtResource("2_n6qj7")
 
-[connection signal="pressed" from="LimitPopup/MessagePanel/ButtonContainer/MenuButton" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="LimitPopup/MessagePanel/ButtonContainer/MenuButton/TouchScreenButton" to="." method="_on_menu_button_pressed"]

@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://c8x2m4n5k9w7t"]
+[gd_scene load_steps=2 format=3 uid="uid://c8x2m4n5law7t"]
 
-[ext_resource type="Script" path="res://CommonScripts/DeathLimitTestUI.gd" id="1_test"]
+[ext_resource type="Script" uid="uid://dow6qom6mf680" path="res://CommonScripts/DeathLimitTestUI.gd" id="1_test"]
 
 [node name="DeathLimitTestUI" type="CanvasLayer"]
 layer = 200
@@ -26,6 +26,8 @@ offset_left = 10.0
 offset_top = 10.0
 offset_right = -10.0
 offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Title" type="Label" parent="TestPanel/VBox"]
 layout_mode = 2
