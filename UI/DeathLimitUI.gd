@@ -1,4 +1,3 @@
-class_name DeathLimitUI
 extends CanvasLayer
 
 # UI Components - now from scene
@@ -9,7 +8,7 @@ extends CanvasLayer
 @onready var message_label: Label = $LimitPopup/MessagePanel/MessageLabel
 @onready var menu_button: Button = $LimitPopup/MessagePanel/ButtonContainer/MenuButton
 
-var death_manager: DeathLimitManager
+var death_manager  # Reference to DeathLimitManager AutoLoad
 var update_timer: Timer
 
 func _ready():
@@ -20,12 +19,8 @@ func _ready():
 	# Đợi DeathLimitManager ready
 	await get_tree().process_frame
 	
-	# Get reference to death manager
-	death_manager = DeathLimitManager.instance
-	if not death_manager:
-		push_error("❌ DeathLimitManager not found!")
-		queue_free()
-		return
+	# Get reference to death manager (AutoLoad)
+	death_manager = DeathLimitManager
 	
 	# Setup UI from scene
 	_setup_ui()

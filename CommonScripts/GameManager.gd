@@ -8,20 +8,13 @@ var max_level_unlocked: int = 10
 var current_level: int = 1
 var death_count: int = 0
 
-# ✅ Reference đến DeathLimitManager
-var death_limit_manager: DeathLimitManager
-
 signal level_unlocked(level_number: int)
 signal death_count_changed(new_count: int)
 
 func _ready():
-	# ✅ Tạo DeathLimitManager instance
-	death_limit_manager = DeathLimitManager.new()
-	add_child(death_limit_manager)
-	
-	# ✅ Connect signals
-	death_limit_manager.death_limit_reached.connect(_on_death_limit_reached)
-	death_limit_manager.death_count_updated.connect(_on_daily_death_updated)
+	# ✅ Connect signals với AutoLoad DeathLimitManager
+	DeathLimitManager.death_limit_reached.connect(_on_death_limit_reached)
+	DeathLimitManager.death_count_updated.connect(_on_daily_death_updated)
 	
 	load_progress()
 	# Auto-load DeathMessageSystem using process method
@@ -177,20 +170,24 @@ func reset_progress():
 # ✅ Tăng death count - CẬP NHẬT ĐỂ SỬ DỤNG DEATH LIMIT
 func increment_death_count() -> bool:
 	# Kiểm tra daily limit trước
-	if not death_limit_manager.can_die():
+	if not DeathLimitManager.can_die():
 		print("❌ Cannot die - Daily death limit already reached!")
 		# Hiện thông báo và về main menu
 		_show_death_limit_block_message()
 		return false
 		
-	var can_die = death_limit_manager.try_add_death()
+	var can_die = DeathLimitManager.try_add_death()
 	
 	if can_die:
 		# Tăng total death count (cho statistics)
 		death_count += 1
 		death_count_changed.emit(death_count)
 		save_progress()
-		print("Death count: ", death_count, " | Daily: ", death_limit_manager.current_deaths)
+		
+		# ✅ THÊM POPUP SAU 5 LẦN CHẾT
+		Death5PopupManager.add_death()
+		
+		print("Death count: ", death_count, " | Daily: ", DeathLimitManager.current_deaths)
 		return true
 	else:
 		print("❌ Daily death limit reached!")
@@ -386,36 +383,29 @@ func _auto_load_death_limit_ui():
 	print("✅ Auto-loaded DeathLimitUI scene into %s" % current_scene.name)
 
 # ✅ PUBLIC API CHO EXTERNAL ACCESS
-func get_death_limit_manager() -> DeathLimitManager:
-	return death_limit_manager
+func get_death_limit_manager():
+	return DeathLimitManager
 
 func get_remaining_deaths() -> int:
-	if death_limit_manager:
-		return death_limit_manager.get_remaining_deaths()
-	return 50
+	return DeathLimitManager.get_remaining_deaths()
 
 func can_player_die() -> bool:
-	if death_limit_manager:
-		return death_limit_manager.can_die()
-	return true
+	return DeathLimitManager.can_die()
 
 # ✅ DEBUG FUNCTIONS
 func debug_reset_daily_deaths():
-	if death_limit_manager:
-		death_limit_manager.force_reset()
-		_show_debug_message("🔄 Deaths reset to 0! Lives: 50/50")
+	DeathLimitManager.force_reset()
+	_show_debug_message("🔄 Deaths reset to 0! Lives: 50/50")
 
 func debug_add_deaths(count: int):
-	if death_limit_manager:
-		death_limit_manager.debug_add_deaths(count)
-		var remaining = death_limit_manager.get_remaining_deaths()
-		_show_debug_message("💀 Added %d deaths. Lives remaining: %d/50" % [count, remaining])
+	DeathLimitManager.debug_add_deaths(count)
+	var remaining = DeathLimitManager.get_remaining_deaths()
+	_show_debug_message("💀 Added %d deaths. Lives remaining: %d/50" % [count, remaining])
 
 func debug_set_deaths(count: int):
-	if death_limit_manager:
-		death_limit_manager.debug_set_deaths(count)
-		var remaining = death_limit_manager.get_remaining_deaths()
-		_show_debug_message("🎯 Set deaths to %d. Lives remaining: %d/50" % [count, remaining])
+	DeathLimitManager.debug_set_deaths(count)
+	var remaining = DeathLimitManager.get_remaining_deaths()
+	_show_debug_message("🎯 Set deaths to %d. Lives remaining: %d/50" % [count, remaining])
 
 # ✅ QUICK TEST FUNCTIONS - Gọi từ console
 func quick_test_add_5_deaths():
@@ -465,13 +455,11 @@ func _unhandled_input(event):
 				debug_reset_daily_deaths()
 				_show_debug_message("🔄 F9: Reset deaths to 0")
 			KEY_F10: # Add 10 deaths  
-				if death_limit_manager:
-					death_limit_manager.debug_add_deaths(10)
-					_show_debug_message("💀 F10: Added 10 deaths")
+				DeathLimitManager.debug_add_deaths(10)
+				_show_debug_message("💀 F10: Added 10 deaths")
 			KEY_F11: # Set to 49 (1 life left)
-				if death_limit_manager:
-					death_limit_manager.debug_set_deaths(49)
-					_show_debug_message("⚠️ F11: Set to 49 deaths (1 life left)")
+				DeathLimitManager.debug_set_deaths(49)
+				_show_debug_message("⚠️ F11: Set to 49 deaths (1 life left)")
 			KEY_F12: # Show status
 				_show_death_status()
 
@@ -499,11 +487,7 @@ func _show_debug_message(text: String):
 		label.queue_free()
 
 func _show_death_status():
-	if not death_limit_manager:
-		_show_debug_message("❌ Death Manager not found!")
-		return
-		
-	var remaining = death_limit_manager.get_remaining_deaths()
-	var current = death_limit_manager.current_deaths
-	var status = "💀 Deaths: %d/50 | Lives: %d | Can die: %s" % [current, remaining, str(death_limit_manager.can_die())]
+	var remaining = DeathLimitManager.get_remaining_deaths()
+	var current = DeathLimitManager.current_deaths
+	var status = "💀 Deaths: %d/50 | Lives: %d | Can die: %s" % [current, remaining, str(DeathLimitManager.can_die())]
 	_show_debug_message(status)

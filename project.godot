@@ -20,6 +20,8 @@ config/icon="res://icon.svg"
 AudioController="*res://audio/audio_controller.tscn"
 GameManager="*res://CommonScripts/GameManager.gd"
 DeathCounterUI="*res://UI/DeathCounterUI.tscn"
+DeathLimitManager="*res://CommonScripts/DeathLimitManager.gd"
+Death5PopupManager="*res://CommonScripts/Death5PopupManager.gd"
 
 [display]
 

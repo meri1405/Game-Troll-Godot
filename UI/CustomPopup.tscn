@@ -1,0 +1,91 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxn8y4m5n6qr3"]
+
+[ext_resource type="Script" path="res://UI/CustomPopup.gd" id="1_popup"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1popup"]
+bg_color = Color(0.1, 0.1, 0.2, 0.95)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0.8, 1, 1)
+
+[node name="CustomPopup" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1_popup")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 0.7)
+
+[node name="PopupPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -180.0
+offset_right = 250.0
+offset_bottom = 180.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1popup")
+
+[node name="VBox" type="VBoxContainer" parent="PopupPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -20.0
+
+[node name="Title" type="Label" parent="PopupPanel/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 28
+text = "🎉 POPUP SCENE 🎉"
+horizontal_alignment = 1
+
+[node name="Spacer1" type="Control" parent="PopupPanel/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.2
+
+[node name="Content" type="Label" parent="PopupPanel/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9, 0.9, 0.9, 1)
+theme_override_font_sizes/font_size = 18
+text = "✅ Thay đổi popup này dễ dàng!
+📝 Edit file CustomPopup.tscn
+🎨 Thay đổi màu sắc, text, button
+🚀 Hệ thống sẵn sàng!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spacer2" type="Control" parent="PopupPanel/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.3
+
+[node name="ButtonContainer" type="HBoxContainer" parent="PopupPanel/VBox"]
+layout_mode = 2
+alignment = 1
+
+[node name="CloseButton" type="Button" parent="PopupPanel/VBox/ButtonContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "✅ OK"
+
+[connection signal="pressed" from="PopupPanel/VBox/ButtonContainer/CloseButton" to="." method="_on_close_pressed"]

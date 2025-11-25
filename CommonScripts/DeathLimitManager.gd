@@ -1,9 +1,6 @@
-class_name DeathLimitManager
 extends Node
 
-# Singleton pattern - chỉ có 1 instance
-static var instance: DeathLimitManager
-
+# AutoLoad Singleton for Death Limit Management
 # Constants
 const MAX_DEATHS_PER_DAY := 50
 const SAVE_FILE := "user://death_limit.dat"
@@ -18,19 +15,7 @@ signal death_limit_reached
 signal death_count_updated(current: int, max_deaths: int)
 signal limit_reset_for_new_day
 
-func _init():
-	# Singleton pattern
-	if instance == null:
-		instance = self
-		name = "DeathLimitManager"
-	else:
-		queue_free()
-		return
-
 func _ready():
-	if instance != self:
-		return
-		
 	_load_data()
 	_check_daily_reset()
 	
