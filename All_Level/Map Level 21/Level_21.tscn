@@ -1,7 +1,7 @@
 [gd_scene load_steps=30 format=3 uid="uid://ccg46f8uhmvx8"]
 
 [ext_resource type="Texture2D" uid="uid://c2urtr66gce31" path="res://Pixel Adventure 1/Free/Background/Green.png" id="1_g74ai"]
-[ext_resource type="PackedScene" path="res://ScriptsScenes/box/woodBox.tscn" id="1_lbqc2"]
+[ext_resource type="PackedScene" uid="uid://i05rkcjy5d7q" path="res://ScriptsScenes/box/woodBox.tscn" id="1_lbqc2"]
 [ext_resource type="Texture2D" uid="uid://cmx6ev0y0fkb7" path="res://Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="2_ieqyb"]
 [ext_resource type="PackedScene" uid="uid://dt1tth682nenl" path="res://ScriptsScenes/MainCharacter/character_body_2d.tscn" id="3_ieqyb"]
 [ext_resource type="Script" uid="uid://cbdoukmvx3kuy" path="res://All_Level/Map Level 21/tile_go_go.gd" id="4_b4mrp"]
@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://cibklyepbriw8" path="res://ScriptsScenes/spike/Spike3set.tscn" id="12_qfqxq"]
 [ext_resource type="Script" uid="uid://e0chluajrvw" path="res://All_Level/Map Level 21/dirt_go_right.gd" id="13_ngj8j"]
 [ext_resource type="PackedScene" uid="uid://btdfqc4qp1j67" path="res://Checkpoint/Level_1/checkpoint.tscn" id="14_tqtxi"]
-[ext_resource type="Script" path="res://ScriptsScenes/box/boxMoving.gd" id="16_0mqef"]
+[ext_resource type="Script" uid="uid://oc1xaju2d24h" path="res://ScriptsScenes/box/boxMoving.gd" id="16_0mqef"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hpmnp"]
 texture = ExtResource("2_ieqyb")
