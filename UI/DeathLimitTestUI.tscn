@@ -1,0 +1,97 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8x2m4n5law7t"]
+
+[ext_resource type="Script" uid="uid://dow6qom6mf680" path="res://CommonScripts/DeathLimitTestUI.gd" id="1_test"]
+
+[node name="DeathLimitTestUI" type="CanvasLayer"]
+layer = 200
+script = ExtResource("1_test")
+
+[node name="TestPanel" type="Panel" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -400.0
+offset_right = -10.0
+offset_bottom = -10.0
+
+[node name="VBox" type="VBoxContainer" parent="TestPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="TestPanel/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "DEATH LIMIT TEST"
+horizontal_alignment = 1
+
+[node name="StatusLabel" type="Label" parent="TestPanel/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Deaths: 0/50"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="TestPanel/VBox"]
+layout_mode = 2
+
+[node name="ResetBtn" type="Button" parent="TestPanel/VBox"]
+layout_mode = 2
+text = "Reset to 0"
+
+[node name="Add1Btn" type="Button" parent="TestPanel/VBox"]
+layout_mode = 2
+text = "Add 1 Death"
+
+[node name="Add10Btn" type="Button" parent="TestPanel/VBox"]
+layout_mode = 2
+text = "Add 10 Deaths"
+
+[node name="Set40Btn" type="Button" parent="TestPanel/VBox"]
+layout_mode = 2
+text = "Set to 40 (10 left)"
+
+[node name="Set49Btn" type="Button" parent="TestPanel/VBox"]
+layout_mode = 2
+text = "Set to 49 (1 left)"
+
+[node name="Set50Btn" type="Button" parent="TestPanel/VBox"]
+layout_mode = 2
+text = "Set to 50 (0 left)"
+
+[node name="HSeparator2" type="HSeparator" parent="TestPanel/VBox"]
+layout_mode = 2
+
+[node name="ShowPopupBtn" type="Button" parent="TestPanel/VBox"]
+layout_mode = 2
+text = "Show Popup"
+
+[node name="HidePopupBtn" type="Button" parent="TestPanel/VBox"]
+layout_mode = 2
+text = "Hide Popup"
+
+[node name="HSeparator3" type="HSeparator" parent="TestPanel/VBox"]
+layout_mode = 2
+
+[node name="CloseBtn" type="Button" parent="TestPanel/VBox"]
+layout_mode = 2
+text = "Close Test"
+
+[connection signal="pressed" from="TestPanel/VBox/ResetBtn" to="." method="_on_reset_pressed"]
+[connection signal="pressed" from="TestPanel/VBox/Add1Btn" to="." method="_on_add1_pressed"]
+[connection signal="pressed" from="TestPanel/VBox/Add10Btn" to="." method="_on_add10_pressed"]
+[connection signal="pressed" from="TestPanel/VBox/Set40Btn" to="." method="_on_set40_pressed"]
+[connection signal="pressed" from="TestPanel/VBox/Set49Btn" to="." method="_on_set49_pressed"]
+[connection signal="pressed" from="TestPanel/VBox/Set50Btn" to="." method="_on_set50_pressed"]
+[connection signal="pressed" from="TestPanel/VBox/ShowPopupBtn" to="." method="_on_show_popup_pressed"]
+[connection signal="pressed" from="TestPanel/VBox/HidePopupBtn" to="." method="_on_hide_popup_pressed"]
+[connection signal="pressed" from="TestPanel/VBox/CloseBtn" to="." method="_on_close_pressed"]

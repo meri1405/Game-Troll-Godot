@@ -1,0 +1,100 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkl10w8otppjo"]
+
+[ext_resource type="Script" uid="uid://bby0lh1bq20fl" path="res://UI/ADtest.gd" id="1_k5m9x"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1hjkl"]
+bg_color = Color(0.2, 0.6, 1, 0.9)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[node name="ADtest" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_k5m9x")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.8)
+
+[node name="CenterPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -150.0
+offset_right = 200.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1hjkl")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="CenterPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+text = "🎉 AD TEST POPUP 🎉"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="CenterPanel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Description" type="Label" parent="CenterPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 16
+text = "✅ Scene hiển thị thành công!
+💀 Popup sau 5 lần chết
+🎮 Hệ thống hoạt động tốt!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSeparator2" type="HSeparator" parent="CenterPanel/VBoxContainer"]
+layout_mode = 2
+
+[node name="ButtonContainer" type="HBoxContainer" parent="CenterPanel/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="CloseButton" type="Button" parent="CenterPanel/VBoxContainer/ButtonContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "❌ Đóng"
+
+[node name="TestButton" type="Button" parent="CenterPanel/VBoxContainer/ButtonContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "🧪 Test Again"
+
+[connection signal="pressed" from="CenterPanel/VBoxContainer/ButtonContainer/CloseButton" to="." method="_on_close_button_pressed"]
+[connection signal="pressed" from="CenterPanel/VBoxContainer/ButtonContainer/TestButton" to="." method="_on_test_button_pressed"]

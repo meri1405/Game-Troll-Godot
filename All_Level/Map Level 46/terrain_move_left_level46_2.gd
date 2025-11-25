@@ -1,6 +1,6 @@
 extends AnimatableBody2D
 
-@export var speed: float = 888.8
+@export var speed: float = 800.8
 @export var direction: int = -1
 
 var triggered: bool = false
@@ -12,10 +12,10 @@ func _ready():
 
 func _physics_process(delta: float) -> void:
 	if triggered:
-		global_position.x += direction * speed * delta
+		global_position.y += direction * speed * delta
 		visible = true
-	if global_position.x < 580: #đến đoạn này thì chữ sẽ dừng lại và vẫn hiện đó 
-		#global_position.x = 0
+	if global_position.y < 100: #đến đoạn này thì chữ sẽ dừng lại và vẫn hiện đó 
+		global_position.y = 100
 		triggered = false
 		
 
