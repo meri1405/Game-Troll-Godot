@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b467xhmpftqn4"
+path="res://.godot/imported/(203) Button-Plate Click (Minecraft Sound) - Sound Effect for editing - YouTube (mp3cut.net).wav-aba497ca2f5ec46b863b9309d9a1e588.sample"
+
+[deps]
+
+source_file="res://audio/audioAssests/(203) Button-Plate Click (Minecraft Sound) - Sound Effect for editing - YouTube (mp3cut.net).wav"
+dest_files=["res://.godot/imported/(203) Button-Plate Click (Minecraft Sound) - Sound Effect for editing - YouTube (mp3cut.net).wav-aba497ca2f5ec46b863b9309d9a1e588.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
