@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://cx5aawsp8hr22"]
 
-[ext_resource type="Texture2D" uid="uid://bkt5uj3je8vh4" path="res://Pixel Adventure 1/Free/Terrain/rock_ice_alt_tileset_0.png" id="1_k8qlf"]
-[ext_resource type="Texture2D" uid="uid://cmx6ev0y0fkb7" path="res://Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="2_w67ha"]
-[ext_resource type="Texture2D" uid="uid://cf4ms2y2h4nfc" path="res://Pixel Adventure 1/Free/Background/Background_1.png" id="3_doxf2"]
+[ext_resource type="Texture2D" uid="uid://bkt5uj3je8vh4" path="res://Pixel Adventure 1/Free/Terrain/rock_ice_alt_tileset_0.png" id="1_d0pm8"]
+[ext_resource type="Texture2D" uid="uid://cmx6ev0y0fkb7" path="res://Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="2_uirdq"]
+[ext_resource type="Texture2D" uid="uid://cf4ms2y2h4nfc" path="res://Pixel Adventure 1/Free/Background/Background_1.png" id="3_8bsdq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rgoev"]
-texture = ExtResource("1_k8qlf")
+texture = ExtResource("1_d0pm8")
 0:0/0 = 0
 0:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -45,7 +45,7 @@ texture = ExtResource("1_k8qlf")
 5:5/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_po7lp"]
-texture = ExtResource("2_w67ha")
+texture = ExtResource("2_uirdq")
 0:0/0 = 0
 0:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -349,4 +349,4 @@ offset_left = -1160.0
 offset_top = 1326.0
 offset_right = 376.0
 offset_bottom = 2350.0
-texture = ExtResource("3_doxf2")
+texture = ExtResource("3_8bsdq")
