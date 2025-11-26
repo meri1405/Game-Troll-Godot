@@ -1,27 +1,30 @@
-[gd_scene load_steps=46 format=3 uid="uid://sjw0mmaak7ym"]
+[gd_scene load_steps=49 format=3 uid="uid://sjw0mmaak7ym"]
 
-[ext_resource type="Texture2D" uid="uid://cffceoyqsskp" path="res://Pixel Adventure 1/Free/Background/Background_4.jpeg" id="1_2gtk8"]
-[ext_resource type="PackedScene" uid="uid://dt1tth682nenl" path="res://ScriptsScenes/MainCharacter/character_body_2d.tscn" id="2_xldq1"]
-[ext_resource type="Texture2D" uid="uid://cmx6ev0y0fkb7" path="res://Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="3_bhddu"]
-[ext_resource type="Texture2D" uid="uid://cvbnup8uvc31b" path="res://Pixel Adventure 1/Free/Terrain/metal_snow_tileset.png" id="4_fwk2f"]
-[ext_resource type="Script" uid="uid://bn8752m1onop8" path="res://ScriptsScenes/switchBodyLevel/room.gd" id="5_xldq1"]
-[ext_resource type="Texture2D" uid="uid://dycdavdvo4drb" path="res://Pixel Adventure 1/Free/Traps/Trap2/Spike_B.png" id="6_fwk2f"]
-[ext_resource type="Script" uid="uid://c6jphiasfsmq3" path="res://All_Level/Map Level 22/Script_lv22/gai_trigger_show.gd" id="7_a1aux"]
-[ext_resource type="Texture2D" uid="uid://crhk04in7jmsy" path="res://Pixel Adventure 1/Free/Traps/Spikes/Idle.png" id="7_pt6y6"]
-[ext_resource type="PackedScene" uid="uid://cibklyepbriw8" path="res://ScriptsScenes/spike/Spike3set.tscn" id="9_0yt1x"]
-[ext_resource type="Script" uid="uid://eb0v10emceai" path="res://All_Level/Map Level 47/button.gd" id="10_n4edg"]
-[ext_resource type="Texture2D" uid="uid://cgdbmsy1ma5nx" path="res://Pixel Adventure 1/Free/Items/Buttons/ButtonBlue-Sheet.png" id="11_kpjop"]
-[ext_resource type="AudioStream" uid="uid://b467xhmpftqn4" path="res://audio/audioAssests/(203) Button-Plate Click (Minecraft Sound) - Sound Effect for editing - YouTube (mp3cut.net).wav" id="12_n4edg"]
-[ext_resource type="Script" uid="uid://di2u33q416h8w" path="res://All_Level/Map Level 47/delete_plane.gd" id="13_kpjop"]
-[ext_resource type="Script" uid="uid://cq4ac2tl8jg2s" path="res://All_Level/Map Level 47/box_left_move.gd" id="14_xclyv"]
-[ext_resource type="Texture2D" uid="uid://sg5gxyeqs7dq" path="res://Pixel Adventure 1/Free/Traps/Rock Head/Blink (42x42).png" id="15_v1hof"]
-[ext_resource type="Script" uid="uid://bjeukcsw66fln" path="res://All_Level/Map Level 7/box_trigger.gd" id="16_akiu0"]
-[ext_resource type="PackedScene" uid="uid://btdfqc4qp1j67" path="res://Checkpoint/Level_1/checkpoint.tscn" id="17_o4jg4"]
-[ext_resource type="Script" uid="uid://dqt77xkq01kww" path="res://ScriptsScenes/box/box_suprise.gd" id="18_daqpv"]
-[ext_resource type="Texture2D" uid="uid://et81wap61p4f" path="res://Pixel Adventure 1/Free/Items/Boxes/Box1/Idle.png" id="19_ji8wj"]
+[ext_resource type="Texture2D" uid="uid://cffceoyqsskp" path="res://Pixel Adventure 1/Free/Background/Background_4.jpeg" id="1_qelwb"]
+[ext_resource type="PackedScene" uid="uid://dt1tth682nenl" path="res://ScriptsScenes/MainCharacter/character_body_2d.tscn" id="2_cr5vd"]
+[ext_resource type="Texture2D" uid="uid://cmx6ev0y0fkb7" path="res://Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="3_qcgry"]
+[ext_resource type="Texture2D" uid="uid://cvbnup8uvc31b" path="res://Pixel Adventure 1/Free/Terrain/metal_snow_tileset.png" id="4_g4djm"]
+[ext_resource type="Script" uid="uid://bn8752m1onop8" path="res://ScriptsScenes/switchBodyLevel/room.gd" id="5_a6hdu"]
+[ext_resource type="Texture2D" uid="uid://dycdavdvo4drb" path="res://Pixel Adventure 1/Free/Traps/Trap2/Spike_B.png" id="6_wxfov"]
+[ext_resource type="Texture2D" uid="uid://crhk04in7jmsy" path="res://Pixel Adventure 1/Free/Traps/Spikes/Idle.png" id="7_oq7sq"]
+[ext_resource type="Script" uid="uid://c6jphiasfsmq3" path="res://All_Level/Map Level 22/Script_lv22/gai_trigger_show.gd" id="8_poici"]
+[ext_resource type="PackedScene" uid="uid://cibklyepbriw8" path="res://ScriptsScenes/spike/Spike3set.tscn" id="9_djupq"]
+[ext_resource type="Script" uid="uid://eb0v10emceai" path="res://All_Level/Map Level 47/button.gd" id="10_ncd8m"]
+[ext_resource type="Texture2D" uid="uid://cgdbmsy1ma5nx" path="res://Pixel Adventure 1/Free/Items/Buttons/ButtonBlue-Sheet.png" id="11_w536b"]
+[ext_resource type="AudioStream" uid="uid://b467xhmpftqn4" path="res://audio/audioAssests/(203) Button-Plate Click (Minecraft Sound) - Sound Effect for editing - YouTube (mp3cut.net).wav" id="12_1e2ta"]
+[ext_resource type="Script" uid="uid://di2u33q416h8w" path="res://All_Level/Map Level 47/delete_plane.gd" id="13_q1wiy"]
+[ext_resource type="Script" uid="uid://cq4ac2tl8jg2s" path="res://All_Level/Map Level 47/box_left_move.gd" id="14_iclce"]
+[ext_resource type="Texture2D" uid="uid://sg5gxyeqs7dq" path="res://Pixel Adventure 1/Free/Traps/Rock Head/Blink (42x42).png" id="15_7kmpl"]
+[ext_resource type="Script" uid="uid://bjeukcsw66fln" path="res://All_Level/Map Level 7/box_trigger.gd" id="16_lb1fy"]
+[ext_resource type="PackedScene" uid="uid://btdfqc4qp1j67" path="res://Checkpoint/Level_1/checkpoint.tscn" id="17_xxvmd"]
+[ext_resource type="Script" uid="uid://dqt77xkq01kww" path="res://ScriptsScenes/box/box_suprise.gd" id="18_drqjh"]
+[ext_resource type="Texture2D" uid="uid://et81wap61p4f" path="res://Pixel Adventure 1/Free/Items/Boxes/Box1/Idle.png" id="19_4ja5v"]
+[ext_resource type="PackedScene" uid="uid://m4c8hp47kokd" path="res://UI/pause_menu.tscn" id="20_g4djm"]
+[ext_resource type="PackedScene" uid="uid://0dybtnqg5l6c" path="res://CommonScripts/PauseButton.tscn" id="21_a6hdu"]
+[ext_resource type="PackedScene" uid="uid://b0b8d8fe0ga2a" path="res://Touch_Controls/scene/touch_controls.tscn" id="22_wxfov"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a1aux"]
-texture = ExtResource("3_bhddu")
+texture = ExtResource("3_qcgry")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -235,7 +238,7 @@ texture = ExtResource("3_bhddu")
 20:10/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pt6y6"]
-texture = ExtResource("4_fwk2f")
+texture = ExtResource("4_g4djm")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -318,7 +321,7 @@ sources/1 = SubResource("TileSetAtlasSource_pt6y6")
 size = Vector2(2678.5, 1154.5)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k2crs"]
-atlas = ExtResource("6_fwk2f")
+atlas = ExtResource("6_wxfov")
 region = Rect2(128, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pt6y6"]
@@ -328,7 +331,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_k2crs")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_pt6y6")
+"texture": ExtResource("7_oq7sq")
 }],
 "loop": true,
 "name": &"default",
@@ -342,27 +345,27 @@ size = Vector2(32.3333, 14.1667)
 size = Vector2(48, 33)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cv3by"]
-atlas = ExtResource("11_kpjop")
+atlas = ExtResource("11_w536b")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xclyv"]
-atlas = ExtResource("11_kpjop")
+atlas = ExtResource("11_w536b")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v1hof"]
-atlas = ExtResource("11_kpjop")
+atlas = ExtResource("11_w536b")
 region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_akiu0"]
-atlas = ExtResource("11_kpjop")
+atlas = ExtResource("11_w536b")
 region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o4jg4"]
-atlas = ExtResource("11_kpjop")
+atlas = ExtResource("11_w536b")
 region = Rect2(128, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_daqpv"]
-atlas = ExtResource("11_kpjop")
+atlas = ExtResource("11_w536b")
 region = Rect2(160, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ji8wj"]
@@ -398,19 +401,19 @@ size = Vector2(47, 32)
 size = Vector2(190, 155)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sx4db"]
-atlas = ExtResource("15_v1hof")
+atlas = ExtResource("15_7kmpl")
 region = Rect2(0, 0, 42, 42)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7lf1v"]
-atlas = ExtResource("15_v1hof")
+atlas = ExtResource("15_7kmpl")
 region = Rect2(42, 0, 42, 42)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dguho"]
-atlas = ExtResource("15_v1hof")
+atlas = ExtResource("15_7kmpl")
 region = Rect2(84, 0, 42, 42)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p2trt"]
-atlas = ExtResource("15_v1hof")
+atlas = ExtResource("15_7kmpl")
 region = Rect2(126, 0, 42, 42)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_o4jg4"]
@@ -453,10 +456,10 @@ offset_left = 132.0
 offset_top = -235.0
 offset_right = 2603.0
 offset_bottom = 905.0
-texture = ExtResource("1_2gtk8")
+texture = ExtResource("1_qelwb")
 expand_mode = 1
 
-[node name="CharacterBody2D" parent="." groups=["Player"] instance=ExtResource("2_xldq1")]
+[node name="CharacterBody2D" parent="." groups=["Player"] instance=ExtResource("2_cr5vd")]
 position = Vector2(200, 494)
 
 [node name="RayCast2D" type="RayCast2D" parent="CharacterBody2D"]
@@ -473,7 +476,7 @@ layer_0/tile_data = PackedInt32Array(-327666, 458752, 6, -327672, 458752, 6, -32
 [node name="Room" type="Area2D" parent="." groups=["Room_light"]]
 visible = false
 position = Vector2(182, -15)
-script = ExtResource("5_xldq1")
+script = ExtResource("5_a6hdu")
 cam_limit_left = 96
 cam_limit_right = 2784
 cam_limit_top = -240
@@ -618,43 +621,43 @@ shape = SubResource("RectangleShape2D_2qntf")
 
 [node name="GaiTriggerShow" type="Area2D" parent="."]
 position = Vector2(428, 338)
-script = ExtResource("7_a1aux")
+script = ExtResource("8_poici")
 gai_parent_path = NodePath("../Gai")
 move_distance = -2740.0
-move_speed = 12.0
+move_speed = 11.5
 delay_before_move = 0.6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GaiTriggerShow"]
 position = Vector2(31, 75.5)
 shape = SubResource("RectangleShape2D_e7q3o")
 
-[node name="Spike" parent="." instance=ExtResource("9_0yt1x")]
+[node name="Spike" parent="." instance=ExtResource("9_djupq")]
 position = Vector2(255, 848)
 scale = Vector2(2, 2)
 
-[node name="Spike3set2" parent="Spike" instance=ExtResource("9_0yt1x")]
+[node name="Spike3set2" parent="Spike" instance=ExtResource("9_djupq")]
 position = Vector2(23, 0)
 
-[node name="Spike3set3" parent="Spike" instance=ExtResource("9_0yt1x")]
+[node name="Spike3set3" parent="Spike" instance=ExtResource("9_djupq")]
 position = Vector2(69, 0)
 
-[node name="Spike3set4" parent="Spike" instance=ExtResource("9_0yt1x")]
+[node name="Spike3set4" parent="Spike" instance=ExtResource("9_djupq")]
 position = Vector2(46, 0)
 
-[node name="Spike3set5" parent="Spike" instance=ExtResource("9_0yt1x")]
+[node name="Spike3set5" parent="Spike" instance=ExtResource("9_djupq")]
 position = Vector2(92, 0)
 
-[node name="Spike3set6" parent="Spike" instance=ExtResource("9_0yt1x")]
+[node name="Spike3set6" parent="Spike" instance=ExtResource("9_djupq")]
 position = Vector2(114.5, 0)
 
-[node name="Spike3set7" parent="Spike" instance=ExtResource("9_0yt1x")]
+[node name="Spike3set7" parent="Spike" instance=ExtResource("9_djupq")]
 z_index = -1
 position = Vector2(137.5, 0)
 
 [node name="Button" type="Area2D" parent="."]
 z_index = -1
 position = Vector2(541, 332)
-script = ExtResource("10_n4edg")
+script = ExtResource("10_ncd8m")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Button"]
 texture_filter = 1
@@ -668,12 +671,12 @@ position = Vector2(-82.5, 82)
 shape = SubResource("RectangleShape2D_s7vfw")
 
 [node name="Sound" type="AudioStreamPlayer2D" parent="Button"]
-stream = ExtResource("12_n4edg")
+stream = ExtResource("12_1e2ta")
 volume_db = 9.905
 
 [node name="DeletePlane" type="Area2D" parent="."]
 position = Vector2(783, 3747)
-script = ExtResource("13_kpjop")
+script = ExtResource("13_q1wiy")
 tilemap_node = NodePath("../TileMap")
 top_left = Vector2i(18, 7)
 bottom_right = Vector2i(21, 17)
@@ -685,7 +688,7 @@ shape = SubResource("RectangleShape2D_cv3by")
 [node name="Box_LeftMove" type="AnimatableBody2D" parent="." groups=["player"]]
 position = Vector2(2106, 733)
 scale = Vector2(2, 2)
-script = ExtResource("14_xclyv")
+script = ExtResource("14_iclce")
 move_distance = 300.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Box_LeftMove" groups=["player"]]
@@ -702,17 +705,17 @@ shape = SubResource("RectangleShape2D_daqpv")
 
 [node name="Box_Left_Trigger" type="Area2D" parent="."]
 position = Vector2(799, 69)
-script = ExtResource("16_akiu0")
+script = ExtResource("16_lb1fy")
 target_path = NodePath("../Box_LeftMove")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Box_Left_Trigger"]
 position = Vector2(710, 479)
 shape = SubResource("RectangleShape2D_ji8wj")
 
-[node name="Checkpoint" parent="." instance=ExtResource("17_o4jg4")]
+[node name="Checkpoint" parent="." instance=ExtResource("17_xxvmd")]
 position = Vector2(1405, 335)
 completed_level_number = 47
-next_level = "res://All_Level/Map Level 27/Level_27.tscn"
+next_level = "res://All_Level/Map Level 48/Level_48.tscn"
 
 [node name="Box1-4" type="Node2D" parent="."]
 
@@ -721,12 +724,12 @@ position = Vector2(1787, 308)
 
 [node name="Box_Suprise" type="AnimatableBody2D" parent="Box1-4/Box1" groups=["saws"]]
 position = Vector2(69, 154)
-script = ExtResource("18_daqpv")
+script = ExtResource("18_drqjh")
 
 [node name="Sprite2D" type="Sprite2D" parent="Box1-4/Box1/Box_Suprise"]
 texture_filter = 1
 scale = Vector2(2, 2)
-texture = ExtResource("19_ji8wj")
+texture = ExtResource("19_4ja5v")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Box1-4/Box1/Box_Suprise"]
 visible = false
@@ -745,12 +748,12 @@ position = Vector2(1787, 268)
 
 [node name="Box_Suprise" type="AnimatableBody2D" parent="Box1-4/Box2" groups=["saws"]]
 position = Vector2(69, 154)
-script = ExtResource("18_daqpv")
+script = ExtResource("18_drqjh")
 
 [node name="Sprite2D" type="Sprite2D" parent="Box1-4/Box2/Box_Suprise"]
 texture_filter = 1
 scale = Vector2(2, 2)
-texture = ExtResource("19_ji8wj")
+texture = ExtResource("19_4ja5v")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Box1-4/Box2/Box_Suprise"]
 visible = false
@@ -769,12 +772,12 @@ position = Vector2(1827, 308)
 
 [node name="Box_Suprise" type="AnimatableBody2D" parent="Box1-4/Box3" groups=["saws"]]
 position = Vector2(69, 154)
-script = ExtResource("18_daqpv")
+script = ExtResource("18_drqjh")
 
 [node name="Sprite2D" type="Sprite2D" parent="Box1-4/Box3/Box_Suprise"]
 texture_filter = 1
 scale = Vector2(2, 2)
-texture = ExtResource("19_ji8wj")
+texture = ExtResource("19_4ja5v")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Box1-4/Box3/Box_Suprise"]
 visible = false
@@ -793,12 +796,12 @@ position = Vector2(1827, 268)
 
 [node name="Box_Suprise" type="AnimatableBody2D" parent="Box1-4/Box4" groups=["saws"]]
 position = Vector2(69, 154)
-script = ExtResource("18_daqpv")
+script = ExtResource("18_drqjh")
 
 [node name="Sprite2D" type="Sprite2D" parent="Box1-4/Box4/Box_Suprise"]
 texture_filter = 1
 scale = Vector2(2, 2)
-texture = ExtResource("19_ji8wj")
+texture = ExtResource("19_4ja5v")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Box1-4/Box4/Box_Suprise"]
 visible = false
@@ -820,12 +823,12 @@ position = Vector2(158, 141)
 
 [node name="Box_Suprise" type="AnimatableBody2D" parent="Box1-5/Box1" groups=["saws"]]
 position = Vector2(69, 154)
-script = ExtResource("18_daqpv")
+script = ExtResource("18_drqjh")
 
 [node name="Sprite2D" type="Sprite2D" parent="Box1-5/Box1/Box_Suprise"]
 texture_filter = 1
 scale = Vector2(2, 2)
-texture = ExtResource("19_ji8wj")
+texture = ExtResource("19_4ja5v")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Box1-5/Box1/Box_Suprise"]
 visible = false
@@ -844,12 +847,12 @@ position = Vector2(158, 101)
 
 [node name="Box_Suprise" type="AnimatableBody2D" parent="Box1-5/Box2" groups=["saws"]]
 position = Vector2(69, 154)
-script = ExtResource("18_daqpv")
+script = ExtResource("18_drqjh")
 
 [node name="Sprite2D" type="Sprite2D" parent="Box1-5/Box2/Box_Suprise"]
 texture_filter = 1
 scale = Vector2(2, 2)
-texture = ExtResource("19_ji8wj")
+texture = ExtResource("19_4ja5v")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Box1-5/Box2/Box_Suprise"]
 visible = false
@@ -868,12 +871,12 @@ position = Vector2(198, 141)
 
 [node name="Box_Suprise" type="AnimatableBody2D" parent="Box1-5/Box3" groups=["saws"]]
 position = Vector2(69, 154)
-script = ExtResource("18_daqpv")
+script = ExtResource("18_drqjh")
 
 [node name="Sprite2D" type="Sprite2D" parent="Box1-5/Box3/Box_Suprise"]
 texture_filter = 1
 scale = Vector2(2, 2)
-texture = ExtResource("19_ji8wj")
+texture = ExtResource("19_4ja5v")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Box1-5/Box3/Box_Suprise"]
 visible = false
@@ -892,12 +895,12 @@ position = Vector2(198, 101)
 
 [node name="Box_Suprise" type="AnimatableBody2D" parent="Box1-5/Box4" groups=["saws"]]
 position = Vector2(69, 154)
-script = ExtResource("18_daqpv")
+script = ExtResource("18_drqjh")
 
 [node name="Sprite2D" type="Sprite2D" parent="Box1-5/Box4/Box_Suprise"]
 texture_filter = 1
 scale = Vector2(2, 2)
-texture = ExtResource("19_ji8wj")
+texture = ExtResource("19_4ja5v")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Box1-5/Box4/Box_Suprise"]
 visible = false
@@ -910,6 +913,13 @@ position = Vector2(77, 152)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Box1-5/Box4/TriggerShowBox"]
 position = Vector2(-8, 2)
 shape = SubResource("RectangleShape2D_u3g6w")
+
+[node name="PauseMenu" parent="." instance=ExtResource("20_g4djm")]
+visible = false
+
+[node name="PauseButton" parent="." instance=ExtResource("21_a6hdu")]
+
+[node name="TouchControls" parent="." instance=ExtResource("22_wxfov")]
 
 [connection signal="body_entered" from="Room" to="Room" method="_on_body_entered"]
 [connection signal="body_entered" from="GaiTriggerShow" to="GaiTriggerShow" method="_on_body_entered"]
@@ -932,3 +942,5 @@ shape = SubResource("RectangleShape2D_u3g6w")
 [connection signal="body_exited" from="Box1-5/Box3/TriggerShowBox" to="Box1-5/Box3/Box_Suprise" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="Box1-5/Box4/TriggerShowBox" to="Box1-5/Box4/Box_Suprise" method="_on_saw_trigger_body_entered"]
 [connection signal="body_exited" from="Box1-5/Box4/TriggerShowBox" to="Box1-5/Box4/Box_Suprise" method="_on_area_2d_body_exited"]
+
+[editable path="PauseButton"]
