@@ -942,5 +942,6 @@ visible = false
 [connection signal="body_exited" from="Box1-5/Box3/TriggerShowBox" to="Box1-5/Box3/Box_Suprise" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="Box1-5/Box4/TriggerShowBox" to="Box1-5/Box4/Box_Suprise" method="_on_saw_trigger_body_entered"]
 [connection signal="body_exited" from="Box1-5/Box4/TriggerShowBox" to="Box1-5/Box4/Box_Suprise" method="_on_area_2d_body_exited"]
+[connection signal="pressed" from="PauseButton/Pause" to="PauseMenu" method="show_menu"]
 
 [editable path="PauseButton"]

@@ -396,7 +396,7 @@ shape = SubResource("RectangleShape2D_kpjop")
 [node name="Checkpoint" parent="." instance=ExtResource("6_xub6v")]
 position = Vector2(-452, 92)
 completed_level_number = 40
-next_level = "res://All_Level/Map Level 19/Level_19.tscn"
+next_level = "res://All_Level/Map Level 41/Level_41.tscn"
 
 [node name="NodeBegin" type="Node2D" parent="."]
 
