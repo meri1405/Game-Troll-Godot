@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=4 uid="uid://xgfw7xy7qsd"]
+[gd_scene load_steps=56 format=4 uid="uid://ce4bholj57vew"]
 
 [ext_resource type="Texture2D" uid="uid://bys7i7ki4uf25" path="res://Pixel Adventure 1/Free/Background/pixil-frame-0 (82).png" id="1_cstwk"]
 [ext_resource type="Texture2D" uid="uid://c6hhr64uxscxc" path="res://Pixel Adventure 1/Free/Terrain/rock_ice_alt_tileset_5.png" id="2_hho0v"]
@@ -942,8 +942,8 @@ shape = SubResource("RectangleShape2D_ptj6m")
 
 [node name="Checkpoint" parent="." instance=ExtResource("17_s1se7")]
 position = Vector2(-707, 526)
-completed_level_number = 20
-next_level = "res://All_Level/Map Level 21/Level_21.tscn"
+completed_level_number = 45
+next_level = "res://All_Level/Map Level 46/Level_46.tscn"
 
 [node name="TouchControls" parent="." instance=ExtResource("18_b08by")]
 
@@ -970,5 +970,6 @@ visible = false
 [connection signal="body_entered" from="SpikeHide/Trigger" to="SpikeHide/SpikeHide2" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="SpikeHide/Trigger" to="SpikeHide/SpikeHide3" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="Room1" to="Room1" method="_on_body_entered"]
+[connection signal="pressed" from="PauseButton/Pause" to="PauseMenu" method="show_menu"]
 
 [editable path="PauseButton"]
