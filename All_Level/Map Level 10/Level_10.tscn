@@ -1,9 +1,10 @@
-[gd_scene load_steps=39 format=3 uid="uid://mhwnib7cebs5"]
+[gd_scene load_steps=40 format=3 uid="uid://mhwnib7cebs5"]
 
 [ext_resource type="Script" uid="uid://c85pk27sc71ds" path="res://ScriptsScenes/misc/level_1.gd" id="1_4y57e"]
 [ext_resource type="Texture2D" uid="uid://dhkt1prc5cciq" path="res://Pixel Adventure 1/Free/Background/Blue.png" id="2_epwhl"]
 [ext_resource type="Script" uid="uid://f7wkvuj85q1u" path="res://CHiTAN/Trap-up-Low.gd" id="3_wib0y"]
 [ext_resource type="Texture2D" uid="uid://crhk04in7jmsy" path="res://Pixel Adventure 1/Free/Traps/Spikes/Idle.png" id="4_cgcne"]
+[ext_resource type="Script" uid="uid://ow7lj5frkx85" path="res://CHiTAN/Trap_tái_sử_dụng/Trap_DULR.gd" id="5_cgcne"]
 [ext_resource type="Script" uid="uid://d7j87xllr3qh" path="res://CHiTAN/TrapMoveRight.gd" id="5_slgrp"]
 [ext_resource type="PackedScene" uid="uid://b6ag1ctw4nvis" path="res://CHiTAN/TrapCoDinh.tscn" id="6_fqwyg"]
 [ext_resource type="PackedScene" uid="uid://cvvso2wo21aec" path="res://CHiTAN/MoveR.tscn" id="7_duw73"]
@@ -350,7 +351,11 @@ shape = SubResource("RectangleShape2D_rbddr")
 
 [node name="Area2D7" type="Area2D" parent="."]
 position = Vector2(636, 197)
-script = ExtResource("5_slgrp")
+script = ExtResource("5_cgcne")
+distances = Array[float]([0.0, 0.0, 0.0, 45.0])
+speeds = Array[float]([0.0, 0.0, 0.0, 0.2])
+reset_delay = 1.0
+is_active = true
 
 [node name="NewAtlasTexture" type="Sprite2D" parent="Area2D7"]
 position = Vector2(108, 216)

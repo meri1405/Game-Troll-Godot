@@ -9,7 +9,7 @@
 [ext_resource type="Script" uid="uid://di5465m55skol" path="res://CHiTAN/Move_down.gd" id="6_rc3a0"]
 [ext_resource type="Texture2D" uid="uid://fs3vd4y6dk8i" path="res://UI/ImgBlock/MapChiTanq2.tres" id="7_rtpcx"]
 [ext_resource type="Script" uid="uid://dmwtg3a5hhtfi" path="res://CHiTAN/Trap_tái_sử_dụng/Move_U_L_D.gd" id="8_7csua"]
-[ext_resource type="Texture2D" uid="uid://6pch5atfx7tn" path="res://UI/ImgBlock/MapChiTan2.tres" id="9_yjq8v"]
+[ext_resource type="Texture2D" uid="uid://6pch5atfx7tn" path="res://UI/ImgBlock/DungSuaCainayPlease.tres" id="9_yjq8v"]
 [ext_resource type="Script" uid="uid://d1obb2soqoptq" path="res://CHiTAN/Trap_tái_sử_dụng/Trap_U_L_D.gd" id="10_24uu7"]
 [ext_resource type="Texture2D" uid="uid://bv3m3qsh8rpor" path="res://Pixel Adventure 1/Free/Traps/Saw/Off.png" id="11_fwcvx"]
 [ext_resource type="Script" uid="uid://ow7lj5frkx85" path="res://CHiTAN/Trap_tái_sử_dụng/Trap_DULR.gd" id="12_krlqr"]
