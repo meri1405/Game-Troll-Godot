@@ -18,7 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://dt1tth682nenl" path="res://ScriptsScenes/MainCharacter/character_body_2d.tscn" id="13_0ahky"]
 [ext_resource type="Script" uid="uid://dhbe4nrvokkhm" path="res://CHiTAN/ChiTanNV.gd" id="14_g4b12"]
 [ext_resource type="Script" uid="uid://d0i3764jsu8oy" path="res://CHiTAN/TrapXoay.gd" id="15_crpob"]
-[ext_resource type="Texture2D" uid="uid://6pch5atfx7tn" path="res://UI/ImgBlock/MapChiTan2.tres" id="16_orjjv"]
+[ext_resource type="Texture2D" uid="uid://6pch5atfx7tn" path="res://UI/ImgBlock/DungSuaCainayPlease.tres" id="16_orjjv"]
 [ext_resource type="Script" uid="uid://bwy4xaymd4xr3" path="res://CHiTAN/Move_left_Low.gd" id="17_w6ak3"]
 [ext_resource type="Script" uid="uid://di5465m55skol" path="res://CHiTAN/Move_down.gd" id="18_wlq77"]
 [ext_resource type="Script" uid="uid://dt82j3echcxyj" path="res://CHiTAN/RemoveTileMap.gd" id="19_e4g82"]
@@ -663,7 +663,7 @@ scale = Vector2(0.37512, 0.566092)
 shape = SubResource("RectangleShape2D_u68p4")
 
 [node name="Checkpoint" parent="TextureRect" instance=ExtResource("8_qjbsg")]
-position = Vector2(-1029, -32)
+position = Vector2(-1041, -34)
 script = ExtResource("9_qjbsg")
 completed_level_number = 6
 next_level = "res://All_Level/Map Level 7/Level_7.tscn"
