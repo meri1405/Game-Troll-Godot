@@ -683,8 +683,8 @@ shape = SubResource("RectangleShape2D_kjdhy")
 
 [node name="Checkpoint" parent="." instance=ExtResource("18_scb14")]
 position = Vector2(2545, 192)
-completed_level_number = 20
-next_level = "res://All_Level/Map Level 21/Level_21.tscn"
+completed_level_number = 41
+next_level = "res://All_Level/Map Level 42/Level_42.tscn"
 
 [node name="TouchControls" parent="." instance=ExtResource("19_csq1x")]
 
@@ -700,5 +700,6 @@ visible = false
 [connection signal="body_entered" from="Dir_Change/TriggerChangeDir" to="Dir_Change/TriggerChangeDir" method="_on_body_entered"]
 [connection signal="body_entered" from="Dir_Change/DisTriggerChangeDir" to="Dir_Change/DisTriggerChangeDir" method="_on_body_entered"]
 [connection signal="body_entered" from="Room1" to="Room1" method="_on_body_entered"]
+[connection signal="pressed" from="PauseButton/Pause" to="PauseMenu" method="show_menu"]
 
 [editable path="PauseButton"]

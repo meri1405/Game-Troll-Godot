@@ -159,6 +159,7 @@ layout_mode = 2
 disabled = true
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="VBoxContainer/HBoxContainer/ResetButton"]
+visible = false
 position = Vector2(-142, -276)
 scale = Vector2(4.74128, 4.04545)
 texture_normal = ExtResource("14_euyfw")
