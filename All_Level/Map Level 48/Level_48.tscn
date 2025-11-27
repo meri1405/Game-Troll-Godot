@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://df4x1pqr3p3l5" path="res://Bg-Dark/Tileset/Dark_Horror_Asset_pack.png" id="2_cx6q4"]
 [ext_resource type="PackedScene" uid="uid://dt1tth682nenl" path="res://ScriptsScenes/MainCharacter/character_body_2d.tscn" id="3_a0tic"]
 [ext_resource type="Script" uid="uid://bpbjucfecmdd1" path="res://All_Level/Map Level 46/terrain_move_left_level46_2.gd" id="4_c6xx2"]
-[ext_resource type="Texture2D" uid="uid://com5q080b4xoh" path="res://UI/ImgBlock/Img_Level/level48.tres" id="5_b7t0q"]
+[ext_resource type="Texture2D" path="res://UI/ImgBlock/Img_Level/level48.tres" id="5_b7t0q"]
 [ext_resource type="Script" uid="uid://e3cnttgr7mkc" path="res://All_Level/Map Level 24/trigger_move.gd" id="6_ys3u6"]
 [ext_resource type="Script" uid="uid://dc6s6ta1ql8w1" path="res://All_Level/Map Level 48/terrain_move_left_level48.gd" id="7_tyqyq"]
 [ext_resource type="Script" uid="uid://c652bmikb4j8q" path="res://All_Level/Map Level 48/enemy_level48.gd" id="8_blb82"]

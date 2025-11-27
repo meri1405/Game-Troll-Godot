@@ -397,6 +397,7 @@ position = Vector2(5.06639e-06, 0.333331)
 shape = SubResource("RectangleShape2D_26fwk")
 
 [node name="end" type="Area2D" parent="." groups=["hurt"]]
+visible = false
 position = Vector2(721, 200)
 metadata/_edit_group_ = true
 
