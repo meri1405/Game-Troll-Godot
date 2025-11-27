@@ -509,7 +509,7 @@ shape = SubResource("RectangleShape2D_anthm")
 position = Vector2(262.081, 699.126)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Area2D3"]
-position = Vector2(429.5, 51)
+position = Vector2(368.726, 37.5274)
 shape = SubResource("RectangleShape2D_nw40j")
 
 [node name="Area2D2" type="AnimatableBody2D" parent="TextureRect"]
