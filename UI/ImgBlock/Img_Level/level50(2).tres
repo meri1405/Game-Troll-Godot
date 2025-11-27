@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://b07fdeadto64g"]
+
+[ext_resource type="Texture2D" uid="uid://d2i85iu2ym6xj" path="res://Pixel Adventure 1/Free/Traps/Sand Mud Ice/Sand Mud Ice (16x6).png" id="1_31hyo"]
+
+[resource]
+atlas = ExtResource("1_31hyo")
+region = Rect2(128.008, -0.0026741, 17.4788, 47.9972)
