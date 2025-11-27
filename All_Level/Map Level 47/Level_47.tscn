@@ -1,0 +1,947 @@
+[gd_scene load_steps=49 format=3 uid="uid://sjw0mmaak7ym"]
+
+[ext_resource type="Texture2D" uid="uid://cffceoyqsskp" path="res://Pixel Adventure 1/Free/Background/Background_4.jpeg" id="1_qelwb"]
+[ext_resource type="PackedScene" uid="uid://dt1tth682nenl" path="res://ScriptsScenes/MainCharacter/character_body_2d.tscn" id="2_cr5vd"]
+[ext_resource type="Texture2D" uid="uid://cmx6ev0y0fkb7" path="res://Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="3_qcgry"]
+[ext_resource type="Texture2D" uid="uid://cvbnup8uvc31b" path="res://Pixel Adventure 1/Free/Terrain/metal_snow_tileset.png" id="4_g4djm"]
+[ext_resource type="Script" uid="uid://bn8752m1onop8" path="res://ScriptsScenes/switchBodyLevel/room.gd" id="5_a6hdu"]
+[ext_resource type="Texture2D" uid="uid://dycdavdvo4drb" path="res://Pixel Adventure 1/Free/Traps/Trap2/Spike_B.png" id="6_wxfov"]
+[ext_resource type="Texture2D" uid="uid://crhk04in7jmsy" path="res://Pixel Adventure 1/Free/Traps/Spikes/Idle.png" id="7_oq7sq"]
+[ext_resource type="Script" uid="uid://c6jphiasfsmq3" path="res://All_Level/Map Level 22/Script_lv22/gai_trigger_show.gd" id="8_poici"]
+[ext_resource type="PackedScene" uid="uid://cibklyepbriw8" path="res://ScriptsScenes/spike/Spike3set.tscn" id="9_djupq"]
+[ext_resource type="Script" uid="uid://eb0v10emceai" path="res://All_Level/Map Level 47/button.gd" id="10_ncd8m"]
+[ext_resource type="Texture2D" uid="uid://cgdbmsy1ma5nx" path="res://Pixel Adventure 1/Free/Items/Buttons/ButtonBlue-Sheet.png" id="11_w536b"]
+[ext_resource type="AudioStream" uid="uid://b467xhmpftqn4" path="res://audio/audioAssests/(203) Button-Plate Click (Minecraft Sound) - Sound Effect for editing - YouTube (mp3cut.net).wav" id="12_1e2ta"]
+[ext_resource type="Script" uid="uid://di2u33q416h8w" path="res://All_Level/Map Level 47/delete_plane.gd" id="13_q1wiy"]
+[ext_resource type="Script" uid="uid://cq4ac2tl8jg2s" path="res://All_Level/Map Level 47/box_left_move.gd" id="14_iclce"]
+[ext_resource type="Texture2D" uid="uid://sg5gxyeqs7dq" path="res://Pixel Adventure 1/Free/Traps/Rock Head/Blink (42x42).png" id="15_7kmpl"]
+[ext_resource type="Script" uid="uid://bjeukcsw66fln" path="res://All_Level/Map Level 7/box_trigger.gd" id="16_lb1fy"]
+[ext_resource type="PackedScene" uid="uid://btdfqc4qp1j67" path="res://Checkpoint/Level_1/checkpoint.tscn" id="17_xxvmd"]
+[ext_resource type="Script" uid="uid://dqt77xkq01kww" path="res://ScriptsScenes/box/box_suprise.gd" id="18_drqjh"]
+[ext_resource type="Texture2D" uid="uid://et81wap61p4f" path="res://Pixel Adventure 1/Free/Items/Boxes/Box1/Idle.png" id="19_4ja5v"]
+[ext_resource type="PackedScene" uid="uid://m4c8hp47kokd" path="res://UI/pause_menu.tscn" id="20_g4djm"]
+[ext_resource type="PackedScene" uid="uid://0dybtnqg5l6c" path="res://CommonScripts/PauseButton.tscn" id="21_a6hdu"]
+[ext_resource type="PackedScene" uid="uid://b0b8d8fe0ga2a" path="res://Touch_Controls/scene/touch_controls.tscn" id="22_wxfov"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a1aux"]
+texture = ExtResource("3_qcgry")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+6:0/0 = 0
+6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:0/0 = 0
+7:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:0/0 = 0
+8:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:0/0 = 0
+9:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+10:0/0 = 0
+10:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+12:0/0 = 0
+12:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+13:0/0 = 0
+13:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+14:0/0 = 0
+14:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+15:0/0 = 0
+15:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+17:0/0 = 0
+18:0/0 = 0
+19:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+6:1/0 = 0
+6:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:1/0 = 0
+7:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:1/0 = 0
+8:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:1/0 = 0
+9:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+10:1/0 = 0
+10:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+12:1/0 = 0
+12:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+13:1/0 = 0
+13:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+14:1/0 = 0
+14:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+15:1/0 = 0
+15:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+17:1/0 = 0
+17:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+18:1/0 = 0
+18:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+19:1/0 = 0
+19:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+6:2/0 = 0
+6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:2/0 = 0
+7:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:2/0 = 0
+8:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+13:2/0 = 0
+13:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+14:2/0 = 0
+14:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+15:2/0 = 0
+15:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+17:2/0 = 0
+17:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+18:2/0 = 0
+18:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+19:2/0 = 0
+19:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+6:4/0 = 0
+6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:4/0 = 0
+7:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:4/0 = 0
+8:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:4/0 = 0
+9:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+10:4/0 = 0
+10:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+12:4/0 = 0
+12:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+13:4/0 = 0
+13:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+14:4/0 = 0
+14:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+15:4/0 = 0
+15:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+17:4/0 = 0
+17:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+18:4/0 = 0
+18:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+19:4/0 = 0
+19:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+20:4/0 = 0
+20:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+21:4/0 = 0
+21:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+6:5/0 = 0
+6:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:5/0 = 0
+7:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:5/0 = 0
+8:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:5/0 = 0
+9:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+10:5/0 = 0
+10:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+12:5/0 = 0
+12:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+13:5/0 = 0
+13:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+14:5/0 = 0
+14:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+15:5/0 = 0
+15:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+17:5/0 = 0
+17:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+18:5/0 = 0
+18:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+19:5/0 = 0
+19:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+20:5/0 = 0
+20:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+21:5/0 = 0
+21:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+6:6/0 = 0
+6:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:6/0 = 0
+7:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:6/0 = 0
+8:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+13:6/0 = 0
+13:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+14:6/0 = 0
+14:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+15:6/0 = 0
+15:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+17:6/0 = 0
+17:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+18:6/0 = 0
+18:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+19:6/0 = 0
+19:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+14:8/0 = 0
+15:8/0 = 0
+17:8/0 = 0
+18:8/0 = 0
+19:8/0 = 0
+20:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+10:9/0 = 0
+12:9/0 = 0
+13:9/0 = 0
+14:9/0 = 0
+15:9/0 = 0
+17:9/0 = 0
+18:9/0 = 0
+19:9/0 = 0
+20:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+13:10/0 = 0
+14:10/0 = 0
+15:10/0 = 0
+18:10/0 = 0
+19:10/0 = 0
+20:10/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pt6y6"]
+texture = ExtResource("4_g4djm")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:0/0 = 0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:0/0 = 0
+6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:1/0 = 0
+6:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:2/0 = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:2/0 = 0
+4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:2/0 = 0
+5:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:2/0 = 0
+6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:3/0 = 0
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:3/0 = 0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:4/0 = 0
+0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:4/0 = 0
+1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:4/0 = 0
+2:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:4/0 = 0
+3:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:4/0 = 0
+4:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:4/0 = 0
+5:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:5/0 = 0
+0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:5/0 = 0
+1:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:5/0 = 0
+2:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:5/0 = 0
+3:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:5/0 = 0
+4:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:5/0 = 0
+5:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_2qntf"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_a1aux")
+sources/1 = SubResource("TileSetAtlasSource_pt6y6")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bhddu"]
+size = Vector2(2678.5, 1154.5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k2crs"]
+atlas = ExtResource("6_wxfov")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pt6y6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k2crs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_oq7sq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 9.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2qntf"]
+size = Vector2(32.3333, 14.1667)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e7q3o"]
+size = Vector2(48, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cv3by"]
+atlas = ExtResource("11_w536b")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xclyv"]
+atlas = ExtResource("11_w536b")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v1hof"]
+atlas = ExtResource("11_w536b")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_akiu0"]
+atlas = ExtResource("11_w536b")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o4jg4"]
+atlas = ExtResource("11_w536b")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_daqpv"]
+atlas = ExtResource("11_w536b")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ji8wj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cv3by")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xclyv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v1hof")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_akiu0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o4jg4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_daqpv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s7vfw"]
+size = Vector2(47, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cv3by"]
+size = Vector2(190, 155)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sx4db"]
+atlas = ExtResource("15_7kmpl")
+region = Rect2(0, 0, 42, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7lf1v"]
+atlas = ExtResource("15_7kmpl")
+region = Rect2(42, 0, 42, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dguho"]
+atlas = ExtResource("15_7kmpl")
+region = Rect2(84, 0, 42, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p2trt"]
+atlas = ExtResource("15_7kmpl")
+region = Rect2(126, 0, 42, 42)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o4jg4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sx4db")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7lf1v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dguho")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p2trt")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_daqpv"]
+size = Vector2(27.1875, 39)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ji8wj"]
+size = Vector2(32.4375, 47.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4wxwn"]
+size = Vector2(40, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u3g6w"]
+size = Vector2(42, 58.5)
+
+[node name="KhangMap" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -4
+offset_left = 132.0
+offset_top = -235.0
+offset_right = 2603.0
+offset_bottom = 905.0
+texture = ExtResource("1_qelwb")
+expand_mode = 1
+
+[node name="CharacterBody2D" parent="." groups=["Player"] instance=ExtResource("2_cr5vd")]
+position = Vector2(200, 494)
+
+[node name="RayCast2D" type="RayCast2D" parent="CharacterBody2D"]
+position = Vector2(10.6667, -20.3333)
+target_position = Vector2(0, 10)
+
+[node name="TileMap" type="TileMap" parent="."]
+texture_filter = 1
+scale = Vector2(3, 3)
+tile_set = SubResource("TileSet_2qntf")
+format = 2
+layer_0/tile_data = PackedInt32Array(-327666, 458752, 6, -327672, 458752, 6, -327671, 458752, 6, -327670, 458752, 6, -327669, 458752, 6, -327668, 458752, 6, -327667, 458752, 6, -327676, 458752, 6, -327675, 458752, 6, -327678, 458752, 5, -262142, 524288, 5, -196606, 524288, 5, -131070, 524288, 5, -65534, 524288, 5, 2, 524288, 5, 65538, 524288, 5, 131074, 524288, 5, 196610, 524288, 5, 262146, 524288, 5, 327682, 524288, 5, 393218, 524288, 5, 458754, 524288, 5, 524290, 524288, 5, 589826, 524288, 5, 655362, 524288, 5, 720898, 458752, 5, 786434, 458752, 5, -327677, 458752, 6, -327674, 458752, 6, -327673, 458752, 6, 851970, 458752, 5, -327665, 458752, 6, -327664, 458752, 6, -327663, 458752, 6, -327662, 458752, 6, -327661, 458752, 6, -327660, 458752, 6, -327659, 458752, 6, -327658, 458752, 6, 917506, 458752, 5, 983042, 458752, 5, 1048578, 458752, 5, 1114114, 458752, 5, 1179650, 458752, 5, -327642, 458752, 6, -327641, 458752, 6, -327640, 458752, 6, -327639, 458752, 6, -327638, 458752, 6, -327637, 458752, 6, -327636, 458752, 6, -327635, 458752, 6, -327634, 458752, 6, -327633, 458752, 6, -327632, 458752, 6, -327631, 458752, 6, -327630, 458752, 6, -327629, 458752, 6, -327628, 458752, 6, -327627, 458752, 6, -327657, 458752, 6, -327656, 458752, 6, -327655, 458752, 6, -327654, 458752, 6, -327653, 458752, 6, -327652, 458752, 6, -327651, 458752, 6, -327650, 458752, 6, -327649, 458752, 6, -327648, 458752, 6, -327647, 458752, 6, -327646, 458752, 6, -327645, 458752, 6, -327644, 458752, 6, -327643, 458752, 6, 1179651, 458752, 5, 1179652, 458752, 5, 1179653, 458752, 4, 1179654, 458752, 4, 1179655, 458752, 4, 1179656, 458752, 4, 1179657, 458752, 4, 1179658, 458752, 4, 1179659, 458752, 4, 1179660, 458752, 4, 1179661, 458752, 4, 1179662, 458752, 4, 1179663, 458752, 4, 1179664, 458752, 4, 1179665, 458752, 4, 1179666, 458752, 4, 1179667, 458752, 4, 1179668, 458752, 4, 1179669, 458752, 4, 1179670, 458752, 4, 1179671, 458752, 4, 1179672, 458752, 4, 1179673, 458752, 4, 1179674, 458752, 4, 1179675, 458752, 4, 1179676, 458752, 4, 1179677, 458752, 4, 1179678, 458752, 4, 1179679, 458752, 4, 1179680, 458752, 4, 1179681, 458752, 4, 1179682, 458752, 4, 1179683, 458752, 4, 1179684, 458752, 4, 1179685, 458752, 4, 1179686, 458752, 4, 1179687, 458752, 4, 1179688, 458752, 4, 1179689, 458752, 4, 1179690, 458752, 4, 1179691, 458752, 4, 1179692, 458752, 4, 1179693, 458752, 4, 1179694, 458752, 4, 1179695, 458752, 4, 1179696, 458752, 4, 1179697, 458752, 4, 1179698, 458752, 5, 1179699, 458752, 5, 1179700, 458752, 5, 1179701, 458752, 5, 720899, 458752, 4, 720900, 458752, 4, 720901, 458752, 4, 720902, 524288, 4, 786437, 524288, 6, 851972, 524288, 5, 917508, 524288, 5, 983044, 524288, 5, 1048580, 524288, 5, 1114116, 524288, 5, 786436, 458752, 5, 786435, 458752, 5, 851971, 458752, 5, 917507, 458752, 5, 983043, 458752, 5, 1048579, 458752, 5, 1114115, 458752, 5, 1114123, 393216, 5, 1048587, 393216, 5, 983051, 393216, 5, 917515, 393216, 5, 851979, 393216, 5, 786443, 393216, 5, 720907, 393216, 5, 589833, 393216, 4, 655370, 393216, 6, 589835, 458752, 4, 589834, 458752, 4, 655371, 458752, 5, 1114124, 524288, 5, 1048588, 524288, 5, 983052, 524288, 5, 917516, 524288, 5, 851980, 524288, 5, 786444, 524288, 5, 720908, 524288, 5, 589837, 458752, 4, 655373, 524288, 6, 589838, 524288, 4, 655372, 458752, 5, 589836, 458752, 4, 851987, 393216, 5, 917523, 393216, 5, 983059, 393216, 5, 851988, 524288, 5, 917524, 524288, 5, 983060, 524288, 5, 458774, 524288, 4, 1048595, 393216, 5, 1114131, 393216, 5, 1048596, 524288, 5, 1114132, 524288, 5, 458771, 458752, 4, 458772, 458752, 4, 524308, 458752, 5, 458773, 458752, 4, 524309, 524288, 6, 458769, 393216, 4, 458770, 458752, 4, 524306, 393216, 6, 524307, 458752, 5, 589843, 393216, 5, 655379, 393216, 5, 720915, 393216, 5, 786451, 393216, 5, 589844, 524288, 5, 655380, 524288, 5, 720916, 524288, 5, 786452, 524288, 5, 786461, 393216, 4, 786462, 458752, 4, 851998, 393216, 6, 786463, 458752, 4, 851999, 458752, 5, 917535, 393216, 5, 983071, 393216, 5, 1048607, 393216, 5, 1114143, 393216, 5, 786464, 458752, 4, 852000, 458752, 5, 917536, 524288, 5, 983072, 524288, 5, 1048608, 524288, 5, 1114144, 524288, 5, 786465, 458752, 4, 852001, 524288, 6, 786466, 524288, 4, 655397, 393216, 4, 655398, 458752, 4, 720934, 393216, 6, 655399, 458752, 4, 720935, 458752, 5, 786471, 393216, 5, 852007, 393216, 5, 917543, 393216, 5, 983079, 393216, 5, 1048615, 393216, 5, 1114151, 393216, 5, 655400, 458752, 4, 720936, 458752, 5, 786472, 524288, 5, 852008, 524288, 5, 917544, 524288, 5, 983080, 524288, 5, 1048616, 524288, 5, 1114152, 524288, 5, 655401, 458752, 4, 720937, 524288, 6, 655402, 524288, 4, -327626, 458752, 5, 1179702, 458752, 5, -262090, 393216, 5, -196554, 393216, 5, -131018, 393216, 5, -65482, 393216, 5, 54, 393216, 5, 65590, 393216, 5, 131126, 393216, 5, 196662, 393216, 5, 262198, 393216, 5, 327734, 393216, 5, 393270, 393216, 5, 458806, 393216, 5, 524342, 393216, 5, 589878, 393216, 5, 655414, 458752, 5, 720950, 458752, 5, 786486, 458752, 5, 852022, 458752, 5, 917558, 458752, 5, 983094, 458752, 5, 1048630, 458752, 5, 1114166, 458752, 5, 655407, 393216, 4, 655408, 458752, 4, 655409, 458752, 4, 655410, 458752, 4, 655411, 458752, 4, 655412, 458752, 4, 655413, 458752, 4, 720944, 393216, 5, 786481, 393216, 5, 852018, 393216, 5, 917554, 393216, 5, 983090, 393216, 5, 1048626, 393216, 5, 1114162, 393216, 5, 1114165, 458752, 5, 1114164, 458752, 5, 1048628, 458752, 5, 983092, 458752, 5, 917556, 458752, 5, 852020, 458752, 5, 852019, 458752, 5, 786483, 458752, 5, 786482, 458752, 5, 720946, 458752, 5, 720945, 458752, 5, 917555, 458752, 5, 983091, 458752, 5, 1048627, 458752, 5, 1114163, 458752, 5, 720949, 458752, 5, 720948, 458752, 5, 720947, 458752, 5, 786484, 458752, 5, 786485, 458752, 5, 917557, 458752, 5, 983093, 458752, 5, 1048629, 458752, 5, 852021, 458752, 5)
+
+[node name="Room" type="Area2D" parent="." groups=["Room_light"]]
+visible = false
+position = Vector2(182, -15)
+script = ExtResource("5_a6hdu")
+cam_limit_left = 96
+cam_limit_right = 2784
+cam_limit_top = -240
+cam_limit_bottom = 912
+cam_zoom = Vector2(0.63, 0.63)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room"]
+position = Vector2(1253.75, 348.75)
+shape = SubResource("RectangleShape2D_bhddu")
+
+[node name="Gai" type="Node2D" parent="."]
+z_index = 1
+position = Vector2(267, 497)
+rotation = 3.14159
+scale = Vector2(0.8, 0.8)
+
+[node name="Gaimove" type="Area2D" parent="Gai" groups=["hurt"]]
+position = Vector2(-33, -370)
+rotation = -1.5708
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Gai/Gaimove"]
+z_index = -1
+texture_filter = 1
+position = Vector2(4.99961, 299)
+rotation = 1.18301e-05
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_pt6y6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gai/Gaimove"]
+z_index = 1
+position = Vector2(2.99998, 299)
+scale = Vector2(6, 6)
+shape = SubResource("RectangleShape2D_2qntf")
+
+[node name="Gaimove2" type="Area2D" parent="Gai" groups=["hurt"]]
+position = Vector2(-33, -183)
+rotation = -1.5708
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Gai/Gaimove2"]
+z_index = -1
+texture_filter = 1
+position = Vector2(4.99961, 299)
+rotation = 1.18301e-05
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_pt6y6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gai/Gaimove2"]
+z_index = 1
+position = Vector2(4.74961, 299)
+scale = Vector2(6, 6)
+shape = SubResource("RectangleShape2D_2qntf")
+
+[node name="Gaimove3" type="Area2D" parent="Gai" groups=["hurt"]]
+position = Vector2(-33, 3)
+rotation = -1.5708
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Gai/Gaimove3"]
+z_index = -1
+texture_filter = 1
+position = Vector2(4.99961, 299)
+rotation = 1.18301e-05
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_pt6y6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gai/Gaimove3"]
+z_index = 1
+position = Vector2(4.74961, 299)
+scale = Vector2(6, 6)
+shape = SubResource("RectangleShape2D_2qntf")
+
+[node name="Gaimove4" type="Area2D" parent="Gai" groups=["hurt"]]
+position = Vector2(-33, 189)
+rotation = -1.5708
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Gai/Gaimove4"]
+z_index = -1
+texture_filter = 1
+position = Vector2(4.99961, 299)
+rotation = 1.18301e-05
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_pt6y6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gai/Gaimove4"]
+z_index = 1
+position = Vector2(4.74961, 299)
+scale = Vector2(6, 6)
+shape = SubResource("RectangleShape2D_2qntf")
+
+[node name="Gaimove5" type="Area2D" parent="Gai" groups=["hurt"]]
+position = Vector2(-33.7499, 377.5)
+rotation = -1.5708
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Gai/Gaimove5"]
+z_index = -1
+texture_filter = 1
+position = Vector2(4.99961, 299)
+rotation = 1.18301e-05
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_pt6y6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gai/Gaimove5"]
+z_index = 1
+position = Vector2(4.74961, 299)
+scale = Vector2(6, 6)
+shape = SubResource("RectangleShape2D_2qntf")
+
+[node name="Gaimove6" type="Area2D" parent="Gai" groups=["hurt"]]
+position = Vector2(-33.7499, 565)
+rotation = -1.5708
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Gai/Gaimove6"]
+z_index = -1
+texture_filter = 1
+position = Vector2(4.99961, 299)
+rotation = 1.18301e-05
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_pt6y6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gai/Gaimove6"]
+z_index = 1
+position = Vector2(4.74961, 299)
+scale = Vector2(6, 6)
+shape = SubResource("RectangleShape2D_2qntf")
+
+[node name="Gaimove7" type="Area2D" parent="Gai" groups=["hurt"]]
+position = Vector2(-33.7499, 752.5)
+rotation = -1.5708
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Gai/Gaimove7"]
+z_index = -1
+texture_filter = 1
+position = Vector2(4.99961, 299)
+rotation = 1.18301e-05
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_pt6y6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gai/Gaimove7"]
+z_index = 1
+position = Vector2(4.74961, 299)
+scale = Vector2(6, 6)
+shape = SubResource("RectangleShape2D_2qntf")
+
+[node name="GaiTriggerShow" type="Area2D" parent="."]
+position = Vector2(428, 338)
+script = ExtResource("8_poici")
+gai_parent_path = NodePath("../Gai")
+move_distance = -2740.0
+move_speed = 11.5
+delay_before_move = 0.6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GaiTriggerShow"]
+position = Vector2(31, 75.5)
+shape = SubResource("RectangleShape2D_e7q3o")
+
+[node name="Spike" parent="." instance=ExtResource("9_djupq")]
+position = Vector2(255, 848)
+scale = Vector2(2, 2)
+
+[node name="Spike3set2" parent="Spike" instance=ExtResource("9_djupq")]
+position = Vector2(23, 0)
+
+[node name="Spike3set3" parent="Spike" instance=ExtResource("9_djupq")]
+position = Vector2(69, 0)
+
+[node name="Spike3set4" parent="Spike" instance=ExtResource("9_djupq")]
+position = Vector2(46, 0)
+
+[node name="Spike3set5" parent="Spike" instance=ExtResource("9_djupq")]
+position = Vector2(92, 0)
+
+[node name="Spike3set6" parent="Spike" instance=ExtResource("9_djupq")]
+position = Vector2(114.5, 0)
+
+[node name="Spike3set7" parent="Spike" instance=ExtResource("9_djupq")]
+z_index = -1
+position = Vector2(137.5, 0)
+
+[node name="Button" type="Area2D" parent="."]
+z_index = -1
+position = Vector2(541, 332)
+script = ExtResource("10_ncd8m")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Button"]
+texture_filter = 1
+position = Vector2(-82, 75)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_ji8wj")
+speed_scale = 2.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Button"]
+position = Vector2(-82.5, 82)
+shape = SubResource("RectangleShape2D_s7vfw")
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="Button"]
+stream = ExtResource("12_1e2ta")
+volume_db = 9.905
+
+[node name="DeletePlane" type="Area2D" parent="."]
+position = Vector2(783, 3747)
+script = ExtResource("13_q1wiy")
+tilemap_node = NodePath("../TileMap")
+top_left = Vector2i(18, 7)
+bottom_right = Vector2i(21, 17)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeletePlane"]
+position = Vector2(177, -3394.5)
+shape = SubResource("RectangleShape2D_cv3by")
+
+[node name="Box_LeftMove" type="AnimatableBody2D" parent="." groups=["player"]]
+position = Vector2(2106, 733)
+scale = Vector2(2, 2)
+script = ExtResource("14_iclce")
+move_distance = 300.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Box_LeftMove" groups=["player"]]
+texture_filter = 1
+position = Vector2(-237, -54.8438)
+scale = Vector2(0.830357, 1.34077)
+sprite_frames = SubResource("SpriteFrames_o4jg4")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box_LeftMove"]
+position = Vector2(-237.594, -56.5)
+shape = SubResource("RectangleShape2D_daqpv")
+
+[node name="Box_Left_Trigger" type="Area2D" parent="."]
+position = Vector2(799, 69)
+script = ExtResource("16_lb1fy")
+target_path = NodePath("../Box_LeftMove")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box_Left_Trigger"]
+position = Vector2(710, 479)
+shape = SubResource("RectangleShape2D_ji8wj")
+
+[node name="Checkpoint" parent="." instance=ExtResource("17_xxvmd")]
+position = Vector2(1405, 335)
+completed_level_number = 47
+next_level = "res://All_Level/Map Level 48/Level_48.tscn"
+
+[node name="Box1-4" type="Node2D" parent="."]
+
+[node name="Box1" type="Node2D" parent="Box1-4"]
+position = Vector2(1787, 308)
+
+[node name="Box_Suprise" type="AnimatableBody2D" parent="Box1-4/Box1" groups=["saws"]]
+position = Vector2(69, 154)
+script = ExtResource("18_drqjh")
+
+[node name="Sprite2D" type="Sprite2D" parent="Box1-4/Box1/Box_Suprise"]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("19_4ja5v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box1-4/Box1/Box_Suprise"]
+visible = false
+shape = SubResource("RectangleShape2D_4wxwn")
+
+[node name="TriggerShowBox" type="Area2D" parent="Box1-4/Box1"]
+visible = false
+position = Vector2(77, 152)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box1-4/Box1/TriggerShowBox"]
+position = Vector2(-8, 2)
+shape = SubResource("RectangleShape2D_u3g6w")
+
+[node name="Box2" type="Node2D" parent="Box1-4"]
+position = Vector2(1787, 268)
+
+[node name="Box_Suprise" type="AnimatableBody2D" parent="Box1-4/Box2" groups=["saws"]]
+position = Vector2(69, 154)
+script = ExtResource("18_drqjh")
+
+[node name="Sprite2D" type="Sprite2D" parent="Box1-4/Box2/Box_Suprise"]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("19_4ja5v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box1-4/Box2/Box_Suprise"]
+visible = false
+shape = SubResource("RectangleShape2D_4wxwn")
+
+[node name="TriggerShowBox" type="Area2D" parent="Box1-4/Box2"]
+visible = false
+position = Vector2(77, 152)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box1-4/Box2/TriggerShowBox"]
+position = Vector2(-8, 2)
+shape = SubResource("RectangleShape2D_u3g6w")
+
+[node name="Box3" type="Node2D" parent="Box1-4"]
+position = Vector2(1827, 308)
+
+[node name="Box_Suprise" type="AnimatableBody2D" parent="Box1-4/Box3" groups=["saws"]]
+position = Vector2(69, 154)
+script = ExtResource("18_drqjh")
+
+[node name="Sprite2D" type="Sprite2D" parent="Box1-4/Box3/Box_Suprise"]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("19_4ja5v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box1-4/Box3/Box_Suprise"]
+visible = false
+shape = SubResource("RectangleShape2D_4wxwn")
+
+[node name="TriggerShowBox" type="Area2D" parent="Box1-4/Box3"]
+visible = false
+position = Vector2(77, 152)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box1-4/Box3/TriggerShowBox"]
+position = Vector2(-8, 2)
+shape = SubResource("RectangleShape2D_u3g6w")
+
+[node name="Box4" type="Node2D" parent="Box1-4"]
+position = Vector2(1827, 268)
+
+[node name="Box_Suprise" type="AnimatableBody2D" parent="Box1-4/Box4" groups=["saws"]]
+position = Vector2(69, 154)
+script = ExtResource("18_drqjh")
+
+[node name="Sprite2D" type="Sprite2D" parent="Box1-4/Box4/Box_Suprise"]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("19_4ja5v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box1-4/Box4/Box_Suprise"]
+visible = false
+shape = SubResource("RectangleShape2D_4wxwn")
+
+[node name="TriggerShowBox" type="Area2D" parent="Box1-4/Box4"]
+visible = false
+position = Vector2(77, 152)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box1-4/Box4/TriggerShowBox"]
+position = Vector2(-8, 2)
+shape = SubResource("RectangleShape2D_u3g6w")
+
+[node name="Box1-5" type="Node2D" parent="."]
+position = Vector2(1709, 167)
+
+[node name="Box1" type="Node2D" parent="Box1-5"]
+position = Vector2(158, 141)
+
+[node name="Box_Suprise" type="AnimatableBody2D" parent="Box1-5/Box1" groups=["saws"]]
+position = Vector2(69, 154)
+script = ExtResource("18_drqjh")
+
+[node name="Sprite2D" type="Sprite2D" parent="Box1-5/Box1/Box_Suprise"]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("19_4ja5v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box1-5/Box1/Box_Suprise"]
+visible = false
+shape = SubResource("RectangleShape2D_4wxwn")
+
+[node name="TriggerShowBox" type="Area2D" parent="Box1-5/Box1"]
+visible = false
+position = Vector2(77, 152)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box1-5/Box1/TriggerShowBox"]
+position = Vector2(-8, 2)
+shape = SubResource("RectangleShape2D_u3g6w")
+
+[node name="Box2" type="Node2D" parent="Box1-5"]
+position = Vector2(158, 101)
+
+[node name="Box_Suprise" type="AnimatableBody2D" parent="Box1-5/Box2" groups=["saws"]]
+position = Vector2(69, 154)
+script = ExtResource("18_drqjh")
+
+[node name="Sprite2D" type="Sprite2D" parent="Box1-5/Box2/Box_Suprise"]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("19_4ja5v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box1-5/Box2/Box_Suprise"]
+visible = false
+shape = SubResource("RectangleShape2D_4wxwn")
+
+[node name="TriggerShowBox" type="Area2D" parent="Box1-5/Box2"]
+visible = false
+position = Vector2(77, 152)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box1-5/Box2/TriggerShowBox"]
+position = Vector2(-8, 2)
+shape = SubResource("RectangleShape2D_u3g6w")
+
+[node name="Box3" type="Node2D" parent="Box1-5"]
+position = Vector2(198, 141)
+
+[node name="Box_Suprise" type="AnimatableBody2D" parent="Box1-5/Box3" groups=["saws"]]
+position = Vector2(69, 154)
+script = ExtResource("18_drqjh")
+
+[node name="Sprite2D" type="Sprite2D" parent="Box1-5/Box3/Box_Suprise"]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("19_4ja5v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box1-5/Box3/Box_Suprise"]
+visible = false
+shape = SubResource("RectangleShape2D_4wxwn")
+
+[node name="TriggerShowBox" type="Area2D" parent="Box1-5/Box3"]
+visible = false
+position = Vector2(77, 152)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box1-5/Box3/TriggerShowBox"]
+position = Vector2(-8, 2)
+shape = SubResource("RectangleShape2D_u3g6w")
+
+[node name="Box4" type="Node2D" parent="Box1-5"]
+position = Vector2(198, 101)
+
+[node name="Box_Suprise" type="AnimatableBody2D" parent="Box1-5/Box4" groups=["saws"]]
+position = Vector2(69, 154)
+script = ExtResource("18_drqjh")
+
+[node name="Sprite2D" type="Sprite2D" parent="Box1-5/Box4/Box_Suprise"]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("19_4ja5v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box1-5/Box4/Box_Suprise"]
+visible = false
+shape = SubResource("RectangleShape2D_4wxwn")
+
+[node name="TriggerShowBox" type="Area2D" parent="Box1-5/Box4"]
+visible = false
+position = Vector2(77, 152)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box1-5/Box4/TriggerShowBox"]
+position = Vector2(-8, 2)
+shape = SubResource("RectangleShape2D_u3g6w")
+
+[node name="PauseMenu" parent="." instance=ExtResource("20_g4djm")]
+visible = false
+
+[node name="PauseButton" parent="." instance=ExtResource("21_a6hdu")]
+
+[node name="TouchControls" parent="." instance=ExtResource("22_wxfov")]
+
+[connection signal="body_entered" from="Room" to="Room" method="_on_body_entered"]
+[connection signal="body_entered" from="GaiTriggerShow" to="GaiTriggerShow" method="_on_body_entered"]
+[connection signal="body_entered" from="Button" to="Button" method="_on_body_entered"]
+[connection signal="body_entered" from="DeletePlane" to="DeletePlane" method="_on_body_entered"]
+[connection signal="body_entered" from="Box_Left_Trigger" to="Box_Left_Trigger" method="_on_body_entered"]
+[connection signal="body_entered" from="Box1-4/Box1/TriggerShowBox" to="Box1-4/Box1/Box_Suprise" method="_on_saw_trigger_body_entered"]
+[connection signal="body_exited" from="Box1-4/Box1/TriggerShowBox" to="Box1-4/Box1/Box_Suprise" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Box1-4/Box2/TriggerShowBox" to="Box1-4/Box2/Box_Suprise" method="_on_saw_trigger_body_entered"]
+[connection signal="body_exited" from="Box1-4/Box2/TriggerShowBox" to="Box1-4/Box2/Box_Suprise" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Box1-4/Box3/TriggerShowBox" to="Box1-4/Box3/Box_Suprise" method="_on_saw_trigger_body_entered"]
+[connection signal="body_exited" from="Box1-4/Box3/TriggerShowBox" to="Box1-4/Box3/Box_Suprise" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Box1-4/Box4/TriggerShowBox" to="Box1-4/Box4/Box_Suprise" method="_on_saw_trigger_body_entered"]
+[connection signal="body_exited" from="Box1-4/Box4/TriggerShowBox" to="Box1-4/Box4/Box_Suprise" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Box1-5/Box1/TriggerShowBox" to="Box1-5/Box1/Box_Suprise" method="_on_saw_trigger_body_entered"]
+[connection signal="body_exited" from="Box1-5/Box1/TriggerShowBox" to="Box1-5/Box1/Box_Suprise" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Box1-5/Box2/TriggerShowBox" to="Box1-5/Box2/Box_Suprise" method="_on_saw_trigger_body_entered"]
+[connection signal="body_exited" from="Box1-5/Box2/TriggerShowBox" to="Box1-5/Box2/Box_Suprise" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Box1-5/Box3/TriggerShowBox" to="Box1-5/Box3/Box_Suprise" method="_on_saw_trigger_body_entered"]
+[connection signal="body_exited" from="Box1-5/Box3/TriggerShowBox" to="Box1-5/Box3/Box_Suprise" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Box1-5/Box4/TriggerShowBox" to="Box1-5/Box4/Box_Suprise" method="_on_saw_trigger_body_entered"]
+[connection signal="body_exited" from="Box1-5/Box4/TriggerShowBox" to="Box1-5/Box4/Box_Suprise" method="_on_area_2d_body_exited"]
+[connection signal="pressed" from="PauseButton/Pause" to="PauseMenu" method="show_menu"]
+
+[editable path="PauseButton"]
