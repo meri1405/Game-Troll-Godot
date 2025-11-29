@@ -1928,7 +1928,7 @@ layer_0/tile_data = PackedInt32Array(983039, 393216, 0, 917504, 458752, 0, 91750
 
 [node name="Player1" type="CharacterBody2D" parent="Player" groups=["Player", "player"]]
 texture_filter = 1
-position = Vector2(-4245, -2020)
+position = Vector2(-4263, -2015)
 scale = Vector2(3, 3)
 script = ExtResource("11_x4ec5")
 
@@ -2969,7 +2969,7 @@ shape = SubResource("RectangleShape2D_4q3ci")
 
 [node name="Checkpoint" parent="." instance=ExtResource("60_7hmg0")]
 position = Vector2(27, -1)
-completed_level_number = 46
+completed_level_number = 50
 next_level = "res://All_Level/Map Level 47/Level_47.tscn"
 
 [node name="Save_point" type="Node" parent="."]
@@ -3019,6 +3019,7 @@ shape = SubResource("RectangleShape2D_hvq8q")
 position = Vector2(-4352, -2607)
 
 [node name="Room1" type="Area2D" parent="screen" node_paths=PackedStringArray("canvas_mod") groups=["Room_light"]]
+visible = false
 position = Vector2(-4170, -2622)
 script = ExtResource("63_p2uw7")
 canvas_mod = NodePath("../CanvasModulate")
@@ -3032,6 +3033,7 @@ position = Vector2(442, 351)
 shape = SubResource("RectangleShape2D_iqy1t")
 
 [node name="Room2" type="Area2D" parent="screen" node_paths=PackedStringArray("canvas_mod") groups=["Room_light"]]
+visible = false
 position = Vector2(198, 18)
 script = ExtResource("63_p2uw7")
 canvas_mod = NodePath("../CanvasModulate")
@@ -3045,6 +3047,7 @@ position = Vector2(442, 351)
 shape = SubResource("RectangleShape2D_iqy1t")
 
 [node name="Room3" type="Area2D" parent="screen" node_paths=PackedStringArray("canvas_mod") groups=["Room_light"]]
+visible = false
 position = Vector2(390, -2814)
 script = ExtResource("63_p2uw7")
 canvas_mod = NodePath("../CanvasModulate")
@@ -3058,6 +3061,7 @@ position = Vector2(442, 351)
 shape = SubResource("RectangleShape2D_iqy1t")
 
 [node name="Room4" type="Area2D" parent="screen" node_paths=PackedStringArray("canvas_mod") groups=["Room_light"]]
+visible = false
 position = Vector2(390, -5742)
 script = ExtResource("63_p2uw7")
 canvas_mod = NodePath("../CanvasModulate")
@@ -3071,6 +3075,7 @@ position = Vector2(418, 351)
 shape = SubResource("RectangleShape2D_xlr6u")
 
 [node name="Room5" type="Area2D" parent="screen" node_paths=PackedStringArray("canvas_mod") groups=["Room_light"]]
+visible = false
 position = Vector2(4734, -2838)
 script = ExtResource("63_p2uw7")
 canvas_mod = NodePath("../CanvasModulate")
@@ -3170,5 +3175,6 @@ visible = false
 [connection signal="body_entered" from="screen/Room3" to="screen/Room3" method="_on_body_entered"]
 [connection signal="body_entered" from="screen/Room4" to="screen/Room4" method="_on_body_entered"]
 [connection signal="body_entered" from="screen/Room5" to="screen/Room5" method="_on_body_entered"]
+[connection signal="pressed" from="PauseButton/Pause" to="PauseMenu" method="show_menu"]
 
 [editable path="PauseButton"]
