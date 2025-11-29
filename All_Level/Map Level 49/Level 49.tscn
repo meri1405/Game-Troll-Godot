@@ -582,8 +582,8 @@ target_position = Vector2(0, 10)
 
 [node name="Checkpoint" parent="." instance=ExtResource("5_nq4da")]
 position = Vector2(-477, 794)
-completed_level_number = 28
-next_level = "res://All_Level/Map Level 29/Level_29.tscn"
+completed_level_number = 49
+next_level = "res://All_Level/Map Level 50/Level_50.tscn"
 
 [node name="SpikesHide2" type="Node" parent="."]
 
@@ -849,6 +849,7 @@ shape = SubResource("RectangleShape2D_x3tmh")
 
 [connection signal="body_entered" from="SpikesHide2/TriggerShow" to="SpikesHide2/SpikeHide1" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="SpikesHide3/TriggerShow" to="SpikesHide3/SpikeHide1" method="_on_saw_trigger_body_entered"]
+[connection signal="pressed" from="PauseButton/Pause" to="PauseMenu" method="show_menu"]
 [connection signal="body_entered" from="SpikesHide/TriggerShow" to="SpikesHide/SpikeHide" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="SpikeTrap_LeftMove4/SpikeTrigger" to="SpikeTrap_LeftMove4/SpikeTrap_LeftMove" method="_on_saw_trigger_body_entered"]
 [connection signal="body_entered" from="SpikeTrap_DownMove/SpikeTrigger" to="SpikeTrap_DownMove/SpikeTrap_DownMove" method="_on_saw_trigger_body_entered"]
