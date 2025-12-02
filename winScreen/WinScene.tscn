@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://ycwtrqjv541u"]
+[gd_scene load_steps=9 format=3 uid="uid://ycwtrqjv541u"]
 
 [ext_resource type="Texture2D" uid="uid://587as1fm0kkm" path="res://Pixel Adventure 1/Free/Background/WinBG.png" id="1_t3pix"]
 [ext_resource type="Script" uid="uid://cnfnl6wjldgmb" path="res://winScreen/WinScene.gd" id="1_winscene"]
@@ -6,6 +6,10 @@
 [ext_resource type="Script" uid="uid://d2extkqcfbitg" path="res://CommonScripts/button.gd" id="3_j4jwh"]
 [ext_resource type="PackedScene" uid="uid://m4c8hp47kokd" path="res://UI/pause_menu.tscn" id="4_g0tah"]
 [ext_resource type="PackedScene" uid="uid://0dybtnqg5l6c" path="res://CommonScripts/PauseButton.tscn" id="5_6ag3o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_po3bq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nttd0"]
 
 [node name="WinScene" type="Node2D"]
 script = ExtResource("1_winscene")
@@ -27,12 +31,93 @@ icon = ExtResource("2_uuemd")
 flat = true
 script = ExtResource("3_j4jwh")
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 10
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StatsLabel" type="RichTextLabel" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -280.0
+offset_top = -200.0
+offset_right = 280.0
+offset_bottom = -70.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center][color=#FFFFFF]Cấp độ hoàn thành:[/color] [color=#00FF00][b]50[/b][/color]
+[color=#FFFFFF]Tổng số lần chết:[/color] [color=#FF5555][b]0[/b][/color][/center]"
+fit_content = true
+scroll_active = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -225.0
+offset_top = -50.0
+offset_right = 225.0
+offset_bottom = 290.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 25
+
+[node name="CreditsButton" type="Button" parent="CanvasLayer/Control/VBoxContainer"]
+custom_minimum_size = Vector2(450, 80)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "📜 XEM CREDITS"
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="CanvasLayer/Control/VBoxContainer/CreditsButton"]
+position = Vector2(231, 38)
+scale = Vector2(-19.3765, 3.7529)
+shape = SubResource("RectangleShape2D_po3bq")
+
+[node name="MenuButton" type="Button" parent="CanvasLayer/Control/VBoxContainer"]
+custom_minimum_size = Vector2(450, 80)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "🏠 MENU CHÍNH"
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="CanvasLayer/Control/VBoxContainer/MenuButton"]
+position = Vector2(236, 44)
+scale = Vector2(-20.5767, 4.2143)
+shape = SubResource("RectangleShape2D_nttd0")
+
+[node name="QuitButton" type="Button" parent="CanvasLayer/Control/VBoxContainer"]
+custom_minimum_size = Vector2(450, 80)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "❌ THOÁT GAME"
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="CanvasLayer/Control/VBoxContainer/QuitButton"]
+position = Vector2(236, 44)
+scale = Vector2(-20.5767, 4.2143)
+shape = SubResource("RectangleShape2D_nttd0")
+
 [node name="PauseMenu" parent="." instance=ExtResource("4_g0tah")]
 visible = false
 
 [node name="PauseButton" parent="." instance=ExtResource("5_6ag3o")]
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/CreditsButton/TouchScreenButton" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/MenuButton/TouchScreenButton" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/QuitButton/TouchScreenButton" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="PauseButton/Pause" to="PauseMenu" method="show_menu"]
 
 [editable path="PauseButton"]
