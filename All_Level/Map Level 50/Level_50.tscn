@@ -1928,7 +1928,7 @@ layer_0/tile_data = PackedInt32Array(983039, 393216, 0, 917504, 458752, 0, 91750
 
 [node name="Player1" type="CharacterBody2D" parent="Player" groups=["Player", "player"]]
 texture_filter = 1
-position = Vector2(-4263, -2015)
+position = Vector2(-4269, -2015)
 scale = Vector2(3, 3)
 script = ExtResource("11_x4ec5")
 

@@ -478,7 +478,7 @@ visible = false
 position = Vector2(182, -15)
 script = ExtResource("5_a6hdu")
 cam_limit_left = 96
-cam_limit_right = 2784
+cam_limit_right = 2640
 cam_limit_top = -240
 cam_limit_bottom = 912
 cam_zoom = Vector2(0.63, 0.63)
@@ -686,7 +686,7 @@ position = Vector2(177, -3394.5)
 shape = SubResource("RectangleShape2D_cv3by")
 
 [node name="Box_LeftMove" type="AnimatableBody2D" parent="." groups=["player"]]
-position = Vector2(2106, 733)
+position = Vector2(2115, 736)
 scale = Vector2(2, 2)
 script = ExtResource("14_iclce")
 move_distance = 300.0
