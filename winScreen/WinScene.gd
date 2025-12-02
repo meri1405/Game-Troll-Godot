@@ -52,10 +52,11 @@ func create_win_ui():
 	# Stats
 	var stats = RichTextLabel.new()
 	var death_count = GameManager.get_death_count() if GameManager else 0
-	var max_level = GameManager.max_level_unlocked if GameManager else 20
+	# ✅ SỬA: Hiển thị 50 level thay vì max_level_unlocked (51)
+	var completed_levels = 50  # Vì đã vào WinScene nghĩa là hoàn thành tất cả 50 level
 	stats.bbcode_enabled = true
 	stats.text = "[center][b][color=#FFD700][/color][/b]\n\n"
-	stats.text += "[color=#FFFFFF]Cấp độ hoàn thành:[/color] [color=#00FF00][b]" + str(max_level) + "[/b][/color]\n"
+	stats.text += "[color=#FFFFFF]Cấp độ hoàn thành:[/color] [color=#00FF00][b]" + str(completed_levels) + "[/b][/color]\n"
 	stats.text += "[color=#FFFFFF]Tổng số lần chết:[/color] [color=#FF5555][b]" + str(death_count) + "[/b][/color][/center]"
 	stats.add_theme_font_size_override("normal_font_size", 30)
 	stats.add_theme_font_size_override("bold_font_size", 36)
